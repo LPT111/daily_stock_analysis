@@ -116,3 +116,28 @@ class MarketReviewNoFcntlLockTestCase(unittest.TestCase):
                 self.assertTrue(token.uses_flock is False)
             finally:
                 market_review_lock.release_market_review_lock(token)
+
+    def test_windows_liveness_probe_does_not_call_os_kill(self) -> None:
+        with patch.object(market_review_lock.os, "name", "nt"), \
+             patch.object(
+                 market_review_lock,
+                 "_is_windows_process_alive",
+                 return_value=True,
+             ) as windows_probe, \
+             patch.object(market_review_lock.os, "kill") as os_kill:
+            self.assertTrue(market_review_lock._is_process_alive(12345))
+
+        windows_probe.assert_called_once_with(12345)
+        os_kill.assert_not_called()
+
+    def test_windows_liveness_probe_treats_invalid_pid_as_dead(self) -> None:
+        kernel32 = SimpleNamespace(OpenProcess=lambda *_args: 0)
+        with patch("ctypes.WinDLL", return_value=kernel32, create=True), \
+             patch("ctypes.get_last_error", return_value=87, create=True):
+            self.assertFalse(market_review_lock._is_windows_process_alive(99999))
+
+    def test_windows_liveness_probe_keeps_access_denied_lock_active(self) -> None:
+        kernel32 = SimpleNamespace(OpenProcess=lambda *_args: 0)
+        with patch("ctypes.WinDLL", return_value=kernel32, create=True), \
+             patch("ctypes.get_last_error", return_value=5, create=True):
+            self.assertTrue(market_review_lock._is_windows_process_alive(12345))

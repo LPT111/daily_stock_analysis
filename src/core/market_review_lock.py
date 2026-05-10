@@ -46,6 +46,10 @@ def _write_market_review_lock_metadata(handle: Any) -> None:
 def _is_process_alive(pid: int) -> bool:
     if pid <= 0:
         return False
+
+    if os.name == "nt":
+        return _is_windows_process_alive(pid)
+
     try:
         os.kill(pid, 0)
     except ProcessLookupError:
@@ -53,6 +57,35 @@ def _is_process_alive(pid: int) -> bool:
     except OSError:
         return True
     return True
+
+
+def _is_windows_process_alive(pid: int) -> bool:
+    try:
+        import ctypes
+    except ImportError:  # pragma: no cover - ctypes is part of stdlib
+        return True
+
+    try:
+        kernel32 = ctypes.WinDLL("kernel32", use_last_error=True)
+        process_query_limited_information = 0x1000
+        handle = kernel32.OpenProcess(
+            process_query_limited_information,
+            False,
+            pid,
+        )
+        if not handle:
+            return ctypes.get_last_error() != 87
+
+        try:
+            exit_code = ctypes.c_ulong()
+            if not kernel32.GetExitCodeProcess(handle, ctypes.byref(exit_code)):
+                return True
+            return exit_code.value == 259
+        finally:
+            kernel32.CloseHandle(handle)
+    except Exception as exc:
+        logger.warning("Windows 进程存活探测失败，保守视为仍在运行: %s", exc)
+        return True
 
 
 def _read_lock_metadata(lock_path: Path) -> dict[str, str]:
