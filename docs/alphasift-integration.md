@@ -70,6 +70,7 @@ AlphaSift 侧已在 `ZhuLinsen/alphasift@b2ca66dd47001b9a09890cfe21c2b18c7219ccf
 - 任何配置清理、回退与告警仍沿用当前后端配置解析链路（包括运行时保存前验证、兼容别名解析和非法值 fallback）；AlphaSift 功能本身不引入额外清理/迁移副作用。
 - 如果用户已在 `.env`/设置页配置过历史值，AlphaSift 开启前后应保持可用行为一致；需要恢复旧行为时，按既有方式回退到原配置（例如恢复旧的模型名/BASE URL，或关闭相关模型通道）即可。
 - 失败可见性：`status`/`screen` 接口返回明确错误码与 `message`，前端在设置页或选股页会将 `403/424/400/422` 等错误直接提示给用户，便于定位并回退到“关闭 AlphaSift + 保持原有 LLM 运行链路”。
+- 状态诊断：`/api/v1/alphasift/status` 对 AlphaSift 包或 `alphasift.dsa_adapter` 未安装仍保持 `200` + `available=false` 的兼容语义；如果导入过程、`get_status()` 调用或返回结构出现非预期异常，后端会记录 warning，并在响应中追加不含安装来源明文的 `diagnostics` 字段，便于从接口状态和服务端日志定位问题。
 
 错误策略：
 

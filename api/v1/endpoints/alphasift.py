@@ -5,13 +5,14 @@ from __future__ import annotations
 
 import importlib
 import inspect
+import logging
 import math
 import os
 import subprocess
 import sys
 from dataclasses import asdict, is_dataclass
 from pathlib import Path
-from typing import Any, Dict, List
+from typing import Any, Dict, List, Optional, Tuple
 
 from fastapi import APIRouter, Depends, HTTPException, Request
 from pydantic import BaseModel, Field
@@ -21,8 +22,10 @@ from src.config import Config, DEFAULT_ALPHASIFT_INSTALL_SPEC
 from src.auth import COOKIE_NAME, is_auth_enabled, verify_session
 
 router = APIRouter()
+logger = logging.getLogger(__name__)
 
 ALPHASIFT_DSA_ADAPTER_MODULE = "alphasift.dsa_adapter"
+ALPHASIFT_EXPECTED_MISSING_MODULES = frozenset({"alphasift", ALPHASIFT_DSA_ADAPTER_MODULE})
 ALLOWED_ALPHASIFT_INSTALL_SPECS = frozenset({DEFAULT_ALPHASIFT_INSTALL_SPEC})
 
 
@@ -46,16 +49,8 @@ class AlphaSiftStrategyResponse(BaseModel):
 
 @router.get("/status")
 def alphasift_status(config: Config = Depends(get_config_dep)) -> Dict[str, Any]:
-    adapter_status: Dict[str, Any] = {}
-    available = _is_alphasift_available()
-    if available:
-        try:
-            adapter_status = _call_alphasift_status()
-            available = bool(adapter_status.get("available", True))
-        except Exception:
-            available = False
-
-    return {
+    adapter_status, available, diagnostics = _get_alphasift_status_snapshot()
+    payload = {
         "enabled": bool(config.alphasift_enabled),
         "available": available,
         "install_spec_is_default": _is_default_alphasift_install_spec(config.alphasift_install_spec),
@@ -63,6 +58,9 @@ def alphasift_status(config: Config = Depends(get_config_dep)) -> Dict[str, Any]
         "version": adapter_status.get("version"),
         "strategy_count": adapter_status.get("strategy_count"),
     }
+    if diagnostics:
+        payload["diagnostics"] = diagnostics
+    return payload
 
 
 @router.get("/strategies")
@@ -251,10 +249,20 @@ def _ensure_alphasift_enabled(config: Config) -> None:
 
 
 def _is_alphasift_available() -> bool:
+    _, available, _ = _get_alphasift_status_snapshot()
+    return available
+
+
+def _get_alphasift_status_snapshot() -> Tuple[Dict[str, Any], bool, Optional[Dict[str, str]]]:
     try:
-        return _is_adapter_available(_call_alphasift_status())
-    except Exception:
-        return False
+        adapter_status = _call_alphasift_status()
+    except HTTPException as exc:
+        return {}, False, _extract_alphasift_diagnostics(exc)
+    except Exception as exc:
+        diagnostics = _log_unexpected_alphasift_exception("status_probe", exc)
+        return {}, False, diagnostics
+
+    return adapter_status, _is_adapter_available(adapter_status), None
 
 
 def _is_adapter_available(adapter_status: Any) -> bool:
@@ -264,16 +272,24 @@ def _is_adapter_available(adapter_status: Any) -> bool:
 
 
 def _import_alphasift() -> Any:
-    _prepare_alphasift_runtime_env()
     try:
+        _prepare_alphasift_runtime_env()
         return importlib.import_module(ALPHASIFT_DSA_ADAPTER_MODULE)
+    except ModuleNotFoundError as exc:
+        if _is_expected_alphasift_missing(exc):
+            raise _alphasift_unavailable_exception(
+                f"AlphaSift 未安装或未挂载到当前 Python 环境，无法导入 {ALPHASIFT_DSA_ADAPTER_MODULE}：{exc}"
+            ) from exc
+        diagnostics = _log_unexpected_alphasift_exception("import_adapter", exc)
+        raise _alphasift_unavailable_exception(
+            f"AlphaSift 适配层导入失败，请检查依赖完整性和当前 Python 环境：{exc}",
+            diagnostics=diagnostics,
+        ) from exc
     except Exception as exc:
-        raise HTTPException(
-            status_code=424,
-            detail={
-                "error": "alphasift_unavailable",
-                "message": f"AlphaSift 未安装或未挂载到当前 Python 环境，无法导入 {ALPHASIFT_DSA_ADAPTER_MODULE}：{exc}",
-            },
+        diagnostics = _log_unexpected_alphasift_exception("import_adapter", exc)
+        raise _alphasift_unavailable_exception(
+            f"AlphaSift 适配层导入失败，请检查依赖完整性和当前 Python 环境：{exc}",
+            diagnostics=diagnostics,
         ) from exc
 
 
@@ -309,20 +325,62 @@ def _get_adapter_callable(adapter: Any, name: str, missing_error: str) -> Any:
 
 def _call_alphasift_status() -> Dict[str, Any]:
     adapter = _import_alphasift()
-    get_status = _get_adapter_callable(adapter, "get_status", "get_status() 不可调用。")
+    try:
+        get_status = _get_adapter_callable(adapter, "get_status", "get_status() 不可调用。")
+    except HTTPException as exc:
+        diagnostics = _log_unexpected_alphasift_exception("get_status_callable", exc)
+        raise _alphasift_unavailable_exception(
+            "AlphaSift 适配层 get_status 不可调用，请检查适配层版本。",
+            diagnostics=diagnostics,
+        ) from exc
     try:
         result = _to_plain(get_status())
     except Exception as exc:
-        raise HTTPException(
-            status_code=424,
-            detail={
-                "error": "alphasift_unavailable",
-                "message": f"AlphaSift 适配层 get_status 调用失败：{exc}",
-            },
+        diagnostics = _log_unexpected_alphasift_exception("get_status", exc)
+        raise _alphasift_unavailable_exception(
+            f"AlphaSift 适配层 get_status 调用失败：{exc}",
+            diagnostics=diagnostics,
         ) from exc
     if not isinstance(result, dict):
-        return {}
+        exc = TypeError(f"get_status returned {type(result).__name__}, expected dict")
+        diagnostics = _log_unexpected_alphasift_exception("get_status_result", exc)
+        raise _alphasift_unavailable_exception(
+            "AlphaSift 适配层 get_status 返回结构非法，请检查适配层版本。",
+            diagnostics=diagnostics,
+        ) from exc
     return result
+
+
+def _is_expected_alphasift_missing(exc: ModuleNotFoundError) -> bool:
+    return getattr(exc, "name", None) in ALPHASIFT_EXPECTED_MISSING_MODULES
+
+
+def _alphasift_unavailable_exception(
+    message: str,
+    *,
+    diagnostics: Optional[Dict[str, str]] = None,
+) -> HTTPException:
+    detail: Dict[str, Any] = {"error": "alphasift_unavailable", "message": message}
+    if diagnostics:
+        detail["diagnostics"] = diagnostics
+    return HTTPException(status_code=424, detail=detail)
+
+
+def _log_unexpected_alphasift_exception(stage: str, exc: BaseException) -> Dict[str, str]:
+    logger.warning("Unexpected AlphaSift %s failure: %s", stage, exc, exc_info=exc.__traceback__ is not None)
+    return {
+        "reason": "unexpected_exception",
+        "stage": stage,
+        "error_type": exc.__class__.__name__,
+    }
+
+
+def _extract_alphasift_diagnostics(exc: HTTPException) -> Optional[Dict[str, str]]:
+    detail = exc.detail if isinstance(exc.detail, dict) else {}
+    diagnostics = detail.get("diagnostics")
+    if not isinstance(diagnostics, dict):
+        return None
+    return {str(key): str(value) for key, value in diagnostics.items()}
 
 
 def _list_strategies() -> List[Dict[str, Any]]:

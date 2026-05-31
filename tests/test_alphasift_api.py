@@ -73,17 +73,19 @@ class AlphaSiftOpportunitiesApiTestCase(unittest.TestCase):
     def test_status_defaults_to_disabled(self) -> None:
         config = self._config(enabled=False)
 
-        with patch("api.v1.endpoints.alphasift._is_alphasift_available", return_value=False):
+        with patch("api.v1.endpoints.alphasift._call_alphasift_status", side_effect=_raise_alphasift_unavailable):
             payload = alphasift_endpoint.alphasift_status(config=config)
 
         self.assertEqual(payload["enabled"], False)
+        self.assertEqual(payload["available"], False)
         self.assertEqual(payload["install_spec_is_default"], True)
+        self.assertNotIn("diagnostics", payload)
         self.assertNotIn("install_spec", payload)
 
     def test_status_marks_custom_install_source(self) -> None:
         config = self._config(enabled=False, install_spec="git+https://example.com/private/alphasift.git")
 
-        with patch("api.v1.endpoints.alphasift._is_alphasift_available", return_value=False):
+        with patch("api.v1.endpoints.alphasift._call_alphasift_status", side_effect=_raise_alphasift_unavailable):
             payload = alphasift_endpoint.alphasift_status(config=config)
 
         self.assertEqual(payload["install_spec_is_default"], False)
@@ -92,29 +94,94 @@ class AlphaSiftOpportunitiesApiTestCase(unittest.TestCase):
     def test_status_includes_adapter_contract_metadata(self) -> None:
         config = self._config(enabled=True)
 
-        with (
-            patch("api.v1.endpoints.alphasift._is_alphasift_available", return_value=True),
-            patch(
-                "api.v1.endpoints.alphasift._call_alphasift_status",
-                return_value={"available": True, "contract_version": "1", "version": "0.2.0", "strategy_count": 8},
-            ),
+        with patch(
+            "api.v1.endpoints.alphasift._call_alphasift_status",
+            return_value={"available": True, "contract_version": "1", "version": "0.2.0", "strategy_count": 8},
         ):
             payload = alphasift_endpoint.alphasift_status(config=config)
 
+        self.assertTrue(payload["available"])
         self.assertEqual(payload["contract_version"], "1")
         self.assertEqual(payload["version"], "0.2.0")
         self.assertEqual(payload["strategy_count"], 8)
 
-    def test_status_maps_adapter_runtime_exception_to_unavailable(self) -> None:
+    def test_status_preserves_adapter_available_false_without_diagnostics(self) -> None:
         config = self._config(enabled=False)
 
-        with (
-            patch("api.v1.endpoints.alphasift._is_alphasift_available", return_value=True),
-            patch("api.v1.endpoints.alphasift._call_alphasift_status", side_effect=RuntimeError("get_status failed")),
+        with patch(
+            "api.v1.endpoints.alphasift._call_alphasift_status",
+            return_value={"available": False, "contract_version": "1", "version": "0.2.0", "strategy_count": 0},
         ):
             payload = alphasift_endpoint.alphasift_status(config=config)
 
         self.assertFalse(payload["available"])
+        self.assertEqual(payload["contract_version"], "1")
+        self.assertNotIn("diagnostics", payload)
+
+    def test_status_logs_and_reports_adapter_runtime_exception_diagnostics(self) -> None:
+        config = self._config(enabled=False)
+        fake_module = _make_adapter_module(get_status=MagicMock(side_effect=RuntimeError("get_status failed")))
+
+        with (
+            patch("api.v1.endpoints.alphasift._import_alphasift", return_value=fake_module),
+            self.assertLogs("api.v1.endpoints.alphasift", level="WARNING") as captured,
+        ):
+            payload = alphasift_endpoint.alphasift_status(config=config)
+
+        self.assertFalse(payload["available"])
+        self.assertEqual(payload["diagnostics"]["reason"], "unexpected_exception")
+        self.assertEqual(payload["diagnostics"]["stage"], "get_status")
+        self.assertEqual(payload["diagnostics"]["error_type"], "RuntimeError")
+        self.assertIn("Unexpected AlphaSift get_status failure", "\n".join(captured.output))
+
+    def test_status_logs_and_reports_unexpected_import_exception_diagnostics(self) -> None:
+        config = self._config(enabled=False)
+        missing_sub_dependency = ModuleNotFoundError("No module named 'optional_dep'", name="optional_dep")
+
+        with (
+            patch("api.v1.endpoints.alphasift._prepare_alphasift_runtime_env"),
+            patch("api.v1.endpoints.alphasift.importlib.import_module", side_effect=missing_sub_dependency),
+            self.assertLogs("api.v1.endpoints.alphasift", level="WARNING") as captured,
+        ):
+            payload = alphasift_endpoint.alphasift_status(config=config)
+
+        self.assertFalse(payload["available"])
+        self.assertEqual(payload["diagnostics"]["reason"], "unexpected_exception")
+        self.assertEqual(payload["diagnostics"]["stage"], "import_adapter")
+        self.assertEqual(payload["diagnostics"]["error_type"], "ModuleNotFoundError")
+        self.assertIn("Unexpected AlphaSift import_adapter failure", "\n".join(captured.output))
+
+    def test_status_logs_and_reports_invalid_get_status_result_diagnostics(self) -> None:
+        config = self._config(enabled=False)
+        fake_module = _make_adapter_module(get_status=lambda: ["not", "a", "dict"])
+
+        with (
+            patch("api.v1.endpoints.alphasift._import_alphasift", return_value=fake_module),
+            self.assertLogs("api.v1.endpoints.alphasift", level="WARNING") as captured,
+        ):
+            payload = alphasift_endpoint.alphasift_status(config=config)
+
+        self.assertFalse(payload["available"])
+        self.assertEqual(payload["diagnostics"]["reason"], "unexpected_exception")
+        self.assertEqual(payload["diagnostics"]["stage"], "get_status_result")
+        self.assertEqual(payload["diagnostics"]["error_type"], "TypeError")
+        self.assertIn("Unexpected AlphaSift get_status_result failure", "\n".join(captured.output))
+
+    def test_status_logs_and_reports_missing_get_status_callable_diagnostics(self) -> None:
+        config = self._config(enabled=False)
+        fake_module = SimpleNamespace(list_strategies=lambda: [], screen=MagicMock(return_value=[]))
+
+        with (
+            patch("api.v1.endpoints.alphasift._import_alphasift", return_value=fake_module),
+            self.assertLogs("api.v1.endpoints.alphasift", level="WARNING") as captured,
+        ):
+            payload = alphasift_endpoint.alphasift_status(config=config)
+
+        self.assertFalse(payload["available"])
+        self.assertEqual(payload["diagnostics"]["reason"], "unexpected_exception")
+        self.assertEqual(payload["diagnostics"]["stage"], "get_status_callable")
+        self.assertEqual(payload["diagnostics"]["error_type"], "HTTPException")
+        self.assertIn("Unexpected AlphaSift get_status_callable failure", "\n".join(captured.output))
 
     def test_strategies_returns_adapter_strategies(self) -> None:
         config = self._config(enabled=True)
