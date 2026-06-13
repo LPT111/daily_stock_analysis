@@ -2175,6 +2175,9 @@ class SearchService:
         "安装包", "资源包", "应用商店", "游戏", "手游", "app", "apk",
         "download", "install", "installer", "software", "game", "mobile app",
     )
+    _LOW_QUALITY_DOWNLOAD_INTENT_TERMS = (
+        "安装包", "安卓版", "苹果版", "官方版", "客户端下载", "应用下载", "客户端",
+    )
     _LOW_QUALITY_DOWNLOAD_CONTEXT_TERMS = (
         "下载", "安装", "安卓版", "苹果版", "官方版", "最新版", "客户端",
         "安装包", "资源包", "应用商店", "apk", "download", "install",
@@ -2715,17 +2718,20 @@ class SearchService:
 
     @classmethod
     def _is_trusted_official_news_source(cls, item: SearchResult) -> bool:
-        """Only trust official exemptions from parsed hosts or exact source labels."""
-        candidate_hosts = (
-            cls._candidate_hostname(item.url),
-            cls._candidate_hostname(item.source),
-        )
-        for host in candidate_hosts:
+        """Only trust official exemptions from trusted hosts; fallback to labels only when URL host is absent."""
+        url_host = cls._candidate_hostname(item.url)
+        source_host = cls._candidate_hostname(item.source)
+
+        for host in (url_host, source_host):
             if any(
                 host == official_host or host.endswith(f".{official_host}")
                 for official_host in cls._OFFICIAL_SOURCE_HOSTS
             ):
                 return True
+
+        if url_host:
+            # 有 URL 时以主机可信链路为准，避免 source label 伪装的官方放行。
+            return False
 
         source_label = str(item.source or "").strip().lower()
         return source_label in cls._OFFICIAL_SOURCE_LABELS
@@ -2751,6 +2757,10 @@ class SearchService:
             content_text,
             cls._LOW_QUALITY_APP_CONTEXT_TERMS,
         )
+        has_download_intent = cls._contains_any_low_quality_news_term(
+            content_text,
+            cls._LOW_QUALITY_DOWNLOAD_INTENT_TERMS,
+        )
         has_file_size = bool(cls._LOW_QUALITY_FILE_SIZE_RE.search(content_text))
         has_rating = bool(cls._LOW_QUALITY_RATING_RE.search(content_text))
         has_url_signal = bool(cls._LOW_QUALITY_URL_RE.search(url_surface))
@@ -2759,7 +2769,8 @@ class SearchService:
         )
 
         return (
-            (has_download_term or has_app_listing_context)
+            (has_download_term and has_download_intent and (has_app_context or has_download_context))
+            or (has_download_term or has_app_listing_context)
             and (has_file_size or has_rating)
         ) or (
             has_url_signal

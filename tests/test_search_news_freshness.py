@@ -528,6 +528,35 @@ class SearchNewsFreshnessTestCase(unittest.TestCase):
         self.assertEqual([item.title for item in resp.results], ["腾讯控股 00700 早盘走强"])
         self.assertEqual(resp.results[0].relevance_category, "direct_company_news")
 
+    def test_download_like_news_without_size_or_url_hints_is_filtered(self) -> None:
+        """Content-only Android/download signals should still trigger low-quality filtering."""
+        fresh = datetime.now().date().isoformat()
+        service, _ = self._create_service_with_mock_provider(
+            news_max_age_days=3,
+            news_strategy_profile="short",
+            response=_response(
+                [
+                    _result(
+                        "腾讯控股 00700 官方版客户端安卓版下载",
+                        fresh,
+                        snippet="点此获取最新版安卓版客户端，支持一键下载安装包。",
+                        url="https://finance.example.invalid/tencent/stock/00700",
+                        source="finance.example.invalid",
+                    ),
+                    _result(
+                        "腾讯控股 00700 发布回购公告",
+                        fresh,
+                        snippet="腾讯控股披露股份回购公告。",
+                        source="hkexnews",
+                    ),
+                ]
+            ),
+        )
+
+        resp = service.search_stock_news("00700.HK", "腾讯控股", max_results=2)
+
+        self.assertEqual([item.title for item in resp.results], ["腾讯控股 00700 发布回购公告"])
+
     def test_url_only_app_route_does_not_drop_direct_stock_news(self) -> None:
         """App-style news hosts or paths need content evidence before admission drops."""
         fresh = datetime.now().date().isoformat()
@@ -600,6 +629,13 @@ class SearchNewsFreshnessTestCase(unittest.TestCase):
                         snippet="小姐预约 yue2345，同城约炮、保健按摩、推油套餐。",
                         url="https://hkexnews.evil.invalid/local/yue2345",
                         source="hkexnews.evil.invalid",
+                    ),
+                    _result(
+                        "腾讯控股 00700 官方app下载链接",
+                        fresh,
+                        snippet="安卓客户端下载，支持极速版下载。",
+                        url="https://hkexnews.evil.invalid/guide/officialdownload",
+                        source="hkexnews",
                     ),
                     _result(
                         "腾讯控股 00700 发布回购公告",
