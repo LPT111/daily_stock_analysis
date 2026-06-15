@@ -37,8 +37,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 - [新功能] 个股分析历史成功保存后会从最终报告 best-effort 提取 `DecisionSignal` 决策信号，复用现有信号去重、计划质量计算和脱敏契约。
 - [改进] 问股页移动端策略选择改为默认收起的按钮入口，展开后仍可多选策略并在发送后自动收起，减少对对话内容的遮挡。
-- [测试] #1646 问股页移动端策略选择改动已通过 `cd apps/dsa-web && npm run lint && npm run build && npm run test -- src/pages/__tests__/ChatPage.test.tsx` 验证。
-- [文档] #1646 该 UI 变更需在 PR 描述补充移动端前后对比截图（默认收起、展开、发送后收起）与对应验证命令，无法截图时补充等价可视证据。
+
 
 ## [3.22.0] - 2026-06-13
 
