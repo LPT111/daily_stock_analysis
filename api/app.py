@@ -143,6 +143,7 @@ from src.services.runtime_scheduler import (
     CLI_SCHEDULER_OWNER_ENV,
     RUNTIME_SCHEDULER_FORCE_ENABLED_ENV,
     RUNTIME_SCHEDULER_RUN_IMMEDIATELY_ENV,
+    RUNTIME_SCHEDULER_SUPPRESS_START_ENV,
     RuntimeSchedulerService,
 )
 from src.services.stock_index_remote_service import (
@@ -201,8 +202,14 @@ async def app_lifespan(app: FastAPI):
         "yes",
         "on",
     }
+    runtime_suppress_start = os.getenv(RUNTIME_SCHEDULER_SUPPRESS_START_ENV, "").strip().lower() in {
+        "1",
+        "true",
+        "yes",
+        "on",
+    }
     runtime_run_immediately_override = os.getenv(RUNTIME_SCHEDULER_RUN_IMMEDIATELY_ENV)
-    if not runtime_owns_schedule:
+    if runtime_suppress_start or not runtime_owns_schedule:
         runtime_run_immediately = False
     elif runtime_run_immediately_override is None:
         from src.config import get_config
@@ -217,15 +224,17 @@ async def app_lifespan(app: FastAPI):
         }
     os.environ.pop(RUNTIME_SCHEDULER_FORCE_ENABLED_ENV, None)
     os.environ.pop(RUNTIME_SCHEDULER_RUN_IMMEDIATELY_ENV, None)
+    os.environ.pop(RUNTIME_SCHEDULER_SUPPRESS_START_ENV, None)
     runtime_scheduler_service = RuntimeSchedulerService(
         owns_schedule=runtime_owns_schedule,
         force_enabled=runtime_force_enabled,
+        run_immediately_in_background=True,
     )
-    runtime_scheduler_service._run_immediately_in_background = True
     app.state.runtime_scheduler_service = runtime_scheduler_service
-    app.state.runtime_scheduler_service.reconcile_from_config(
-        run_immediately=runtime_run_immediately,
-    )
+    if not runtime_suppress_start:
+        app.state.runtime_scheduler_service.reconcile_from_config(
+            run_immediately=runtime_run_immediately,
+        )
     app.state.system_config_service = SystemConfigService(
         runtime_scheduler=app.state.runtime_scheduler_service,
     )

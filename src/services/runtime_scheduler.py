@@ -18,6 +18,47 @@ logger = logging.getLogger(__name__)
 CLI_SCHEDULER_OWNER_ENV = "DSA_CLI_SCHEDULER_OWNS_SCHEDULE"
 RUNTIME_SCHEDULER_FORCE_ENABLED_ENV = "DSA_RUNTIME_SCHEDULER_FORCE_ENABLED"
 RUNTIME_SCHEDULER_RUN_IMMEDIATELY_ENV = "DSA_RUNTIME_SCHEDULER_RUN_IMMEDIATELY"
+RUNTIME_SCHEDULER_SUPPRESS_START_ENV = "DSA_RUNTIME_SCHEDULER_SUPPRESS_START"
+
+
+def build_agent_event_monitor_background_tasks(
+    config: Config,
+    *,
+    config_provider: Callable[[], Config],
+) -> List[Dict[str, Any]]:
+    """Build scheduler background tasks used by the runtime scheduler."""
+    if not getattr(config, "agent_event_monitor_enabled", False):
+        return []
+
+    from src.services.alert_worker import AlertWorker
+
+    interval_minutes = getattr(config, "agent_event_monitor_interval_minutes", 5)
+    try:
+        interval_minutes = max(1, int(interval_minutes))
+    except (TypeError, ValueError):  # pragma: no cover - defensive branch
+        logger.warning(
+            "Invalid AGENT_EVENT_MONITOR_INTERVAL_MINUTES=%r; use fallback 5",
+            interval_minutes,
+        )
+        interval_minutes = 5
+    try:
+        alert_worker = AlertWorker(config_provider=config_provider)
+    except Exception as exc:  # pragma: no cover - defensive branch
+        logger.warning("Failed to initialize AlertWorker for event monitor: %s", exc)
+        return []
+
+    def event_monitor_task() -> None:
+        stats = alert_worker.run_once()
+        triggered_count = stats.get("triggered", 0)
+        if triggered_count:
+            logger.info("[EventMonitor] triggered %d alert(s)", triggered_count)
+
+    return [{
+        "task": event_monitor_task,
+        "interval_seconds": interval_minutes * 60,
+        "run_immediately": True,
+        "name": "agent_event_monitor",
+    }]
 
 
 class RuntimeSchedulerService:
@@ -30,6 +71,8 @@ class RuntimeSchedulerService:
         task_runner: Optional[Callable[[Config, Any, Optional[List[str]]], Any]] = None,
         owns_schedule: Optional[bool] = None,
         force_enabled: bool = False,
+        run_immediately_in_background: bool = False,
+        background_tasks_provider: Optional[Callable[[Config], List[Dict[str, Any]]]] = None,
     ) -> None:
         self._config_provider = config_provider
         self._task_runner = task_runner
@@ -42,6 +85,8 @@ class RuntimeSchedulerService:
             }
         self._owns_schedule = owns_schedule
         self._force_enabled = force_enabled
+        self._run_immediately_in_background = run_immediately_in_background
+        self._background_tasks_provider = background_tasks_provider
         self._lock = threading.RLock()
         self._run_lock = threading.Lock()
         self._scheduler: Optional[Scheduler] = None
@@ -112,41 +157,12 @@ class RuntimeSchedulerService:
     def _is_schedule_enabled(self, config: Config) -> bool:
         return self._force_enabled or bool(getattr(config, "schedule_enabled", False))
 
-    def _register_event_monitor(self, scheduler: Scheduler, config: Config) -> None:
-        if not getattr(config, "agent_event_monitor_enabled", False):
-            return
-
-        interval_minutes = getattr(config, "agent_event_monitor_interval_minutes", 5)
-        try:
-            interval_minutes = max(1, int(interval_minutes))
-        except (TypeError, ValueError):  # pragma: no cover - defensive branch
-            logger.warning(
-                "Invalid AGENT_EVENT_MONITOR_INTERVAL_MINUTES=%r; use fallback 5",
-                interval_minutes,
-            )
-            interval_minutes = 5
-        try:
-            from src.services.alert_worker import AlertWorker
-        except Exception as exc:
-            logger.warning("Failed to load AlertWorker for event monitor: %s", exc)
-            return
-
-        alert_worker = AlertWorker(config_provider=self._reload_config)
-
-        def event_monitor_task() -> None:
-            try:
-                stats = alert_worker.run_once()
-                triggered_count = stats.get("triggered", 0)
-                if triggered_count:
-                    logger.info("[EventMonitor] 本轮触发 %d 条提醒", triggered_count)
-            except Exception as exc:  # noqa: BLE001 - event monitor should not crash scheduler loop.
-                logger.exception("Runtime event monitor task failed: %s", exc)
-
-        scheduler.add_background_task(
-            task=event_monitor_task,
-            interval_seconds=interval_minutes * 60,
-            run_immediately=True,
-            name="agent_event_monitor",
+    def _current_background_tasks(self, config: Config) -> List[Dict[str, Any]]:
+        if self._background_tasks_provider is not None:
+            return self._background_tasks_provider(config)
+        return build_agent_event_monitor_background_tasks(
+            config,
+            config_provider=self._reload_config,
         )
 
     @staticmethod
@@ -181,12 +197,19 @@ class RuntimeSchedulerService:
                 schedule_times_provider=self._current_times,
                 register_signals=False,
             )
-            if run_immediately and getattr(self, "_run_immediately_in_background", False):
+            if run_immediately and self._run_immediately_in_background:
                 scheduler.set_daily_task(self._run_analysis_once, run_immediately=False)
-                self._run_in_background_thread(self._run_analysis_once)
             else:
                 scheduler.set_daily_task(self._run_analysis_once, run_immediately=run_immediately)
-            self._register_event_monitor(scheduler=scheduler, config=config)
+            for entry in self._current_background_tasks(config):
+                scheduler.add_background_task(
+                    entry["task"],
+                    interval_seconds=entry["interval_seconds"],
+                    run_immediately=entry.get("run_immediately", False),
+                    name=entry.get("name"),
+                )
+            if run_immediately and self._run_immediately_in_background:
+                self._run_in_background_thread(self._run_analysis_once)
             thread = threading.Thread(
                 target=scheduler.run,
                 daemon=True,

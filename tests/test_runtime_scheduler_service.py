@@ -18,6 +18,7 @@ from src.services.runtime_scheduler import (
     CLI_SCHEDULER_OWNER_ENV,
     RUNTIME_SCHEDULER_FORCE_ENABLED_ENV,
     RUNTIME_SCHEDULER_RUN_IMMEDIATELY_ENV,
+    RUNTIME_SCHEDULER_SUPPRESS_START_ENV,
     RuntimeSchedulerService,
 )
 
@@ -71,6 +72,9 @@ class _NoopThread:
 
     def start(self):
         return None
+
+    def is_alive(self):
+        return False
 
 
 class RuntimeSchedulerServiceTestCase(unittest.TestCase):
@@ -291,10 +295,16 @@ class RuntimeSchedulerServiceTestCase(unittest.TestCase):
         events = []
 
         class FakeRuntimeSchedulerService:
-            def __init__(self, *, owns_schedule=True, force_enabled=False):
+            def __init__(
+                self,
+                *,
+                owns_schedule=True,
+                force_enabled=False,
+                run_immediately_in_background=False,
+            ):
                 self.owns_schedule = owns_schedule
                 self.force_enabled = force_enabled
-                events.append(("init", owns_schedule, force_enabled))
+                events.append(("init", owns_schedule, force_enabled, run_immediately_in_background))
 
             def reconcile_from_config(self, *, run_immediately=False, clear_enabled_override=False):
                 events.append((
@@ -327,7 +337,7 @@ class RuntimeSchedulerServiceTestCase(unittest.TestCase):
                 pass
 
         self.assertEqual(events, [
-            ("init", False, False),
+            ("init", False, False, True),
             ("reconcile", False, False, False),
             ("stop", False),
         ])
@@ -338,8 +348,14 @@ class RuntimeSchedulerServiceTestCase(unittest.TestCase):
         events = []
 
         class FakeRuntimeSchedulerService:
-            def __init__(self, *, owns_schedule=True, force_enabled=False):
-                events.append(("init", owns_schedule, force_enabled))
+            def __init__(
+                self,
+                *,
+                owns_schedule=True,
+                force_enabled=False,
+                run_immediately_in_background=False,
+            ):
+                events.append(("init", owns_schedule, force_enabled, run_immediately_in_background))
 
             def reconcile_from_config(self, *, run_immediately=False, clear_enabled_override=False):
                 events.append(("reconcile", run_immediately, clear_enabled_override))
@@ -367,12 +383,58 @@ class RuntimeSchedulerServiceTestCase(unittest.TestCase):
                 pass
 
         self.assertEqual(events, [
-            ("init", True, True),
+            ("init", True, True, True),
             ("reconcile", True, False),
             ("stop",),
         ])
         self.assertIsNone(os.getenv(RUNTIME_SCHEDULER_FORCE_ENABLED_ENV))
         self.assertIsNone(os.getenv(RUNTIME_SCHEDULER_RUN_IMMEDIATELY_ENV))
+
+    def test_lifespan_suppresses_initial_start_without_losing_runtime_ownership(self) -> None:
+        from api.app import create_app
+
+        events = []
+
+        class FakeRuntimeSchedulerService:
+            def __init__(
+                self,
+                *,
+                owns_schedule=True,
+                force_enabled=False,
+                run_immediately_in_background=False,
+            ):
+                events.append(("init", owns_schedule, force_enabled, run_immediately_in_background))
+
+            def reconcile_from_config(self, *, run_immediately=False, clear_enabled_override=False):
+                events.append(("reconcile", run_immediately, clear_enabled_override))
+
+            def stop(self):
+                events.append(("stop",))
+
+        class FakeSystemConfigService:
+            def __init__(self, runtime_scheduler=None):
+                self.runtime_scheduler = runtime_scheduler
+
+        with tempfile.TemporaryDirectory() as temp_dir, patch.dict(
+            os.environ,
+            {RUNTIME_SCHEDULER_SUPPRESS_START_ENV: "true"},
+            clear=False,
+        ), patch(
+            "src.config.get_config",
+            return_value=SimpleNamespace(schedule_run_immediately=True),
+        ), patch("api.app.RuntimeSchedulerService", FakeRuntimeSchedulerService), patch(
+            "api.app.SystemConfigService",
+            FakeSystemConfigService,
+        ), patch("api.app._schedule_stock_index_background_refresh"):
+            app = create_app(static_dir=Path(temp_dir))
+            with TestClient(app):
+                pass
+
+        self.assertEqual(events, [
+            ("init", True, False, True),
+            ("stop",),
+        ])
+        self.assertIsNone(os.getenv(RUNTIME_SCHEDULER_SUPPRESS_START_ENV))
 
     def test_lifespan_uses_configured_run_immediately_without_override(self) -> None:
         from api.app import create_app
@@ -380,8 +442,14 @@ class RuntimeSchedulerServiceTestCase(unittest.TestCase):
         events = []
 
         class FakeRuntimeSchedulerService:
-            def __init__(self, *, owns_schedule=True, force_enabled=False):
-                events.append(("init", owns_schedule, force_enabled))
+            def __init__(
+                self,
+                *,
+                owns_schedule=True,
+                force_enabled=False,
+                run_immediately_in_background=False,
+            ):
+                events.append(("init", owns_schedule, force_enabled, run_immediately_in_background))
 
             def reconcile_from_config(self, *, run_immediately=False, clear_enabled_override=False):
                 events.append(("reconcile", run_immediately, clear_enabled_override))
@@ -409,7 +477,7 @@ class RuntimeSchedulerServiceTestCase(unittest.TestCase):
                 pass
 
         self.assertEqual(events, [
-            ("init", True, False),
+            ("init", True, False, True),
             ("reconcile", True, False),
             ("stop",),
         ])
