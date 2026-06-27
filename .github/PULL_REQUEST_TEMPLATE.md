@@ -64,7 +64,7 @@ python -m pytest -m "not network"
 
 关键输出/结论 / Key output & conclusion:
 
-- 【兼容示例】若 PR 文档仍保留“历史失败”字样，请在同一段明确补充“当前 CI 已通过”；若当前 CI 通过可直接写“当前 CI 全通过（含 backend-gate:pass）”避免误导 reviewer。
+- 【兼容示例】若 PR 文档仍保留“历史失败”字样，请在同一段明确补充“当前 CI 已通过”；若当前 CI 通过，请直接写“当前 CI 全通过（含 backend-gate:pass）”避免误导 reviewer。
 
 > 若上述核验项与 PR 文本冲突，建议先更新 PR 描述再提交，避免审查因状态不一致被阻塞。
 
@@ -73,16 +73,16 @@ python -m pytest -m "not network"
 若本 PR 修改报告格式、报告渲染效果或 Web UI 界面，请在此处附受影响报告 / 页面截图；涉及前后差异时，优先附前后对比。Issue / PR 过程截图、审查截图、一次性验收截图和临时可视证据请放在 PR 描述、PR 评论、GitHub 附件、Actions artifact 或外部可访问链接中，不要作为仓库文件合入。
 *(EN) If this PR changes report formatting, report rendering, or Web UI, attach screenshots of the affected report/page here; before/after screenshots are preferred when relevant. Issue/PR process screenshots, review screenshots, one-off acceptance screenshots, and temporary visual evidence should be linked from the PR body/comments, GitHub attachments, Actions artifacts, or external accessible evidence; do not commit them as repository files.)*
 
-> 如截图无法获取，请在“原因”中明确写明替代证据（如 Playwright/e2e 产物路径、审查链接）及其可追溯命令，不得留空。
+> 如截图无法获取，请在“原因”中明确写明替代证据（如 Playwright/e2e 产物路径、审查链接）及其可追溯命令，不得留空。涉及 Web 设置字段变更时，需确保截图或替代证据明确指向设置页变更项。
 >
 > 若本 PR 修改 Web UI，建议至少补一条可复现路径，例如：
 >
 > - Playwright 截图产物：`apps/dsa-web/e2e/smoke.spec.ts`（`npx playwright test apps/dsa-web/e2e/smoke.spec.ts --grep "backtest page renders filter controls after login"`）
 > - 审查证据链接：可直接使用 Actions 产物、GitHub 评论附件或外部可访问链接。
 
-- 截图链接 / Screenshot links（必填）：
+- 截图链接 / Screenshot links（Web UI/报告改动项必填）：
 - 前后对比 / Before & After（如有）：
-- 不适用原因 / Reason if not applicable（必填）：
+- 不适用原因 / Reason if not applicable（若未附截图，此项务必填写，且包含可复现证据与命令）：
 
 > 若本 PR 修改 Web UI 或报告展示且无法获取截图，原因栏必须给出可复现替代证据（例如 Playwright 截图产物路径 + 命令），且不得留空。
 
