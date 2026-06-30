@@ -1301,6 +1301,48 @@ class TestNotificationServiceReportGeneration(unittest.TestCase):
         self.assertNotIn("capital_flow_signal", out)
 
     @mock.patch("src.notification.get_config")
+    def test_generate_single_stock_report_appends_tw_institution_block_when_status_available(
+        self, mock_get_config: mock.MagicMock
+    ):
+        mock_get_config.return_value = _make_config(report_renderer_enabled=False)
+        service = NotificationService()
+        result = AnalysisResult(
+            code="2330.TW",
+            name="台积电",
+            sentiment_score=70,
+            trend_prediction="震荡",
+            operation_advice="观望",
+            analysis_summary="留意外资买卖节奏。",
+        )
+        result.fundamental_context = {
+            "market": "tw",
+            "institution": {
+                "status": "available",
+                "data": {
+                    "foreign_net": -1912490,
+                    "trust_net": 919216,
+                    "dealer_net": 996850,
+                    "total_net": 3576,
+                    "unit": "shares",
+                    "date": "20260629",
+                    "source": "TWSE-T86",
+                },
+            },
+        }
+
+        out = service.generate_single_stock_report(result)
+
+        self.assertIn("三大法人买卖超", out)
+        self.assertIn("外资净买卖超", out)
+        self.assertIn("-1,912,490", out)
+        self.assertIn("919,216", out)
+        self.assertIn("996,850", out)
+        self.assertIn("3,576", out)
+        self.assertIn("TWSE-T86", out)
+        self.assertIn("| 20260629 | -1,912,490 | 919,216 | 996,850 | 3,576 | TWSE-T86 | 股 |", out)
+        self.assertNotIn("capital_flow_signal", out)
+
+    @mock.patch("src.notification.get_config")
     def test_generate_single_stock_report_skips_incomplete_tw_institution_block(
         self, mock_get_config: mock.MagicMock
     ):

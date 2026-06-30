@@ -2067,7 +2067,7 @@ class NotificationService(
         institution: Dict[str, Any] = {}
         institution_block = ctx.get("institution") if isinstance(ctx.get("institution"), dict) else {}
         institution_data = institution_block.get("data") if isinstance(institution_block.get("data"), dict) else {}
-        if ctx.get("market") == "tw" and institution_block.get("status") == "ok":
+        if ctx.get("market") == "tw" and institution_block.get("status") in ("ok", "available"):
             institution = institution_data
 
         boards_block = ctx.get("boards") if isinstance(ctx.get("boards"), dict) else {}
