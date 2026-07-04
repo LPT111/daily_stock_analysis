@@ -1140,7 +1140,10 @@ def get_analysis_status(task_id: str) -> TaskStatus:
                 context_snapshot=context_snapshot,
                 fallback_fundamental_payload=fallback_fundamental,
             )
-            market_structure = extract_market_structure_detail_field(context_snapshot)
+            market_structure = extract_market_structure_detail_field(
+                context_snapshot,
+                raw_result,
+            )
             has_board_details = (
                 bool(extracted_boards.get("belong_boards"))
                 or extracted_boards.get("sector_rankings") is not None
@@ -1397,7 +1400,10 @@ def _build_analysis_report(
         context_snapshot=context_snapshot,
         fallback_fundamental_payload=fallback_fundamental_payload,
     )
-    market_structure = extract_market_structure_detail_field(context_snapshot)
+    market_structure = extract_market_structure_detail_field(
+        context_snapshot,
+        raw_result_data or details_data,
+    )
     analysis_context_pack_overview = extract_analysis_context_pack_overview(context_snapshot)
     api_context_snapshot = sanitize_context_snapshot_for_api(context_snapshot)
     details = None

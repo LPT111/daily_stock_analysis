@@ -265,9 +265,7 @@ class ReportDetails(BaseModel):
 
     @model_validator(mode="after")
     def populate_context_derived_details(self) -> "ReportDetails":
-        if self.context_snapshot is None:
-            return self
-        if self.concept_rankings is None:
+        if self.concept_rankings is None and self.context_snapshot is not None:
             try:
                 from src.utils.data_processing import extract_board_detail_fields
 
@@ -279,7 +277,10 @@ class ReportDetails(BaseModel):
             try:
                 from src.utils.data_processing import extract_market_structure_detail_field
 
-                self.market_structure = extract_market_structure_detail_field(self.context_snapshot)
+                self.market_structure = extract_market_structure_detail_field(
+                    self.context_snapshot,
+                    self.raw_result,
+                )
             except Exception:
                 self.market_structure = None
         return self

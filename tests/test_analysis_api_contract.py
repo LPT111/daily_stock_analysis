@@ -1989,6 +1989,66 @@ class AnalysisApiContractTestCase(unittest.TestCase):
         self.assertEqual(status.result.report["meta"]["change_pct"], 0.0)
         self.assertEqual(status.result.report["meta"]["model_used"], "test-model")
 
+    def test_get_analysis_status_restores_market_structure_from_raw_result_without_snapshot(self) -> None:
+        if get_analysis_status is None:
+            self.skipTest("analysis endpoint helpers unavailable in this environment")
+
+        market_structure = {
+            "schema_version": "market-structure-v1",
+            "status": "partial",
+            "market": "cn",
+            "market_theme_context": {
+                "schema_version": "market-theme-v1",
+                "status": "partial",
+                "market": "cn",
+                "active_themes": [{"name": "机器人概念"}],
+            },
+            "stock_market_position": {
+                "schema_version": "stock-market-position-v1",
+                "status": "partial",
+                "stock_code": "300024",
+                "market": "cn",
+                "primary_theme": {"name": "机器人概念"},
+            },
+        }
+        record = SimpleNamespace(
+            id=1,
+            code="300024",
+            name="机器人",
+            report_type="detailed",
+            created_at=datetime(2026, 4, 10, 12, 0, 0),
+            raw_result=json.dumps(
+                {
+                    "model_used": "test-model",
+                    "report_language": "zh",
+                    "market_structure_context": market_structure,
+                }
+            ),
+            context_snapshot=None,
+            sentiment_score=80,
+            operation_advice="持有",
+            trend_prediction="震荡上行",
+            analysis_summary="summary",
+            ideal_buy=None,
+            secondary_buy=None,
+            stop_loss=None,
+            take_profit=None,
+        )
+        mock_db = MagicMock()
+        mock_db.get_analysis_history.return_value = [record]
+        mock_db.get_latest_fundamental_snapshot.return_value = None
+
+        with patch("api.v1.endpoints.analysis.get_task_queue") as queue_mock, \
+             patch("src.storage.DatabaseManager.get_instance", return_value=mock_db):
+            queue_mock.return_value.get_task.return_value = None
+            status = get_analysis_status("task_market_structure_raw_1")
+
+        self.assertEqual(status.status, "completed")
+        self.assertEqual(
+            status.result.report["details"]["market_structure"]["market_theme_context"]["active_themes"][0]["name"],
+            "机器人概念",
+        )
+
     def test_get_analysis_status_completed_db_snapshot_includes_agent_snapshot_board_details(self) -> None:
         if get_analysis_status is None:
             self.skipTest("analysis endpoint helpers unavailable in this environment")

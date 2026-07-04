@@ -12,7 +12,7 @@ import logging
 import copy
 import threading
 from datetime import date
-from typing import Any, Dict, List, Optional, Tuple
+from typing import Any, Callable, Dict, List, Optional, Tuple
 
 from data_provider import DataFetcherManager
 
@@ -30,12 +30,19 @@ from src.schemas.market_structure import (
 
 logger = logging.getLogger(__name__)
 
+DEFAULT_RANKING_FETCH_TIMEOUT_SECONDS = 3.0
+
 
 class MarketHotspotService:
     """Build low-sensitive A-share market/theme context from DSA rankings."""
 
-    def __init__(self, fetcher_manager: Optional[DataFetcherManager] = None) -> None:
+    def __init__(
+        self,
+        fetcher_manager: Optional[DataFetcherManager] = None,
+        ranking_fetch_timeout_seconds: Optional[float] = None,
+    ) -> None:
         self.fetcher_manager = fetcher_manager or DataFetcherManager()
+        self._ranking_fetch_timeout_seconds = ranking_fetch_timeout_seconds
         self._hotspots_cache: Dict[Tuple[str, Optional[str], int], Dict[str, Any]] = {}
         self._hotspots_cache_lock = threading.Lock()
 
@@ -45,6 +52,8 @@ class MarketHotspotService:
         market: str,
         trade_date: Any = None,
         limit: int = 5,
+        sector_rankings: Any = None,
+        concept_rankings: Any = None,
     ) -> Dict[str, Any]:
         normalized_market = str(market or "cn").strip().lower() or "cn"
         trade_date_text = self._format_trade_date(trade_date)
@@ -53,10 +62,12 @@ class MarketHotspotService:
         except (TypeError, ValueError):
             limit = 5
 
+        uses_preloaded_rankings = sector_rankings is not None or concept_rankings is not None
         cache_key = (normalized_market, trade_date_text, limit)
-        cached = self._get_cached_hotspots(cache_key)
-        if cached is not None:
-            return cached
+        if not uses_preloaded_rankings:
+            cached = self._get_cached_hotspots(cache_key)
+            if cached is not None:
+                return cached
 
         if normalized_market != "cn":
             context = MarketThemeContext(
@@ -80,19 +91,21 @@ class MarketHotspotService:
 
         errors: List[str] = []
         sources: List[MarketStructureSource] = []
-        top_industries, bottom_industries = self._fetch_rankings(
+        top_industries, bottom_industries = self._resolve_rankings(
             "get_sector_rankings",
             "sector_rankings",
             limit,
             errors,
             sources,
+            preloaded_rankings=sector_rankings,
         )
-        top_concepts, bottom_concepts = self._fetch_rankings(
+        top_concepts, bottom_concepts = self._resolve_rankings(
             "get_concept_rankings",
             "concept_rankings",
             limit,
             errors,
             sources,
+            preloaded_rankings=concept_rankings,
         )
 
         leading_industries = self._normalize_ranked_items(top_industries, "industry")
@@ -141,7 +154,58 @@ class MarketHotspotService:
                 errors=errors,
             ),
         )
-        return self._store_cached_hotspots(cache_key, dump_market_structure_model(context))
+        payload = dump_market_structure_model(context)
+        if uses_preloaded_rankings:
+            return payload
+        return self._store_cached_hotspots(cache_key, payload)
+
+    def _resolve_rankings(
+        self,
+        fetch_name: str,
+        dataset: str,
+        limit: int,
+        errors: List[str],
+        sources: List[MarketStructureSource],
+        *,
+        preloaded_rankings: Any = None,
+    ) -> Tuple[List[Dict[str, Any]], List[Dict[str, Any]]]:
+        preloaded = self._rankings_from_payload(preloaded_rankings, dataset, sources)
+        if preloaded is not None:
+            return preloaded
+        return self._fetch_rankings(fetch_name, dataset, limit, errors, sources)
+
+    @staticmethod
+    def _rankings_from_payload(
+        rankings: Any,
+        dataset: str,
+        sources: List[MarketStructureSource],
+    ) -> Optional[Tuple[List[Dict[str, Any]], List[Dict[str, Any]]]]:
+        if rankings is None:
+            return None
+        if not isinstance(rankings, dict):
+            sources.append(
+                MarketStructureSource(
+                    provider="dsa",
+                    dataset=dataset,
+                    status="invalid",
+                    message="preloaded ranking payload is invalid",
+                )
+            )
+            return [], []
+
+        top = rankings.get("top")
+        bottom = rankings.get("bottom")
+        top_items = list(top) if isinstance(top, list) else []
+        bottom_items = list(bottom) if isinstance(bottom, list) else []
+        sources.append(
+            MarketStructureSource(
+                provider="dsa",
+                dataset=dataset,
+                status="ok" if top_items or bottom_items else "empty",
+                message="reused fundamental_context ranking payload",
+            )
+        )
+        return top_items, bottom_items
 
     def get_hotspot_detail(self, theme_name: str, market: str = "cn") -> Dict[str, Any]:
         """Return an explicit placeholder for richer hotspot detail evidence."""
@@ -192,7 +256,11 @@ class MarketHotspotService:
             return [], []
 
         try:
-            rankings = fetch_rankings(limit)
+            rankings = self._call_with_timeout(
+                lambda: fetch_rankings(limit),
+                timeout_seconds=self._resolve_ranking_fetch_timeout_seconds(),
+                task_name=dataset,
+            )
             if isinstance(rankings, tuple) and len(rankings) == 2:
                 top, bottom = rankings
                 top_items = list(top) if isinstance(top, list) else []
@@ -225,6 +293,59 @@ class MarketHotspotService:
                 )
             )
         return [], []
+
+    def _resolve_ranking_fetch_timeout_seconds(self) -> float:
+        if self._ranking_fetch_timeout_seconds is not None:
+            try:
+                return max(0.0, float(self._ranking_fetch_timeout_seconds))
+            except (TypeError, ValueError):
+                return DEFAULT_RANKING_FETCH_TIMEOUT_SECONDS
+        try:
+            from src.config import get_config
+
+            value = getattr(
+                get_config(),
+                "fundamental_fetch_timeout_seconds",
+                DEFAULT_RANKING_FETCH_TIMEOUT_SECONDS,
+            )
+            return max(0.0, float(value))
+        except Exception:
+            return DEFAULT_RANKING_FETCH_TIMEOUT_SECONDS
+
+    @staticmethod
+    def _call_with_timeout(
+        task: Callable[[], Any],
+        *,
+        timeout_seconds: float,
+        task_name: str,
+    ) -> Any:
+        timeout_value = max(0.0, float(timeout_seconds))
+        if timeout_value <= 0:
+            raise TimeoutError(f"{task_name} ranking fetch timeout")
+
+        result_holder: Dict[str, Any] = {}
+        error_holder: Dict[str, BaseException] = {}
+
+        def runner() -> None:
+            try:
+                result_holder["value"] = task()
+            except BaseException as exc:
+                error_holder["value"] = exc
+
+        worker = threading.Thread(
+            target=runner,
+            daemon=True,
+            name=f"market-hotspot-{task_name}",
+        )
+        worker.start()
+        worker.join(timeout=timeout_value)
+        if worker.is_alive():
+            raise TimeoutError(
+                f"{task_name} ranking fetch timeout after {timeout_value:g}s"
+            )
+        if "value" in error_holder:
+            raise error_holder["value"]
+        return result_holder.get("value")
 
     def _normalize_ranked_items(
         self,

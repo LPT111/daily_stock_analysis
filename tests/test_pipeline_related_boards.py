@@ -178,6 +178,35 @@ class PipelineRelatedBoardsTestCase(unittest.TestCase):
         self.assertEqual(extracted["stock_market_position"]["primary_theme"]["name"], "机器人概念")
         self.assertEqual(details.market_structure["market_theme_context"]["active_themes"][0]["name"], "机器人概念")
 
+    def test_extract_market_structure_details_from_raw_result_fallback(self) -> None:
+        payload = {
+            "schema_version": "market-structure-v1",
+            "status": "partial",
+            "market": "cn",
+            "market_theme_context": {
+                "schema_version": "market-theme-v1",
+                "status": "partial",
+                "market": "cn",
+                "active_themes": [{"name": "机器人概念"}],
+            },
+            "stock_market_position": {
+                "schema_version": "stock-market-position-v1",
+                "status": "partial",
+                "stock_code": "300024",
+                "market": "cn",
+                "primary_theme": {"name": "机器人概念"},
+            },
+        }
+
+        extracted = extract_market_structure_detail_field(
+            None,
+            {"market_structure_context": payload},
+        )
+        details = ReportDetails(raw_result={"market_structure_context": payload})
+
+        self.assertEqual(extracted["stock_market_position"]["primary_theme"]["name"], "机器人概念")
+        self.assertEqual(details.market_structure["market_theme_context"]["active_themes"][0]["name"], "机器人概念")
+
     def test_attach_belong_boards_copies_existing_board_list(self) -> None:
         pipeline = StockAnalysisPipeline.__new__(StockAnalysisPipeline)
         pipeline.fetcher_manager = MagicMock()

@@ -94,6 +94,15 @@ def _safe_float(value: Any) -> Optional[float]:
         return None
 
 
+def _safe_int(value: Any) -> Optional[int]:
+    if value is None:
+        return None
+    try:
+        return int(value)
+    except (TypeError, ValueError):
+        return None
+
+
 def _normalize_sector_ranking_items(value: Any) -> List[Dict[str, Any]]:
     if not isinstance(value, list):
         return []
@@ -117,6 +126,9 @@ def _normalize_sector_ranking_items(value: Any) -> List[Dict[str, Any]]:
         change_pct = _safe_float(item.get("change_pct"))
         if change_pct is not None:
             ranking_item["change_pct"] = change_pct
+        rank = _safe_int(item.get("rank"))
+        if rank is not None:
+            ranking_item["rank"] = rank
         normalized.append(ranking_item)
     return normalized
 
@@ -294,16 +306,23 @@ def extract_board_detail_fields(
     }
 
 
-def extract_market_structure_detail_field(context_snapshot: Any) -> Optional[Dict[str, Any]]:
-    """Extract the stable market_structure detail payload from a snapshot."""
+def extract_market_structure_detail_field(
+    context_snapshot: Any,
+    fallback_raw_result_payload: Any = None,
+) -> Optional[Dict[str, Any]]:
+    """Extract the stable market_structure detail payload from persisted payloads."""
     snapshot_obj = parse_json_field(context_snapshot)
-    if not isinstance(snapshot_obj, dict):
-        return None
 
-    candidates = [snapshot_obj.get("market_structure_context")]
-    enhanced = snapshot_obj.get("enhanced_context")
-    if isinstance(enhanced, dict):
-        candidates.append(enhanced.get("market_structure_context"))
+    candidates = []
+    if isinstance(snapshot_obj, dict):
+        candidates.append(snapshot_obj.get("market_structure_context"))
+        enhanced = snapshot_obj.get("enhanced_context")
+        if isinstance(enhanced, dict):
+            candidates.append(enhanced.get("market_structure_context"))
+
+    raw_result_obj = parse_json_field(fallback_raw_result_payload)
+    if isinstance(raw_result_obj, dict):
+        candidates.append(raw_result_obj.get("market_structure_context"))
 
     for candidate in candidates:
         payload = parse_json_field(candidate)

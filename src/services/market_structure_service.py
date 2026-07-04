@@ -97,17 +97,21 @@ class MarketStructureService:
                 )
             )
 
-        market_theme_payload = self.hotspot_service.get_hotspots(
-            market=normalized_market,
-            trade_date=trade_date_text,
-        )
-        market_theme_context = MarketThemeContext.model_validate(market_theme_payload)
-
         board_details = extract_board_detail_fields(
             {"fundamental_context": fundamental_context or {}}
         )
-        sector_rankings = board_details.get("sector_rankings") or {}
-        concept_rankings = board_details.get("concept_rankings") or {}
+        sector_rankings_payload = board_details.get("sector_rankings")
+        concept_rankings_payload = board_details.get("concept_rankings")
+        sector_rankings = sector_rankings_payload or {}
+        concept_rankings = concept_rankings_payload or {}
+        market_theme_payload = self.hotspot_service.get_hotspots(
+            market=normalized_market,
+            trade_date=trade_date_text,
+            sector_rankings=sector_rankings_payload,
+            concept_rankings=concept_rankings_payload,
+        )
+        market_theme_context = MarketThemeContext.model_validate(market_theme_payload)
+
         related_boards = self._build_related_boards(
             board_details.get("belong_boards") or [],
             sector_rankings=sector_rankings,
@@ -271,7 +275,7 @@ class MarketStructureService:
                 change_pct=self._safe_float(item.get("change_pct")),
             )
 
-        first = related_boards[0]
+        first = self._select_ranked_related_board(related_boards)
         return PrimaryTheme(
             name=first.name,
             source=first.source,
@@ -279,6 +283,15 @@ class MarketStructureService:
             rank=first.rank,
             change_pct=first.change_pct,
         )
+
+    @staticmethod
+    def _select_ranked_related_board(
+        related_boards: List[StockBoardPosition],
+    ) -> StockBoardPosition:
+        for board in related_boards:
+            if board.rank is not None or board.change_pct is not None:
+                return board
+        return related_boards[0]
 
     @staticmethod
     def _infer_stock_role(

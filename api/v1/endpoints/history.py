@@ -542,7 +542,10 @@ def get_history_detail(
             context_snapshot=result.get("context_snapshot"),
             fallback_fundamental_payload=fallback_fundamental,
         )
-        market_structure = extract_market_structure_detail_field(result.get("context_snapshot"))
+        market_structure = extract_market_structure_detail_field(
+            result.get("context_snapshot"),
+            result.get("raw_result"),
+        )
 
         details = ReportDetails(
             news_content=result.get("news_content"),
