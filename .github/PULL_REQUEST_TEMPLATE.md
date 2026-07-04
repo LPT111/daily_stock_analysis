@@ -22,8 +22,7 @@ For English contributors: please fill in English. All fields marked (EN) accept 
 请列出本 PR 修改的模块和文件范围。  
 *(EN) List the modules and files changed in this PR.*
 
-> 注意：请按实际 `git diff` 全量列出文件范围（建议注明文件总数），避免遗漏文档/后端/API/前端文件导致描述不一致。
-> 本节请直接贴入以下命令的原始输出，避免手工遗漏并保证与当前 Head 一致：
+> 注意：请按实际 `git diff` 全量列出文件范围（建议注明文件总数），避免遗漏文档/后端/API/前端文件导致描述不一致。**提交前先执行并粘贴命令原始输出**，不允许手工改写：
 > - `CURRENT_HEAD=$(git rev-parse --short HEAD)`
 > - `git diff --stat $(git merge-base HEAD origin/main)..$CURRENT_HEAD`
 > - `git diff --name-only $(git merge-base HEAD origin/main)..$CURRENT_HEAD`
@@ -38,6 +37,11 @@ git diff --stat "$BASE_REF"..HEAD
 git diff --name-only "$BASE_REF"..HEAD
 ```
 
+> 请将以下快照段落直接贴入 PR 正文，确保 Head 与 scope 一致：
+> - Head：`git rev-parse --short HEAD`
+> - Base：`git merge-base HEAD origin/main`
+> - 文件总数 / 增删行（原始输出）：
+>   `git diff --stat "$BASE_REF"..HEAD`
 - 文件总数 / 变更行数（建议粘贴 `git diff --stat "$BASE_REF"..HEAD`）：
 - 文件清单（按 `git diff --name-only "$BASE_REF"..HEAD` 全量逐项列出）：
   - 请直接粘贴命令原始输出，不得删减空行。若发现遗漏，请同步补齐后再提交。
@@ -127,6 +131,14 @@ python -m pytest -m "not network"
 - 若本 PR 修改第三方模型 / API 的兼容语义、请求参数、路由前缀或 provider fallback，请提供**官方来源链接或公告**，并说明这是长期约束、当前运行时约束还是临时兼容处理。  
   请在下方补充所影响外部 API/服务、回归范围与回退方式。  
   *(EN) If this PR changes third-party model/API compatibility, request parameters, routing prefixes, or provider fallback behavior, include an **official source link or announcement** and clarify whether the rule is permanent, runtime-specific, or a temporary compatibility workaround.)*
+- 若触发 `external model/API` 或 `runtime config migration` 结构化扫描，请按以下固定模板逐项填写（无遗漏）：
+  - 风险来源/规则ID：`<tool|rule-id>`
+  - 命中路径：`<文件路径1> -> <调用链>`
+  - 命中证据：`<文件路径/日志/命令>`
+  - 判定结论：`false-positive / true-impact`
+  - 受影响 runtime 配置或 migration 路径：`<是/否 + 具体路径>`
+  - 回滚方案：`<revert 本 PR + 补充>`
+  - 证据补充：`未改 config registry/路由入口/迁移脚本（如未改则明确逐项写“未改”）`
 - 若结构化检查/扫描报告出现 `external model/API` 或 `runtime config migration` 风险提示，请补充：
   - 风险来源与命中标识（工具/规则 ID）
   - 受影响文件与调用路径
