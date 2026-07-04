@@ -128,10 +128,9 @@ class MarketHotspotService:
 
         leading_industries = self._normalize_ranked_items(top_industries, "industry")
         leading_concepts = self._normalize_ranked_items(top_concepts, "concept")
-        lagging_themes = self._normalize_ranked_items(
-            list(bottom_industries or []) + list(bottom_concepts or []),
-            "unknown",
-        )
+        lagging_themes = list(
+            self._normalize_ranked_items(bottom_industries, "industry")
+        ) + list(self._normalize_ranked_items(bottom_concepts, "concept"))
         active_themes = self._build_active_themes(
             list(leading_industries) + list(leading_concepts),
             limit=limit,

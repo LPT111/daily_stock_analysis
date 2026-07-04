@@ -55,6 +55,20 @@ class _DownTrendFetcherManager:
         )
 
 
+class _OverlappingLaggingThemeFetcherManager:
+    def get_sector_rankings(self, n: int = 5):
+        return (
+            [],
+            [{"name": "旅游酒店", "rank": 1, "change_pct": -4.1}],
+        )
+
+    def get_concept_rankings(self, n: int = 5):
+        return (
+            [],
+            [{"name": "转基因", "rank": 1, "change_pct": -2.0}],
+        )
+
+
 class _RecoverableFailureFetcherManager:
     def __init__(self) -> None:
         self.fail = True
@@ -430,6 +444,30 @@ def test_market_structure_service_uses_lagging_themes_for_board_match() -> None:
     assert position["related_boards"][0]["name"] == "转基因"
     assert position["related_boards"][0]["source"] == "concept"
     assert position["related_boards"][0]["change_pct"] == -2.0
+    assert "theme_ranking_match" not in position["missing_fields"]
+
+
+def test_market_structure_service_keeps_lagging_sources_before_board_match() -> None:
+    service = MarketStructureService(fetcher_manager=_OverlappingLaggingThemeFetcherManager())
+    fundamental_context = {
+        "market": "cn",
+        "belong_boards": [{"name": "旅游酒店"}],
+    }
+
+    context = service.build_context(
+        code="000001",
+        stock_name="平安银行",
+        market="cn",
+        fundamental_context=fundamental_context,
+        trade_date="2026-07-04",
+    )
+
+    lagging_themes = context["market_theme_context"]["lagging_themes"]
+    assert lagging_themes[0]["source"] == "industry"
+    position = context["stock_market_position"]
+    assert position["primary_theme"]["source"] == "industry"
+    assert position["primary_theme"]["change_pct"] == -4.1
+    assert position["related_boards"][0]["source"] == "industry"
     assert "theme_ranking_match" not in position["missing_fields"]
 
 
