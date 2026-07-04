@@ -51,6 +51,7 @@ type StockAnalysisNavigationState = {
 
 const DUPLICATE_BANNER_AUTO_DISMISS_MS = 5000;
 const BATCH_ANALYSIS_CHUNK_SIZE = 50;
+const SERVER_LOCAL_DATE_TIME_PATTERN = /^\d{4}-\d{2}-\d{2}[T\s]\d{2}:\d{2}(?::\d{2}(?:\.\d+)?)?$/;
 
 type BatchAnalyzeStatus = {
   variant: 'success' | 'warning' | 'danger';
@@ -59,7 +60,11 @@ type BatchAnalyzeStatus = {
 
 function getShanghaiDateKey(value?: string | null): string {
   if (!value) return '';
-  const date = new Date(value);
+  const trimmed = value.trim();
+  const normalized = SERVER_LOCAL_DATE_TIME_PATTERN.test(trimmed)
+    ? `${trimmed.replace(' ', 'T')}+08:00`
+    : trimmed;
+  const date = new Date(normalized);
   if (Number.isNaN(date.getTime())) return '';
   return new Intl.DateTimeFormat('en-CA', { timeZone: 'Asia/Shanghai' }).format(date);
 }

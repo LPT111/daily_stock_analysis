@@ -414,6 +414,42 @@ describe('HomePage', () => {
     expect(await screen.findByText('大盘复盘摘要')).toBeInTheDocument();
   });
 
+  it('treats timezone-less stock-bar timestamps as Shanghai local time for watchlist pending state', async () => {
+    const todayInShanghai = new Intl.DateTimeFormat('en-CA', { timeZone: 'Asia/Shanghai' }).format(new Date());
+    vi.mocked(systemConfigApi.getWatchlist).mockResolvedValue(['600519']);
+    vi.mocked(historyApi.getStockBarList).mockResolvedValue({
+      total: 1,
+      items: [{
+        id: 11,
+        stockCode: '600519',
+        stockName: '贵州茅台',
+        reportType: 'detailed',
+        sentimentScore: 72,
+        operationAdvice: '观察',
+        analysisCount: 2,
+        lastAnalysisTime: `${todayInShanghai}T23:30:00`,
+      }],
+    });
+    vi.mocked(historyApi.getList).mockResolvedValue({
+      total: 0,
+      page: 1,
+      limit: 20,
+      items: [],
+    });
+
+    render(
+      <MemoryRouter>
+        <HomePage />
+      </MemoryRouter>,
+    );
+
+    fireEvent.click(await screen.findByRole('button', { name: '自选' }));
+
+    expect(await screen.findByLabelText('今日已分析')).toBeInTheDocument();
+    expect(screen.getByRole('button', { name: '仅未分析' })).toBeDisabled();
+    expect(analysisApi.analyzeAsync).not.toHaveBeenCalled();
+  });
+
   it('removes the MARKET stock bar item after deleting market review history', async () => {
     let isMarketReviewDeleted = false;
     vi.mocked(historyApi.getStockBarList).mockResolvedValue({
