@@ -32,7 +32,8 @@ For English contributors: please fill in English. All fields marked (EN) accept 
 - 文件清单（必填）：
   - `git diff --name-only --diff-filter=ACMRDTUXB $(git merge-base origin/main HEAD) HEAD`
 
-请直接粘贴上述命令输出，不得截断。并按受影响改动面说明本次影响范围（如 backend/web/api/docs/治理资产等）。
+请直接粘贴上述命令输出，不得截断。若 PR 在提交周期内有新增 commit，提交说明前必须重算并覆盖旧值（禁止沿用历史头信息）。
+请按受影响改动面说明本次影响范围（如 backend/web/api/docs/治理资产等），包含 governance 文件时请同步解释变更动机与影响面。
 
 请在正文中同步写出本 PR 的当前 Head（如 `Current HEAD: <hash>`）。
 
@@ -90,12 +91,13 @@ For English contributors: please fill in English. All fields marked (EN) accept 
 
 - 是否触及运行时配置、路由或迁移语义：是 / 否
 - 是否触及 provider/model/base URL 相关语义：是 / 否
-  - 若是，必须逐条说明：
+  - 若是，必须逐条说明（建议按“文件 | 命中文本 | false-positive 依据 | 运行时影响 | 回滚与验证”逐条提交）：
     - 命中来源（文件与关键词/扫描项）
     - 是否为 false positive（是 / 否）
     - 旧行为是否有静默清理或迁移语义影响（有 / 无）
     - 回滚方案与验证依据
   - 请确认命中源是否属于以下非运行时改动：仅模板文本、注释、测试、文档、单测 mock；若是 false positive 请在下方逐条列明“文件-命中文本-判定依据”。
+    - 常见非运行时命中示例：`api_spec.json` 中服务器 URL 示例、文档中的配置说明、PR/治理模板描述、测试 mock/fixture、报告展示字段说明。
   - 若存在运行时影响或兼容风险，请同步列出“旧配置迁移路径（含回退步骤）”与验证依据（例如回归测试、CI 结果或本地复现命令）。
   - 若仅为展示字段（如历史快照元数据）改动，请在此明确写明：历史展示字段不影响运行时调用路径、持久化清理与迁移。
 
