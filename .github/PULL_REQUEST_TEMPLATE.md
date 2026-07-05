@@ -19,7 +19,7 @@ For English contributors: please fill in English. All fields marked (EN) accept 
 
 ## Scope Of Change
 
-请按当前 HEAD 的完整 `git diff` 全量列出变更范围（不得遗漏文件名）：
+请按当前 PR 的真实受影响改动面，完整列出变更范围（不得遗漏文件名）：
 
 - 当前 Head（必填）：
   - `git rev-parse HEAD`
@@ -32,16 +32,7 @@ For English contributors: please fill in English. All fields marked (EN) accept 
 - 文件清单（必填）：
   - `git diff --name-only --diff-filter=ACMRDTUXB $(git merge-base origin/main HEAD) HEAD`
 
-请直接粘贴上述命令输出，不得截断。缺少以下类别文件将视为 Scope 未闭环：
-
-- `api/v1/endpoints/**`
-- `api/v1/schemas/**`
-- `src/services/decision_signal_service.py`
-- `apps/dsa-web/src/components/report/**`
-- `apps/dsa-web/src/utils/**`
-- `apps/dsa-web/src/types/analysis.ts`
-- `tests/**`
-- 及本次涉及的治理/文档文件（`docs/**`、`.github/**`、`AGENTS.md` 等）
+请直接粘贴上述命令输出，不得截断。并按受影响改动面说明本次影响范围（如 backend/web/api/docs/治理资产等）。
 
 请在正文中同步写出本 PR 的当前 Head（如 `Current HEAD: <hash>`）。
 
@@ -64,14 +55,13 @@ For English contributors: please fill in English. All fields marked (EN) accept 
 
 ## Visual Evidence (if applicable)
 
-若修改了报告格式、报告渲染效果或 Web UI，请在此处附受影响报告页/页面截图；前后对比优先。
+若涉及报告格式、报告渲染效果或 Web UI，请在此处附受影响页面截图；前后对比优先。
 
-- 必须覆盖：`市场结构上下文/市场位置卡片` 所在的报告详情页（桌面 + 至少一张移动视图）。
-- 受影响页面截图示例（至少 2 张）：
-  - `report-summary-desktop.png`
-  - `report-summary-mobile.png`
+- 受影响页面需与 PR 内容一致（按改动面选择，不限定特定页面）：
+  - 仅 backend-only 或 docs-only PR 可不附 UI 截图，并在此处注明原因。
+  - 修改了报告/页面展示时，至少附 1 张桌面端截图，移动端截图按实际可复现情况补充。
 - 复现截图命令（至少给出一种）：
-  - `cd apps/dsa-web && npx playwright test e2e/report-markdown.spec.ts --grep "copy markdown source code|copy plain text|mobile responsive layout"`
+  - `cd apps/dsa-web && npx playwright test ...`（按实际可复现实验脚本填写）
   - 或在有后端/登录凭证情况下运行 `npm run test:smoke` 并说明截图来源。
 
 - 截图链接（或外部可访问证据）：
@@ -79,7 +69,7 @@ For English contributors: please fill in English. All fields marked (EN) accept 
 - 复现命令（示例）：
   - `cd apps/dsa-web && npx playwright test e2e/smoke.spec.ts --grep "settings page"`
 - 无法截图时需写明原因与可复现替代证据。
-  - 本轮需覆盖页面：受影响报告页（例如 `report detail / history / 市场结构卡片`）、首页或设置页关键状态视图（若有）；
+  - 若涉及受影响页面，请覆盖对应报告页/列表页/设置页关键状态视图（按实际触达面选择）；
   - 不可用真实历史报告时，请补充可复用的 mock 页（含 mock 数据）或 Actions artifact 链接，并在 PR 评论中给出复现步骤与截图入口。
 
 ## Verification Commands And Results
