@@ -19,13 +19,31 @@ For English contributors: please fill in English. All fields marked (EN) accept 
 
 ## Scope Of Change
 
-请按实际 `git diff` 全量列出本次变更的模块与文件范围（不得遗漏文件名，建议以 `git diff --name-only` 输出为准）。
+请按当前 HEAD 的完整 `git diff` 全量列出变更范围（不得遗漏文件名）：
 
+- 当前 Head（必填）：
+  - `git rev-parse HEAD`
+- 当前 Base（建议）：
+  - `git merge-base origin/main HEAD`
 - 文件总数（必填）：
   - `git diff --name-only --diff-filter=ACMRDTUXB $(git merge-base origin/main HEAD) HEAD | wc -l`
-- 文件清单（必填，建议按 PR base 与 Head 的差异输出）：
-  - `git diff --name-only --diff-filter=ACMRDTUXB $(git merge-base origin/main HEAD) HEAD`（如 base 为 `main`：`git diff --name-only --diff-filter=ACMRDTUXB $(git merge-base origin/main HEAD) HEAD`）
-  - 实际填充时请粘贴完整输出，不得截断；请对照该命令再次确认是否有 `.github/PULL_REQUEST_TEMPLATE.md`、`docs/architecture/api_spec.json`、`apps/dsa-web/src/utils/chatFollowUp.ts`、`src/services/decision_signal_service.py`、测试文件等遗漏条目。
+- 行变更（增/删，必填）：
+  - `git diff --stat --numstat $(git merge-base origin/main HEAD) HEAD`
+- 文件清单（必填）：
+  - `git diff --name-only --diff-filter=ACMRDTUXB $(git merge-base origin/main HEAD) HEAD`
+
+请直接粘贴上述命令输出，不得截断。缺少以下类别文件将视为 Scope 未闭环：
+
+- `api/v1/endpoints/**`
+- `api/v1/schemas/**`
+- `src/services/decision_signal_service.py`
+- `apps/dsa-web/src/components/report/**`
+- `apps/dsa-web/src/utils/**`
+- `apps/dsa-web/src/types/analysis.ts`
+- `tests/**`
+- 及本次涉及的治理/文档文件（`docs/**`、`.github/**`、`AGENTS.md` 等）
+
+请在正文中同步写出本 PR 的当前 Head（如 `Current HEAD: <hash>`）。
 
 若本 PR 包含 `.github/**`、`AGENTS.md`、`CLAUDE.md`、`.github/instructions/**`、`.claude/skills/**` 等协作与治理文件，请补充“变更原因 + 影响面 + 回滚方式（默认 revert）”。
 并补充该类文件的治理资产验证命令与结果（至少包含 `python scripts/check_ai_assets.py` 的结果）。
@@ -47,6 +65,14 @@ For English contributors: please fill in English. All fields marked (EN) accept 
 ## Visual Evidence (if applicable)
 
 若修改了报告格式、报告渲染效果或 Web UI，请在此处附受影响报告页/页面截图；前后对比优先。
+
+- 必须覆盖：`市场结构上下文/市场位置卡片` 所在的报告详情页（桌面 + 至少一张移动视图）。
+- 受影响页面截图示例（至少 2 张）：
+  - `report-summary-desktop.png`
+  - `report-summary-mobile.png`
+- 复现截图命令（至少给出一种）：
+  - `cd apps/dsa-web && npx playwright test e2e/report-markdown.spec.ts --grep "copy markdown source code|copy plain text|mobile responsive layout"`
+  - 或在有后端/登录凭证情况下运行 `npm run test:smoke` 并说明截图来源。
 
 - 截图链接（或外部可访问证据）：
 - 产物路径（示例）：`apps/dsa-web/test-results/**/*.png`
