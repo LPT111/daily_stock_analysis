@@ -36,6 +36,7 @@ DEFAULT_RANKING_FETCH_TIMEOUT_SECONDS = 3.0
 DEFAULT_RANKING_CACHE_FAILURE_TTL_SECONDS = 30.0
 DEFAULT_RANKING_CACHE_SUCCESS_TTL_SECONDS = 60.0
 RANKING_FETCH_MAX_WORKERS = 2
+RANKING_FETCH_TIMEOUT_RETRY_DELAY_SECONDS = 0.2
 
 
 class MarketHotspotService:
@@ -43,6 +44,7 @@ class MarketHotspotService:
 
     _ranking_fetch_slots = threading.BoundedSemaphore(RANKING_FETCH_MAX_WORKERS)
     _ranking_fetch_futures: Dict[Hashable, Future] = {}
+    _ranking_fetch_retry_after: Dict[Hashable, Tuple[Future, float]] = {}
     _ranking_fetch_futures_lock = threading.Lock()
 
     def __init__(
@@ -390,9 +392,10 @@ class MarketHotspotService:
         if timeout_value <= 0:
             raise TimeoutError(f"{task_name} ranking fetch timeout")
 
+        effective_inflight_key = inflight_key or task_name
         future = cls._get_or_submit_ranking_fetch(
             task,
-            inflight_key=inflight_key or task_name,
+            inflight_key=effective_inflight_key,
             task_name=task_name,
         )
         try:
@@ -400,6 +403,13 @@ class MarketHotspotService:
         except FutureTimeoutError as exc:
             if future.done() and future.exception(timeout=0) is exc:
                 raise
+            future.cancel()
+            cls._abandon_ranking_fetch(
+                effective_inflight_key,
+                future,
+                retry_after=time.monotonic()
+                + max(timeout_value, RANKING_FETCH_TIMEOUT_RETRY_DELAY_SECONDS),
+            )
             raise TimeoutError(
                 f"{task_name} ranking fetch timeout after {timeout_value:g}s"
             ) from exc
@@ -415,6 +425,16 @@ class MarketHotspotService:
         submitted: Future
         worker: threading.Thread
         with cls._ranking_fetch_futures_lock:
+            retry_entry = cls._ranking_fetch_retry_after.get(inflight_key)
+            now = time.monotonic()
+            if retry_entry is not None:
+                _, retry_after = retry_entry
+                if retry_after > now:
+                    raise TimeoutError(
+                        f"{task_name} ranking fetch cooling down after previous timeout"
+                    )
+                cls._ranking_fetch_retry_after.pop(inflight_key, None)
+
             current = cls._ranking_fetch_futures.get(inflight_key)
             if current is not None:
                 if not current.done():
@@ -426,6 +446,7 @@ class MarketHotspotService:
                 raise TimeoutError(f"{task_name} ranking fetch in-flight limit reached")
 
             future: Future = Future()
+            cls._ranking_fetch_retry_after.pop(inflight_key, None)
             cls._ranking_fetch_futures[inflight_key] = future
             future.add_done_callback(
                 lambda done_future: cls._forget_ranking_fetch(inflight_key, done_future)
@@ -450,6 +471,25 @@ class MarketHotspotService:
         with cls._ranking_fetch_futures_lock:
             if cls._ranking_fetch_futures.get(inflight_key) is future:
                 cls._ranking_fetch_futures.pop(inflight_key, None)
+                cls._ranking_fetch_retry_after.pop(inflight_key, None)
+                cls._ranking_fetch_slots.release()
+            else:
+                retry_entry = cls._ranking_fetch_retry_after.get(inflight_key)
+                if retry_entry is not None and retry_entry[0] is future:
+                    cls._ranking_fetch_retry_after.pop(inflight_key, None)
+
+    @classmethod
+    def _abandon_ranking_fetch(
+        cls,
+        inflight_key: Hashable,
+        future: Future,
+        *,
+        retry_after: float,
+    ) -> None:
+        with cls._ranking_fetch_futures_lock:
+            if cls._ranking_fetch_futures.get(inflight_key) is future:
+                cls._ranking_fetch_futures.pop(inflight_key, None)
+                cls._ranking_fetch_retry_after[inflight_key] = (future, retry_after)
                 cls._ranking_fetch_slots.release()
 
     @classmethod
