@@ -21,7 +21,7 @@ from datetime import date, datetime, timedelta, timezone
 from email.utils import parsedate_to_datetime
 from typing import List, Dict, Any, Optional, Tuple
 from itertools import cycle
-from urllib.parse import parse_qsl, unquote, urlparse
+from urllib.parse import parse_qsl, unquote, urlencode, urlparse, urlunparse
 import requests
 from newspaper import Article, Config
 from tenacity import (
@@ -2172,6 +2172,28 @@ class SearchService:
         "上交所", "深交所", "港交所", "证券交易所",
         "上海证券交易所", "深圳证券交易所", "香港交易所", "香港联合交易所",
     )
+    _HARD_TECH_NEWSNOW_SOURCES = (
+        ("cls-hot", "NewsNow 财联社热门"),
+        ("wallstreetcn-quick", "NewsNow 华尔街见闻快讯"),
+        ("xueqiu-hotstock", "NewsNow 雪球热门股票"),
+        ("gelonghui", "NewsNow 格隆汇"),
+        ("jin10", "NewsNow 金十数据"),
+    )
+    _HARD_TECH_KEYWORDS = (
+        "科技", "AI", "人工智能", "大模型", "算力", "芯片", "半导体",
+        "卫星", "卫星互联网", "商业航天", "航天", "火箭", "北斗",
+        "机器人", "人形机器人", "具身智能", "工业机器人",
+        "低空经济", "无人机", "eVTOL", "新能源车", "自动驾驶",
+        "军工", "国防科技", "通信", "6G",
+    )
+    _SATELLITE_FOCUS_TERMS = (
+        "中国卫星", "600118", "卫星", "卫星互联网", "商业航天",
+        "航天", "北斗", "遥感", "低轨", "通信卫星", "空间基础设施",
+    )
+    _ROBOTICS_FOCUS_TERMS = (
+        "机器人", "人形机器人", "具身智能", "减速器", "丝杠",
+        "机器视觉", "工业机器人", "机器人板块",
+    )
     _LOW_QUALITY_DOWNLOAD_ACTION_TERMS = (
         "下载", "安装", "下载安装", "下载安装到手机", "下载链接",
         "免费下载", "客户端下载", "应用下载", "官方app下载",
@@ -2576,6 +2598,250 @@ class SearchService:
             news_max_age_days=self.news_max_age_days,
             news_strategy_profile=self.news_strategy_profile,
         )
+
+    @staticmethod
+    def _newsnow_api_url(source_id: str) -> str:
+        """Build a stable NewsNow API URL for market-news fallback."""
+        base_url = "https://newsnow.busiyi.world".rstrip("/")
+        parsed = urlparse(f"{base_url}/api/s")
+        query = dict(parse_qsl(parsed.query, keep_blank_values=True))
+        query["id"] = source_id
+        return urlunparse(parsed._replace(query=urlencode(query)))
+
+    @classmethod
+    def _hardtech_focus_keywords(cls, stock_code: str, stock_name: str) -> List[str]:
+        """Keywords for the stable hard-tech fallback pool."""
+        keywords: List[str] = []
+        cls._append_unique(keywords, stock_name)
+        cls._append_unique(keywords, stock_code)
+        for keyword in cls._HARD_TECH_KEYWORDS:
+            cls._append_unique(keywords, keyword)
+
+        identity = f"{stock_name} {stock_code}"
+        if any(term in identity for term in ("卫星", "航天", "600118", "中国卫星", "北斗")):
+            for keyword in cls._SATELLITE_FOCUS_TERMS:
+                cls._append_unique(keywords, keyword)
+        if any(term in identity for term in ("机器人", "自动化", "智能制造")):
+            for keyword in cls._ROBOTICS_FOCUS_TERMS:
+                cls._append_unique(keywords, keyword)
+        else:
+            # 用户当前关注科技、卫星和机器人板块，因此即使个股名不含机器人，
+            # 也保留机器人作为行业侧观察维度。
+            for keyword in cls._ROBOTICS_FOCUS_TERMS:
+                cls._append_unique(keywords, keyword)
+        return keywords
+
+    @classmethod
+    def _newsnow_item_matches_hardtech(
+        cls,
+        title: str,
+        snippet: str,
+        *,
+        stock_code: str,
+        stock_name: str,
+        keywords: List[str],
+    ) -> Tuple[bool, str, int, List[str]]:
+        """Classify a NewsNow item as direct stock news or hard-tech sector news."""
+        haystack = f"{title} {snippet}".lower()
+        reasons: List[str] = []
+        if stock_name and stock_name.lower() in haystack:
+            reasons.append(f"命中股票名称:{stock_name}")
+        if stock_code and stock_code.lower() in haystack:
+            reasons.append(f"命中股票代码:{stock_code}")
+        if reasons:
+            return True, cls._DIRECT_NEWS_CATEGORY, 95, reasons
+
+        hardtech_hits = [keyword for keyword in keywords if keyword and keyword.lower() in haystack]
+        if hardtech_hits:
+            return (
+                True,
+                cls._SECTOR_NEWS_CATEGORY,
+                70 if any(k in hardtech_hits for k in cls._SATELLITE_FOCUS_TERMS) else 60,
+                [f"硬科技板块:{'、'.join(hardtech_hits[:4])}"],
+            )
+        return False, "", 0, []
+
+    def _fetch_newsnow_hardtech_fallback(
+        self,
+        *,
+        stock_code: str,
+        stock_name: str,
+        max_results: int = 6,
+    ) -> SearchResponse:
+        """Fetch hard-tech market news from NewsNow when search engines are sparse."""
+        start_time = time.time()
+        keywords = self._hardtech_focus_keywords(stock_code, stock_name)
+        seen: set[str] = set()
+        results: List[SearchResult] = []
+        errors: List[str] = []
+        headers = {
+            "User-Agent": (
+                "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
+                "(KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36 daily-stock-analysis/1.0"
+            ),
+            "Accept": "application/json",
+        }
+
+        for source_id, source_name in self._HARD_TECH_NEWSNOW_SOURCES:
+            if len(results) >= max_results:
+                break
+            try:
+                response = requests.get(
+                    self._newsnow_api_url(source_id),
+                    headers=headers,
+                    timeout=10,
+                    allow_redirects=False,
+                )
+                response.raise_for_status()
+                payload = response.json()
+                items = payload.get("items") if isinstance(payload, dict) else None
+                if not isinstance(items, list):
+                    errors.append(f"{source_id}: invalid payload")
+                    continue
+            except Exception as exc:
+                errors.append(f"{source_id}: {exc}")
+                continue
+
+            for item in items:
+                if not isinstance(item, dict):
+                    continue
+                extra = item.get("extra") if isinstance(item.get("extra"), dict) else {}
+                title = str(item.get("title") or "").strip()
+                snippet = str(extra.get("info") or extra.get("hover") or "").strip()
+                url = str(item.get("url") or item.get("mobileUrl") or "").strip()
+                raw_date = item.get("pubDate") or extra.get("date")
+                matched, category, score, reasons = self._newsnow_item_matches_hardtech(
+                    title,
+                    snippet,
+                    stock_code=stock_code,
+                    stock_name=stock_name,
+                    keywords=keywords,
+                )
+                if not matched or not title:
+                    continue
+                identity = url or f"{source_id}:{title}"
+                if identity in seen:
+                    continue
+                seen.add(identity)
+                normalized_date = self._normalize_news_publish_date(raw_date)
+                results.append(
+                    SearchResult(
+                        title=title[:300],
+                        snippet=(snippet or title)[:500],
+                        url=url or self._newsnow_api_url(source_id),
+                        source=source_name,
+                        published_date=normalized_date.isoformat() if normalized_date else None,
+                        relevance_score=score,
+                        relevance_category=category,
+                        relevance_reasons=reasons,
+                    )
+                )
+                if len(results) >= max_results:
+                    break
+
+        if results:
+            logger.info(
+                "[硬科技兜底新闻] %s(%s): NewsNow 返回 %s 条",
+                stock_name,
+                stock_code,
+                len(results),
+            )
+            return SearchResponse(
+                query=f"{stock_name} {stock_code} 科技 卫星 机器人 板块新闻",
+                results=results,
+                provider="NewsNow硬科技兜底",
+                success=True,
+                search_time=time.time() - start_time,
+            )
+
+        return SearchResponse(
+            query=f"{stock_name} {stock_code} 科技 卫星 机器人 板块新闻",
+            results=[],
+            provider="NewsNow硬科技兜底",
+            success=False,
+            error_message="；".join(errors[:3]) if errors else "未匹配到硬科技相关新闻",
+            search_time=time.time() - start_time,
+        )
+
+    @staticmethod
+    def _merge_unique_search_results(
+        primary: Optional[SearchResponse],
+        fallback: SearchResponse,
+        *,
+        max_results: int,
+    ) -> SearchResponse:
+        """Merge fallback news into an existing response without duplicating URLs/titles."""
+        if primary and primary.success:
+            merged = list(primary.results or [])
+            query = primary.query
+            provider = primary.provider
+        else:
+            merged = []
+            query = fallback.query
+            provider = fallback.provider
+
+        seen = {
+            (item.url or item.title).strip()
+            for item in merged
+            if (item.url or item.title)
+        }
+        for item in fallback.results:
+            identity = (item.url or item.title).strip()
+            if identity and identity in seen:
+                continue
+            merged.append(item)
+            if identity:
+                seen.add(identity)
+            if len(merged) >= max_results:
+                break
+
+        return SearchResponse(
+            query=query,
+            results=merged[:max_results],
+            provider=provider if provider == fallback.provider else f"{provider}+{fallback.provider}",
+            success=bool(merged),
+            error_message=None if merged else (fallback.error_message if fallback else None),
+            search_time=(primary.search_time if primary else 0.0) + fallback.search_time,
+        )
+
+    def _ensure_hardtech_fallback_results(
+        self,
+        results: Dict[str, SearchResponse],
+        *,
+        stock_code: str,
+        stock_name: str,
+        target_per_dimension: int,
+    ) -> Dict[str, SearchResponse]:
+        """Add stable hard-tech news if regular search returns sparse news."""
+        fallback = self._fetch_newsnow_hardtech_fallback(
+            stock_code=stock_code,
+            stock_name=stock_name,
+            max_results=max(6, target_per_dimension * 2),
+        )
+        if not fallback.success or not fallback.results:
+            return results
+
+        latest = results.get("latest_news")
+        if not latest or not latest.success or len(latest.results) < target_per_dimension:
+            results["latest_news"] = self._merge_unique_search_results(
+                latest,
+                fallback,
+                max_results=target_per_dimension,
+            )
+
+        industry = results.get("industry")
+        if not industry or not industry.success or len(industry.results) < target_per_dimension:
+            results["industry"] = self._merge_unique_search_results(
+                industry,
+                fallback,
+                max_results=target_per_dimension,
+            )
+
+        results["hardtech_sector"] = self._limit_search_response(
+            fallback,
+            max_results=min(4, max(1, len(fallback.results))),
+        )
+        return results
 
     @classmethod
     def _provider_request_size(cls, max_results: int) -> int:
@@ -3998,7 +4264,10 @@ class SearchService:
             search_dimensions = [
                 {
                     'name': 'latest_news',
-                    'query': f"{stock_name} {stock_code} 最新 新闻 重大 事件",
+                    'query': (
+                        f"{stock_name} {stock_code} 最新 新闻 重大 事件 "
+                        f"科技 卫星互联网 商业航天 机器人"
+                    ),
                     'desc': '最新消息',
                     'tavily_topic': 'news',
                     'strict_freshness': True,
@@ -4044,7 +4313,10 @@ class SearchService:
                     'name': 'industry',
                     'query': (
                         f"{stock_name} 指数成分股 行业配置 权重"
-                        if is_index_etf else f"{stock_name} 所在行业 竞争对手 市场份额 行业前景"
+                        if is_index_etf else (
+                            f"{stock_name} 所在行业 竞争对手 市场份额 行业前景 "
+                            f"科技 卫星互联网 商业航天 机器人 人形机器人"
+                        )
                     ),
                     'desc': '行业分析',
                     'tavily_topic': None,
@@ -4162,7 +4434,13 @@ class SearchService:
             
             # 短暂延迟避免请求过快
             time.sleep(0.5)
-        
+
+        results = self._ensure_hardtech_fallback_results(
+            results,
+            stock_code=stock_code,
+            stock_name=stock_name,
+            target_per_dimension=target_per_dimension,
+        )
         return results
     
     def format_intel_report(self, intel_results: Dict[str, SearchResponse], stock_name: str) -> str:
@@ -4179,11 +4457,20 @@ class SearchService:
         lines = [f"【{stock_name} 情报搜索结果】"]
         
         # 维度展示顺序
-        display_order = ['latest_news', 'announcements', 'market_analysis', 'risk_check', 'earnings', 'industry']
+        display_order = [
+            'latest_news',
+            'hardtech_sector',
+            'announcements',
+            'market_analysis',
+            'risk_check',
+            'earnings',
+            'industry',
+        ]
 
         dim_labels = {
             'latest_news': '📰 最新消息',
             'announcements': '📋 公司公告',
+            'hardtech_sector': '🛰️ 硬科技板块',
             'market_analysis': '📈 机构分析',
             'risk_check': '⚠️ 风险排查',
             'earnings': '📊 业绩预期',
