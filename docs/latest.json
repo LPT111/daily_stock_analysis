@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-15T12:56:17+00:00",
+  "generated_at": "2026-07-15T13:28:36+00:00",
   "dashboard_url": "https://LPT111.github.io/daily_stock_analysis/",
   "stock_report": "report_20260715.md",
   "market_report": "market_review_20260715.md",
@@ -75,6 +75,24 @@
   "sector_news": {
     "items": [
       {
+        "title": "Icarus Robotics taps KULR to provide batteries for Space Station robots",
+        "published_at": "2026-07-15T13:00+00:00",
+        "source": "SpaceNews",
+        "url": "https://spacenews.com/icarus-robotics-taps-kulr-to-provide-batteries-for-space-station-robots/",
+        "category": "机器人与具身智能",
+        "region": "国际",
+        "source_weight": 13
+      },
+      {
+        "title": "Laying the groundwork for the first human mission to Mars",
+        "published_at": "2026-07-15T13:00+00:00",
+        "source": "SpaceNews",
+        "url": "https://spacenews.com/laying-the-groundwork-for-the-first-human-mission-to-mars/",
+        "category": "卫星与商业航天",
+        "region": "国际",
+        "source_weight": 13
+      },
+      {
         "title": "Satellite investment sets annual record halfway through 2026",
         "published_at": "2026-07-15T11:06+00:00",
         "source": "SpaceNews",
@@ -116,24 +134,6 @@
         "source": "Defense News",
         "url": "https://www.defensenews.com/opinion/2026/07/14/europes-defense-build-up-is-delivering-for-nato-and-america/",
         "category": "军工与国防科技",
-        "region": "国际",
-        "source_weight": 13
-      },
-      {
-        "title": "Defense spending lifts Europe’s space economy",
-        "published_at": "2026-07-13T22:18+00:00",
-        "source": "SpaceNews",
-        "url": "https://spacenews.com/defense-spending-lifts-europes-space-economy/",
-        "category": "军工与国防科技",
-        "region": "国际",
-        "source_weight": 13
-      },
-      {
-        "title": "L3Harris, Sierra Space to build 36 satellites to expand U.S. missile-tracking network",
-        "published_at": "2026-07-13T21:08+00:00",
-        "source": "SpaceNews",
-        "url": "https://spacenews.com/l3harris-sierra-space-to-build-36-satellites-to-expand-u-s-missile-tracking-network/",
-        "category": "卫星与商业航天",
         "region": "国际",
         "source_weight": 13
       },
@@ -228,6 +228,15 @@
         "source_weight": 9
       },
       {
+        "title": "Why Europe is suddenly betting big on drones",
+        "published_at": "2026-07-15T05:05+00:00",
+        "source": "CNBC Technology",
+        "url": "https://www.cnbc.com/2026/07/15/drones-defense-europe-autonomous-weapons.html",
+        "category": "军工与国防科技",
+        "region": "国际",
+        "source_weight": 9
+      },
+      {
         "title": "消息称小鹏计划明年在全球推出 IRON 人形机器人，今年年底前力争月产超 1000 台",
         "published_at": "2026-07-15T11:25+00:00",
         "source": "IT之家",
@@ -255,6 +264,15 @@
         "source_weight": 8
       },
       {
+        "title": "宇树机器人出国“搬砖”！日本建筑商启用宇树人形机器人干工地",
+        "published_at": "2026-07-15T21:05+00:00",
+        "source": "快科技-科学",
+        "url": "https://news.mydrivers.com/1/1136/1136669.htm",
+        "category": "机器人与具身智能",
+        "region": "国内",
+        "source_weight": 7
+      },
+      {
         "title": "能当狗又能当人！全球首个可变形个人机器人启元T1登场",
         "published_at": "2026-07-14T22:30+00:00",
         "source": "快科技-科学",
@@ -271,24 +289,6 @@
         "category": "卫星与商业航天",
         "region": "国内",
         "source_weight": 7
-      },
-      {
-        "title": "马斯克“画饼” 宇树填坑？全球首例人形机器人手术登上Nature",
-        "published_at": "2026-07-10T16:09+00:00",
-        "source": "快科技-科学",
-        "url": "https://news.mydrivers.com/1/1135/1135514.htm",
-        "category": "机器人与具身智能",
-        "region": "国内",
-        "source_weight": 7
-      },
-      {
-        "title": "世界首次！美国医生远程操控宇树人形机器人完成手术",
-        "published_at": "2026-07-10T00:50+00:00",
-        "source": "快科技-科学",
-        "url": "https://news.mydrivers.com/1/1135/1135350.htm",
-        "category": "机器人与具身智能",
-        "region": "国内",
-        "source_weight": 7
       }
     ],
     "errors": [
@@ -297,5 +297,5 @@
     ],
     "policy": "仅展示含标题、发布时间、来源和原文链接的新闻；不据此自动推断股价因果。"
   },
-  "digest": "【A股科技主题决策雷达】\n个股建议：减仓（基于近3个月K线，保守模式）\n执行参考：买入区间 暂不设置（需收复MA20且缩量企稳后方可考虑）｜仓位 建议仓位：空仓或1成以内\n风控纪律：止损 持仓者止损位：明日若低开或继续下跌，应即刻减仓；若反弹至MA20（79.81）受阻，也是减仓点｜失效条件 待报告生成\n大盘摘要：🎯 大盘复盘 2026-07-15 大盘复盘 今日市场呈现显著分化：权重护盘、中小创普跌，科创50重挫超4%，而多数个股上涨，量能创近期新高。核心矛盾在于科技主线内部剧烈轮动，短期情绪降温但结构尚未全面崩溃。明日优先观察科创50能否止跌以及领涨板块的持续性。 一、盘面总览 上证指数微跌0.29%，深证成指和创业板指分别下跌0.97%和1.21%，科创50暴跌…\n600118 双源校验：价格：73.92；涨跌幅：-10.00；动态PE：-511.88（亏损状态）；PB：13.82\n\n可核验科技新闻：\n- 卫星与商业航天：Satellite investment sets annual record halfway through 2026（SpaceNews，2026-07-15T11:06+00:00）\n  https://spacenews.com/satellite-investment-sets-annual-record-halfway-through-2026/\n- 军工与国防科技：Israeli firm wants to convert commercial ships into floating drone bases（Defense News，2026-07-15T10:27+00:00）\n  https://www.defensenews.com/global/mideast-africa/2026/07/15/israeli-firm-wants-to-convert-commercial-ships-into-floating-drone-bases/\n- 科技与芯片：What Anthropic’s latest AI discovery does—and doesn’t—show（MIT Technology Review，2026-07-13T18:00+00:00）\n  https://www.technologyreview.com/2026/07/13/1140343/what-anthropics-latest-ai-discovery-does-and-doesnt-show/\n- 机器人与具身智能：消息称小鹏计划明年在全球推出 IRON 人形机器人，今年年底前力争月产超 1000 台（IT之家，2026-07-15T11:25+00:00）\n  https://www.ithome.com/0/977/208.htm\n\n网页版完整报告：https://LPT111.github.io/daily_stock_analysis/\n仅供研究参考，不构成投资建议。"
+  "digest": "【A股科技主题决策雷达】\n个股建议：减仓（基于近3个月K线，保守模式）\n执行参考：买入区间 暂不设置（需等待止跌企稳并重新站稳MA20）｜仓位 持仓者建议降至3成以下，空仓者0成\n风控纪律：止损 72元（前低或-10%），跌破则离场｜失效条件 未来3个交易日重新站稳79.81且量价修复，则减仓判断失效并重新评估\n大盘摘要：🎯 大盘复盘 2026-07-15 大盘复盘 指数分化调整，中小创承压明显，上证50护盘；成交额维持高位，结构上科技板块分化加剧，预计短期进入震荡整理。 一、盘面总览 今日市场整体偏弱，上证指数、深证成指、创业板指、科创50均下跌，其中科创50跌幅达4.25%；上证50逆势上涨0.39%，显示大权重资金托底。涨跌家数比3350:2098，上涨家数多于下跌，但…\n600118 双源校验：价格：73.92；涨跌幅：-10.00；动态PE：-511.88（亏损状态）；PB：13.82\n\n可核验科技新闻：\n- 机器人与具身智能：Icarus Robotics taps KULR to provide batteries for Space Station robots（SpaceNews，2026-07-15T13:00+00:00）\n  https://spacenews.com/icarus-robotics-taps-kulr-to-provide-batteries-for-space-station-robots/\n- 卫星与商业航天：Laying the groundwork for the first human mission to Mars（SpaceNews，2026-07-15T13:00+00:00）\n  https://spacenews.com/laying-the-groundwork-for-the-first-human-mission-to-mars/\n- 军工与国防科技：Israeli firm wants to convert commercial ships into floating drone bases（Defense News，2026-07-15T10:27+00:00）\n  https://www.defensenews.com/global/mideast-africa/2026/07/15/israeli-firm-wants-to-convert-commercial-ships-into-floating-drone-bases/\n- 科技与芯片：What Anthropic’s latest AI discovery does—and doesn’t—show（MIT Technology Review，2026-07-13T18:00+00:00）\n  https://www.technologyreview.com/2026/07/13/1140343/what-anthropics-latest-ai-discovery-does-and-doesnt-show/\n\n网页版完整报告：https://LPT111.github.io/daily_stock_analysis/\n仅供研究参考，不构成投资建议。"
 }
