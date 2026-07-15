@@ -1,9 +1,9 @@
 name: 每日股票分析
 
 on:
-  # 定时触发 - 每天北京时间 08:00 / 15:00
+  # 定时触发 - 每天北京时间 08:30 / 15:00
   schedule:
-    - cron: '0 0 * * *'        # UTC 00:00 = 北京时间 08:00
+    - cron: '30 0 * * *'       # UTC 00:30 = 北京时间 08:30
     - cron: '0 7 * * *'        # UTC 07:00 = 北京时间 15:00
   
   # 手动触发
@@ -28,6 +28,9 @@ on:
 concurrency:
   group: stock-analysis
   cancel-in-progress: false
+
+permissions:
+  contents: write
 
 jobs:
   analyze:
@@ -386,7 +389,7 @@ jobs:
           # ==========================================
           # 运行配置 ⬅️ 新增！
           # ==========================================
-          REPORT_TYPE: ${{ vars.REPORT_TYPE || secrets.REPORT_TYPE || 'simple' }}
+          REPORT_TYPE: detailed
           REPORT_LANGUAGE: ${{ vars.REPORT_LANGUAGE || secrets.REPORT_LANGUAGE || '' }}
           REPORT_SHOW_LLM_MODEL: ${{ vars.REPORT_SHOW_LLM_MODEL || secrets.REPORT_SHOW_LLM_MODEL || 'true' }}
           SINGLE_STOCK_NOTIFY: ${{ vars.SINGLE_STOCK_NOTIFY || secrets.SINGLE_STOCK_NOTIFY || 'false' }}
@@ -401,6 +404,7 @@ jobs:
           MAX_WORKERS: ${{ vars.MAX_WORKERS || secrets.MAX_WORKERS || '1' }}
           # 筹码分布：默认 false（云端接口不稳定）；需启用时在 Settings → Variables 添加 ENABLE_CHIP_DISTRIBUTION=true
           ENABLE_CHIP_DISTRIBUTION: ${{ vars.ENABLE_CHIP_DISTRIBUTION || secrets.ENABLE_CHIP_DISTRIBUTION || 'false' }}
+          PUBLIC_DASHBOARD_URL: https://LPT111.github.io/daily_stock_analysis/
           # 实时行情数据源优先级（腾讯有量比且稳定，推荐首选）
           # 可选值: tencent, akshare_sina, efinance, akshare_em, tickflow, tushare
           # 如果有 TickFlow 或 Tushare Pro，可按权限把 tickflow / tushare 放在更靠前位置
@@ -507,11 +511,25 @@ jobs:
 
           # 执行分析
           if [ "$MODE" = "market-only" ]; then
-            python main.py --market-review $FORCE_RUN_ARG
+            python main.py --market-review --no-notify $FORCE_RUN_ARG
           elif [ "$MODE" = "stocks-only" ]; then
-            python main.py --no-market-review $FORCE_RUN_ARG
+            python main.py --no-market-review --no-notify $FORCE_RUN_ARG
           else
-            python main.py $FORCE_RUN_ARG
+            python main.py --no-notify $FORCE_RUN_ARG
+          fi
+
+          # Build one full web page and send exactly one digest to each channel.
+          python scripts/publish_lpt_stock_radar.py
+
+      - name: 发布最新网页数据
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs/index.html docs/latest.json docs/latest-report.md
+          if ! git diff --cached --quiet; then
+            git commit -m "data: refresh LPT stock radar"
+            git pull --rebase origin main
+            git push origin HEAD:main
           fi
       
       - name: 上传分析报告
@@ -522,6 +540,7 @@ jobs:
           path: |
             reports/
             logs/
+            docs/
           retention-days: 30
       
       - name: 显示运行结果

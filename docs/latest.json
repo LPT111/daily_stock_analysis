@@ -1,0 +1,294 @@
+{
+  "generated_at": "2026-07-15T20:35:59+08:00",
+  "dashboard_url": "https://LPT111.github.io/daily_stock_analysis/",
+  "stock_report": null,
+  "market_report": null,
+  "validations": [
+    {
+      "code": "600118",
+      "policy": "仅 status=confirmed 的字段可用于结论；待核实字段必须忽略。",
+      "metrics": {
+        "price": {
+          "status": "待核实",
+          "value": null,
+          "display": "待核实",
+          "interpretation": "两个数据源未同时返回一致结果，不得用于决策。",
+          "sources": {
+            "腾讯财经": 73.92,
+            "东方财富": null
+          }
+        },
+        "change_pct": {
+          "status": "待核实",
+          "value": null,
+          "display": "待核实",
+          "interpretation": "两个数据源未同时返回一致结果，不得用于决策。",
+          "sources": {
+            "腾讯财经": -10.0,
+            "东方财富": null
+          }
+        },
+        "dynamic_pe": {
+          "status": "待核实",
+          "value": null,
+          "display": "待核实",
+          "interpretation": "两个数据源未同时返回一致结果，不得用于决策。",
+          "sources": {
+            "腾讯财经": -511.88,
+            "东方财富": null
+          }
+        },
+        "pb": {
+          "status": "待核实",
+          "value": null,
+          "display": "待核实",
+          "interpretation": "两个数据源未同时返回一致结果，不得用于决策。",
+          "sources": {
+            "腾讯财经": 13.82,
+            "东方财富": null
+          }
+        }
+      },
+      "raw_sources": [
+        {
+          "source": "腾讯财经",
+          "price": 73.92,
+          "previous_close": 82.13,
+          "change_pct": -10.0,
+          "dynamic_pe": -511.88,
+          "pb": 13.82,
+          "source_url": "https://gu.qq.com/sh600118"
+        }
+      ],
+      "errors": [
+        "东方财富: HTTPSConnectionPool(host='push2.eastmoney.com', port=443): Max retries exceeded with url: /api/qt/stock/get?secid=1.600118&fields=f43%2Cf57%2Cf58%2Cf60%2Cf162%2Cf167%2Cf170 (Caused by ProxyError('Unable to connect to proxy', RemoteDisconnected('Remote end closed connection without response')))"
+      ]
+    }
+  ],
+  "sector_news": {
+    "items": [
+      {
+        "title": "Satellite investment sets annual record halfway through 2026",
+        "published_at": "2026-07-15T19:06+08:00",
+        "source": "SpaceNews",
+        "url": "https://spacenews.com/satellite-investment-sets-annual-record-halfway-through-2026/",
+        "category": "卫星与商业航天",
+        "region": "国际",
+        "source_weight": 13
+      },
+      {
+        "title": "Israeli firm wants to convert commercial ships into floating drone bases",
+        "published_at": "2026-07-15T18:27+08:00",
+        "source": "Defense News",
+        "url": "https://www.defensenews.com/global/mideast-africa/2026/07/15/israeli-firm-wants-to-convert-commercial-ships-into-floating-drone-bases/",
+        "category": "军工与国防科技",
+        "region": "国际",
+        "source_weight": 13
+      },
+      {
+        "title": "The US Navy is eyeing next-gen carrier-based drones. Here’s what they might do.",
+        "published_at": "2026-07-15T07:56+08:00",
+        "source": "Defense News",
+        "url": "https://www.defensenews.com/news/your-navy/2026/07/14/the-us-navy-is-eyeing-next-gen-carrier-based-drones-heres-what-they-might-do/",
+        "category": "军工与国防科技",
+        "region": "国际",
+        "source_weight": 13
+      },
+      {
+        "title": "Antaris™ Establishes Aeonyx™ to Advance All-Domain Mission Virtualization for Defense",
+        "published_at": "2026-07-14T22:56+08:00",
+        "source": "SpaceNews",
+        "url": "https://spacenews.com/antaris-establishes-aeonyx-to-advance-all-domain-mission-virtualization-for-defense/",
+        "category": "军工与国防科技",
+        "region": "国际",
+        "source_weight": 13
+      },
+      {
+        "title": "Europe’s defense build-up is delivering for NATO — and America",
+        "published_at": "2026-07-14T20:22+08:00",
+        "source": "Defense News",
+        "url": "https://www.defensenews.com/opinion/2026/07/14/europes-defense-build-up-is-delivering-for-nato-and-america/",
+        "category": "军工与国防科技",
+        "region": "国际",
+        "source_weight": 13
+      },
+      {
+        "title": "Defense spending lifts Europe’s space economy",
+        "published_at": "2026-07-14T06:18+08:00",
+        "source": "SpaceNews",
+        "url": "https://spacenews.com/defense-spending-lifts-europes-space-economy/",
+        "category": "军工与国防科技",
+        "region": "国际",
+        "source_weight": 13
+      },
+      {
+        "title": "L3Harris, Sierra Space to build 36 satellites to expand U.S. missile-tracking network",
+        "published_at": "2026-07-14T05:08+08:00",
+        "source": "SpaceNews",
+        "url": "https://spacenews.com/l3harris-sierra-space-to-build-36-satellites-to-expand-u-s-missile-tracking-network/",
+        "category": "卫星与商业航天",
+        "region": "国际",
+        "source_weight": 13
+      },
+      {
+        "title": "Sea drones strike Iranian port in combat first for US",
+        "published_at": "2026-07-14T01:07+08:00",
+        "source": "Defense News",
+        "url": "https://www.defensenews.com/news/your-military/2026/07/13/sea-drones-strike-iranian-port-in-combat-first-for-us-navy/",
+        "category": "军工与国防科技",
+        "region": "国际",
+        "source_weight": 13
+      },
+      {
+        "title": "What Anthropic’s latest AI discovery does—and doesn’t—show",
+        "published_at": "2026-07-14T02:00+08:00",
+        "source": "MIT Technology Review",
+        "url": "https://www.technologyreview.com/2026/07/13/1140343/what-anthropics-latest-ai-discovery-does-and-doesnt-show/",
+        "category": "科技与芯片",
+        "region": "国际",
+        "source_weight": 12
+      },
+      {
+        "title": "The Download: a donor conception cap and world models for AI",
+        "published_at": "2026-07-13T20:10+08:00",
+        "source": "MIT Technology Review",
+        "url": "https://www.technologyreview.com/2026/07/13/1140339/the-download-sperm-donor-limits-ai-world-models/",
+        "category": "科技与芯片",
+        "region": "国际",
+        "source_weight": 12
+      },
+      {
+        "title": "The Download: Claude’s inner workings and OpenAI’s “super app”",
+        "published_at": "2026-07-10T20:10+08:00",
+        "source": "MIT Technology Review",
+        "url": "https://www.technologyreview.com/2026/07/10/1140316/the-download-anthropic-claude-hidden-space-openai-super-app/",
+        "category": "科技与芯片",
+        "region": "国际",
+        "source_weight": 12
+      },
+      {
+        "title": "Anthropic found a hidden space where Claude puzzles over concepts",
+        "published_at": "2026-07-10T04:22+08:00",
+        "source": "MIT Technology Review",
+        "url": "https://www.technologyreview.com/2026/07/09/1140293/anthropic-found-a-hidden-space-where-claude-puzzles-over-concepts/",
+        "category": "科技与芯片",
+        "region": "国际",
+        "source_weight": 12
+      },
+      {
+        "title": "A shoebox-sized satellite could expose hidden nuclear weapons in space",
+        "published_at": "2026-07-08T23:11+08:00",
+        "source": "Science News",
+        "url": "https://www.sciencenews.org/article/satellite-nuclear-weapons-space",
+        "category": "卫星与商业航天",
+        "region": "国际",
+        "source_weight": 11
+      },
+      {
+        "title": "The Apple FaceID Co-Inventor Building a Frontier AI Model for the Human Brain",
+        "published_at": "2026-07-15T20:00+08:00",
+        "source": "WIRED Science",
+        "url": "https://www.wired.com/story/the-apple-faceid-veteran-building-a-frontier-ai-model-for-the-human-brain/",
+        "category": "科技与芯片",
+        "region": "国际",
+        "source_weight": 10
+      },
+      {
+        "title": "The US Approves Launch of Mirror Satellite That Can Reflect Sunlight and Illuminate the Earth at Night",
+        "published_at": "2026-07-14T16:30+08:00",
+        "source": "WIRED Science",
+        "url": "https://www.wired.com/story/reflect-orbital-earendil-mirror-satellite-fcc/",
+        "category": "卫星与商业航天",
+        "region": "国际",
+        "source_weight": 10
+      },
+      {
+        "title": "Scientists’ Side Hustle? Using AI and Quantum Computing to Generate New Peptides",
+        "published_at": "2026-07-12T18:00+08:00",
+        "source": "WIRED Science",
+        "url": "https://www.wired.com/story/scientists-using-ai-and-quantum-computing-to-generate-new-peptides/",
+        "category": "科技与芯片",
+        "region": "国际",
+        "source_weight": 10
+      },
+      {
+        "title": "How hard is it to build orbital data centers, actually?",
+        "published_at": "2026-07-15T19:00+08:00",
+        "source": "Ars Technica",
+        "url": "https://arstechnica.com/space/2026/07/how-hard-is-it-to-build-orbital-data-centers-actually/",
+        "category": "卫星与商业航天",
+        "region": "国际",
+        "source_weight": 9
+      },
+      {
+        "title": "消息称小鹏计划明年在全球推出 IRON 人形机器人，今年年底前力争月产超 1000 台",
+        "published_at": "2026-07-15T19:25+08:00",
+        "source": "IT之家",
+        "url": "https://www.ithome.com/0/977/208.htm",
+        "category": "机器人与具身智能",
+        "region": "国内",
+        "source_weight": 8
+      },
+      {
+        "title": "Xiaomi updates progress on humanoid robots in auto factory, achieves 98% success rate in some tasks",
+        "published_at": "2026-07-15T10:14+08:00",
+        "source": "TechNode",
+        "url": "https://technode.com/2026/07/15/xiaomi-updates-progress-on-humanoid-robots-in-auto-factory-achieves-98-success-rate-in-some-tasks/",
+        "category": "机器人与具身智能",
+        "region": "国际",
+        "source_weight": 8
+      },
+      {
+        "title": "Insta360 unveils vision for AI-powered Cameraman robot on 11th anniversary",
+        "published_at": "2026-07-10T09:59+08:00",
+        "source": "TechNode",
+        "url": "https://technode.com/2026/07/10/insta360-unveils-vision-for-ai-powered-cameraman-robot-on-11th-anniversary/",
+        "category": "机器人与具身智能",
+        "region": "国际",
+        "source_weight": 8
+      },
+      {
+        "title": "能当狗又能当人！全球首个可变形个人机器人启元T1登场",
+        "published_at": "2026-07-15T06:30+08:00",
+        "source": "快科技-科学",
+        "url": "https://news.mydrivers.com/1/1136/1136386.htm",
+        "category": "机器人与具身智能",
+        "region": "国内",
+        "source_weight": 7
+      },
+      {
+        "title": "小鹏计划明年在全球推出人形机器人",
+        "published_at": "2026-07-15",
+        "source": "36氪",
+        "url": "https://36kr.com/newsflashes/3896801391609737?f=rss",
+        "category": "机器人与具身智能",
+        "region": "国内",
+        "source_weight": 7
+      },
+      {
+        "title": "星舰第13次试飞定档周四：猛禽3发动机上阵 首搭星链V3卫星",
+        "published_at": "2026-07-14T07:36+08:00",
+        "source": "快科技-科学",
+        "url": "https://news.mydrivers.com/1/1136/1136117.htm",
+        "category": "卫星与商业航天",
+        "region": "国内",
+        "source_weight": 7
+      },
+      {
+        "title": "马斯克“画饼” 宇树填坑？全球首例人形机器人手术登上Nature",
+        "published_at": "2026-07-11T00:09+08:00",
+        "source": "快科技-科学",
+        "url": "https://news.mydrivers.com/1/1135/1135514.htm",
+        "category": "机器人与具身智能",
+        "region": "国内",
+        "source_weight": 7
+      }
+    ],
+    "errors": [
+      "国内科技新闻: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=%28%E5%8D%AB%E6%98%9F+OR+%E8%88%AA%E5%A4%A9+OR+%E5%8C%97%E6%96%97+OR+%E6%9C%BA%E5%99%A8%E4%BA%BA+OR+%E5%85%B7%E8%BA%AB%E6%99%BA%E8%83%BD+OR+%E8%8A%AF%E7%89%87+OR+%E5%8D%8A%E5%AF%BC%E4%BD%93+OR+%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD+OR+%E5%86%9B%E5%B7%A5+OR+%E5%9B%BD%E9%98%B2%E7%A7%91%E6%8A%80%29+sourcelang%3AChinese&mode=artlist&format=json&maxrecords=24&sort=datedesc&timespan=3d",
+      "国际科技新闻: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=%28satellite+OR+spaceflight+OR+robotics+OR+humanoid+OR+semiconductor+OR+%22artificial+intelligence%22+OR+%22defense+technology%22%29+sourcelang%3AEnglish&mode=artlist&format=json&maxrecords=24&sort=datedesc&timespan=3d"
+    ],
+    "policy": "仅展示含标题、发布时间、来源和原文链接的新闻；不据此自动推断股价因果。"
+  },
+  "digest": "【A股科技主题决策雷达】\n个股建议：待确认（基于近3个月K线，保守模式）\n执行参考：买入区间 待报告生成｜仓位 待报告生成\n风控纪律：止损 待报告生成｜失效条件 待报告生成\n大盘摘要：\n600118 双源校验：价格：待核实；涨跌幅：待核实；动态PE：待核实；PB：待核实\n\n可核验科技新闻：\n- 卫星与商业航天：Satellite investment sets annual record halfway through 2026（SpaceNews，2026-07-15T19:06+08:00）\n  https://spacenews.com/satellite-investment-sets-annual-record-halfway-through-2026/\n- 军工与国防科技：Israeli firm wants to convert commercial ships into floating drone bases（Defense News，2026-07-15T18:27+08:00）\n  https://www.defensenews.com/global/mideast-africa/2026/07/15/israeli-firm-wants-to-convert-commercial-ships-into-floating-drone-bases/\n- 科技与芯片：What Anthropic’s latest AI discovery does—and doesn’t—show（MIT Technology Review，2026-07-14T02:00+08:00）\n  https://www.technologyreview.com/2026/07/13/1140343/what-anthropics-latest-ai-discovery-does-and-doesnt-show/\n- 机器人与具身智能：消息称小鹏计划明年在全球推出 IRON 人形机器人，今年年底前力争月产超 1000 台（IT之家，2026-07-15T19:25+08:00）\n  https://www.ithome.com/0/977/208.htm\n\n网页版完整报告：https://LPT111.github.io/daily_stock_analysis/\n仅供研究参考，不构成投资建议。"
+}

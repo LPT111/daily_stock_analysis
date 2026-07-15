@@ -18,7 +18,7 @@ def _fetch_trend_data(stock_code: str):
     """Fetch historical OHLCV (DataFrame) for trend analysis. DB first, then DataFetcher fallback."""
     from src.services.history_loader import load_history_df
 
-    df, _ = load_history_df(stock_code, days=60)
+    df, _ = load_history_df(stock_code, days=90)
     return df
 
 

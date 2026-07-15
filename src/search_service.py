@@ -2719,16 +2719,20 @@ class SearchService:
                 )
                 if not matched or not title:
                     continue
-                identity = url or f"{source_id}:{title}"
+                normalized_date = self._normalize_news_publish_date(raw_date)
+                if not normalized_date or not url.lower().startswith(("http://", "https://")):
+                    # The decision report requires an actual article link and
+                    # publication time.  An API endpoint is not an original link.
+                    continue
+                identity = url
                 if identity in seen:
                     continue
                 seen.add(identity)
-                normalized_date = self._normalize_news_publish_date(raw_date)
                 results.append(
                     SearchResult(
                         title=title[:300],
                         snippet=(snippet or title)[:500],
-                        url=url or self._newsnow_api_url(source_id),
+                        url=url,
                         source=source_name,
                         published_date=normalized_date.isoformat() if normalized_date else None,
                         relevance_score=score,

@@ -341,7 +341,7 @@ class StockAnalysisPipeline:
 
             # 从数据源获取数据
             logger.info(f"{stock_name}({code}) 开始从数据源获取数据...")
-            df, source_name = self.fetcher_manager.get_daily_data(code, days=30)
+            df, source_name = self.fetcher_manager.get_daily_data(code, days=90)
 
             if df is None or df.empty:
                 return False, "获取数据为空"
@@ -515,7 +515,7 @@ class StockAnalysisPipeline:
                 _mkt = get_market_for_stock(normalize_stock_code(code))
                 frozen = get_frozen_target_date()
                 end_date = frozen if frozen else get_market_now(_mkt).date()
-                start_date = end_date - timedelta(days=89)  # ~60 trading days for MA60
+                start_date = end_date - timedelta(days=140)  # ~3 calendar months plus holiday buffer
                 historical_bars = self.db.get_data_range(code, start_date, end_date)
                 if historical_bars:
                     df = pd.DataFrame([bar.to_dict() for bar in historical_bars])
@@ -643,6 +643,12 @@ class StockAnalysisPipeline:
                 portfolio_context=portfolio_context,
             )
             enhanced_context["market_phase_context"] = market_phase_context_dict
+            try:
+                from src.services.lpt_market_verification import verify_a_share_quote
+
+                enhanced_context["dual_source_validation"] = verify_a_share_quote(code)
+            except Exception as exc:
+                logger.warning("%s(%s) 双源行情校验失败: %s", stock_name, code, exc)
             self._attach_daily_market_context(
                 enhanced_context,
                 daily_market_context,
@@ -1542,7 +1548,7 @@ class StockAnalysisPipeline:
             return context
 
         try:
-            df, source_name = self.fetcher_manager.get_daily_data(code, days=60)
+            df, source_name = self.fetcher_manager.get_daily_data(code, days=90)
         except Exception as exc:
             logger.warning("[%s] JP/KR daily fallback fetch failed: %s", code, exc)
             return context
@@ -2893,7 +2899,7 @@ class StockAnalysisPipeline:
         # === 批量预取实时行情（优化：避免每只股票都触发全量拉取）===
         # 只有股票数量 >= 5 时才进行预取，少量股票直接逐个查询更高效
         if len(stock_codes) >= 5:
-            daily_prefetch_count = self.fetcher_manager.prefetch_daily_klines(stock_codes, days=30)
+            daily_prefetch_count = self.fetcher_manager.prefetch_daily_klines(stock_codes, days=90)
             if daily_prefetch_count > 0:
                 logger.info(
                     "[prefetch] component=daily_kline_prefetch action=complete "

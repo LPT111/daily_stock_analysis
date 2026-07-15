@@ -125,7 +125,7 @@ def _select_best_bars(db, stock_code: str, start: date, end: date) -> Tuple[Opti
 
 def load_history_df(
     stock_code: str,
-    days: int = 60,
+    days: int = 90,
     target_date: Optional[date] = None,
 ) -> Tuple[Optional[pd.DataFrame], str]:
     """Load K-line history, DB first with DataFetcherManager fallback.
