@@ -84,13 +84,48 @@ def _extract_report_field(text: str, labels: Iterable[str], limit: int = 90) -> 
     return "待报告生成"
 
 
-def _execution_plan(stock_report: str) -> Dict[str, str]:
-    return {
+def _execution_plan(stock_report: str, action: str) -> Dict[str, str]:
+    """Extract the model plan and fill every missing field conservatively."""
+    plan = {
         "buy_range": _extract_report_field(stock_report, ("理想买入点", "买入区间", "参考买入区间")),
         "position": _extract_report_field(stock_report, ("仓位建议", "建议仓位")),
         "stop_loss": _extract_report_field(stock_report, ("止损位", "止损线", "参考止损")),
         "invalidation": _extract_report_field(stock_report, ("触发失效条件", "失效条件", "判断失效条件"), limit=120),
     }
+    ma20_match = re.search(r"MA20[^0-9]{0,12}([0-9]+(?:\.[0-9]+)?)", stock_report, flags=re.I)
+    ma20 = ma20_match.group(1) if ma20_match else "MA20"
+
+    fallbacks = {
+        "买入": {
+            "buy_range": f"等待回踩{ma20}附近止跌后分批，不追高",
+            "position": "首次不超过2成，确认后最高4成",
+            "stop_loss": f"有效跌破{ma20}且两个交易日未收回",
+            "invalidation": "跌破止损位或所属板块同步转弱时，买入逻辑失效",
+        },
+        "持有": {
+            "buy_range": f"仅在{ma20}附近企稳时考虑低吸，不追涨",
+            "position": "控制在3成以内",
+            "stop_loss": f"有效跌破{ma20}且两个交易日未收回",
+            "invalidation": "跌破止损位或量价结构转空时，持有逻辑失效",
+        },
+        "减仓": {
+            "buy_range": f"暂不新增；重新站稳{ma20}后再评估",
+            "position": "降至1成以内",
+            "stop_loss": "反弹无力或再创近20日新低时继续退出",
+            "invalidation": f"未来3个交易日重新站稳{ma20}且量价修复，则减仓判断失效并重新评估",
+        },
+        "卖出": {
+            "buy_range": f"暂不新增；重新站稳{ma20}后再评估",
+            "position": "降至0成",
+            "stop_loss": "不等待额外确认，按既定纪律退出",
+            "invalidation": f"未来3个交易日重新站稳{ma20}且量价修复，则卖出判断失效并重新评估",
+        },
+    }
+    fallback = fallbacks.get(action, fallbacks["持有"])
+    for key, value in plan.items():
+        if not value or value == "待报告生成":
+            plan[key] = fallback[key]
+    return plan
 
 
 def _stock_codes() -> List[str]:
@@ -240,7 +275,7 @@ def build_digest(
     dashboard_url: str,
 ) -> str:
     action = _extract_action(stock_report)
-    plan = _execution_plan(stock_report)
+    plan = _execution_plan(stock_report, action)
     lines = [
         "【A股科技主题决策雷达】",
         f"个股建议：{action}（基于近3个月K线，保守模式）",

@@ -51,3 +51,20 @@ def test_page_and_digest_are_mobile_summary_first():
     assert "失效条件 放量跌破68.50元" in digest
     assert "网页版完整报告" in digest
     assert len(digest) <= 1500
+
+
+def test_digest_has_no_plan_placeholder_when_model_omits_invalidation():
+    digest = build_digest(
+        stock_report="""核心结论：减仓
+理想买入点：暂不新增
+仓位建议：1成以内
+止损位：反弹无力继续退出
+MA20 79.81
+""",
+        market_report="市场震荡。",
+        validations=[_validation()],
+        news_items=[],
+        dashboard_url="https://example.com/",
+    )
+    assert "待报告生成" not in digest
+    assert "未来3个交易日重新站稳79.81" in digest
