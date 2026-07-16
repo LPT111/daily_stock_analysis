@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-16T01:32:00+00:00",
+  "generated_at": "2026-07-16T09:27:29+00:00",
   "dashboard_url": "https://LPT111.github.io/daily_stock_analysis/",
   "stock_report": "report_20260716.md",
   "market_report": "market_review_20260716.md",
@@ -10,62 +10,62 @@
       "metrics": {
         "price": {
           "status": "confirmed",
-          "value": 70.205,
-          "display": "70.20",
+          "value": 69.16,
+          "display": "69.16",
           "interpretation": "腾讯财经与东方财富交叉核验一致。",
           "sources": {
-            "腾讯财经": 70.21,
-            "东方财富": 70.2
+            "腾讯财经": 69.16,
+            "东方财富": 69.16
           }
         },
         "change_pct": {
           "status": "confirmed",
-          "value": -5.025,
-          "display": "-5.03",
+          "value": -6.44,
+          "display": "-6.44",
           "interpretation": "腾讯财经与东方财富交叉核验一致。",
           "sources": {
-            "腾讯财经": -5.02,
-            "东方财富": -5.03
+            "腾讯财经": -6.44,
+            "东方财富": -6.44
           }
         },
         "dynamic_pe": {
           "status": "confirmed",
-          "value": -486.155,
-          "display": "-486.15（亏损状态）",
+          "value": -478.92,
+          "display": "-478.92（亏损状态）",
           "interpretation": "动态市盈率为负，表示当前口径下盈利为负，不能按正 PE 倍数进行估值判断。",
           "sources": {
-            "腾讯财经": -486.19,
-            "东方财富": -486.12
+            "腾讯财经": -478.92,
+            "东方财富": -478.92
           }
         },
         "pb": {
           "status": "confirmed",
-          "value": 13.125,
-          "display": "13.12",
+          "value": 12.945,
+          "display": "12.95",
           "interpretation": "腾讯财经与东方财富交叉核验一致。",
           "sources": {
-            "腾讯财经": 13.13,
-            "东方财富": 13.12
+            "腾讯财经": 12.93,
+            "东方财富": 12.96
           }
         }
       },
       "raw_sources": [
         {
           "source": "腾讯财经",
-          "price": 70.21,
+          "price": 69.16,
           "previous_close": 73.92,
-          "change_pct": -5.02,
-          "dynamic_pe": -486.19,
-          "pb": 13.13,
+          "change_pct": -6.44,
+          "dynamic_pe": -478.92,
+          "pb": 12.93,
           "source_url": "https://gu.qq.com/sh600118"
         },
         {
           "source": "东方财富",
-          "price": 70.2,
+          "price": 69.16,
           "previous_close": 73.92,
-          "change_pct": -5.03,
-          "dynamic_pe": -486.12,
-          "pb": 13.12,
+          "change_pct": -6.44,
+          "dynamic_pe": -478.92,
+          "pb": 12.96,
           "source_url": "https://quote.eastmoney.com/sh600118.html"
         }
       ],
@@ -82,6 +82,15 @@
         "category": "卫星与商业航天",
         "region": "国际",
         "source_weight": 14
+      },
+      {
+        "title": "Swissto12 raises $70 million to accelerate small GEO satellite production",
+        "published_at": "2026-07-16T07:00+00:00",
+        "source": "SpaceNews",
+        "url": "https://spacenews.com/swissto12-raises-70-million-to-accelerate-small-geo-satellite-production/",
+        "category": "卫星与商业航天",
+        "region": "国际",
+        "source_weight": 13
       },
       {
         "title": "Fedorov out as Ukraine’s defense minister in major government shake-up",
@@ -133,15 +142,6 @@
         "published_at": "2026-07-15T13:00+00:00",
         "source": "SpaceNews",
         "url": "https://spacenews.com/laying-the-groundwork-for-the-first-human-mission-to-mars/",
-        "category": "卫星与商业航天",
-        "region": "国际",
-        "source_weight": 13
-      },
-      {
-        "title": "Satellite investment sets annual record halfway through 2026",
-        "published_at": "2026-07-15T11:06+00:00",
-        "source": "SpaceNews",
-        "url": "https://spacenews.com/satellite-investment-sets-annual-record-halfway-through-2026/",
         "category": "卫星与商业航天",
         "region": "国际",
         "source_weight": 13
@@ -237,12 +237,30 @@
         "source_weight": 9
       },
       {
-        "title": "人形机器人公司逐际动力完成近 2 亿美元 Pre-IPO 轮融资，重点用于大小脑融合技术的突破和产品化",
-        "published_at": "2026-07-15T13:56+00:00",
+        "title": "寰宇航天：国家将统一管控可回收火箭相关试验，所有相关试验须在国家官方主导平台开展",
+        "published_at": "2026-07-16T07:16+00:00",
         "source": "IT之家",
-        "url": "https://www.ithome.com/0/977/234.htm",
+        "url": "https://www.ithome.com/0/977/522.htm",
+        "category": "卫星与商业航天",
+        "region": "国内",
+        "source_weight": 8
+      },
+      {
+        "title": "Cloudflare 推出 Precursor：一键导入，持续检测是否为机器人流量",
+        "published_at": "2026-07-16T06:50+00:00",
+        "source": "IT之家",
+        "url": "https://www.ithome.com/0/977/505.htm",
         "category": "机器人与具身智能",
         "region": "国内",
+        "source_weight": 8
+      },
+      {
+        "title": "Xiaomi introduces Xiaomi-Robotics-U0 for embodied AI and robot generation",
+        "published_at": "2026-07-16T03:25+00:00",
+        "source": "TechNode",
+        "url": "https://technode.com/2026/07/16/xiaomi-introduces-xiaomi-robotics-u0-for-embodied-ai-and-robot-generation/",
+        "category": "机器人与具身智能",
+        "region": "国际",
         "source_weight": 8
       },
       {
@@ -271,31 +289,14 @@
         "category": "机器人与具身智能",
         "region": "国内",
         "source_weight": 7
-      },
-      {
-        "title": "亚马逊Leo与南非企业达成协议，预计明年启动卫星互联网服务",
-        "published_at": "2026-07-16",
-        "source": "36氪",
-        "url": "https://36kr.com/newsflashes/3897597349234561?f=rss",
-        "category": "卫星与商业航天",
-        "region": "国内",
-        "source_weight": 7
-      },
-      {
-        "title": "宇树机器人出国“搬砖”！日本建筑商启用宇树人形机器人干工地",
-        "published_at": "2026-07-15T21:05+00:00",
-        "source": "快科技-科学",
-        "url": "https://news.mydrivers.com/1/1136/1136669.htm",
-        "category": "机器人与具身智能",
-        "region": "国内",
-        "source_weight": 7
       }
     ],
     "errors": [
+      "快科技-硬件: HTTPSConnectionPool(host='rss.mydrivers.com', port=443): Read timed out. (read timeout=12)",
       "国内科技新闻: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=%28%E5%8D%AB%E6%98%9F+OR+%E8%88%AA%E5%A4%A9+OR+%E5%8C%97%E6%96%97+OR+%E6%9C%BA%E5%99%A8%E4%BA%BA+OR+%E5%85%B7%E8%BA%AB%E6%99%BA%E8%83%BD+OR+%E8%8A%AF%E7%89%87+OR+%E5%8D%8A%E5%AF%BC%E4%BD%93+OR+%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD+OR+%E5%86%9B%E5%B7%A5+OR+%E5%9B%BD%E9%98%B2%E7%A7%91%E6%8A%80%29+sourcelang%3AChinese&mode=artlist&format=json&maxrecords=24&sort=datedesc&timespan=3d",
       "国际科技新闻: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=%28satellite+OR+spaceflight+OR+robotics+OR+humanoid+OR+semiconductor+OR+%22artificial+intelligence%22+OR+%22defense+technology%22%29+sourcelang%3AEnglish&mode=artlist&format=json&maxrecords=24&sort=datedesc&timespan=3d"
     ],
     "policy": "仅展示含标题、发布时间、来源和原文链接的新闻；不据此自动推断股价因果。"
   },
-  "digest": "【A股科技主题决策雷达】\n个股建议：卖出（基于近3个月K线，保守模式）\n执行参考：买入区间 暂不设置（趋势向下，无买入条件）｜仓位 空仓\n风控纪律：止损 持仓者：69.00元（跌破则加速下行）｜失效条件 未来3个交易日重新站稳79.52且量价修复，则卖出判断失效并重新评估\n大盘摘要：🎯 大盘复盘 2026-07-16 大盘复盘 今日市场全面重挫，超4000家个股下跌，成交额仅226亿元创极低水平，核心矛盾在于流动性枯竭与无主线带动。明日优先观察是否出现放量止跌信号，若无则继续执行防守策略。 一、盘面总览 各主要指数集体收跌，创业板指和科创50跌幅均超2.4%，权重股相对抗跌但无法扭转颓势。上涨家数仅771家，下跌家数高达4199家，涨跌…\n600118 双源校验：价格：70.20；涨跌幅：-5.03；动态PE：-486.15（亏损状态）；PB：13.12\n\n可核验科技新闻：\n- 卫星与商业航天：NASA’s Perseverance Rover Reads Record of Ancient Mars Impacts（NASA News，2026-07-15T15:30+00:00）\n  https://www.nasa.gov/solar-system/planets/mars/nasas-perseverance-rover-reads-record-of-ancient-mars-impacts/\n- 军工与国防科技：Fedorov out as Ukraine’s defense minister in major government shake-up（Defense News，2026-07-15T21:37+00:00）\n  https://www.defensenews.com/global/europe/2026/07/15/fedorov-out-as-ukraines-defense-minister-in-major-government-shake-up/\n- 科技与芯片：Space Force awards Slingshot $69 million for AI-enabled training technology（SpaceNews，2026-07-15T19:04+00:00）\n  https://spacenews.com/space-force-awards-slingshot-69-million-for-ai-enabled-training-technology/\n- 机器人与具身智能：Icarus Robotics taps KULR to provide batteries for Space Station robots（SpaceNews，2026-07-15T13:00+00:00）\n  https://spacenews.com/icarus-robotics-taps-kulr-to-provide-batteries-for-space-station-robots/\n\n网页版完整报告：https://LPT111.github.io/daily_stock_analysis/\n仅供研究参考，不构成投资建议。"
+  "digest": "【A股科技主题决策雷达】\n个股建议：减仓（基于近3个月K线，保守模式）\n执行参考：买入区间 暂不设置，趋势未明｜仓位 建议仓位：0-1成（若有持仓，减仓至1成以下）\n风控纪律：止损 若持仓，建议止损位66.00元（今日最低价附近）｜失效条件 未来3个交易日重新站稳79.48且量价修复，则减仓判断失效并重新评估\n大盘摘要：🎯 大盘复盘 2026-07-16 大盘复盘 今日市场全线回调，创业板与科创50领跌，成交额放大至2.4万亿显示多空分歧加大，但结构性热点（影视、科技服务）逆势走强；短期进入防守观察期，明日首要观察量能是否持续萎缩以及领跌板块是否止跌。 一、盘面总览 主要指数集体下挫，上证指数跌1.85%、深证成指跌1.97%，创业板指重挫2.95%，科创50跌幅达4.02…\n600118 双源校验：价格：69.16；涨跌幅：-6.44；动态PE：-478.92（亏损状态）；PB：12.95\n\n可核验科技新闻：\n- 卫星与商业航天：NASA’s Perseverance Rover Reads Record of Ancient Mars Impacts（NASA News，2026-07-15T15:30+00:00）\n  https://www.nasa.gov/solar-system/planets/mars/nasas-perseverance-rover-reads-record-of-ancient-mars-impacts/\n- 军工与国防科技：Fedorov out as Ukraine’s defense minister in major government shake-up（Defense News，2026-07-15T21:37+00:00）\n  https://www.defensenews.com/global/europe/2026/07/15/fedorov-out-as-ukraines-defense-minister-in-major-government-shake-up/\n- 科技与芯片：Space Force awards Slingshot $69 million for AI-enabled training technology（SpaceNews，2026-07-15T19:04+00:00）\n  https://spacenews.com/space-force-awards-slingshot-69-million-for-ai-enabled-training-technology/\n- 机器人与具身智能：Icarus Robotics taps KULR to provide batteries for Space Station robots（SpaceNews，2026-07-15T13:00+00:00）\n  https://spacenews.com/icarus-robotics-taps-kulr-to-provide-batteries-for-space-station-robots/\n\n网页版完整报告：https://LPT111.github.io/daily_stock_analysis/\n仅供研究参考，不构成投资建议。"
 }
