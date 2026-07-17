@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-07-16T09:27:29+00:00",
+  "generated_at": "2026-07-17T01:35:28+00:00",
   "dashboard_url": "https://LPT111.github.io/daily_stock_analysis/",
-  "stock_report": "report_20260716.md",
-  "market_report": "market_review_20260716.md",
+  "stock_report": "report_20260717.md",
+  "market_report": "market_review_20260717.md",
   "validations": [
     {
       "code": "600118",
@@ -10,62 +10,62 @@
       "metrics": {
         "price": {
           "status": "confirmed",
-          "value": 69.16,
-          "display": "69.16",
+          "value": 67.785,
+          "display": "67.78",
           "interpretation": "腾讯财经与东方财富交叉核验一致。",
           "sources": {
-            "腾讯财经": 69.16,
-            "东方财富": 69.16
+            "腾讯财经": 67.79,
+            "东方财富": 67.78
           }
         },
         "change_pct": {
           "status": "confirmed",
-          "value": -6.44,
-          "display": "-6.44",
+          "value": -1.99,
+          "display": "-1.99",
           "interpretation": "腾讯财经与东方财富交叉核验一致。",
           "sources": {
-            "腾讯财经": -6.44,
-            "东方财富": -6.44
+            "腾讯财经": -1.98,
+            "东方财富": -2.0
           }
         },
         "dynamic_pe": {
           "status": "confirmed",
-          "value": -478.92,
-          "display": "-478.92（亏损状态）",
+          "value": -469.395,
+          "display": "-469.39（亏损状态）",
           "interpretation": "动态市盈率为负，表示当前口径下盈利为负，不能按正 PE 倍数进行估值判断。",
           "sources": {
-            "腾讯财经": -478.92,
-            "东方财富": -478.92
+            "腾讯财经": -469.43,
+            "东方财富": -469.36
           }
         },
         "pb": {
           "status": "confirmed",
-          "value": 12.945,
-          "display": "12.95",
+          "value": 12.684999999999999,
+          "display": "12.68",
           "interpretation": "腾讯财经与东方财富交叉核验一致。",
           "sources": {
-            "腾讯财经": 12.93,
-            "东方财富": 12.96
+            "腾讯财经": 12.67,
+            "东方财富": 12.7
           }
         }
       },
       "raw_sources": [
         {
           "source": "腾讯财经",
-          "price": 69.16,
-          "previous_close": 73.92,
-          "change_pct": -6.44,
-          "dynamic_pe": -478.92,
-          "pb": 12.93,
+          "price": 67.79,
+          "previous_close": 69.16,
+          "change_pct": -1.98,
+          "dynamic_pe": -469.43,
+          "pb": 12.67,
           "source_url": "https://gu.qq.com/sh600118"
         },
         {
           "source": "东方财富",
-          "price": 69.16,
-          "previous_close": 73.92,
-          "change_pct": -6.44,
-          "dynamic_pe": -478.92,
-          "pb": 12.96,
+          "price": 67.78,
+          "previous_close": 69.16,
+          "change_pct": -2.0,
+          "dynamic_pe": -469.36,
+          "pb": 12.7,
           "source_url": "https://quote.eastmoney.com/sh600118.html"
         }
       ],
@@ -75,20 +75,56 @@
   "sector_news": {
     "items": [
       {
-        "title": "NASA’s Perseverance Rover Reads Record of Ancient Mars Impacts",
-        "published_at": "2026-07-15T15:30+00:00",
-        "source": "NASA News",
-        "url": "https://www.nasa.gov/solar-system/planets/mars/nasas-perseverance-rover-reads-record-of-ancient-mars-impacts/",
-        "category": "卫星与商业航天",
+        "title": "2 defense tech companies sue US Navy after losing out on MUSV program",
+        "published_at": "2026-07-16T22:10+00:00",
+        "source": "Defense News",
+        "url": "https://www.defensenews.com/industry/techwatch/2026/07/16/2-defense-tech-companies-sue-us-navy-after-losing-out-on-musv-program/",
+        "category": "军工与国防科技",
         "region": "国际",
-        "source_weight": 14
+        "source_weight": 13
       },
       {
-        "title": "Swissto12 raises $70 million to accelerate small GEO satellite production",
-        "published_at": "2026-07-16T07:00+00:00",
+        "title": "SpaceX launches 21 satellites for military data network",
+        "published_at": "2026-07-16T21:00+00:00",
         "source": "SpaceNews",
-        "url": "https://spacenews.com/swissto12-raises-70-million-to-accelerate-small-geo-satellite-production/",
+        "url": "https://spacenews.com/spacex-launches-21-satellites-for-military-data-network/",
         "category": "卫星与商业航天",
+        "region": "国际",
+        "source_weight": 13
+      },
+      {
+        "title": "Nature study identifies a new way to spot nuclear weapons in orbit",
+        "published_at": "2026-07-16T20:36+00:00",
+        "source": "SpaceNews",
+        "url": "https://spacenews.com/nature-study-identifies-a-new-way-to-spot-nuclear-weapons-in-orbit/",
+        "category": "卫星与商业航天",
+        "region": "国际",
+        "source_weight": 13
+      },
+      {
+        "title": "Defense Innovation Unit seeks commercial path to deliver electrical power from orbit",
+        "published_at": "2026-07-16T15:29+00:00",
+        "source": "SpaceNews",
+        "url": "https://spacenews.com/defense-innovation-unit-seeks-commercial-path-to-deliver-electrical-power-from-orbit/",
+        "category": "卫星与商业航天",
+        "region": "国际",
+        "source_weight": 13
+      },
+      {
+        "title": "Franco-German defense cooperation under strain as Macron, Merz meet",
+        "published_at": "2026-07-16T13:47+00:00",
+        "source": "Defense News",
+        "url": "https://www.defensenews.com/global/europe/2026/07/16/franco-german-defense-cooperation-under-strain-as-macron-merz-meet/",
+        "category": "军工与国防科技",
+        "region": "国际",
+        "source_weight": 13
+      },
+      {
+        "title": "Bluestaq Launches BLUESTAQ / ARQ Defense-Grade Data Infrastructure Now Available for Commercial, Government, and Enterprise Organizations",
+        "published_at": "2026-07-16T12:00+00:00",
+        "source": "SpaceNews",
+        "url": "https://spacenews.com/bluestaq-launches-bluestaq-arq-defense-grade-data-infrastructure-now-available-for-commercial-government-and-enterprise-organizations/",
+        "category": "军工与国防科技",
         "region": "国际",
         "source_weight": 13
       },
@@ -111,49 +147,13 @@
         "source_weight": 13
       },
       {
-        "title": "Space Force awards Slingshot $69 million for AI-enabled training technology",
-        "published_at": "2026-07-15T19:04+00:00",
-        "source": "SpaceNews",
-        "url": "https://spacenews.com/space-force-awards-slingshot-69-million-for-ai-enabled-training-technology/",
+        "title": "The Download: OpenAI unveils GPT-Red and heat pumps rise in the US",
+        "published_at": "2026-07-16T12:10+00:00",
+        "source": "MIT Technology Review",
+        "url": "https://www.technologyreview.com/2026/07/16/1140600/the-download-openai-unveils-gpt-red-heat-pumps-rise-us/",
         "category": "科技与芯片",
         "region": "国际",
-        "source_weight": 13
-      },
-      {
-        "title": "Pressure mounts on US defense executives to boost weapons production",
-        "published_at": "2026-07-15T14:33+00:00",
-        "source": "Defense News",
-        "url": "https://www.defensenews.com/news/your-military/2026/07/15/pressure-mounts-on-defense-executives-to-boost-weapons-production/",
-        "category": "军工与国防科技",
-        "region": "国际",
-        "source_weight": 13
-      },
-      {
-        "title": "Icarus Robotics taps KULR to provide batteries for Space Station robots",
-        "published_at": "2026-07-15T13:00+00:00",
-        "source": "SpaceNews",
-        "url": "https://spacenews.com/icarus-robotics-taps-kulr-to-provide-batteries-for-space-station-robots/",
-        "category": "机器人与具身智能",
-        "region": "国际",
-        "source_weight": 13
-      },
-      {
-        "title": "Laying the groundwork for the first human mission to Mars",
-        "published_at": "2026-07-15T13:00+00:00",
-        "source": "SpaceNews",
-        "url": "https://spacenews.com/laying-the-groundwork-for-the-first-human-mission-to-mars/",
-        "category": "卫星与商业航天",
-        "region": "国际",
-        "source_weight": 13
-      },
-      {
-        "title": "Israeli firm wants to convert commercial ships into floating drone bases",
-        "published_at": "2026-07-15T10:27+00:00",
-        "source": "Defense News",
-        "url": "https://www.defensenews.com/global/mideast-africa/2026/07/15/israeli-firm-wants-to-convert-commercial-ships-into-floating-drone-bases/",
-        "category": "军工与国防科技",
-        "region": "国际",
-        "source_weight": 13
+        "source_weight": 12
       },
       {
         "title": "Meet GPT-Red: an LLM super-hacker OpenAI built to make its models safer",
@@ -183,15 +183,6 @@
         "source_weight": 12
       },
       {
-        "title": "The Download: Claude’s inner workings and OpenAI’s “super app”",
-        "published_at": "2026-07-10T12:10+00:00",
-        "source": "MIT Technology Review",
-        "url": "https://www.technologyreview.com/2026/07/10/1140316/the-download-anthropic-claude-hidden-space-openai-super-app/",
-        "category": "科技与芯片",
-        "region": "国际",
-        "source_weight": 12
-      },
-      {
         "title": "AI is not ready to fly solo in space",
         "published_at": "2026-07-15T14:00+00:00",
         "source": "Science News",
@@ -199,6 +190,15 @@
         "category": "科技与芯片",
         "region": "国际",
         "source_weight": 11
+      },
+      {
+        "title": "An Inventor of Apple’s FaceID Wants to Analyze Your Brain’s Health With AI",
+        "published_at": "2026-07-15T12:00+00:00",
+        "source": "WIRED Science",
+        "url": "https://www.wired.com/story/the-apple-faceid-veteran-building-a-frontier-ai-model-for-the-human-brain/",
+        "category": "科技与芯片",
+        "region": "国际",
+        "source_weight": 10
       },
       {
         "title": "The US Approves Launch of Mirror Satellite That Can Reflect Sunlight and Illuminate the Earth at Night",
@@ -210,10 +210,19 @@
         "source_weight": 10
       },
       {
-        "title": "How hard is it to build orbital data centers, actually?",
-        "published_at": "2026-07-15T11:00+00:00",
+        "title": "Fear of humanoid robots spurs human workers to strike at Hyundai auto factory",
+        "published_at": "2026-07-16T20:09+00:00",
         "source": "Ars Technica",
-        "url": "https://arstechnica.com/space/2026/07/how-hard-is-it-to-build-orbital-data-centers-actually/",
+        "url": "https://arstechnica.com/ai/2026/07/fear-of-humanoid-robots-spurs-human-workers-to-strike-at-hyundai-auto-factory/",
+        "category": "机器人与具身智能",
+        "region": "国际",
+        "source_weight": 9
+      },
+      {
+        "title": "Move over, GPS: Navigation satellites in low-Earth orbit are making a comeback",
+        "published_at": "2026-07-16T11:00+00:00",
+        "source": "Ars Technica",
+        "url": "https://arstechnica.com/space/2026/07/move-over-gps-navigation-satellites-in-low-earth-orbit-are-making-a-comeback/",
         "category": "卫星与商业航天",
         "region": "国际",
         "source_weight": 9
@@ -228,28 +237,19 @@
         "source_weight": 9
       },
       {
-        "title": "Zipline adds ex-Tesla, Uber, Waymo execs to make drone delivery mainstream across U.S.",
-        "published_at": "2026-07-14T21:08+00:00",
-        "source": "CNBC Technology",
-        "url": "https://www.cnbc.com/2026/07/14/zipline-drone-delivery-tesla-uber-waymo-executives.html",
-        "category": "军工与国防科技",
-        "region": "国际",
-        "source_weight": 9
-      },
-      {
-        "title": "寰宇航天：国家将统一管控可回收火箭相关试验，所有相关试验须在国家官方主导平台开展",
-        "published_at": "2026-07-16T07:16+00:00",
+        "title": "震撼功夫巨星甄子丹：全球人形机器人自由格斗联赛揭幕战在深圳打响，头掉了还能打",
+        "published_at": "2026-07-16T16:39+00:00",
         "source": "IT之家",
-        "url": "https://www.ithome.com/0/977/522.htm",
-        "category": "卫星与商业航天",
+        "url": "https://www.ithome.com/0/977/823.htm",
+        "category": "机器人与具身智能",
         "region": "国内",
         "source_weight": 8
       },
       {
-        "title": "Cloudflare 推出 Precursor：一键导入，持续检测是否为机器人流量",
-        "published_at": "2026-07-16T06:50+00:00",
+        "title": "荣耀黄非晒 Robot Phone 新机 AI 功能，称对未来科技的想象真照进了现实",
+        "published_at": "2026-07-16T15:49+00:00",
         "source": "IT之家",
-        "url": "https://www.ithome.com/0/977/505.htm",
+        "url": "https://www.ithome.com/0/977/816.htm",
         "category": "机器人与具身智能",
         "region": "国内",
         "source_weight": 8
@@ -282,21 +282,20 @@
         "source_weight": 8
       },
       {
-        "title": "众筹近400万美金，这家明星AI体育硬件公司做了款多合一教练机器人 ｜产品观察",
-        "published_at": "2026-07-16",
-        "source": "36氪",
-        "url": "https://36kr.com/p/3896586337978244?f=rss",
-        "category": "机器人与具身智能",
+        "title": "天文台辟谣新疆惊现不明飞行物 ：实为载人火箭发射飞行踪迹",
+        "published_at": "2026-07-17T07:21+00:00",
+        "source": "快科技-综合",
+        "url": "https://news.mydrivers.com/1/1137/1137015.htm",
+        "category": "卫星与商业航天",
         "region": "国内",
-        "source_weight": 7
+        "source_weight": 5
       }
     ],
     "errors": [
-      "快科技-硬件: HTTPSConnectionPool(host='rss.mydrivers.com', port=443): Read timed out. (read timeout=12)",
-      "国内科技新闻: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=%28%E5%8D%AB%E6%98%9F+OR+%E8%88%AA%E5%A4%A9+OR+%E5%8C%97%E6%96%97+OR+%E6%9C%BA%E5%99%A8%E4%BA%BA+OR+%E5%85%B7%E8%BA%AB%E6%99%BA%E8%83%BD+OR+%E8%8A%AF%E7%89%87+OR+%E5%8D%8A%E5%AF%BC%E4%BD%93+OR+%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD+OR+%E5%86%9B%E5%B7%A5+OR+%E5%9B%BD%E9%98%B2%E7%A7%91%E6%8A%80%29+sourcelang%3AChinese&mode=artlist&format=json&maxrecords=24&sort=datedesc&timespan=3d",
+      "快科技-科学: HTTPSConnectionPool(host='rss.mydrivers.com', port=443): Read timed out.",
       "国际科技新闻: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=%28satellite+OR+spaceflight+OR+robotics+OR+humanoid+OR+semiconductor+OR+%22artificial+intelligence%22+OR+%22defense+technology%22%29+sourcelang%3AEnglish&mode=artlist&format=json&maxrecords=24&sort=datedesc&timespan=3d"
     ],
     "policy": "仅展示含标题、发布时间、来源和原文链接的新闻；不据此自动推断股价因果。"
   },
-  "digest": "【A股科技主题决策雷达】\n个股建议：减仓（基于近3个月K线，保守模式）\n执行参考：买入区间 暂不设置，趋势未明｜仓位 建议仓位：0-1成（若有持仓，减仓至1成以下）\n风控纪律：止损 若持仓，建议止损位66.00元（今日最低价附近）｜失效条件 未来3个交易日重新站稳79.48且量价修复，则减仓判断失效并重新评估\n大盘摘要：🎯 大盘复盘 2026-07-16 大盘复盘 今日市场全线回调，创业板与科创50领跌，成交额放大至2.4万亿显示多空分歧加大，但结构性热点（影视、科技服务）逆势走强；短期进入防守观察期，明日首要观察量能是否持续萎缩以及领跌板块是否止跌。 一、盘面总览 主要指数集体下挫，上证指数跌1.85%、深证成指跌1.97%，创业板指重挫2.95%，科创50跌幅达4.02…\n600118 双源校验：价格：69.16；涨跌幅：-6.44；动态PE：-478.92（亏损状态）；PB：12.95\n\n可核验科技新闻：\n- 卫星与商业航天：NASA’s Perseverance Rover Reads Record of Ancient Mars Impacts（NASA News，2026-07-15T15:30+00:00）\n  https://www.nasa.gov/solar-system/planets/mars/nasas-perseverance-rover-reads-record-of-ancient-mars-impacts/\n- 军工与国防科技：Fedorov out as Ukraine’s defense minister in major government shake-up（Defense News，2026-07-15T21:37+00:00）\n  https://www.defensenews.com/global/europe/2026/07/15/fedorov-out-as-ukraines-defense-minister-in-major-government-shake-up/\n- 科技与芯片：Space Force awards Slingshot $69 million for AI-enabled training technology（SpaceNews，2026-07-15T19:04+00:00）\n  https://spacenews.com/space-force-awards-slingshot-69-million-for-ai-enabled-training-technology/\n- 机器人与具身智能：Icarus Robotics taps KULR to provide batteries for Space Station robots（SpaceNews，2026-07-15T13:00+00:00）\n  https://spacenews.com/icarus-robotics-taps-kulr-to-provide-batteries-for-space-station-robots/\n\n网页版完整报告：https://LPT111.github.io/daily_stock_analysis/\n仅供研究参考，不构成投资建议。"
+  "digest": "【A股科技主题决策雷达】\n个股建议：减仓（基于近3个月K线，保守模式）\n执行参考：买入区间 暂不设置（空头趋势不买入）｜仓位 空仓0成，持仓者减仓至半仓以下\n风控纪律：止损 持仓者：现价下方5%即64.4元离场｜失效条件 未来3个交易日重新站稳5且量价修复，则减仓判断失效并重新评估\n大盘摘要：🎯 大盘复盘 2026-07-17 大盘复盘 今日市场全线下跌但个股涨多跌少，成交额萎缩至892亿元，呈现典型的缩量分化格局，权重股拖累指数，中小盘相对抗跌。明日优先观察成交额能否重回千亿以及教育、建筑等逆势板块的持续性。 一、盘面总览 三大指数集体收跌，创业板指跌幅最大达1.62%，但上涨家数（2930家）多于下跌家数（2253家），市场呈显著的结构性分化…\n600118 双源校验：价格：67.78；涨跌幅：-1.99；动态PE：-469.39（亏损状态）；PB：12.68\n\n可核验科技新闻：\n- 军工与国防科技：2 defense tech companies sue US Navy after losing out on MUSV program（Defense News，2026-07-16T22:10+00:00）\n  https://www.defensenews.com/industry/techwatch/2026/07/16/2-defense-tech-companies-sue-us-navy-after-losing-out-on-musv-program/\n- 卫星与商业航天：SpaceX launches 21 satellites for military data network（SpaceNews，2026-07-16T21:00+00:00）\n  https://spacenews.com/spacex-launches-21-satellites-for-military-data-network/\n- 科技与芯片：The Download: OpenAI unveils GPT-Red and heat pumps rise in the US（MIT Technology Review，2026-07-16T12:10+00:00）\n  https://www.technologyreview.com/2026/07/16/1140600/the-download-openai-unveils-gpt-red-heat-pumps-rise-us/\n- 机器人与具身智能：Fear of humanoid robots spurs human workers to strike at Hyundai auto factory（Ars Technica，2026-07-16T20:09+00:00）\n  https://arstechnica.com/ai/2026/07/fear-of-humanoid-robots-spurs-human-workers-to-strike-at-hyundai-auto-factory/\n\n网页版完整报告：https://LPT111.github.io/daily_stock_analysis/\n仅供研究参考，不构成投资建议。"
 }
