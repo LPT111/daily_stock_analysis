@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-18T08:56:10+00:00",
+  "generated_at": "2026-07-19T01:28:49+00:00",
   "dashboard_url": "https://LPT111.github.io/daily_stock_analysis/",
   "stock_report": null,
   "market_report": null,
@@ -9,43 +9,43 @@
       "policy": "仅 status=confirmed 的字段可用于结论；待核实字段必须忽略。",
       "metrics": {
         "price": {
-          "status": "待核实",
-          "value": null,
-          "display": "待核实",
-          "interpretation": "两个数据源未同时返回一致结果，不得用于决策。",
+          "status": "confirmed",
+          "value": 62.35,
+          "display": "62.35",
+          "interpretation": "腾讯财经与东方财富交叉核验一致。",
           "sources": {
             "腾讯财经": 62.35,
-            "东方财富": null
+            "东方财富": 62.35
           }
         },
         "change_pct": {
-          "status": "待核实",
-          "value": null,
-          "display": "待核实",
-          "interpretation": "两个数据源未同时返回一致结果，不得用于决策。",
+          "status": "confirmed",
+          "value": -9.85,
+          "display": "-9.85",
+          "interpretation": "腾讯财经与东方财富交叉核验一致。",
           "sources": {
             "腾讯财经": -9.85,
-            "东方财富": null
+            "东方财富": -9.85
           }
         },
         "dynamic_pe": {
-          "status": "待核实",
-          "value": null,
-          "display": "待核实",
-          "interpretation": "两个数据源未同时返回一致结果，不得用于决策。",
+          "status": "confirmed",
+          "value": -431.76,
+          "display": "-431.76（亏损状态）",
+          "interpretation": "动态市盈率为负，表示当前口径下盈利为负，不能按正 PE 倍数进行估值判断。",
           "sources": {
             "腾讯财经": -431.76,
-            "东方财富": null
+            "东方财富": -431.76
           }
         },
         "pb": {
-          "status": "待核实",
-          "value": null,
-          "display": "待核实",
-          "interpretation": "两个数据源未同时返回一致结果，不得用于决策。",
+          "status": "confirmed",
+          "value": 11.67,
+          "display": "11.67",
+          "interpretation": "腾讯财经与东方财富交叉核验一致。",
           "sources": {
             "腾讯财经": 11.66,
-            "东方财富": null
+            "东方财富": 11.68
           }
         }
       },
@@ -58,11 +58,18 @@
           "dynamic_pe": -431.76,
           "pb": 11.66,
           "source_url": "https://gu.qq.com/sh600118"
+        },
+        {
+          "source": "东方财富",
+          "price": 62.35,
+          "previous_close": 69.16,
+          "change_pct": -9.85,
+          "dynamic_pe": -431.76,
+          "pb": 11.68,
+          "source_url": "https://quote.eastmoney.com/sh600118.html"
         }
       ],
-      "errors": [
-        "东方财富: 502 Server Error: Bad Gateway for url: https://push2.eastmoney.com/api/qt/stock/get?secid=1.600118&fields=f43%2Cf57%2Cf58%2Cf60%2Cf162%2Cf167%2Cf170"
-      ]
+      "errors": []
     }
   ],
   "sector_news": {
@@ -75,6 +82,24 @@
         "category": "卫星与商业航天",
         "region": "国际",
         "source_weight": 14
+      },
+      {
+        "title": "2 US troops killed, 1 missing after Iranian missile, drone attack in Jordan",
+        "published_at": "2026-07-18T18:00+00:00",
+        "source": "Defense News",
+        "url": "https://www.defensenews.com/flashpoints/2026/07/18/2-us-troops-killed-1-missing-after-iranian-missile-drone-attack-in-jordan/",
+        "category": "军工与国防科技",
+        "region": "国际",
+        "source_weight": 13
+      },
+      {
+        "title": "Pentagon awards $7.1 million to expand U.S. production of cover glass for satellites",
+        "published_at": "2026-07-18T16:59+00:00",
+        "source": "SpaceNews",
+        "url": "https://spacenews.com/pentagon-awards-7-1-million-to-expand-u-s-production-of-cover-glass-for-satellites/",
+        "category": "卫星与商业航天",
+        "region": "国际",
+        "source_weight": 13
       },
       {
         "title": "Skyroot Aerospace reaches orbit on first Vikram-1 launch",
@@ -122,28 +147,10 @@
         "source_weight": 13
       },
       {
-        "title": "Nature study identifies a new way to spot nuclear weapons in orbit",
-        "published_at": "2026-07-16T20:36+00:00",
-        "source": "SpaceNews",
-        "url": "https://spacenews.com/nature-study-identifies-a-new-way-to-spot-nuclear-weapons-in-orbit/",
-        "category": "卫星与商业航天",
-        "region": "国际",
-        "source_weight": 13
-      },
-      {
         "title": "Franco-German defense cooperation under strain as Macron, Merz meet",
         "published_at": "2026-07-16T13:47+00:00",
         "source": "Defense News",
         "url": "https://www.defensenews.com/global/europe/2026/07/16/franco-german-defense-cooperation-under-strain-as-macron-merz-meet/",
-        "category": "军工与国防科技",
-        "region": "国际",
-        "source_weight": 13
-      },
-      {
-        "title": "Fedorov out as Ukraine’s defense minister in major government shake-up",
-        "published_at": "2026-07-15T21:37+00:00",
-        "source": "Defense News",
-        "url": "https://www.defensenews.com/global/europe/2026/07/15/fedorov-out-as-ukraines-defense-minister-in-major-government-shake-up/",
         "category": "军工与国防科技",
         "region": "国际",
         "source_weight": 13
@@ -221,48 +228,48 @@
         "source_weight": 9
       },
       {
-        "title": "Fear of humanoid robots spurs human workers to strike at Hyundai auto factory",
-        "published_at": "2026-07-16T20:09+00:00",
-        "source": "Ars Technica",
-        "url": "https://arstechnica.com/ai/2026/07/fear-of-humanoid-robots-spurs-human-workers-to-strike-at-hyundai-auto-factory/",
+        "title": "荣耀新一代伙伴型多模态智能体操作系统 AgenticOS 发布，8 月 Robot Phone 首发内核",
+        "published_at": "2026-07-19T00:30+00:00",
+        "source": "IT之家",
+        "url": "https://www.ithome.com/0/978/621.htm",
+        "category": "机器人与具身智能",
+        "region": "国内",
+        "source_weight": 8
+      },
+      {
+        "title": "美国初创公司发布机器人 AI 模型 ACT-2，宣称在陌生家庭叠衣成功率超 99%",
+        "published_at": "2026-07-19T00:06+00:00",
+        "source": "IT之家",
+        "url": "https://www.ithome.com/0/978/617.htm",
+        "category": "机器人与具身智能",
+        "region": "国内",
+        "source_weight": 8
+      },
+      {
+        "title": "蓝思智能与上纬新材合作建万台级产线，全球首个可变形个人机器人启元 T1 即将量产",
+        "published_at": "2026-07-18T11:18+00:00",
+        "source": "IT之家",
+        "url": "https://www.ithome.com/0/978/566.htm",
+        "category": "机器人与具身智能",
+        "region": "国内",
+        "source_weight": 8
+      },
+      {
+        "title": "Agility Robotics plants its flag in Tesla’s backyard",
+        "published_at": "2026-07-17T20:19+00:00",
+        "source": "TechCrunch",
+        "url": "https://techcrunch.com/2026/07/17/agility-robotics-plants-its-flag-in-teslas-backyard/",
         "category": "机器人与具身智能",
         "region": "国际",
-        "source_weight": 9
-      },
-      {
-        "title": "傅利叶发布首款轮式双臂机器人 GRW：三种手随便换、能扛起 16 公斤重物",
-        "published_at": "2026-07-18T07:40+00:00",
-        "source": "IT之家",
-        "url": "https://www.ithome.com/0/978/489.htm",
-        "category": "机器人与具身智能",
-        "region": "国内",
         "source_weight": 8
       },
       {
-        "title": "国家地方共建人形机器人创新中心中试公共服务平台启用，每年可产整机 2000 台",
-        "published_at": "2026-07-18T07:28+00:00",
-        "source": "IT之家",
-        "url": "https://www.ithome.com/0/978/482.htm",
+        "title": "Xiaomi introduces Xiaomi-Robotics-U0 for embodied AI and robot generation",
+        "published_at": "2026-07-16T03:25+00:00",
+        "source": "TechNode",
+        "url": "https://technode.com/2026/07/16/xiaomi-introduces-xiaomi-robotics-u0-for-embodied-ai-and-robot-generation/",
         "category": "机器人与具身智能",
-        "region": "国内",
-        "source_weight": 8
-      },
-      {
-        "title": "荣耀李健 WAIC 宣布 Robot Phone 开启预约：搭载 Agentic OS，8 月份发布",
-        "published_at": "2026-07-18T06:30+00:00",
-        "source": "IT之家",
-        "url": "https://www.ithome.com/0/978/462.htm",
-        "category": "机器人与具身智能",
-        "region": "国内",
-        "source_weight": 8
-      },
-      {
-        "title": "荣耀 Robot Phone 正式开启预约",
-        "published_at": "2026-07-18T03:11+00:00",
-        "source": "IT之家",
-        "url": "https://www.ithome.com/0/978/394.htm",
-        "category": "机器人与具身智能",
-        "region": "国内",
+        "region": "国际",
         "source_weight": 8
       },
       {
@@ -285,9 +292,10 @@
       }
     ],
     "errors": [
+      "国内科技新闻: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=%28%E5%8D%AB%E6%98%9F+OR+%E8%88%AA%E5%A4%A9+OR+%E5%8C%97%E6%96%97+OR+%E6%9C%BA%E5%99%A8%E4%BA%BA+OR+%E5%85%B7%E8%BA%AB%E6%99%BA%E8%83%BD+OR+%E8%8A%AF%E7%89%87+OR+%E5%8D%8A%E5%AF%BC%E4%BD%93+OR+%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD+OR+%E5%86%9B%E5%B7%A5+OR+%E5%9B%BD%E9%98%B2%E7%A7%91%E6%8A%80%29+sourcelang%3AChinese&mode=artlist&format=json&maxrecords=24&sort=datedesc&timespan=3d",
       "国际科技新闻: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=%28satellite+OR+spaceflight+OR+robotics+OR+humanoid+OR+semiconductor+OR+%22artificial+intelligence%22+OR+%22defense+technology%22%29+sourcelang%3AEnglish&mode=artlist&format=json&maxrecords=24&sort=datedesc&timespan=3d"
     ],
     "policy": "仅展示含标题、发布时间、来源和原文链接的新闻；不据此自动推断股价因果。"
   },
-  "digest": "【A股科技主题决策雷达】\n个股建议：待确认（基于近3个月K线，保守模式）\n执行参考：买入区间 仅在MA20附近企稳时考虑低吸，不追涨｜仓位 控制在3成以内\n风控纪律：止损 有效跌破MA20且两个交易日未收回｜失效条件 跌破止损位或量价结构转空时，持有逻辑失效\n大盘摘要：\n600118 双源校验：价格：待核实；涨跌幅：待核实；动态PE：待核实；PB：待核实\n\n可核验科技新闻：\n- 卫星与商业航天：The Growing Crescent of Mars as NASA’s Psyche Mission Approaches（NASA News，2026-07-17T22:32+00:00）\n  https://science.nasa.gov/photojournal/the-growing-crescent-of-mars-as-nasas-psyche-mission-approaches/\n- 军工与国防科技：US Navy 2 years behind on hypersonic missile installation on Zumwalt destroyers（Defense News，2026-07-17T19:45+00:00）\n  https://www.defensenews.com/industry/techwatch/2026/07/17/us-navy-2-years-behind-on-hypersonic-missile-installation-on-zumwalt-destroyers/\n- 科技与芯片：The Download: perimenopause misinformation and China’s latest AI leap（MIT Technology Review，2026-07-17T12:10+00:00）\n  https://www.technologyreview.com/2026/07/17/1140640/the-download-perimenopause-misinformation-china-moonshot-ai/\n- 机器人与具身智能：Amazon's Zoox issues software recall after robotaxi drove into heavy smoke（CNBC Technology，2026-07-17T14:42+00:00）\n  https://www.cnbc.com/2026/07/17/amazon-zoox-recalls-robotaxi-smoke.html\n\n网页版完整报告：https://LPT111.github.io/daily_stock_analysis/\n仅供研究参考，不构成投资建议。"
+  "digest": "【A股科技主题决策雷达】\n个股建议：待确认（基于近3个月K线，保守模式）\n执行参考：买入区间 仅在MA20附近企稳时考虑低吸，不追涨｜仓位 控制在3成以内\n风控纪律：止损 有效跌破MA20且两个交易日未收回｜失效条件 跌破止损位或量价结构转空时，持有逻辑失效\n大盘摘要：\n600118 双源校验：价格：62.35；涨跌幅：-9.85；动态PE：-431.76（亏损状态）；PB：11.67\n\n可核验科技新闻：\n- 卫星与商业航天：The Growing Crescent of Mars as NASA’s Psyche Mission Approaches（NASA News，2026-07-17T22:32+00:00）\n  https://science.nasa.gov/photojournal/the-growing-crescent-of-mars-as-nasas-psyche-mission-approaches/\n- 军工与国防科技：2 US troops killed, 1 missing after Iranian missile, drone attack in Jordan（Defense News，2026-07-18T18:00+00:00）\n  https://www.defensenews.com/flashpoints/2026/07/18/2-us-troops-killed-1-missing-after-iranian-missile-drone-attack-in-jordan/\n- 科技与芯片：The Download: perimenopause misinformation and China’s latest AI leap（MIT Technology Review，2026-07-17T12:10+00:00）\n  https://www.technologyreview.com/2026/07/17/1140640/the-download-perimenopause-misinformation-china-moonshot-ai/\n- 机器人与具身智能：Amazon's Zoox issues software recall after robotaxi drove into heavy smoke（CNBC Technology，2026-07-17T14:42+00:00）\n  https://www.cnbc.com/2026/07/17/amazon-zoox-recalls-robotaxi-smoke.html\n\n网页版完整报告：https://LPT111.github.io/daily_stock_analysis/\n仅供研究参考，不构成投资建议。"
 }
