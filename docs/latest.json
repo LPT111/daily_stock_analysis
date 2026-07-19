@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-19T01:28:49+00:00",
+  "generated_at": "2026-07-19T09:12:24+00:00",
   "dashboard_url": "https://LPT111.github.io/daily_stock_analysis/",
   "stock_report": null,
   "market_report": null,
@@ -228,28 +228,19 @@
         "source_weight": 9
       },
       {
-        "title": "荣耀新一代伙伴型多模态智能体操作系统 AgenticOS 发布，8 月 Robot Phone 首发内核",
-        "published_at": "2026-07-19T00:30+00:00",
+        "title": "上海人形机器人中试服务平台发布，兼容轮臂机器人、四足机器人试制",
+        "published_at": "2026-07-19T08:54+00:00",
         "source": "IT之家",
-        "url": "https://www.ithome.com/0/978/621.htm",
+        "url": "https://www.ithome.com/0/978/735.htm",
         "category": "机器人与具身智能",
         "region": "国内",
         "source_weight": 8
       },
       {
-        "title": "美国初创公司发布机器人 AI 模型 ACT-2，宣称在陌生家庭叠衣成功率超 99%",
-        "published_at": "2026-07-19T00:06+00:00",
+        "title": "全国首个具身智能实训场样板点发布",
+        "published_at": "2026-07-19T04:07+00:00",
         "source": "IT之家",
-        "url": "https://www.ithome.com/0/978/617.htm",
-        "category": "机器人与具身智能",
-        "region": "国内",
-        "source_weight": 8
-      },
-      {
-        "title": "蓝思智能与上纬新材合作建万台级产线，全球首个可变形个人机器人启元 T1 即将量产",
-        "published_at": "2026-07-18T11:18+00:00",
-        "source": "IT之家",
-        "url": "https://www.ithome.com/0/978/566.htm",
+        "url": "https://www.ithome.com/0/978/673.htm",
         "category": "机器人与具身智能",
         "region": "国内",
         "source_weight": 8
@@ -268,6 +259,15 @@
         "published_at": "2026-07-16T03:25+00:00",
         "source": "TechNode",
         "url": "https://technode.com/2026/07/16/xiaomi-introduces-xiaomi-robotics-u0-for-embodied-ai-and-robot-generation/",
+        "category": "机器人与具身智能",
+        "region": "国际",
+        "source_weight": 8
+      },
+      {
+        "title": "Xiaomi updates progress on humanoid robots in auto factory, achieves 98% success rate in some tasks",
+        "published_at": "2026-07-15T02:14+00:00",
+        "source": "TechNode",
+        "url": "https://technode.com/2026/07/15/xiaomi-updates-progress-on-humanoid-robots-in-auto-factory-achieves-98-success-rate-in-some-tasks/",
         "category": "机器人与具身智能",
         "region": "国际",
         "source_weight": 8
