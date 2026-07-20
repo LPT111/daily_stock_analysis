@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-20T01:58:05+00:00",
+  "generated_at": "2026-07-20T10:23:39+00:00",
   "dashboard_url": "https://LPT111.github.io/daily_stock_analysis/",
   "stock_report": "report_20260720.md",
   "market_report": "market_review_20260720.md",
@@ -9,67 +9,60 @@
       "policy": "仅 status=confirmed 的字段可用于结论；待核实字段必须忽略。",
       "metrics": {
         "price": {
-          "status": "confirmed",
-          "value": 61.815,
-          "display": "61.81",
-          "interpretation": "腾讯财经与东方财富交叉核验一致。",
+          "status": "待核实",
+          "value": null,
+          "display": "待核实",
+          "interpretation": "两个数据源未同时返回一致结果，不得用于决策。",
           "sources": {
-            "腾讯财经": 61.82,
-            "东方财富": 61.81
+            "腾讯财经": 59.48,
+            "东方财富": null
           }
         },
         "change_pct": {
-          "status": "confirmed",
-          "value": -0.86,
-          "display": "-0.86",
-          "interpretation": "腾讯财经与东方财富交叉核验一致。",
+          "status": "待核实",
+          "value": null,
+          "display": "待核实",
+          "interpretation": "两个数据源未同时返回一致结果，不得用于决策。",
           "sources": {
-            "腾讯财经": -0.85,
-            "东方财富": -0.87
+            "腾讯财经": -4.6,
+            "东方财富": null
           }
         },
         "dynamic_pe": {
-          "status": "confirmed",
-          "value": -428.05499999999995,
-          "display": "-428.05（亏损状态）",
-          "interpretation": "动态市盈率为负，表示当前口径下盈利为负，不能按正 PE 倍数进行估值判断。",
+          "status": "待核实",
+          "value": null,
+          "display": "待核实",
+          "interpretation": "两个数据源未同时返回一致结果，不得用于决策。",
           "sources": {
-            "腾讯财经": -428.09,
-            "东方财富": -428.02
+            "腾讯财经": -411.89,
+            "东方财富": null
           }
         },
         "pb": {
-          "status": "confirmed",
-          "value": 11.57,
-          "display": "11.57",
-          "interpretation": "腾讯财经与东方财富交叉核验一致。",
+          "status": "待核实",
+          "value": null,
+          "display": "待核实",
+          "interpretation": "两个数据源未同时返回一致结果，不得用于决策。",
           "sources": {
-            "腾讯财经": 11.56,
-            "东方财富": 11.58
+            "腾讯财经": 11.12,
+            "东方财富": null
           }
         }
       },
       "raw_sources": [
         {
           "source": "腾讯财经",
-          "price": 61.82,
+          "price": 59.48,
           "previous_close": 62.35,
-          "change_pct": -0.85,
-          "dynamic_pe": -428.09,
-          "pb": 11.56,
+          "change_pct": -4.6,
+          "dynamic_pe": -411.89,
+          "pb": 11.12,
           "source_url": "https://gu.qq.com/sh600118"
-        },
-        {
-          "source": "东方财富",
-          "price": 61.81,
-          "previous_close": 62.35,
-          "change_pct": -0.87,
-          "dynamic_pe": -428.02,
-          "pb": 11.58,
-          "source_url": "https://quote.eastmoney.com/sh600118.html"
         }
       ],
-      "errors": []
+      "errors": [
+        "东方财富: HTTPSConnectionPool(host='push2delay.eastmoney.com', port=443): Read timed out. (read timeout=8)"
+      ]
     }
   ],
   "sector_news": {
@@ -156,6 +149,15 @@
         "source_weight": 13
       },
       {
+        "title": "AI is more likely than humans to form biases when hiring",
+        "published_at": "2026-07-20T08:39+00:00",
+        "source": "MIT Technology Review",
+        "url": "https://www.technologyreview.com/2026/07/20/1140655/ai-biases-hiring-humans/",
+        "category": "科技与芯片",
+        "region": "国际",
+        "source_weight": 12
+      },
+      {
         "title": "The Download: perimenopause misinformation and China’s latest AI leap",
         "published_at": "2026-07-17T12:10+00:00",
         "source": "MIT Technology Review",
@@ -178,15 +180,6 @@
         "published_at": "2026-07-15T17:09+00:00",
         "source": "MIT Technology Review",
         "url": "https://www.technologyreview.com/2026/07/15/1140514/meet-gpt-red-an-llm-super-hacker-openai-built-to-make-its-models-safer/",
-        "category": "科技与芯片",
-        "region": "国际",
-        "source_weight": 12
-      },
-      {
-        "title": "What Anthropic’s latest AI discovery does—and doesn’t—show",
-        "published_at": "2026-07-13T18:00+00:00",
-        "source": "MIT Technology Review",
-        "url": "https://www.technologyreview.com/2026/07/13/1140343/what-anthropics-latest-ai-discovery-does-and-doesnt-show/",
         "category": "科技与芯片",
         "region": "国际",
         "source_weight": 12
@@ -228,12 +221,39 @@
         "source_weight": 9
       },
       {
-        "title": "全球首款半人马机器人在上海问世",
-        "published_at": "2026-07-20T00:54+00:00",
-        "source": "IT之家",
-        "url": "https://www.ithome.com/0/978/833.htm",
+        "title": "Elon Musk says robot fights are fun after watching China’s humanoid robot battle",
+        "published_at": "2026-07-20T08:34+00:00",
+        "source": "TechNode",
+        "url": "https://technode.com/2026/07/20/elon-musk-says-robot-fights-are-fun-after-watching-chinas-humanoid-robot-battle/",
         "category": "机器人与具身智能",
-        "region": "国内",
+        "region": "国际",
+        "source_weight": 8
+      },
+      {
+        "title": "Yimu Tech raises over RMB1 billion for robot tactile sensing and production",
+        "published_at": "2026-07-20T08:09+00:00",
+        "source": "TechNode",
+        "url": "https://technode.com/2026/07/20/yimu-tech-raises-over-rmb1-billion-for-robot-tactile-sensing-and-production/",
+        "category": "机器人与具身智能",
+        "region": "国际",
+        "source_weight": 8
+      },
+      {
+        "title": "China develops more than 400 humanoid robot products, accounting for over half of the global total",
+        "published_at": "2026-07-20T05:59+00:00",
+        "source": "TechNode",
+        "url": "https://technode.com/2026/07/20/china-develops-more-than-400-humanoid-robot-products-accounting-for-over-half-of-the-global-total/",
+        "category": "机器人与具身智能",
+        "region": "国际",
+        "source_weight": 8
+      },
+      {
+        "title": "Honor confirms August global launch of its first Robot Phone at WAIC 2026",
+        "published_at": "2026-07-20T02:27+00:00",
+        "source": "TechNode",
+        "url": "https://technode.com/2026/07/20/honor-confirms-august-global-launch-of-its-first-robot-phone-at-waic-2026/",
+        "category": "机器人与具身智能",
+        "region": "国际",
         "source_weight": 8
       },
       {
@@ -246,42 +266,6 @@
         "source_weight": 8
       },
       {
-        "title": "DJI 大疆 Osmo Pocket 影像大赛开启：设置六大创作方向、最高奖 Mavic 4 Pro 512GB 无人机创作者套装及 3 万元现金",
-        "published_at": "2026-07-19T10:34+00:00",
-        "source": "IT之家",
-        "url": "https://www.ithome.com/0/978/771.htm",
-        "category": "军工与国防科技",
-        "region": "国内",
-        "source_weight": 8
-      },
-      {
-        "title": "Agility Robotics plants its flag in Tesla’s backyard",
-        "published_at": "2026-07-17T20:19+00:00",
-        "source": "TechCrunch",
-        "url": "https://techcrunch.com/2026/07/17/agility-robotics-plants-its-flag-in-teslas-backyard/",
-        "category": "机器人与具身智能",
-        "region": "国际",
-        "source_weight": 8
-      },
-      {
-        "title": "Xiaomi introduces Xiaomi-Robotics-U0 for embodied AI and robot generation",
-        "published_at": "2026-07-16T03:25+00:00",
-        "source": "TechNode",
-        "url": "https://technode.com/2026/07/16/xiaomi-introduces-xiaomi-robotics-u0-for-embodied-ai-and-robot-generation/",
-        "category": "机器人与具身智能",
-        "region": "国际",
-        "source_weight": 8
-      },
-      {
-        "title": "Xiaomi updates progress on humanoid robots in auto factory, achieves 98% success rate in some tasks",
-        "published_at": "2026-07-15T02:14+00:00",
-        "source": "TechNode",
-        "url": "https://technode.com/2026/07/15/xiaomi-updates-progress-on-humanoid-robots-in-auto-factory-achieves-98-success-rate-in-some-tasks/",
-        "category": "机器人与具身智能",
-        "region": "国际",
-        "source_weight": 8
-      },
-      {
         "title": "离实战还差得远！揭秘美国造出的隐身无人机：对雷达、红外、声学完全无效",
         "published_at": "2026-07-20T08:13+00:00",
         "source": "快科技-科学",
@@ -289,12 +273,22 @@
         "category": "军工与国防科技",
         "region": "国内",
         "source_weight": 7
+      },
+      {
+        "title": "25圈/秒自转 美国搞出“幻影旋翼”无人机 高速旋转瞬间凭空消失",
+        "published_at": "2026-07-18T14:46+00:00",
+        "source": "快科技-科学",
+        "url": "https://news.mydrivers.com/1/1137/1137339.htm",
+        "category": "军工与国防科技",
+        "region": "国内",
+        "source_weight": 7
       }
     ],
     "errors": [
-      "国内科技新闻: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=%28%E5%8D%AB%E6%98%9F+OR+%E8%88%AA%E5%A4%A9+OR+%E5%8C%97%E6%96%97+OR+%E6%9C%BA%E5%99%A8%E4%BA%BA+OR+%E5%85%B7%E8%BA%AB%E6%99%BA%E8%83%BD+OR+%E8%8A%AF%E7%89%87+OR+%E5%8D%8A%E5%AF%BC%E4%BD%93+OR+%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD+OR+%E5%86%9B%E5%B7%A5+OR+%E5%9B%BD%E9%98%B2%E7%A7%91%E6%8A%80%29+sourcelang%3AChinese&mode=artlist&format=json&maxrecords=24&sort=datedesc&timespan=3d"
+      "国内科技新闻: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=%28%E5%8D%AB%E6%98%9F+OR+%E8%88%AA%E5%A4%A9+OR+%E5%8C%97%E6%96%97+OR+%E6%9C%BA%E5%99%A8%E4%BA%BA+OR+%E5%85%B7%E8%BA%AB%E6%99%BA%E8%83%BD+OR+%E8%8A%AF%E7%89%87+OR+%E5%8D%8A%E5%AF%BC%E4%BD%93+OR+%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD+OR+%E5%86%9B%E5%B7%A5+OR+%E5%9B%BD%E9%98%B2%E7%A7%91%E6%8A%80%29+sourcelang%3AChinese&mode=artlist&format=json&maxrecords=24&sort=datedesc&timespan=3d",
+      "国际科技新闻: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=%28satellite+OR+spaceflight+OR+robotics+OR+humanoid+OR+semiconductor+OR+%22artificial+intelligence%22+OR+%22defense+technology%22%29+sourcelang%3AEnglish&mode=artlist&format=json&maxrecords=24&sort=datedesc&timespan=3d"
     ],
     "policy": "仅展示含标题、发布时间、来源和原文链接的新闻；不据此自动推断股价因果。"
   },
-  "digest": "【A股科技主题决策雷达】\n个股建议：卖出（基于近3个月K线，保守模式）\n执行参考：买入区间 暂不设置（趋势空头，不抄底）｜仓位 空仓\n风控纪律：止损 60元（若持有）｜失效条件 未来3个交易日重新站稳78.07且量价修复，则卖出判断失效并重新评估\n大盘摘要：🎯 大盘复盘 2026-07-20 大盘复盘 今日市场指数普涨，权重蓝筹领涨，但成交额缩量，高位连板股集体大跌，短线情绪与指数走势背离。核心矛盾是蓝筹护盘与题材退潮的切换，明日优先观察成交额能否回升及高标股是否止跌。 一、盘面总览 今日主要指数全部收红，上证50涨幅最大（+2.07%），上证、创业板也录得1%以上涨幅，但深成指涨幅最弱（+0.48%）。涨跌家…\n600118 双源校验：价格：61.81；涨跌幅：-0.86；动态PE：-428.05（亏损状态）；PB：11.57\n\n可核验科技新闻：\n- 卫星与商业航天：The Growing Crescent of Mars as NASA’s Psyche Mission Approaches（NASA News，2026-07-17T22:32+00:00）\n  https://science.nasa.gov/photojournal/the-growing-crescent-of-mars-as-nasas-psyche-mission-approaches/\n- 军工与国防科技：2 US troops killed, 1 missing after Iranian missile, drone attack in Jordan（Defense News，2026-07-18T18:00+00:00）\n  https://www.defensenews.com/flashpoints/2026/07/18/2-us-troops-killed-1-missing-after-iranian-missile-drone-attack-in-jordan/\n- 科技与芯片：The Download: perimenopause misinformation and China’s latest AI leap（MIT Technology Review，2026-07-17T12:10+00:00）\n  https://www.technologyreview.com/2026/07/17/1140640/the-download-perimenopause-misinformation-china-moonshot-ai/\n- 机器人与具身智能：Amazon's Zoox issues software recall after robotaxi drove into heavy smoke（CNBC Technology，2026-07-17T14:42+00:00）\n  https://www.cnbc.com/2026/07/17/amazon-zoox-recalls-robotaxi-smoke.html\n\n网页版完整报告：https://LPT111.github.io/daily_stock_analysis/\n仅供研究参考，不构成投资建议。"
+  "digest": "【A股科技主题决策雷达】\n个股建议：卖出（基于近3个月K线，保守模式）\n执行参考：买入区间 暂不设置，空头趋势未结束｜仓位 0成\n风控纪律：止损 持仓者建议以今日最低价57.39元或跌破57元止损｜失效条件 未来3个交易日重新站稳77.95且量价修复，则卖出判断失效并重新评估\n大盘摘要：🎯 大盘复盘 2026-07-20 大盘复盘 今日市场呈现极端分化：上证50大涨3%带动沪指收红，但中小盘个股普跌，跌停家数超240家，成交额放量至2.7万亿，核心矛盾是权重护盘与中小盘流动性收缩的背离，明日优先观察创业板指能否止跌以及领跌板块是否扩散。 一、盘面总览 今日市场涨跌比约1:2.1，涨跌停比55:244，情绪温度明显偏冷。尽管上证指数、沪深30…\n600118 双源校验：价格：待核实；涨跌幅：待核实；动态PE：待核实；PB：待核实\n\n可核验科技新闻：\n- 卫星与商业航天：The Growing Crescent of Mars as NASA’s Psyche Mission Approaches（NASA News，2026-07-17T22:32+00:00）\n  https://science.nasa.gov/photojournal/the-growing-crescent-of-mars-as-nasas-psyche-mission-approaches/\n- 军工与国防科技：2 US troops killed, 1 missing after Iranian missile, drone attack in Jordan（Defense News，2026-07-18T18:00+00:00）\n  https://www.defensenews.com/flashpoints/2026/07/18/2-us-troops-killed-1-missing-after-iranian-missile-drone-attack-in-jordan/\n- 科技与芯片：AI is more likely than humans to form biases when hiring（MIT Technology Review，2026-07-20T08:39+00:00）\n  https://www.technologyreview.com/2026/07/20/1140655/ai-biases-hiring-humans/\n- 机器人与具身智能：Amazon's Zoox issues software recall after robotaxi drove into heavy smoke（CNBC Technology，2026-07-17T14:42+00:00）\n  https://www.cnbc.com/2026/07/17/amazon-zoox-recalls-robotaxi-smoke.html\n\n网页版完整报告：https://LPT111.github.io/daily_stock_analysis/\n仅供研究参考，不构成投资建议。"
 }
