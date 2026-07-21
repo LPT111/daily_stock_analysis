@@ -1,72 +1,97 @@
 {
-  "generated_at": "2026-07-20T10:23:39+00:00",
+  "generated_at": "2026-07-21T01:33:48+00:00",
   "dashboard_url": "https://LPT111.github.io/daily_stock_analysis/",
-  "stock_report": "report_20260720.md",
-  "market_report": "market_review_20260720.md",
+  "stock_report": "report_20260721.md",
+  "market_report": "market_review_20260721.md",
   "validations": [
     {
       "code": "600118",
       "policy": "仅 status=confirmed 的字段可用于结论；待核实字段必须忽略。",
       "metrics": {
         "price": {
-          "status": "待核实",
-          "value": null,
-          "display": "待核实",
-          "interpretation": "两个数据源未同时返回一致结果，不得用于决策。",
+          "status": "confirmed",
+          "value": 58.555,
+          "display": "58.55",
+          "interpretation": "腾讯财经与东方财富交叉核验一致。",
           "sources": {
-            "腾讯财经": 59.48,
-            "东方财富": null
+            "腾讯财经": 58.6,
+            "东方财富": 58.51
           }
         },
         "change_pct": {
-          "status": "待核实",
-          "value": null,
-          "display": "待核实",
-          "interpretation": "两个数据源未同时返回一致结果，不得用于决策。",
+          "status": "confirmed",
+          "value": -1.555,
+          "display": "-1.55",
+          "interpretation": "腾讯财经与东方财富交叉核验一致。",
           "sources": {
-            "腾讯财经": -4.6,
-            "东方财富": null
+            "腾讯财经": -1.48,
+            "东方财富": -1.63
           }
         },
         "dynamic_pe": {
-          "status": "待核实",
-          "value": null,
-          "display": "待核实",
-          "interpretation": "两个数据源未同时返回一致结果，不得用于决策。",
+          "status": "confirmed",
+          "value": -405.48,
+          "display": "-405.48（亏损状态）",
+          "interpretation": "动态市盈率为负，表示当前口径下盈利为负，不能按正 PE 倍数进行估值判断。",
           "sources": {
-            "腾讯财经": -411.89,
-            "东方财富": null
+            "腾讯财经": -405.79,
+            "东方财富": -405.17
           }
         },
         "pb": {
-          "status": "待核实",
-          "value": null,
-          "display": "待核实",
-          "interpretation": "两个数据源未同时返回一致结果，不得用于决策。",
+          "status": "confirmed",
+          "value": 10.96,
+          "display": "10.96",
+          "interpretation": "腾讯财经与东方财富交叉核验一致。",
           "sources": {
-            "腾讯财经": 11.12,
-            "东方财富": null
+            "腾讯财经": 10.96,
+            "东方财富": 10.96
           }
         }
       },
       "raw_sources": [
         {
           "source": "腾讯财经",
-          "price": 59.48,
-          "previous_close": 62.35,
-          "change_pct": -4.6,
-          "dynamic_pe": -411.89,
-          "pb": 11.12,
+          "price": 58.6,
+          "previous_close": 59.48,
+          "change_pct": -1.48,
+          "dynamic_pe": -405.79,
+          "pb": 10.96,
           "source_url": "https://gu.qq.com/sh600118"
+        },
+        {
+          "source": "东方财富",
+          "price": 58.51,
+          "previous_close": 59.48,
+          "change_pct": -1.63,
+          "dynamic_pe": -405.17,
+          "pb": 10.96,
+          "source_url": "https://quote.eastmoney.com/sh600118.html"
         }
       ],
-      "errors": [
-        "东方财富: HTTPSConnectionPool(host='push2delay.eastmoney.com', port=443): Read timed out. (read timeout=8)"
-      ]
+      "errors": []
     }
   ],
   "sector_news": {
     "items": [
+      {
+        "title": "From Hampton to Mars: How NASA Langley Helped Land on the Red Planet",
+        "published_at": "2026-07-20T15:47+00:00",
+        "source": "NASA News",
+        "url": "https://www.nasa.gov/general/from-hampton-to-mars-how-nasa-langley-helped-land-on-the-red-planet/",
+        "category": "卫星与商业航天",
+        "region": "国际",
+        "source_weight": 14
+      },
+      {
+        "title": "Our First View of the Surface of Mars",
+        "published_at": "2026-07-20T15:38+00:00",
+        "source": "NASA News",
+        "url": "https://www.nasa.gov/image-article/our-first-view-of-the-surface-of-mars/",
+        "category": "卫星与商业航天",
+        "region": "国际",
+        "source_weight": 14
+      },
       {
         "title": "The Growing Crescent of Mars as NASA’s Psyche Mission Approaches",
         "published_at": "2026-07-17T22:32+00:00",
@@ -77,11 +102,47 @@
         "source_weight": 14
       },
       {
-        "title": "2 US troops killed, 1 missing after Iranian missile, drone attack in Jordan",
-        "published_at": "2026-07-18T18:00+00:00",
+        "title": "New executive order tightens defense supply chain waiver rules",
+        "published_at": "2026-07-20T20:30+00:00",
         "source": "Defense News",
-        "url": "https://www.defensenews.com/flashpoints/2026/07/18/2-us-troops-killed-1-missing-after-iranian-missile-drone-attack-in-jordan/",
+        "url": "https://www.defensenews.com/news/pentagon-congress/2026/07/20/new-executive-order-tightens-defense-supply-chain-waiver-rules/",
         "category": "军工与国防科技",
+        "region": "国际",
+        "source_weight": 13
+      },
+      {
+        "title": "Doodle Labs eyes US, European production sites as demand soars for jam-resistant drones",
+        "published_at": "2026-07-20T16:00+00:00",
+        "source": "Defense News",
+        "url": "https://www.defensenews.com/industry/2026/07/20/doodle-labs-eyes-us-european-production-sites-as-demand-soars-for-jam-resistant-drones/",
+        "category": "军工与国防科技",
+        "region": "国际",
+        "source_weight": 13
+      },
+      {
+        "title": "Lockheed Martin’s Morfius X-Rotor built to fry 50 enemy drones in one flight",
+        "published_at": "2026-07-20T15:04+00:00",
+        "source": "Defense News",
+        "url": "https://www.defensenews.com/industry/techwatch/2026/07/20/lockheed-martins-morfius-x-rotor-built-to-fry-50-enemy-drones-in-one-flight/",
+        "category": "军工与国防科技",
+        "region": "国际",
+        "source_weight": 13
+      },
+      {
+        "title": "Lockheed Martin announces cheaper Patriot interceptor missile",
+        "published_at": "2026-07-20T14:44+00:00",
+        "source": "Defense News",
+        "url": "https://www.defensenews.com/news/your-military/2026/07/20/lockheed-martin-announces-cheaper-patriot-interceptor-missile/",
+        "category": "军工与国防科技",
+        "region": "国际",
+        "source_weight": 13
+      },
+      {
+        "title": "AI rocket engine startup LegendSpace raises $29.5 million angel round",
+        "published_at": "2026-07-20T11:18+00:00",
+        "source": "SpaceNews",
+        "url": "https://spacenews.com/ai-rocket-engine-startup-legendspace-raises-29-5-million-angel-round/",
+        "category": "卫星与商业航天",
         "region": "国际",
         "source_weight": 13
       },
@@ -104,49 +165,31 @@
         "source_weight": 13
       },
       {
-        "title": "NASA terminates Draper lunar lander mission",
-        "published_at": "2026-07-18T00:00+00:00",
+        "title": "Bluestaq Launches BLUESTAQ / ARQ Defense-Grade Data Infrastructure Now Available for Commercial, Government, and Enterprise Organizations",
+        "published_at": "2026-07-16T12:00+00:00",
         "source": "SpaceNews",
-        "url": "https://spacenews.com/nasa-terminates-draper-lunar-lander-mission/",
-        "category": "卫星与商业航天",
-        "region": "国际",
-        "source_weight": 13
-      },
-      {
-        "title": "US Navy 2 years behind on hypersonic missile installation on Zumwalt destroyers",
-        "published_at": "2026-07-17T19:45+00:00",
-        "source": "Defense News",
-        "url": "https://www.defensenews.com/industry/techwatch/2026/07/17/us-navy-2-years-behind-on-hypersonic-missile-installation-on-zumwalt-destroyers/",
+        "url": "https://spacenews.com/bluestaq-launches-bluestaq-arq-defense-grade-data-infrastructure-now-available-for-commercial-government-and-enterprise-organizations/",
         "category": "军工与国防科技",
         "region": "国际",
         "source_weight": 13
       },
       {
-        "title": "2 defense tech companies sue US Navy after losing out on MUSV program",
-        "published_at": "2026-07-16T22:10+00:00",
-        "source": "Defense News",
-        "url": "https://www.defensenews.com/industry/techwatch/2026/07/16/2-defense-tech-companies-sue-us-navy-after-losing-out-on-musv-program/",
-        "category": "军工与国防科技",
+        "title": "China’s AI models have Trump’s AI world at war with itself",
+        "published_at": "2026-07-20T18:00+00:00",
+        "source": "MIT Technology Review",
+        "url": "https://www.technologyreview.com/2026/07/20/1140675/chinas-ai-models-have-trumps-ai-world-at-war-with-itself/",
+        "category": "科技与芯片",
         "region": "国际",
-        "source_weight": 13
+        "source_weight": 12
       },
       {
-        "title": "SpaceX launches 21 satellites for military data network",
-        "published_at": "2026-07-16T21:00+00:00",
-        "source": "SpaceNews",
-        "url": "https://spacenews.com/spacex-launches-21-satellites-for-military-data-network/",
-        "category": "卫星与商业航天",
+        "title": "The Download: AI hiring biases, and weather data sabotage",
+        "published_at": "2026-07-20T12:10+00:00",
+        "source": "MIT Technology Review",
+        "url": "https://www.technologyreview.com/2026/07/20/1140664/the-download-ai-hiring-biases-weather-data-sabotage/",
+        "category": "科技与芯片",
         "region": "国际",
-        "source_weight": 13
-      },
-      {
-        "title": "Franco-German defense cooperation under strain as Macron, Merz meet",
-        "published_at": "2026-07-16T13:47+00:00",
-        "source": "Defense News",
-        "url": "https://www.defensenews.com/global/europe/2026/07/16/franco-german-defense-cooperation-under-strain-as-macron-merz-meet/",
-        "category": "军工与国防科技",
-        "region": "国际",
-        "source_weight": 13
+        "source_weight": 12
       },
       {
         "title": "AI is more likely than humans to form biases when hiring",
@@ -167,22 +210,13 @@
         "source_weight": 12
       },
       {
-        "title": "The Download: OpenAI unveils GPT-Red and heat pumps rise in the US",
-        "published_at": "2026-07-16T12:10+00:00",
-        "source": "MIT Technology Review",
-        "url": "https://www.technologyreview.com/2026/07/16/1140600/the-download-openai-unveils-gpt-red-heat-pumps-rise-us/",
+        "title": "AI ‘ghosts’ can comfort mourners — even when the bots get the facts wrong",
+        "published_at": "2026-07-20T15:00+00:00",
+        "source": "Science News",
+        "url": "https://www.sciencenews.org/article/ai-ghosts-grief-facts-wrong-chatbot",
         "category": "科技与芯片",
         "region": "国际",
-        "source_weight": 12
-      },
-      {
-        "title": "Meet GPT-Red: an LLM super-hacker OpenAI built to make its models safer",
-        "published_at": "2026-07-15T17:09+00:00",
-        "source": "MIT Technology Review",
-        "url": "https://www.technologyreview.com/2026/07/15/1140514/meet-gpt-red-an-llm-super-hacker-openai-built-to-make-its-models-safer/",
-        "category": "科技与芯片",
-        "region": "国际",
-        "source_weight": 12
+        "source_weight": 11
       },
       {
         "title": "AI is not ready to fly solo in space",
@@ -194,22 +228,13 @@
         "source_weight": 11
       },
       {
-        "title": "An Inventor of Apple’s FaceID Wants to Analyze Your Brain’s Health With AI",
-        "published_at": "2026-07-15T12:00+00:00",
-        "source": "WIRED Science",
-        "url": "https://www.wired.com/story/the-apple-faceid-veteran-building-a-frontier-ai-model-for-the-human-brain/",
-        "category": "科技与芯片",
+        "title": "Firefighting drones in the works as wildfires plague US nearly year-round",
+        "published_at": "2026-07-20T21:55+00:00",
+        "source": "Ars Technica",
+        "url": "https://arstechnica.com/ai/2026/07/firefighting-drones-in-the-works-as-wildfires-plague-us-nearly-year-round/",
+        "category": "军工与国防科技",
         "region": "国际",
-        "source_weight": 10
-      },
-      {
-        "title": "The US Approves Launch of Mirror Satellite That Can Reflect Sunlight and Illuminate the Earth at Night",
-        "published_at": "2026-07-14T08:30+00:00",
-        "source": "WIRED Science",
-        "url": "https://www.wired.com/story/reflect-orbital-earendil-mirror-satellite-fcc/",
-        "category": "卫星与商业航天",
-        "region": "国际",
-        "source_weight": 10
+        "source_weight": 9
       },
       {
         "title": "Amazon's Zoox issues software recall after robotaxi drove into heavy smoke",
@@ -219,6 +244,24 @@
         "category": "机器人与具身智能",
         "region": "国际",
         "source_weight": 9
+      },
+      {
+        "title": "三星电子宣布将设立机器人部门，加速研发和商业化",
+        "published_at": "2026-07-21T01:12+00:00",
+        "source": "IT之家",
+        "url": "https://www.ithome.com/0/979/306.htm",
+        "category": "机器人与具身智能",
+        "region": "国内",
+        "source_weight": 8
+      },
+      {
+        "title": "IT早报 0721：市监总局推动平台企业降佣；我国人形机器人整机产品超全球半数；硅谷多方驳斥 OpenAI 高管批 Kimi K3 开源言论；3 万元起张雪预告首款电摩...",
+        "published_at": "2026-07-20T23:25+00:00",
+        "source": "IT之家",
+        "url": "https://www.ithome.com/0/979/278.htm",
+        "category": "机器人与具身智能",
+        "region": "国内",
+        "source_weight": 8
       },
       {
         "title": "Elon Musk says robot fights are fun after watching China’s humanoid robot battle",
@@ -246,49 +289,13 @@
         "category": "机器人与具身智能",
         "region": "国际",
         "source_weight": 8
-      },
-      {
-        "title": "Honor confirms August global launch of its first Robot Phone at WAIC 2026",
-        "published_at": "2026-07-20T02:27+00:00",
-        "source": "TechNode",
-        "url": "https://technode.com/2026/07/20/honor-confirms-august-global-launch-of-its-first-robot-phone-at-waic-2026/",
-        "category": "机器人与具身智能",
-        "region": "国际",
-        "source_weight": 8
-      },
-      {
-        "title": "TechCrunch Mobility: The battle over robotaxi rules",
-        "published_at": "2026-07-19T16:05+00:00",
-        "source": "TechCrunch",
-        "url": "https://techcrunch.com/2026/07/19/techcrunch-mobility-the-battle-over-robotaxi-rules/",
-        "category": "机器人与具身智能",
-        "region": "国际",
-        "source_weight": 8
-      },
-      {
-        "title": "离实战还差得远！揭秘美国造出的隐身无人机：对雷达、红外、声学完全无效",
-        "published_at": "2026-07-20T08:13+00:00",
-        "source": "快科技-科学",
-        "url": "https://news.mydrivers.com/1/1137/1137535.htm",
-        "category": "军工与国防科技",
-        "region": "国内",
-        "source_weight": 7
-      },
-      {
-        "title": "25圈/秒自转 美国搞出“幻影旋翼”无人机 高速旋转瞬间凭空消失",
-        "published_at": "2026-07-18T14:46+00:00",
-        "source": "快科技-科学",
-        "url": "https://news.mydrivers.com/1/1137/1137339.htm",
-        "category": "军工与国防科技",
-        "region": "国内",
-        "source_weight": 7
       }
     ],
     "errors": [
-      "国内科技新闻: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=%28%E5%8D%AB%E6%98%9F+OR+%E8%88%AA%E5%A4%A9+OR+%E5%8C%97%E6%96%97+OR+%E6%9C%BA%E5%99%A8%E4%BA%BA+OR+%E5%85%B7%E8%BA%AB%E6%99%BA%E8%83%BD+OR+%E8%8A%AF%E7%89%87+OR+%E5%8D%8A%E5%AF%BC%E4%BD%93+OR+%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD+OR+%E5%86%9B%E5%B7%A5+OR+%E5%9B%BD%E9%98%B2%E7%A7%91%E6%8A%80%29+sourcelang%3AChinese&mode=artlist&format=json&maxrecords=24&sort=datedesc&timespan=3d",
-      "国际科技新闻: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=%28satellite+OR+spaceflight+OR+robotics+OR+humanoid+OR+semiconductor+OR+%22artificial+intelligence%22+OR+%22defense+technology%22%29+sourcelang%3AEnglish&mode=artlist&format=json&maxrecords=24&sort=datedesc&timespan=3d"
+      "快科技-硬件: HTTPSConnectionPool(host='rss.mydrivers.com', port=443): Read timed out.",
+      "国内科技新闻: HTTPSConnectionPool(host='api.gdeltproject.org', port=443): Read timed out. (read timeout=15)"
     ],
     "policy": "仅展示含标题、发布时间、来源和原文链接的新闻；不据此自动推断股价因果。"
   },
-  "digest": "【A股科技主题决策雷达】\n个股建议：卖出（基于近3个月K线，保守模式）\n执行参考：买入区间 暂不设置，空头趋势未结束｜仓位 0成\n风控纪律：止损 持仓者建议以今日最低价57.39元或跌破57元止损｜失效条件 未来3个交易日重新站稳77.95且量价修复，则卖出判断失效并重新评估\n大盘摘要：🎯 大盘复盘 2026-07-20 大盘复盘 今日市场呈现极端分化：上证50大涨3%带动沪指收红，但中小盘个股普跌，跌停家数超240家，成交额放量至2.7万亿，核心矛盾是权重护盘与中小盘流动性收缩的背离，明日优先观察创业板指能否止跌以及领跌板块是否扩散。 一、盘面总览 今日市场涨跌比约1:2.1，涨跌停比55:244，情绪温度明显偏冷。尽管上证指数、沪深30…\n600118 双源校验：价格：待核实；涨跌幅：待核实；动态PE：待核实；PB：待核实\n\n可核验科技新闻：\n- 卫星与商业航天：The Growing Crescent of Mars as NASA’s Psyche Mission Approaches（NASA News，2026-07-17T22:32+00:00）\n  https://science.nasa.gov/photojournal/the-growing-crescent-of-mars-as-nasas-psyche-mission-approaches/\n- 军工与国防科技：2 US troops killed, 1 missing after Iranian missile, drone attack in Jordan（Defense News，2026-07-18T18:00+00:00）\n  https://www.defensenews.com/flashpoints/2026/07/18/2-us-troops-killed-1-missing-after-iranian-missile-drone-attack-in-jordan/\n- 科技与芯片：AI is more likely than humans to form biases when hiring（MIT Technology Review，2026-07-20T08:39+00:00）\n  https://www.technologyreview.com/2026/07/20/1140655/ai-biases-hiring-humans/\n- 机器人与具身智能：Amazon's Zoox issues software recall after robotaxi drove into heavy smoke（CNBC Technology，2026-07-17T14:42+00:00）\n  https://www.cnbc.com/2026/07/17/amazon-zoox-recalls-robotaxi-smoke.html\n\n网页版完整报告：https://LPT111.github.io/daily_stock_analysis/\n仅供研究参考，不构成投资建议。"
+  "digest": "【A股科技主题决策雷达】\n个股建议：减仓（基于近3个月K线，保守模式）\n执行参考：买入区间 暂不设置，需等均线粘合或多头排列形成｜仓位 空仓者0成；持仓者减至1成以下\n风控纪律：止损 59.00元（跌破前低整数关口）｜失效条件 未来3个交易日重新站稳8.32且量价修复，则减仓判断失效并重新评估\n大盘摘要：🎯 大盘复盘 2026-07-21 大盘复盘 今日市场普涨但涨跌家数接近对半，成交额极端萎缩至188亿元，涨停仅2家而跌停16家，市场处于量价背离的弱反弹状态，核心矛盾是流动性显著缺失下的指数虚涨，明日优先观察成交额能否恢复至正常水平。 一、盘面总览 今日各大指数全线收红，科创50领涨1.68%，上证50涨1.38%，但涨跌家数比为2274:2407，下跌家…\n600118 双源校验：价格：58.55；涨跌幅：-1.55；动态PE：-405.48（亏损状态）；PB：10.96\n\n可核验科技新闻：\n- 卫星与商业航天：From Hampton to Mars: How NASA Langley Helped Land on the Red Planet（NASA News，2026-07-20T15:47+00:00）\n  https://www.nasa.gov/general/from-hampton-to-mars-how-nasa-langley-helped-land-on-the-red-planet/\n- 军工与国防科技：New executive order tightens defense supply chain waiver rules（Defense News，2026-07-20T20:30+00:00）\n  https://www.defensenews.com/news/pentagon-congress/2026/07/20/new-executive-order-tightens-defense-supply-chain-waiver-rules/\n- 科技与芯片：China’s AI models have Trump’s AI world at war with itself（MIT Technology Review，2026-07-20T18:00+00:00）\n  https://www.technologyreview.com/2026/07/20/1140675/chinas-ai-models-have-trumps-ai-world-at-war-with-itself/\n- 机器人与具身智能：Amazon's Zoox issues software recall after robotaxi drove into heavy smoke（CNBC Technology，2026-07-17T14:42+00:00）\n  https://www.cnbc.com/2026/07/17/amazon-zoox-recalls-robotaxi-smoke.html\n\n网页版完整报告：https://LPT111.github.io/daily_stock_analysis/\n仅供研究参考，不构成投资建议。"
 }
