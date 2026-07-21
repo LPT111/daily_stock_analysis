@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-21T01:33:48+00:00",
+  "generated_at": "2026-07-21T09:37:42+00:00",
   "dashboard_url": "https://LPT111.github.io/daily_stock_analysis/",
   "stock_report": "report_20260721.md",
   "market_report": "market_review_20260721.md",
@@ -10,62 +10,62 @@
       "metrics": {
         "price": {
           "status": "confirmed",
-          "value": 58.555,
-          "display": "58.55",
+          "value": 61.29,
+          "display": "61.29",
           "interpretation": "腾讯财经与东方财富交叉核验一致。",
           "sources": {
-            "腾讯财经": 58.6,
-            "东方财富": 58.51
+            "腾讯财经": 61.29,
+            "东方财富": 61.29
           }
         },
         "change_pct": {
           "status": "confirmed",
-          "value": -1.555,
-          "display": "-1.55",
+          "value": 3.04,
+          "display": "3.04",
           "interpretation": "腾讯财经与东方财富交叉核验一致。",
           "sources": {
-            "腾讯财经": -1.48,
-            "东方财富": -1.63
+            "腾讯财经": 3.04,
+            "东方财富": 3.04
           }
         },
         "dynamic_pe": {
           "status": "confirmed",
-          "value": -405.48,
-          "display": "-405.48（亏损状态）",
+          "value": -424.42,
+          "display": "-424.42（亏损状态）",
           "interpretation": "动态市盈率为负，表示当前口径下盈利为负，不能按正 PE 倍数进行估值判断。",
           "sources": {
-            "腾讯财经": -405.79,
-            "东方财富": -405.17
+            "腾讯财经": -424.42,
+            "东方财富": -424.42
           }
         },
         "pb": {
           "status": "confirmed",
-          "value": 10.96,
-          "display": "10.96",
+          "value": 11.47,
+          "display": "11.47",
           "interpretation": "腾讯财经与东方财富交叉核验一致。",
           "sources": {
-            "腾讯财经": 10.96,
-            "东方财富": 10.96
+            "腾讯财经": 11.46,
+            "东方财富": 11.48
           }
         }
       },
       "raw_sources": [
         {
           "source": "腾讯财经",
-          "price": 58.6,
+          "price": 61.29,
           "previous_close": 59.48,
-          "change_pct": -1.48,
-          "dynamic_pe": -405.79,
-          "pb": 10.96,
+          "change_pct": 3.04,
+          "dynamic_pe": -424.42,
+          "pb": 11.46,
           "source_url": "https://gu.qq.com/sh600118"
         },
         {
           "source": "东方财富",
-          "price": 58.51,
+          "price": 61.29,
           "previous_close": 59.48,
-          "change_pct": -1.63,
-          "dynamic_pe": -405.17,
-          "pb": 10.96,
+          "change_pct": 3.04,
+          "dynamic_pe": -424.42,
+          "pb": 11.48,
           "source_url": "https://quote.eastmoney.com/sh600118.html"
         }
       ],
@@ -100,6 +100,15 @@
         "category": "卫星与商业航天",
         "region": "国际",
         "source_weight": 14
+      },
+      {
+        "title": "IHI explores Kuva hyperspectral satellites for Japan’s multi-sensor constellation",
+        "published_at": "2026-07-21T07:00+00:00",
+        "source": "SpaceNews",
+        "url": "https://spacenews.com/ihi-explores-kuva-hyperspectral-satellites-for-japans-multi-sensor-constellation/",
+        "category": "卫星与商业航天",
+        "region": "国际",
+        "source_weight": 13
       },
       {
         "title": "New executive order tightens defense supply chain waiver rules",
@@ -151,15 +160,6 @@
         "published_at": "2026-07-18T16:59+00:00",
         "source": "SpaceNews",
         "url": "https://spacenews.com/pentagon-awards-7-1-million-to-expand-u-s-production-of-cover-glass-for-satellites/",
-        "category": "卫星与商业航天",
-        "region": "国际",
-        "source_weight": 13
-      },
-      {
-        "title": "Skyroot Aerospace reaches orbit on first Vikram-1 launch",
-        "published_at": "2026-07-18T08:03+00:00",
-        "source": "SpaceNews",
-        "url": "https://spacenews.com/skyroot-aerospace-reaches-orbit-on-first-vikram-1-launch/",
         "category": "卫星与商业航天",
         "region": "国际",
         "source_weight": 13
@@ -246,19 +246,28 @@
         "source_weight": 9
       },
       {
-        "title": "三星电子宣布将设立机器人部门，加速研发和商业化",
-        "published_at": "2026-07-21T01:12+00:00",
-        "source": "IT之家",
-        "url": "https://www.ithome.com/0/979/306.htm",
+        "title": "BrainCo demos thought-controlled robots at WAIC 2026",
+        "published_at": "2026-07-21T07:59+00:00",
+        "source": "TechNode",
+        "url": "https://technode.com/2026/07/21/brainco-demos-thought-controlled-robots-at-waic-2026/",
         "category": "机器人与具身智能",
-        "region": "国内",
+        "region": "国际",
         "source_weight": 8
       },
       {
-        "title": "IT早报 0721：市监总局推动平台企业降佣；我国人形机器人整机产品超全球半数；硅谷多方驳斥 OpenAI 高管批 Kimi K3 开源言论；3 万元起张雪预告首款电摩...",
-        "published_at": "2026-07-20T23:25+00:00",
+        "title": "XPENG releases TuringViT for smart driving and humanoid robots",
+        "published_at": "2026-07-21T07:53+00:00",
+        "source": "TechNode",
+        "url": "https://technode.com/2026/07/21/xpeng-releases-turingvit-for-smart-driving-and-humanoid-robots/",
+        "category": "机器人与具身智能",
+        "region": "国际",
+        "source_weight": 8
+      },
+      {
+        "title": "全球首款机器人手机：荣耀 Robot Phone 首日预约量超荣耀历代旗舰产品",
+        "published_at": "2026-07-21T07:07+00:00",
         "source": "IT之家",
-        "url": "https://www.ithome.com/0/979/278.htm",
+        "url": "https://www.ithome.com/0/979/555.htm",
         "category": "机器人与具身智能",
         "region": "国内",
         "source_weight": 8
@@ -280,22 +289,13 @@
         "category": "机器人与具身智能",
         "region": "国际",
         "source_weight": 8
-      },
-      {
-        "title": "China develops more than 400 humanoid robot products, accounting for over half of the global total",
-        "published_at": "2026-07-20T05:59+00:00",
-        "source": "TechNode",
-        "url": "https://technode.com/2026/07/20/china-develops-more-than-400-humanoid-robot-products-accounting-for-over-half-of-the-global-total/",
-        "category": "机器人与具身智能",
-        "region": "国际",
-        "source_weight": 8
       }
     ],
     "errors": [
-      "快科技-硬件: HTTPSConnectionPool(host='rss.mydrivers.com', port=443): Read timed out.",
-      "国内科技新闻: HTTPSConnectionPool(host='api.gdeltproject.org', port=443): Read timed out. (read timeout=15)"
+      "国内科技新闻: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=%28%E5%8D%AB%E6%98%9F+OR+%E8%88%AA%E5%A4%A9+OR+%E5%8C%97%E6%96%97+OR+%E6%9C%BA%E5%99%A8%E4%BA%BA+OR+%E5%85%B7%E8%BA%AB%E6%99%BA%E8%83%BD+OR+%E8%8A%AF%E7%89%87+OR+%E5%8D%8A%E5%AF%BC%E4%BD%93+OR+%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD+OR+%E5%86%9B%E5%B7%A5+OR+%E5%9B%BD%E9%98%B2%E7%A7%91%E6%8A%80%29+sourcelang%3AChinese&mode=artlist&format=json&maxrecords=24&sort=datedesc&timespan=3d",
+      "国际科技新闻: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=%28satellite+OR+spaceflight+OR+robotics+OR+humanoid+OR+semiconductor+OR+%22artificial+intelligence%22+OR+%22defense+technology%22%29+sourcelang%3AEnglish&mode=artlist&format=json&maxrecords=24&sort=datedesc&timespan=3d"
     ],
     "policy": "仅展示含标题、发布时间、来源和原文链接的新闻；不据此自动推断股价因果。"
   },
-  "digest": "【A股科技主题决策雷达】\n个股建议：减仓（基于近3个月K线，保守模式）\n执行参考：买入区间 暂不设置，需等均线粘合或多头排列形成｜仓位 空仓者0成；持仓者减至1成以下\n风控纪律：止损 59.00元（跌破前低整数关口）｜失效条件 未来3个交易日重新站稳8.32且量价修复，则减仓判断失效并重新评估\n大盘摘要：🎯 大盘复盘 2026-07-21 大盘复盘 今日市场普涨但涨跌家数接近对半，成交额极端萎缩至188亿元，涨停仅2家而跌停16家，市场处于量价背离的弱反弹状态，核心矛盾是流动性显著缺失下的指数虚涨，明日优先观察成交额能否恢复至正常水平。 一、盘面总览 今日各大指数全线收红，科创50领涨1.68%，上证50涨1.38%，但涨跌家数比为2274:2407，下跌家…\n600118 双源校验：价格：58.55；涨跌幅：-1.55；动态PE：-405.48（亏损状态）；PB：10.96\n\n可核验科技新闻：\n- 卫星与商业航天：From Hampton to Mars: How NASA Langley Helped Land on the Red Planet（NASA News，2026-07-20T15:47+00:00）\n  https://www.nasa.gov/general/from-hampton-to-mars-how-nasa-langley-helped-land-on-the-red-planet/\n- 军工与国防科技：New executive order tightens defense supply chain waiver rules（Defense News，2026-07-20T20:30+00:00）\n  https://www.defensenews.com/news/pentagon-congress/2026/07/20/new-executive-order-tightens-defense-supply-chain-waiver-rules/\n- 科技与芯片：China’s AI models have Trump’s AI world at war with itself（MIT Technology Review，2026-07-20T18:00+00:00）\n  https://www.technologyreview.com/2026/07/20/1140675/chinas-ai-models-have-trumps-ai-world-at-war-with-itself/\n- 机器人与具身智能：Amazon's Zoox issues software recall after robotaxi drove into heavy smoke（CNBC Technology，2026-07-17T14:42+00:00）\n  https://www.cnbc.com/2026/07/17/amazon-zoox-recalls-robotaxi-smoke.html\n\n网页版完整报告：https://LPT111.github.io/daily_stock_analysis/\n仅供研究参考，不构成投资建议。"
+  "digest": "【A股科技主题决策雷达】\n个股建议：减仓（基于近3个月K线，保守模式）\n执行参考：买入区间 暂不设置（空头排列，严禁追买）｜仓位 0成（空仓）或减仓至1成以内（持仓者）\n风控纪律：止损 持仓者：若跌破今日低点54.71元建议严格止损｜失效条件 未来3个交易日重新站稳3.04且量价修复，则减仓判断失效并重新评估\n大盘摘要：🎯 大盘复盘 2026-07-21 大盘复盘 今日市场呈现极致结构分化，科创50与创业板指放量暴涨，上证相对滞涨，板块热度高度集中于科技与高端制造；日内涨停家数虽多但跌停同步存在，情绪局部亢奋但宽度不足。明日核心矛盾在于科技主线能否持续扩散，以及权重板块是否出现补涨或拖累。 一、盘面总览 主要指数全线收红，但内部剧烈分化：科创50暴涨10.73%，创业板指大…\n600118 双源校验：价格：61.29；涨跌幅：3.04；动态PE：-424.42（亏损状态）；PB：11.47\n\n可核验科技新闻：\n- 卫星与商业航天：From Hampton to Mars: How NASA Langley Helped Land on the Red Planet（NASA News，2026-07-20T15:47+00:00）\n  https://www.nasa.gov/general/from-hampton-to-mars-how-nasa-langley-helped-land-on-the-red-planet/\n- 军工与国防科技：New executive order tightens defense supply chain waiver rules（Defense News，2026-07-20T20:30+00:00）\n  https://www.defensenews.com/news/pentagon-congress/2026/07/20/new-executive-order-tightens-defense-supply-chain-waiver-rules/\n- 科技与芯片：China’s AI models have Trump’s AI world at war with itself（MIT Technology Review，2026-07-20T18:00+00:00）\n  https://www.technologyreview.com/2026/07/20/1140675/chinas-ai-models-have-trumps-ai-world-at-war-with-itself/\n- 机器人与具身智能：Amazon's Zoox issues software recall after robotaxi drove into heavy smoke（CNBC Technology，2026-07-17T14:42+00:00）\n  https://www.cnbc.com/2026/07/17/amazon-zoox-recalls-robotaxi-smoke.html\n\n网页版完整报告：https://LPT111.github.io/daily_stock_analysis/\n仅供研究参考，不构成投资建议。"
 }
