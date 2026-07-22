@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-22T01:30:49+00:00",
+  "generated_at": "2026-07-22T09:39:12+00:00",
   "dashboard_url": "https://LPT111.github.io/daily_stock_analysis/",
   "stock_report": "report_20260722.md",
   "market_report": "market_review_20260722.md",
@@ -10,62 +10,62 @@
       "metrics": {
         "price": {
           "status": "confirmed",
-          "value": 59.865,
-          "display": "59.87",
+          "value": 59.61,
+          "display": "59.61",
           "interpretation": "腾讯财经与东方财富交叉核验一致。",
           "sources": {
-            "腾讯财经": 59.92,
-            "东方财富": 59.81
+            "腾讯财经": 59.61,
+            "东方财富": 59.61
           }
         },
         "change_pct": {
-          "status": "待核实",
-          "value": null,
-          "display": "待核实",
-          "interpretation": "两个数据源未同时返回一致结果，不得用于决策。",
+          "status": "confirmed",
+          "value": -2.74,
+          "display": "-2.74",
+          "interpretation": "腾讯财经与东方财富交叉核验一致。",
           "sources": {
-            "腾讯财经": -2.24,
-            "东方财富": -2.41
+            "腾讯财经": -2.74,
+            "东方财富": -2.74
           }
         },
         "dynamic_pe": {
           "status": "confirmed",
-          "value": -414.555,
-          "display": "-414.56（亏损状态）",
+          "value": -412.79,
+          "display": "-412.79（亏损状态）",
           "interpretation": "动态市盈率为负，表示当前口径下盈利为负，不能按正 PE 倍数进行估值判断。",
           "sources": {
-            "腾讯财经": -414.94,
-            "东方财富": -414.17
+            "腾讯财经": -412.79,
+            "东方财富": -412.79
           }
         },
         "pb": {
           "status": "confirmed",
-          "value": 11.205,
-          "display": "11.21",
+          "value": 11.155000000000001,
+          "display": "11.16",
           "interpretation": "腾讯财经与东方财富交叉核验一致。",
           "sources": {
-            "腾讯财经": 11.2,
-            "东方财富": 11.21
+            "腾讯财经": 11.14,
+            "东方财富": 11.17
           }
         }
       },
       "raw_sources": [
         {
           "source": "腾讯财经",
-          "price": 59.92,
+          "price": 59.61,
           "previous_close": 61.29,
-          "change_pct": -2.24,
-          "dynamic_pe": -414.94,
-          "pb": 11.2,
+          "change_pct": -2.74,
+          "dynamic_pe": -412.79,
+          "pb": 11.14,
           "source_url": "https://gu.qq.com/sh600118"
         },
         {
           "source": "东方财富",
-          "price": 59.81,
+          "price": 59.61,
           "previous_close": 61.29,
-          "change_pct": -2.41,
-          "dynamic_pe": -414.17,
-          "pb": 11.21,
+          "change_pct": -2.74,
+          "dynamic_pe": -412.79,
+          "pb": 11.17,
           "source_url": "https://quote.eastmoney.com/sh600118.html"
         }
       ],
@@ -100,6 +100,15 @@
         "category": "机器人与具身智能",
         "region": "国际",
         "source_weight": 14
+      },
+      {
+        "title": "Gravity-1 sea launch off Shanghai puts 9 satellites into orbit",
+        "published_at": "2026-07-22T09:32+00:00",
+        "source": "SpaceNews",
+        "url": "https://spacenews.com/gravity-1-sea-launch-off-shanghai-puts-9-satellites-into-orbit/",
+        "category": "卫星与商业航天",
+        "region": "国际",
+        "source_weight": 13
       },
       {
         "title": "SpaceX launches Northrop mission to extend the life of aging satellites",
@@ -161,15 +170,6 @@
         "source": "SpaceNews",
         "url": "https://spacenews.com/kbr-organizes-defense-technology-business-to-pursue-golden-dome-work/",
         "category": "军工与国防科技",
-        "region": "国际",
-        "source_weight": 13
-      },
-      {
-        "title": "IHI explores Kuva hyperspectral satellites for Japan’s multi-sensor constellation",
-        "published_at": "2026-07-21T07:00+00:00",
-        "source": "SpaceNews",
-        "url": "https://spacenews.com/ihi-explores-kuva-hyperspectral-satellites-for-japans-multi-sensor-constellation/",
-        "category": "卫星与商业航天",
         "region": "国际",
         "source_weight": 13
       },
@@ -246,30 +246,21 @@
         "source_weight": 9
       },
       {
+        "title": "宇树王兴兴：具身智能“ChatGPT 时刻”有望最快两三年内到来，大家要提前做好准备",
+        "published_at": "2026-07-22T09:38+00:00",
+        "source": "IT之家",
+        "url": "https://www.ithome.com/0/980/206.htm",
+        "category": "机器人与具身智能",
+        "region": "国内",
+        "source_weight": 8
+      },
+      {
         "title": "Tesla spins up robotaxi pilots in Orlando and Tampa ahead of Q2 earnings",
         "published_at": "2026-07-21T18:05+00:00",
         "source": "TechCrunch",
         "url": "https://techcrunch.com/2026/07/21/tesla-spins-up-robotaxi-pilots-in-orlando-and-tampa-ahead-of-q2-earnings/",
         "category": "机器人与具身智能",
         "region": "国际",
-        "source_weight": 8
-      },
-      {
-        "title": "全球首款机器人手机：荣耀 Robot Phone 拍照页面曝光，将支持大师电影模式",
-        "published_at": "2026-07-21T15:33+00:00",
-        "source": "IT之家",
-        "url": "https://www.ithome.com/0/979/801.htm",
-        "category": "机器人与具身智能",
-        "region": "国内",
-        "source_weight": 8
-      },
-      {
-        "title": "财报前夕，特斯拉将 Robotaxi 自动驾驶出租车服务扩展至美国奥兰多和坦帕",
-        "published_at": "2026-07-21T14:40+00:00",
-        "source": "IT之家",
-        "url": "https://www.ithome.com/0/979/786.htm",
-        "category": "机器人与具身智能",
-        "region": "国内",
         "source_weight": 8
       },
       {
@@ -289,14 +280,21 @@
         "category": "机器人与具身智能",
         "region": "国际",
         "source_weight": 8
+      },
+      {
+        "title": "Elon Musk says robot fights are fun after watching China’s humanoid robot battle",
+        "published_at": "2026-07-20T08:34+00:00",
+        "source": "TechNode",
+        "url": "https://technode.com/2026/07/20/elon-musk-says-robot-fights-are-fun-after-watching-chinas-humanoid-robot-battle/",
+        "category": "机器人与具身智能",
+        "region": "国际",
+        "source_weight": 8
       }
     ],
     "errors": [
-      "快科技-科学: HTTPSConnectionPool(host='rss.mydrivers.com', port=443): Read timed out. (read timeout=12)",
-      "国内科技新闻: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=%28%E5%8D%AB%E6%98%9F+OR+%E8%88%AA%E5%A4%A9+OR+%E5%8C%97%E6%96%97+OR+%E6%9C%BA%E5%99%A8%E4%BA%BA+OR+%E5%85%B7%E8%BA%AB%E6%99%BA%E8%83%BD+OR+%E8%8A%AF%E7%89%87+OR+%E5%8D%8A%E5%AF%BC%E4%BD%93+OR+%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD+OR+%E5%86%9B%E5%B7%A5+OR+%E5%9B%BD%E9%98%B2%E7%A7%91%E6%8A%80%29+sourcelang%3AChinese&mode=artlist&format=json&maxrecords=24&sort=datedesc&timespan=3d",
       "国际科技新闻: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=%28satellite+OR+spaceflight+OR+robotics+OR+humanoid+OR+semiconductor+OR+%22artificial+intelligence%22+OR+%22defense+technology%22%29+sourcelang%3AEnglish&mode=artlist&format=json&maxrecords=24&sort=datedesc&timespan=3d"
     ],
     "policy": "仅展示含标题、发布时间、来源和原文链接的新闻；不据此自动推断股价因果。"
   },
-  "digest": "【A股科技主题决策雷达】\n个股建议：减仓（基于近3个月K线，保守模式）\n执行参考：买入区间 暂不设置（空头排列不具备买入条件）｜仓位 0成（空仓）；持仓者不超过2成\n风控纪律：止损 已持仓者止损位：跌破57.5元（前低支撑）或亏损达-8%｜失效条件 未来3个交易日重新站稳76.85且量价修复，则减仓判断失效并重新评估\n大盘摘要：🎯 大盘复盘 2026-07-22 大盘复盘 今日市场呈现普跌且成交额极端萎缩状态，三大指数共振下行，仅个别资源类板块逆势抗跌。核心矛盾在于流动性枯竭与情绪冰点，明日优先观察成交量能否恢复以及权重股是否有护盘动作。 📉 一、盘面总览 今日A股全面走弱，上证指数、深证成指、创业板指分别下跌0.64%、0.66%、1.11%，科创50跌幅最大达1.49%。全市场…\n600118 双源校验：价格：59.87；涨跌幅：待核实；动态PE：-414.56（亏损状态）；PB：11.21\n\n可核验科技新闻：\n- 卫星与商业航天：US-India Satellite Delivers Data, Reveals ‘Hummingbird’ in Antarctica（NASA News，2026-07-21T18:14+00:00）\n  https://www.nasa.gov/missions/nisar/us-india-satellite-delivers-data-reveals-hummingbird-in-antarctica/\n- 机器人与具身智能：Robotically Assembled Electromagnetic Metamaterials for Long-Range Space Situational Awareness（NASA News，2026-07-21T15:23+00:00）\n  https://www.nasa.gov/directorates/stmd/niac/robotically-assembled-electromagnetic-metamaterials-for-long-range-space-situational-awareness/\n- 军工与国防科技：New British prime minister gains early defense win with Canada fighter jet tie-up（Defense News，2026-07-21T16:45+00:00）\n  https://www.defensenews.com/global/europe/2026/07/21/new-british-prime-minister-gains-early-defense-win-with-canada-fighter-jet-tie-up/\n- 科技与芯片：The Download: Chinese AI divides the White House, and a record copyright payout（MIT Technology Review，2026-07-21T12:10+00:00）\n  https://www.technologyreview.com/2026/07/21/1140685/the-download-chinese-ai-divides-white-house-anthropic-copyright-settlement/\n\n网页版完整报告：https://LPT111.github.io/daily_stock_analysi"
+  "digest": "【A股科技主题决策雷达】\n个股建议：减仓（基于近3个月K线，保守模式）\n执行参考：买入区间 暂不设置（空头排列不具备买入条件）｜仓位 0成（空仓者）或1成以下（持仓者严格风控）\n风控纪律：止损 持仓者：跌破59.00元（前低）或亏损达5%时强制止损｜失效条件 未来3个交易日重新站稳76.83且量价修复，则减仓判断失效并重新评估\n大盘摘要：🎯 大盘复盘 2026-07-22 大盘复盘 市场呈现极端分化，权重蓝筹护盘但中小盘股显著杀跌，成交额放大但亏钱效应明显，短期风险偏好骤降。 一、盘面总览 今日市场呈现剧烈分化，收盘整体情绪偏弱。上证指数在蓝筹股支撑下勉强收红，但深证成指、创业板指与科创50跌幅显著，后者大跌超3%。全市场仅1530家上涨，却有3875家下跌，涨跌比约1:2.5，跌停家数上升…\n600118 双源校验：价格：59.61；涨跌幅：-2.74；动态PE：-412.79（亏损状态）；PB：11.16\n\n可核验科技新闻：\n- 卫星与商业航天：US-India Satellite Delivers Data, Reveals ‘Hummingbird’ in Antarctica（NASA News，2026-07-21T18:14+00:00）\n  https://www.nasa.gov/missions/nisar/us-india-satellite-delivers-data-reveals-hummingbird-in-antarctica/\n- 机器人与具身智能：Robotically Assembled Electromagnetic Metamaterials for Long-Range Space Situational Awareness（NASA News，2026-07-21T15:23+00:00）\n  https://www.nasa.gov/directorates/stmd/niac/robotically-assembled-electromagnetic-metamaterials-for-long-range-space-situational-awareness/\n- 军工与国防科技：New British prime minister gains early defense win with Canada fighter jet tie-up（Defense News，2026-07-21T16:45+00:00）\n  https://www.defensenews.com/global/europe/2026/07/21/new-british-prime-minister-gains-early-defense-win-with-canada-fighter-jet-tie-up/\n- 科技与芯片：The Download: Chinese AI divides the White House, and a record copyright payout（MIT Technology Review，2026-07-21T12:10+00:00）\n  https://www.technologyreview.com/2026/07/21/1140685/the-download-chinese-ai-divides-white-house-anthropic-copyright-settlement/\n\n网页版完整报告：https://LPT111.github.io/daily_stock_"
 }
