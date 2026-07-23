@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-23T01:48:15+00:00",
+  "generated_at": "2026-07-23T09:41:27+00:00",
   "dashboard_url": "https://LPT111.github.io/daily_stock_analysis/",
   "stock_report": "report_20260723.md",
   "market_report": "market_review_20260723.md",
@@ -10,62 +10,62 @@
       "metrics": {
         "price": {
           "status": "confirmed",
-          "value": 60.08,
-          "display": "60.08",
+          "value": 61.07,
+          "display": "61.07",
           "interpretation": "腾讯财经与东方财富交叉核验一致。",
           "sources": {
-            "腾讯财经": 60.07,
-            "东方财富": 60.09
+            "腾讯财经": 61.07,
+            "东方财富": 61.07
           }
         },
         "change_pct": {
           "status": "confirmed",
-          "value": 0.79,
-          "display": "0.79",
+          "value": 2.45,
+          "display": "2.45",
           "interpretation": "腾讯财经与东方财富交叉核验一致。",
           "sources": {
-            "腾讯财经": 0.77,
-            "东方财富": 0.81
+            "腾讯财经": 2.45,
+            "东方财富": 2.45
           }
         },
         "dynamic_pe": {
           "status": "confirmed",
-          "value": -416.04,
-          "display": "-416.04（亏损状态）",
+          "value": -422.9,
+          "display": "-422.90（亏损状态）",
           "interpretation": "动态市盈率为负，表示当前口径下盈利为负，不能按正 PE 倍数进行估值判断。",
           "sources": {
-            "腾讯财经": -415.97,
-            "东方财富": -416.11
+            "腾讯财经": -422.9,
+            "东方财富": -422.9
           }
         },
         "pb": {
           "status": "confirmed",
-          "value": 11.245000000000001,
-          "display": "11.25",
+          "value": 11.43,
+          "display": "11.43",
           "interpretation": "腾讯财经与东方财富交叉核验一致。",
           "sources": {
-            "腾讯财经": 11.23,
-            "东方财富": 11.26
+            "腾讯财经": 11.42,
+            "东方财富": 11.44
           }
         }
       },
       "raw_sources": [
         {
           "source": "腾讯财经",
-          "price": 60.07,
+          "price": 61.07,
           "previous_close": 59.61,
-          "change_pct": 0.77,
-          "dynamic_pe": -415.97,
-          "pb": 11.23,
+          "change_pct": 2.45,
+          "dynamic_pe": -422.9,
+          "pb": 11.42,
           "source_url": "https://gu.qq.com/sh600118"
         },
         {
           "source": "东方财富",
-          "price": 60.09,
+          "price": 61.07,
           "previous_close": 59.61,
-          "change_pct": 0.81,
-          "dynamic_pe": -416.11,
-          "pb": 11.26,
+          "change_pct": 2.45,
+          "dynamic_pe": -422.9,
+          "pb": 11.44,
           "source_url": "https://quote.eastmoney.com/sh600118.html"
         }
       ],
@@ -237,19 +237,28 @@
         "source_weight": 9
       },
       {
-        "title": "《自然》最新研究：人类首次发现系外卫星候选体，质量约为 0.9 个木星",
-        "published_at": "2026-07-23T01:09+00:00",
+        "title": "一枚 SpaceX 猎鹰 9 号火箭将于 8 月 5 日撞击月球，地球部分地区可观测",
+        "published_at": "2026-07-23T08:36+00:00",
         "source": "IT之家",
-        "url": "https://www.ithome.com/0/980/381.htm",
+        "url": "https://www.ithome.com/0/980/709.htm",
         "category": "卫星与商业航天",
         "region": "国内",
         "source_weight": 8
       },
       {
-        "title": "首届北京市中学生人形机器人足球赛收官：55 支队伍参赛，胜者获推荐参加世界 U19 赛事",
-        "published_at": "2026-07-23T00:29+00:00",
+        "title": "2027 款比亚迪海豹 06 海报曝光：搭载激光雷达，定位 B 级满配轿跑",
+        "published_at": "2026-07-23T07:50+00:00",
         "source": "IT之家",
-        "url": "https://www.ithome.com/0/980/370.htm",
+        "url": "https://www.ithome.com/0/980/651.htm",
+        "category": "军工与国防科技",
+        "region": "国内",
+        "source_weight": 8
+      },
+      {
+        "title": "代码暗示，特斯拉 App 已开始为 Optimus 人形机器人上线做准备",
+        "published_at": "2026-07-23T07:08+00:00",
+        "source": "IT之家",
+        "url": "https://www.ithome.com/0/980/629.htm",
         "category": "机器人与具身智能",
         "region": "国内",
         "source_weight": 8
@@ -280,22 +289,12 @@
         "category": "机器人与具身智能",
         "region": "国际",
         "source_weight": 8
-      },
-      {
-        "title": "离实战还差得远！揭秘美国造出的隐身无人机：对雷达、红外、声学完全无效",
-        "published_at": "2026-07-20T08:13+00:00",
-        "source": "快科技-科学",
-        "url": "https://news.mydrivers.com/1/1137/1137535.htm",
-        "category": "军工与国防科技",
-        "region": "国内",
-        "source_weight": 7
       }
     ],
     "errors": [
-      "国内科技新闻: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=%28%E5%8D%AB%E6%98%9F+OR+%E8%88%AA%E5%A4%A9+OR+%E5%8C%97%E6%96%97+OR+%E6%9C%BA%E5%99%A8%E4%BA%BA+OR+%E5%85%B7%E8%BA%AB%E6%99%BA%E8%83%BD+OR+%E8%8A%AF%E7%89%87+OR+%E5%8D%8A%E5%AF%BC%E4%BD%93+OR+%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD+OR+%E5%86%9B%E5%B7%A5+OR+%E5%9B%BD%E9%98%B2%E7%A7%91%E6%8A%80%29+sourcelang%3AChinese&mode=artlist&format=json&maxrecords=24&sort=datedesc&timespan=3d",
       "国际科技新闻: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=%28satellite+OR+spaceflight+OR+robotics+OR+humanoid+OR+semiconductor+OR+%22artificial+intelligence%22+OR+%22defense+technology%22%29+sourcelang%3AEnglish&mode=artlist&format=json&maxrecords=24&sort=datedesc&timespan=3d"
     ],
     "policy": "仅展示含标题、发布时间、来源和原文链接的新闻；不据此自动推断股价因果。"
   },
-  "digest": "【A股科技主题决策雷达】\n个股建议：减仓（基于近3个月K线，保守模式）\n执行参考：买入区间 暂不设置（空头环境下不宜买入）｜仓位 空仓者0成；持仓者建议降至1成以下或清仓\n风控纪律：止损 持仓者止损位：若跌破今日最低58.69元，应无条件止损｜失效条件 未来3个交易日重新站稳76.301且量价修复，则减仓判断失效并重新评估\n大盘摘要：🎯 大盘复盘 2026-07-23 大盘复盘 市场整体呈现指数分化、个股涨多跌少的震荡格局，中小市值品种相对活跃，权重股拖累上证指数，成交额维持低位，短线情绪偏暖但主线不明。 一、盘面总览 三大指数涨跌不一，上证微跌0.04%，深证成指与创业板指分别上涨0.37%和0.50%，市场呈现明显的“沪弱深强”结构。上涨家数3143家、下跌2092家，涨停31家、跌…\n600118 双源校验：价格：60.08；涨跌幅：0.79；动态PE：-416.04（亏损状态）；PB：11.25\n\n可核验科技新闻：\n- 机器人与具身智能：Robotic Servicing Mission Launches with NASA Support（NASA News，2026-07-22T18:04+00:00）\n  https://www.nasa.gov/technology/robotic-servicing-mission-launches-with-nasa-support/\n- 科技与芯片：NASA Joins Genesis Mission to Accelerate AI-Driven Discovery（NASA News，2026-07-22T14:04+00:00）\n  https://www.nasa.gov/news-release/nasa-joins-genesis-mission-to-accelerate-ai-driven-discovery/\n- 卫星与商业航天：China’s Shijian-31 satellite is sweeping GEO using a unique orbit（SpaceNews，2026-07-22T21:13+00:00）\n  https://spacenews.com/chinas-shijian-31-satellite-is-sweeping-geo-using-a-unique-orbit/\n- 军工与国防科技：New British prime minister gains early defense win with Canada fighter jet tie-up（Defense News，2026-07-21T16:45+00:00）\n  https://www.defensenews.com/global/europe/2026/07/21/new-british-prime-minister-gains-early-defense-win-with-canada-fighter-jet-tie-up/\n\n网页版完整报告：https://LPT111.github.io/daily_stock_analysis/\n仅供研究参考，不构成投资建议。"
+  "digest": "【A股科技主题决策雷达】\n个股建议：减仓（基于近3个月K线，保守模式）\n执行参考：买入区间 暂不设置（空头排列，需等待MA5金叉MA10或放量突破62.2元前高）｜仓位 0~1成（仅限极轻仓博弈反弹）\n风控纪律：止损 60.00元（跌破MA5及前低支撑）｜失效条件 未来3个交易日重新站稳76.35且量价修复，则减仓判断失效并重新评估\n大盘摘要：🎯 大盘复盘 2026-07-23 大盘复盘 市场整体呈现普涨格局，但指数涨幅极为有限，科技板块领跌拖累指数，资金偏好转向传统周期与消费。明日需观察科技股是否企稳以及主线能否从低价补涨切换为趋势引领。 一、盘面总览 今日上证与深证小幅收红，创业板、科创50、上证50、沪深300均收平（涨跌幅为零）。涨跌家数比4259:1208，涨停117家、跌停仅2家，成交…\n600118 双源校验：价格：61.07；涨跌幅：2.45；动态PE：-422.90（亏损状态）；PB：11.43\n\n可核验科技新闻：\n- 机器人与具身智能：Robotic Servicing Mission Launches with NASA Support（NASA News，2026-07-22T18:04+00:00）\n  https://www.nasa.gov/technology/robotic-servicing-mission-launches-with-nasa-support/\n- 科技与芯片：NASA Joins Genesis Mission to Accelerate AI-Driven Discovery（NASA News，2026-07-22T14:04+00:00）\n  https://www.nasa.gov/news-release/nasa-joins-genesis-mission-to-accelerate-ai-driven-discovery/\n- 卫星与商业航天：China’s Shijian-31 satellite is sweeping GEO using a unique orbit（SpaceNews，2026-07-22T21:13+00:00）\n  https://spacenews.com/chinas-shijian-31-satellite-is-sweeping-geo-using-a-unique-orbit/\n- 军工与国防科技：New British prime minister gains early defense win with Canada fighter jet tie-up（Defense News，2026-07-21T16:45+00:00）\n  https://www.defensenews.com/global/europe/2026/07/21/new-british-prime-minister-gains-early-defense-win-with-canada-fighter-jet-tie-up/\n\n网页版完整报告：https://LPT111.github.io/daily_stock_analysis/\n仅供研究参考，不构成投资建议。"
 }
