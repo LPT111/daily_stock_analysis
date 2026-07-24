@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-24T01:37:02+00:00",
+  "generated_at": "2026-07-24T09:33:16+00:00",
   "dashboard_url": "https://LPT111.github.io/daily_stock_analysis/",
   "stock_report": "report_20260724.md",
   "market_report": "market_review_20260724.md",
@@ -9,60 +9,67 @@
       "policy": "仅 status=confirmed 的字段可用于结论；待核实字段必须忽略。",
       "metrics": {
         "price": {
-          "status": "待核实",
-          "value": null,
-          "display": "待核实",
-          "interpretation": "两个数据源未同时返回一致结果，不得用于决策。",
+          "status": "confirmed",
+          "value": 57.78,
+          "display": "57.78",
+          "interpretation": "腾讯财经与东方财富交叉核验一致。",
           "sources": {
-            "腾讯财经": 59.96,
-            "东方财富": null
+            "腾讯财经": 57.78,
+            "东方财富": 57.78
           }
         },
         "change_pct": {
-          "status": "待核实",
-          "value": null,
-          "display": "待核实",
-          "interpretation": "两个数据源未同时返回一致结果，不得用于决策。",
+          "status": "confirmed",
+          "value": -5.37,
+          "display": "-5.37",
+          "interpretation": "腾讯财经与东方财富交叉核验一致。",
           "sources": {
-            "腾讯财经": -1.8,
-            "东方财富": null
+            "腾讯财经": -5.37,
+            "东方财富": -5.37
           }
         },
         "dynamic_pe": {
-          "status": "待核实",
-          "value": null,
-          "display": "待核实",
-          "interpretation": "两个数据源未同时返回一致结果，不得用于决策。",
+          "status": "confirmed",
+          "value": -400.12,
+          "display": "-400.12（亏损状态）",
+          "interpretation": "动态市盈率为负，表示当前口径下盈利为负，不能按正 PE 倍数进行估值判断。",
           "sources": {
-            "腾讯财经": -415.21,
-            "东方财富": null
+            "腾讯财经": -400.12,
+            "东方财富": -400.12
           }
         },
         "pb": {
-          "status": "待核实",
-          "value": null,
-          "display": "待核实",
-          "interpretation": "两个数据源未同时返回一致结果，不得用于决策。",
+          "status": "confirmed",
+          "value": 10.83,
+          "display": "10.83",
+          "interpretation": "腾讯财经与东方财富交叉核验一致。",
           "sources": {
-            "腾讯财经": 11.24,
-            "东方财富": null
+            "腾讯财经": 10.83,
+            "东方财富": 10.83
           }
         }
       },
       "raw_sources": [
         {
           "source": "腾讯财经",
-          "price": 59.96,
+          "price": 57.78,
           "previous_close": 61.06,
-          "change_pct": -1.8,
-          "dynamic_pe": -415.21,
-          "pb": 11.24,
+          "change_pct": -5.37,
+          "dynamic_pe": -400.12,
+          "pb": 10.83,
           "source_url": "https://gu.qq.com/sh600118"
+        },
+        {
+          "source": "东方财富",
+          "price": 57.78,
+          "previous_close": 61.06,
+          "change_pct": -5.37,
+          "dynamic_pe": -400.12,
+          "pb": 10.83,
+          "source_url": "https://quote.eastmoney.com/sh600118.html"
         }
       ],
-      "errors": [
-        "东方财富: HTTPSConnectionPool(host='push2.eastmoney.com', port=443): Read timed out. (read timeout=8)"
-      ]
+      "errors": []
     }
   ],
   "sector_news": {
@@ -203,10 +210,10 @@
         "source_weight": 11
       },
       {
-        "title": "Amazon cracks down on use of AI images by sellers after New York law",
-        "published_at": "2026-07-24T00:36+00:00",
+        "title": "U.S., other nations back open-source AI with 'strong security' at China summit",
+        "published_at": "2026-07-24T02:42+00:00",
         "source": "CNBC Technology",
-        "url": "https://www.cnbc.com/2026/07/23/amazon-makes-sellers-label-ai-generated-people-in-images-after-ny-law.html",
+        "url": "https://www.cnbc.com/2026/07/24/china-ai-open-source-apec.html",
         "category": "科技与芯片",
         "region": "国际",
         "source_weight": 9
@@ -221,12 +228,30 @@
         "source_weight": 9
       },
       {
-        "title": "一箭五星！我国成功发射天仪 48 星等 5 颗卫星",
-        "published_at": "2026-07-24T00:02+00:00",
+        "title": "我国成功发射两颗 AI 卫星：一颗能自己管自己，一颗在天上做气象预报",
+        "published_at": "2026-07-24T09:19+00:00",
         "source": "IT之家",
-        "url": "https://www.ithome.com/0/980/901.htm",
+        "url": "https://www.ithome.com/0/981/300.htm",
         "category": "卫星与商业航天",
         "region": "国内",
+        "source_weight": 8
+      },
+      {
+        "title": "消息称小鹏人形机器人正小批量试生产，量产产线进入最后联调阶段",
+        "published_at": "2026-07-24T06:38+00:00",
+        "source": "IT之家",
+        "url": "https://www.ithome.com/0/981/130.htm",
+        "category": "机器人与具身智能",
+        "region": "国内",
+        "source_weight": 8
+      },
+      {
+        "title": "Honor confirms August launch for Robot Phone with 4DoF gimbal",
+        "published_at": "2026-07-24T05:28+00:00",
+        "source": "TechNode",
+        "url": "https://technode.com/2026/07/24/honor-confirms-august-launch-for-robot-phone-with-4dof-gimbal/",
+        "category": "机器人与具身智能",
+        "region": "国际",
         "source_weight": 8
       },
       {
@@ -243,24 +268,6 @@
         "published_at": "2026-07-23T16:29+00:00",
         "source": "TechCrunch",
         "url": "https://techcrunch.com/2026/07/23/teslas-robotaxis-are-moving-in-reverse/",
-        "category": "机器人与具身智能",
-        "region": "国际",
-        "source_weight": 8
-      },
-      {
-        "title": "BrainCo demos thought-controlled robots at WAIC 2026",
-        "published_at": "2026-07-21T07:59+00:00",
-        "source": "TechNode",
-        "url": "https://technode.com/2026/07/21/brainco-demos-thought-controlled-robots-at-waic-2026/",
-        "category": "机器人与具身智能",
-        "region": "国际",
-        "source_weight": 8
-      },
-      {
-        "title": "XPENG releases TuringViT for smart driving and humanoid robots",
-        "published_at": "2026-07-21T07:53+00:00",
-        "source": "TechNode",
-        "url": "https://technode.com/2026/07/21/xpeng-releases-turingvit-for-smart-driving-and-humanoid-robots/",
         "category": "机器人与具身智能",
         "region": "国际",
         "source_weight": 8
@@ -290,5 +297,5 @@
     ],
     "policy": "仅展示含标题、发布时间、来源和原文链接的新闻；不据此自动推断股价因果。"
   },
-  "digest": "【A股科技主题决策雷达】\n个股建议：卖出（基于近3个月K线，保守模式）\n执行参考：买入区间 暂不设置（均线空头排列，不符合买入条件）｜仓位 0成（空仓者）或减仓至1成以内\n风控纪律：止损 已有仓位止损位：跌破58元或MA20继续下行时止损｜失效条件 未来3个交易日重新站稳58且量价修复，则卖出判断失效并重新评估\n大盘摘要：🎯 大盘复盘 2026-07-24 大盘复盘 市场全面转弱，上证指数尾盘靠银行、白酒勉强收窄跌幅，而深证与创业板跌超1.5%，个股普跌且成交额极度萎缩，市场处于缩量下跌的防守状态。明日优先观察银行与消费能否延续护盘，以及石油、有色板块是否企稳。 一、盘面总览 指数全线收跌，上证指数跌0.62%，深证成指、创业板指分别跌1.62%和1.82%，科创50跌1.4…\n600118 双源校验：价格：待核实；涨跌幅：待核实；动态PE：待核实；PB：待核实\n\n可核验科技新闻：\n- 卫星与商业航天：NASA’s MAVEN Illuminates New Understanding of Auroras at Mars（NASA News，2026-07-23T15:19+00:00）\n  https://science.nasa.gov/missions/maven/nasas-maven-illuminates-new-understanding-of-auroras-at-mars/\n- 机器人与具身智能：Robotic Servicing Mission Launches with NASA Support（NASA News，2026-07-22T18:04+00:00）\n  https://www.nasa.gov/technology/robotic-servicing-mission-launches-with-nasa-support/\n- 军工与国防科技：Greece to buy $4 billion air defense system from Israel（Defense News，2026-07-23T13:41+00:00）\n  https://www.defensenews.com/global/europe/2026/07/23/greece-to-buy-4-billion-air-defence-system-from-israel/\n- 科技与芯片：The Download: energy transmission and US threats against Chinese AI（MIT Technology Review，2026-07-23T12:10+00:00）\n  https://www.technologyreview.com/2026/07/23/1140753/the-download-energy-transmission-and-us-threats-chinese-ai/\n\n网页版完整报告：https://LPT111.github.io/daily_stock_analysis/\n仅供研究参考，不构成投资建议。"
+  "digest": "【A股科技主题决策雷达】\n个股建议：减仓（基于近3个月K线，保守模式）\n执行参考：买入区间 暂不设置（空头格局）｜仓位 0~2成（仅限持仓者减仓后保留底仓）\n风控纪律：止损 持仓者止损位：57.75元（跌破今日最低点）或MA20（75.34元）作为中期止损参考｜失效条件 未来3个交易日重新站稳75.34且量价修复，则减仓判断失效并重新评估\n大盘摘要：🎯 大盘复盘 2026-07-24 大盘复盘 今日市场全面重挫，三大指数同步下跌，深证与创业板跌幅均超2.4%，上涨家数仅555家（占比约10%），成交额维持高位但属于恐慌性放量。核心矛盾是主线缺失与情绪悲观共振，明日优先观察上证3800点支撑与科创50能否独立企稳。 一、盘面总览 三大指数全线收跌，上证跌幅相对最小（-1.61%），深证与创业板大跌超2.4…\n600118 双源校验：价格：57.78；涨跌幅：-5.37；动态PE：-400.12（亏损状态）；PB：10.83\n\n可核验科技新闻：\n- 卫星与商业航天：NASA’s MAVEN Illuminates New Understanding of Auroras at Mars（NASA News，2026-07-23T15:19+00:00）\n  https://science.nasa.gov/missions/maven/nasas-maven-illuminates-new-understanding-of-auroras-at-mars/\n- 机器人与具身智能：Robotic Servicing Mission Launches with NASA Support（NASA News，2026-07-22T18:04+00:00）\n  https://www.nasa.gov/technology/robotic-servicing-mission-launches-with-nasa-support/\n- 军工与国防科技：Greece to buy $4 billion air defense system from Israel（Defense News，2026-07-23T13:41+00:00）\n  https://www.defensenews.com/global/europe/2026/07/23/greece-to-buy-4-billion-air-defence-system-from-israel/\n- 科技与芯片：The Download: energy transmission and US threats against Chinese AI（MIT Technology Review，2026-07-23T12:10+00:00）\n  https://www.technologyreview.com/2026/07/23/1140753/the-download-energy-transmission-and-us-threats-chinese-ai/\n\n网页版完整报告：https://LPT111.github.io/daily_stock_analysis/\n仅供研究参考，不构成投资建议。"
 }
