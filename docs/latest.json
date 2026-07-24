@@ -1,79 +1,81 @@
 {
-  "generated_at": "2026-07-23T09:41:27+00:00",
+  "generated_at": "2026-07-24T01:37:02+00:00",
   "dashboard_url": "https://LPT111.github.io/daily_stock_analysis/",
-  "stock_report": "report_20260723.md",
-  "market_report": "market_review_20260723.md",
+  "stock_report": "report_20260724.md",
+  "market_report": "market_review_20260724.md",
   "validations": [
     {
       "code": "600118",
       "policy": "仅 status=confirmed 的字段可用于结论；待核实字段必须忽略。",
       "metrics": {
         "price": {
-          "status": "confirmed",
-          "value": 61.07,
-          "display": "61.07",
-          "interpretation": "腾讯财经与东方财富交叉核验一致。",
+          "status": "待核实",
+          "value": null,
+          "display": "待核实",
+          "interpretation": "两个数据源未同时返回一致结果，不得用于决策。",
           "sources": {
-            "腾讯财经": 61.07,
-            "东方财富": 61.07
+            "腾讯财经": 59.96,
+            "东方财富": null
           }
         },
         "change_pct": {
-          "status": "confirmed",
-          "value": 2.45,
-          "display": "2.45",
-          "interpretation": "腾讯财经与东方财富交叉核验一致。",
+          "status": "待核实",
+          "value": null,
+          "display": "待核实",
+          "interpretation": "两个数据源未同时返回一致结果，不得用于决策。",
           "sources": {
-            "腾讯财经": 2.45,
-            "东方财富": 2.45
+            "腾讯财经": -1.8,
+            "东方财富": null
           }
         },
         "dynamic_pe": {
-          "status": "confirmed",
-          "value": -422.9,
-          "display": "-422.90（亏损状态）",
-          "interpretation": "动态市盈率为负，表示当前口径下盈利为负，不能按正 PE 倍数进行估值判断。",
+          "status": "待核实",
+          "value": null,
+          "display": "待核实",
+          "interpretation": "两个数据源未同时返回一致结果，不得用于决策。",
           "sources": {
-            "腾讯财经": -422.9,
-            "东方财富": -422.9
+            "腾讯财经": -415.21,
+            "东方财富": null
           }
         },
         "pb": {
-          "status": "confirmed",
-          "value": 11.43,
-          "display": "11.43",
-          "interpretation": "腾讯财经与东方财富交叉核验一致。",
+          "status": "待核实",
+          "value": null,
+          "display": "待核实",
+          "interpretation": "两个数据源未同时返回一致结果，不得用于决策。",
           "sources": {
-            "腾讯财经": 11.42,
-            "东方财富": 11.44
+            "腾讯财经": 11.24,
+            "东方财富": null
           }
         }
       },
       "raw_sources": [
         {
           "source": "腾讯财经",
-          "price": 61.07,
-          "previous_close": 59.61,
-          "change_pct": 2.45,
-          "dynamic_pe": -422.9,
-          "pb": 11.42,
+          "price": 59.96,
+          "previous_close": 61.06,
+          "change_pct": -1.8,
+          "dynamic_pe": -415.21,
+          "pb": 11.24,
           "source_url": "https://gu.qq.com/sh600118"
-        },
-        {
-          "source": "东方财富",
-          "price": 61.07,
-          "previous_close": 59.61,
-          "change_pct": 2.45,
-          "dynamic_pe": -422.9,
-          "pb": 11.44,
-          "source_url": "https://quote.eastmoney.com/sh600118.html"
         }
       ],
-      "errors": []
+      "errors": [
+        "东方财富: HTTPSConnectionPool(host='push2.eastmoney.com', port=443): Read timed out. (read timeout=8)"
+      ]
     }
   ],
   "sector_news": {
     "items": [
+      {
+        "title": "NASA’s MAVEN Illuminates New Understanding of Auroras at Mars",
+        "published_at": "2026-07-23T15:19+00:00",
+        "source": "NASA News",
+        "url": "https://science.nasa.gov/missions/maven/nasas-maven-illuminates-new-understanding-of-auroras-at-mars/",
+        "category": "卫星与商业航天",
+        "region": "国际",
+        "source_weight": 14
+      },
       {
         "title": "Robotic Servicing Mission Launches with NASA Support",
         "published_at": "2026-07-22T18:04+00:00",
@@ -84,13 +86,40 @@
         "source_weight": 14
       },
       {
-        "title": "NASA Joins Genesis Mission to Accelerate AI-Driven Discovery",
-        "published_at": "2026-07-22T14:04+00:00",
-        "source": "NASA News",
-        "url": "https://www.nasa.gov/news-release/nasa-joins-genesis-mission-to-accelerate-ai-driven-discovery/",
-        "category": "科技与芯片",
+        "title": "Will Bruey on rethinking the role of pharmaceuticals in low Earth orbit",
+        "published_at": "2026-07-23T15:13+00:00",
+        "source": "SpaceNews",
+        "url": "https://spacenews.com/will-bruey-on-rethinking-the-role-of-pharmaceuticals-in-low-earth-orbit/",
+        "category": "卫星与商业航天",
         "region": "国际",
-        "source_weight": 14
+        "source_weight": 13
+      },
+      {
+        "title": "Greece to buy $4 billion air defense system from Israel",
+        "published_at": "2026-07-23T13:41+00:00",
+        "source": "Defense News",
+        "url": "https://www.defensenews.com/global/europe/2026/07/23/greece-to-buy-4-billion-air-defence-system-from-israel/",
+        "category": "军工与国防科技",
+        "region": "国际",
+        "source_weight": 13
+      },
+      {
+        "title": "Airbus space business takes advantage of growing demand for satellite systems",
+        "published_at": "2026-07-23T11:55+00:00",
+        "source": "SpaceNews",
+        "url": "https://spacenews.com/airbus-space-business-takes-advantage-of-growing-demand-for-satellite-systems/",
+        "category": "卫星与商业航天",
+        "region": "国际",
+        "source_weight": 13
+      },
+      {
+        "title": "Australia whips together a hybrid air defense weapon",
+        "published_at": "2026-07-23T10:35+00:00",
+        "source": "Defense News",
+        "url": "https://www.defensenews.com/global/asia-pacific/2026/07/23/australia-whips-together-a-hybrid-air-defense-weapon/",
+        "category": "军工与国防科技",
+        "region": "国际",
+        "source_weight": 13
       },
       {
         "title": "China’s Shijian-31 satellite is sweeping GEO using a unique orbit",
@@ -106,24 +135,6 @@
         "published_at": "2026-07-22T10:01+00:00",
         "source": "SpaceNews",
         "url": "https://spacenews.com/artemis-2-astronaut-advocates-for-equatorial-lunar-landings/",
-        "category": "卫星与商业航天",
-        "region": "国际",
-        "source_weight": 13
-      },
-      {
-        "title": "Gravity-1 sea launch off Shanghai puts 9 satellites into orbit",
-        "published_at": "2026-07-22T09:32+00:00",
-        "source": "SpaceNews",
-        "url": "https://spacenews.com/gravity-1-sea-launch-off-shanghai-puts-9-satellites-into-orbit/",
-        "category": "卫星与商业航天",
-        "region": "国际",
-        "source_weight": 13
-      },
-      {
-        "title": "SpaceX launches Northrop mission to extend the life of aging satellites",
-        "published_at": "2026-07-21T21:26+00:00",
-        "source": "SpaceNews",
-        "url": "https://spacenews.com/spacex-launches-northrop-mission-to-extend-the-life-of-aging-satellites/",
         "category": "卫星与商业航天",
         "region": "国际",
         "source_weight": 13
@@ -147,22 +158,22 @@
         "source_weight": 13
       },
       {
-        "title": "Germany to study French cooperation offer on SAMP/T air-defense system",
-        "published_at": "2026-07-21T13:51+00:00",
-        "source": "Defense News",
-        "url": "https://www.defensenews.com/global/europe/2026/07/21/germany-to-study-french-cooperation-offer-on-sampt-air-defense-system/",
-        "category": "军工与国防科技",
+        "title": "The Download: energy transmission and US threats against Chinese AI",
+        "published_at": "2026-07-23T12:10+00:00",
+        "source": "MIT Technology Review",
+        "url": "https://www.technologyreview.com/2026/07/23/1140753/the-download-energy-transmission-and-us-threats-chinese-ai/",
+        "category": "科技与芯片",
         "region": "国际",
-        "source_weight": 13
+        "source_weight": 12
       },
       {
-        "title": "How startups are reshaping the Pentagon’s drone industry",
-        "published_at": "2026-07-21T13:41+00:00",
-        "source": "Defense News",
-        "url": "https://www.defensenews.com/news/your-military/2026/07/21/how-startups-are-reshaping-the-pentagons-drone-industry/",
-        "category": "军工与国防科技",
+        "title": "How AI helps scientists design the next generation of medicines",
+        "published_at": "2026-07-23T12:00+00:00",
+        "source": "MIT Technology Review",
+        "url": "https://www.technologyreview.com/2026/07/23/1140346/how-ai-helps-scientists-design-the-next-generation-of-medicines/",
+        "category": "科技与芯片",
         "region": "国际",
-        "source_weight": 13
+        "source_weight": 12
       },
       {
         "title": "The Download: NASA’s new space telescope and OpenAI’s autonomous hacker",
@@ -183,24 +194,6 @@
         "source_weight": 12
       },
       {
-        "title": "Advancing next-gen AI with materials science innovation",
-        "published_at": "2026-07-21T10:37+00:00",
-        "source": "MIT Technology Review",
-        "url": "https://www.technologyreview.com/2026/07/21/1140602/advancing-next-gen-ai-with-materials-science-innovation/",
-        "category": "科技与芯片",
-        "region": "国际",
-        "source_weight": 12
-      },
-      {
-        "title": "China’s AI models have Trump’s AI world at war with itself",
-        "published_at": "2026-07-20T18:00+00:00",
-        "source": "MIT Technology Review",
-        "url": "https://www.technologyreview.com/2026/07/20/1140675/chinas-ai-models-have-trumps-ai-world-at-war-with-itself/",
-        "category": "科技与芯片",
-        "region": "国际",
-        "source_weight": 12
-      },
-      {
         "title": "AI ‘ghosts’ can comfort mourners — even when the bots get the facts wrong",
         "published_at": "2026-07-20T15:00+00:00",
         "source": "Science News",
@@ -208,6 +201,15 @@
         "category": "科技与芯片",
         "region": "国际",
         "source_weight": 11
+      },
+      {
+        "title": "Amazon cracks down on use of AI images by sellers after New York law",
+        "published_at": "2026-07-24T00:36+00:00",
+        "source": "CNBC Technology",
+        "url": "https://www.cnbc.com/2026/07/23/amazon-makes-sellers-label-ai-generated-people-in-images-after-ny-law.html",
+        "category": "科技与芯片",
+        "region": "国际",
+        "source_weight": 9
       },
       {
         "title": "Hyundai claims humanoid robot plan is not part of talks with striking workers",
@@ -219,64 +221,28 @@
         "source_weight": 9
       },
       {
-        "title": "OpenAI, Anthropic boost lobbying as legacy tech and defense spending slips",
-        "published_at": "2026-07-22T12:16+00:00",
-        "source": "CNBC Technology",
-        "url": "https://www.cnbc.com/2026/07/21/openai-anthropic-ai-lobbying-spending-q2-2026.html",
-        "category": "军工与国防科技",
-        "region": "国际",
-        "source_weight": 9
-      },
-      {
-        "title": "Ukrainian drones deliver robots directly into battle by sea and air",
-        "published_at": "2026-07-22T11:15+00:00",
-        "source": "Ars Technica",
-        "url": "https://arstechnica.com/gadgets/2026/07/ukrainian-drones-deliver-robots-directly-into-battle-by-sea-and-air/",
-        "category": "机器人与具身智能",
-        "region": "国际",
-        "source_weight": 9
-      },
-      {
-        "title": "一枚 SpaceX 猎鹰 9 号火箭将于 8 月 5 日撞击月球，地球部分地区可观测",
-        "published_at": "2026-07-23T08:36+00:00",
+        "title": "一箭五星！我国成功发射天仪 48 星等 5 颗卫星",
+        "published_at": "2026-07-24T00:02+00:00",
         "source": "IT之家",
-        "url": "https://www.ithome.com/0/980/709.htm",
+        "url": "https://www.ithome.com/0/980/901.htm",
         "category": "卫星与商业航天",
         "region": "国内",
         "source_weight": 8
       },
       {
-        "title": "2027 款比亚迪海豹 06 海报曝光：搭载激光雷达，定位 B 级满配轿跑",
-        "published_at": "2026-07-23T07:50+00:00",
-        "source": "IT之家",
-        "url": "https://www.ithome.com/0/980/651.htm",
-        "category": "军工与国防科技",
-        "region": "国内",
-        "source_weight": 8
-      },
-      {
-        "title": "代码暗示，特斯拉 App 已开始为 Optimus 人形机器人上线做准备",
-        "published_at": "2026-07-23T07:08+00:00",
-        "source": "IT之家",
-        "url": "https://www.ithome.com/0/980/629.htm",
-        "category": "机器人与具身智能",
-        "region": "国内",
-        "source_weight": 8
-      },
-      {
-        "title": "Tesla spending skyrockets as Cybercab, Semi, Megapack production timeline slips",
-        "published_at": "2026-07-22T20:43+00:00",
+        "title": "Mobileye CEO Amnon Shashua to step aside as company pushes into robotaxis, robotics",
+        "published_at": "2026-07-23T22:40+00:00",
         "source": "TechCrunch",
-        "url": "https://techcrunch.com/2026/07/22/tesla-spending-skyrockets-as-cybercab-semi-megapack-production-timeline-slips/",
-        "category": "卫星与商业航天",
+        "url": "https://techcrunch.com/2026/07/23/mobileye-ceo-amnon-shashua-to-step-aside-as-company-pushes-into-robotaxis-robotics/",
+        "category": "机器人与具身智能",
         "region": "国际",
         "source_weight": 8
       },
       {
-        "title": "Travis Kalanick’s robotics company raises $1.7B, led by a16z",
-        "published_at": "2026-07-22T18:50+00:00",
+        "title": "Tesla’s robotaxis are moving in reverse",
+        "published_at": "2026-07-23T16:29+00:00",
         "source": "TechCrunch",
-        "url": "https://techcrunch.com/2026/07/22/travis-kalanicks-robotics-company-raises-1-7b-led-by-a16z/",
+        "url": "https://techcrunch.com/2026/07/23/teslas-robotaxis-are-moving-in-reverse/",
         "category": "机器人与具身智能",
         "region": "国际",
         "source_weight": 8
@@ -289,12 +255,40 @@
         "category": "机器人与具身智能",
         "region": "国际",
         "source_weight": 8
+      },
+      {
+        "title": "XPENG releases TuringViT for smart driving and humanoid robots",
+        "published_at": "2026-07-21T07:53+00:00",
+        "source": "TechNode",
+        "url": "https://technode.com/2026/07/21/xpeng-releases-turingvit-for-smart-driving-and-humanoid-robots/",
+        "category": "机器人与具身智能",
+        "region": "国际",
+        "source_weight": 8
+      },
+      {
+        "title": "众目睽睽之下消失！美国研发隐形无人机 如何做到的？",
+        "published_at": "2026-07-24T06:56+00:00",
+        "source": "快科技-科学",
+        "url": "https://news.mydrivers.com/1/1138/1138673.htm",
+        "category": "军工与国防科技",
+        "region": "国内",
+        "source_weight": 7
+      },
+      {
+        "title": "离实战还差得远！揭秘美国造出的隐身无人机：对雷达、红外、声学完全无效",
+        "published_at": "2026-07-20T08:13+00:00",
+        "source": "快科技-科学",
+        "url": "https://news.mydrivers.com/1/1137/1137535.htm",
+        "category": "军工与国防科技",
+        "region": "国内",
+        "source_weight": 7
       }
     ],
     "errors": [
+      "国内科技新闻: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=%28%E5%8D%AB%E6%98%9F+OR+%E8%88%AA%E5%A4%A9+OR+%E5%8C%97%E6%96%97+OR+%E6%9C%BA%E5%99%A8%E4%BA%BA+OR+%E5%85%B7%E8%BA%AB%E6%99%BA%E8%83%BD+OR+%E8%8A%AF%E7%89%87+OR+%E5%8D%8A%E5%AF%BC%E4%BD%93+OR+%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD+OR+%E5%86%9B%E5%B7%A5+OR+%E5%9B%BD%E9%98%B2%E7%A7%91%E6%8A%80%29+sourcelang%3AChinese&mode=artlist&format=json&maxrecords=24&sort=datedesc&timespan=3d",
       "国际科技新闻: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=%28satellite+OR+spaceflight+OR+robotics+OR+humanoid+OR+semiconductor+OR+%22artificial+intelligence%22+OR+%22defense+technology%22%29+sourcelang%3AEnglish&mode=artlist&format=json&maxrecords=24&sort=datedesc&timespan=3d"
     ],
     "policy": "仅展示含标题、发布时间、来源和原文链接的新闻；不据此自动推断股价因果。"
   },
-  "digest": "【A股科技主题决策雷达】\n个股建议：减仓（基于近3个月K线，保守模式）\n执行参考：买入区间 暂不设置（空头排列，需等待MA5金叉MA10或放量突破62.2元前高）｜仓位 0~1成（仅限极轻仓博弈反弹）\n风控纪律：止损 60.00元（跌破MA5及前低支撑）｜失效条件 未来3个交易日重新站稳76.35且量价修复，则减仓判断失效并重新评估\n大盘摘要：🎯 大盘复盘 2026-07-23 大盘复盘 市场整体呈现普涨格局，但指数涨幅极为有限，科技板块领跌拖累指数，资金偏好转向传统周期与消费。明日需观察科技股是否企稳以及主线能否从低价补涨切换为趋势引领。 一、盘面总览 今日上证与深证小幅收红，创业板、科创50、上证50、沪深300均收平（涨跌幅为零）。涨跌家数比4259:1208，涨停117家、跌停仅2家，成交…\n600118 双源校验：价格：61.07；涨跌幅：2.45；动态PE：-422.90（亏损状态）；PB：11.43\n\n可核验科技新闻：\n- 机器人与具身智能：Robotic Servicing Mission Launches with NASA Support（NASA News，2026-07-22T18:04+00:00）\n  https://www.nasa.gov/technology/robotic-servicing-mission-launches-with-nasa-support/\n- 科技与芯片：NASA Joins Genesis Mission to Accelerate AI-Driven Discovery（NASA News，2026-07-22T14:04+00:00）\n  https://www.nasa.gov/news-release/nasa-joins-genesis-mission-to-accelerate-ai-driven-discovery/\n- 卫星与商业航天：China’s Shijian-31 satellite is sweeping GEO using a unique orbit（SpaceNews，2026-07-22T21:13+00:00）\n  https://spacenews.com/chinas-shijian-31-satellite-is-sweeping-geo-using-a-unique-orbit/\n- 军工与国防科技：New British prime minister gains early defense win with Canada fighter jet tie-up（Defense News，2026-07-21T16:45+00:00）\n  https://www.defensenews.com/global/europe/2026/07/21/new-british-prime-minister-gains-early-defense-win-with-canada-fighter-jet-tie-up/\n\n网页版完整报告：https://LPT111.github.io/daily_stock_analysis/\n仅供研究参考，不构成投资建议。"
+  "digest": "【A股科技主题决策雷达】\n个股建议：卖出（基于近3个月K线，保守模式）\n执行参考：买入区间 暂不设置（均线空头排列，不符合买入条件）｜仓位 0成（空仓者）或减仓至1成以内\n风控纪律：止损 已有仓位止损位：跌破58元或MA20继续下行时止损｜失效条件 未来3个交易日重新站稳58且量价修复，则卖出判断失效并重新评估\n大盘摘要：🎯 大盘复盘 2026-07-24 大盘复盘 市场全面转弱，上证指数尾盘靠银行、白酒勉强收窄跌幅，而深证与创业板跌超1.5%，个股普跌且成交额极度萎缩，市场处于缩量下跌的防守状态。明日优先观察银行与消费能否延续护盘，以及石油、有色板块是否企稳。 一、盘面总览 指数全线收跌，上证指数跌0.62%，深证成指、创业板指分别跌1.62%和1.82%，科创50跌1.4…\n600118 双源校验：价格：待核实；涨跌幅：待核实；动态PE：待核实；PB：待核实\n\n可核验科技新闻：\n- 卫星与商业航天：NASA’s MAVEN Illuminates New Understanding of Auroras at Mars（NASA News，2026-07-23T15:19+00:00）\n  https://science.nasa.gov/missions/maven/nasas-maven-illuminates-new-understanding-of-auroras-at-mars/\n- 机器人与具身智能：Robotic Servicing Mission Launches with NASA Support（NASA News，2026-07-22T18:04+00:00）\n  https://www.nasa.gov/technology/robotic-servicing-mission-launches-with-nasa-support/\n- 军工与国防科技：Greece to buy $4 billion air defense system from Israel（Defense News，2026-07-23T13:41+00:00）\n  https://www.defensenews.com/global/europe/2026/07/23/greece-to-buy-4-billion-air-defence-system-from-israel/\n- 科技与芯片：The Download: energy transmission and US threats against Chinese AI（MIT Technology Review，2026-07-23T12:10+00:00）\n  https://www.technologyreview.com/2026/07/23/1140753/the-download-energy-transmission-and-us-threats-chinese-ai/\n\n网页版完整报告：https://LPT111.github.io/daily_stock_analysis/\n仅供研究参考，不构成投资建议。"
 }
