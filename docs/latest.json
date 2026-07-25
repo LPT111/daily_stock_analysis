@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-07-24T09:33:16+00:00",
+  "generated_at": "2026-07-25T01:31:25+00:00",
   "dashboard_url": "https://LPT111.github.io/daily_stock_analysis/",
-  "stock_report": "report_20260724.md",
-  "market_report": "market_review_20260724.md",
+  "stock_report": null,
+  "market_report": null,
   "validations": [
     {
       "code": "600118",
@@ -75,6 +75,24 @@
   "sector_news": {
     "items": [
       {
+        "title": "NASA Announces New Spacecraft Technology Demonstration Mission at Moon",
+        "published_at": "2026-07-24T16:35+00:00",
+        "source": "NASA News",
+        "url": "https://www.nasa.gov/directorates/armd/nasa-announces-new-spacecraft-technology-demonstration-mission-at-moon/",
+        "category": "卫星与商业航天",
+        "region": "国际",
+        "source_weight": 14
+      },
+      {
+        "title": "NASA to Support Blue Origin New Glenn Rocket Testing, Advance Artemis",
+        "published_at": "2026-07-24T15:30+00:00",
+        "source": "NASA News",
+        "url": "https://www.nasa.gov/news-release/nasa-to-support-blue-origin-new-glenn-rocket-testing-advance-artemis/",
+        "category": "卫星与商业航天",
+        "region": "国际",
+        "source_weight": 14
+      },
+      {
         "title": "NASA’s MAVEN Illuminates New Understanding of Auroras at Mars",
         "published_at": "2026-07-23T15:19+00:00",
         "source": "NASA News",
@@ -84,13 +102,31 @@
         "source_weight": 14
       },
       {
-        "title": "Robotic Servicing Mission Launches with NASA Support",
-        "published_at": "2026-07-22T18:04+00:00",
-        "source": "NASA News",
-        "url": "https://www.nasa.gov/technology/robotic-servicing-mission-launches-with-nasa-support/",
-        "category": "机器人与具身智能",
+        "title": "From steppe to sea, a Ukrainian drone unit hunts Russian ships",
+        "published_at": "2026-07-24T20:59+00:00",
+        "source": "Defense News",
+        "url": "https://www.defensenews.com/global/europe/2026/07/24/from-steppe-to-sea-a-ukrainian-drone-unit-hunts-russian-ships/",
+        "category": "军工与国防科技",
         "region": "国际",
-        "source_weight": 14
+        "source_weight": 13
+      },
+      {
+        "title": "LatConnect 60 Unveils Proprietary AI Capabilities Following Growing Indo-Pacific Defence Interest in SWIRSAT",
+        "published_at": "2026-07-24T14:59+00:00",
+        "source": "SpaceNews",
+        "url": "https://spacenews.com/latconnect-60-unveils-proprietary-ai-capabilities-following-growing-indo-pacific-defence-interest-in-swirsat/",
+        "category": "军工与国防科技",
+        "region": "国际",
+        "source_weight": 13
+      },
+      {
+        "title": "Lightning strikes Long March 3B after liftoff, Kinetica-1 launches 5 satellites",
+        "published_at": "2026-07-24T10:32+00:00",
+        "source": "SpaceNews",
+        "url": "https://spacenews.com/lightning-strikes-long-march-3b-after-liftoff-kinetica-1-launches-5-satellites/",
+        "category": "卫星与商业航天",
+        "region": "国际",
+        "source_weight": 13
       },
       {
         "title": "Will Bruey on rethinking the role of pharmaceuticals in low Earth orbit",
@@ -129,24 +165,6 @@
         "source_weight": 13
       },
       {
-        "title": "China’s Shijian-31 satellite is sweeping GEO using a unique orbit",
-        "published_at": "2026-07-22T21:13+00:00",
-        "source": "SpaceNews",
-        "url": "https://spacenews.com/chinas-shijian-31-satellite-is-sweeping-geo-using-a-unique-orbit/",
-        "category": "卫星与商业航天",
-        "region": "国际",
-        "source_weight": 13
-      },
-      {
-        "title": "Artemis 2 astronaut advocates for equatorial lunar landings",
-        "published_at": "2026-07-22T10:01+00:00",
-        "source": "SpaceNews",
-        "url": "https://spacenews.com/artemis-2-astronaut-advocates-for-equatorial-lunar-landings/",
-        "category": "卫星与商业航天",
-        "region": "国际",
-        "source_weight": 13
-      },
-      {
         "title": "New British prime minister gains early defense win with Canada fighter jet tie-up",
         "published_at": "2026-07-21T16:45+00:00",
         "source": "Defense News",
@@ -156,13 +174,13 @@
         "source_weight": 13
       },
       {
-        "title": "Hanwha Philly Shipyard awarded $2 billion to build 2 missile-tracking vessels",
-        "published_at": "2026-07-21T15:14+00:00",
-        "source": "Defense News",
-        "url": "https://www.defensenews.com/pentagon/2026/07/21/hanwha-philly-shipyard-awarded-2-billion-to-build-2-missile-tracking-vessels/",
-        "category": "军工与国防科技",
+        "title": "The Download: an organ transplant breakthrough, and homegrown Chinese chips",
+        "published_at": "2026-07-24T12:10+00:00",
+        "source": "MIT Technology Review",
+        "url": "https://www.technologyreview.com/2026/07/24/1140776/the-download-organ-transplant-breakthrough-chinese-chips/",
+        "category": "科技与芯片",
         "region": "国际",
-        "source_weight": 13
+        "source_weight": 12
       },
       {
         "title": "The Download: energy transmission and US threats against Chinese AI",
@@ -192,13 +210,13 @@
         "source_weight": 12
       },
       {
-        "title": "The Download: Chinese AI divides the White House, and a record copyright payout",
-        "published_at": "2026-07-21T12:10+00:00",
-        "source": "MIT Technology Review",
-        "url": "https://www.technologyreview.com/2026/07/21/1140685/the-download-chinese-ai-divides-white-house-anthropic-copyright-settlement/",
+        "title": "Struggling with a hard life choice? AI future selves have tips",
+        "published_at": "2026-07-24T15:00+00:00",
+        "source": "Science News",
+        "url": "https://www.sciencenews.org/article/life-choice-ai-future-selves-decisions",
         "category": "科技与芯片",
         "region": "国际",
-        "source_weight": 12
+        "source_weight": 11
       },
       {
         "title": "AI ‘ghosts’ can comfort mourners — even when the bots get the facts wrong",
@@ -210,37 +228,28 @@
         "source_weight": 11
       },
       {
-        "title": "U.S., other nations back open-source AI with 'strong security' at China summit",
-        "published_at": "2026-07-24T02:42+00:00",
-        "source": "CNBC Technology",
-        "url": "https://www.cnbc.com/2026/07/24/china-ai-open-source-apec.html",
-        "category": "科技与芯片",
-        "region": "国际",
-        "source_weight": 9
-      },
-      {
-        "title": "Hyundai claims humanoid robot plan is not part of talks with striking workers",
-        "published_at": "2026-07-22T18:18+00:00",
+        "title": "Robot snakes searched for Venezuela earthquake survivors in collapsed buildings",
+        "published_at": "2026-07-24T11:20+00:00",
         "source": "Ars Technica",
-        "url": "https://arstechnica.com/ai/2026/07/hyundai-claims-humanoid-robot-plan-is-not-part-of-talks-with-striking-workers/",
+        "url": "https://arstechnica.com/gadgets/2026/07/robot-snakes-searched-for-venezuela-earthquake-survivors-in-collapsed-buildings/",
         "category": "机器人与具身智能",
         "region": "国际",
         "source_weight": 9
       },
       {
-        "title": "我国成功发射两颗 AI 卫星：一颗能自己管自己，一颗在天上做气象预报",
-        "published_at": "2026-07-24T09:19+00:00",
+        "title": "Waymo 计划独立进入两地 Robotaxi 市场，放弃与 Uber 合作",
+        "published_at": "2026-07-25T00:16+00:00",
         "source": "IT之家",
-        "url": "https://www.ithome.com/0/981/300.htm",
-        "category": "卫星与商业航天",
+        "url": "https://www.ithome.com/0/981/419.htm",
+        "category": "机器人与具身智能",
         "region": "国内",
         "source_weight": 8
       },
       {
-        "title": "消息称小鹏人形机器人正小批量试生产，量产产线进入最后联调阶段",
-        "published_at": "2026-07-24T06:38+00:00",
+        "title": "宇树发布轮足机器人 As2-W：速度 6m/s、IP54 级防水、空载续航距离超 30km",
+        "published_at": "2026-07-24T12:41+00:00",
         "source": "IT之家",
-        "url": "https://www.ithome.com/0/981/130.htm",
+        "url": "https://www.ithome.com/0/981/372.htm",
         "category": "机器人与具身智能",
         "region": "国内",
         "source_weight": 8
@@ -255,19 +264,19 @@
         "source_weight": 8
       },
       {
-        "title": "Mobileye CEO Amnon Shashua to step aside as company pushes into robotaxis, robotics",
-        "published_at": "2026-07-23T22:40+00:00",
-        "source": "TechCrunch",
-        "url": "https://techcrunch.com/2026/07/23/mobileye-ceo-amnon-shashua-to-step-aside-as-company-pushes-into-robotaxis-robotics/",
+        "title": "BrainCo demos thought-controlled robots at WAIC 2026",
+        "published_at": "2026-07-21T07:59+00:00",
+        "source": "TechNode",
+        "url": "https://technode.com/2026/07/21/brainco-demos-thought-controlled-robots-at-waic-2026/",
         "category": "机器人与具身智能",
         "region": "国际",
         "source_weight": 8
       },
       {
-        "title": "Tesla’s robotaxis are moving in reverse",
-        "published_at": "2026-07-23T16:29+00:00",
-        "source": "TechCrunch",
-        "url": "https://techcrunch.com/2026/07/23/teslas-robotaxis-are-moving-in-reverse/",
+        "title": "XPENG releases TuringViT for smart driving and humanoid robots",
+        "published_at": "2026-07-21T07:53+00:00",
+        "source": "TechNode",
+        "url": "https://technode.com/2026/07/21/xpeng-releases-turingvit-for-smart-driving-and-humanoid-robots/",
         "category": "机器人与具身智能",
         "region": "国际",
         "source_weight": 8
@@ -280,15 +289,6 @@
         "category": "军工与国防科技",
         "region": "国内",
         "source_weight": 7
-      },
-      {
-        "title": "离实战还差得远！揭秘美国造出的隐身无人机：对雷达、红外、声学完全无效",
-        "published_at": "2026-07-20T08:13+00:00",
-        "source": "快科技-科学",
-        "url": "https://news.mydrivers.com/1/1137/1137535.htm",
-        "category": "军工与国防科技",
-        "region": "国内",
-        "source_weight": 7
       }
     ],
     "errors": [
@@ -297,5 +297,5 @@
     ],
     "policy": "仅展示含标题、发布时间、来源和原文链接的新闻；不据此自动推断股价因果。"
   },
-  "digest": "【A股科技主题决策雷达】\n个股建议：减仓（基于近3个月K线，保守模式）\n执行参考：买入区间 暂不设置（空头格局）｜仓位 0~2成（仅限持仓者减仓后保留底仓）\n风控纪律：止损 持仓者止损位：57.75元（跌破今日最低点）或MA20（75.34元）作为中期止损参考｜失效条件 未来3个交易日重新站稳75.34且量价修复，则减仓判断失效并重新评估\n大盘摘要：🎯 大盘复盘 2026-07-24 大盘复盘 今日市场全面重挫，三大指数同步下跌，深证与创业板跌幅均超2.4%，上涨家数仅555家（占比约10%），成交额维持高位但属于恐慌性放量。核心矛盾是主线缺失与情绪悲观共振，明日优先观察上证3800点支撑与科创50能否独立企稳。 一、盘面总览 三大指数全线收跌，上证跌幅相对最小（-1.61%），深证与创业板大跌超2.4…\n600118 双源校验：价格：57.78；涨跌幅：-5.37；动态PE：-400.12（亏损状态）；PB：10.83\n\n可核验科技新闻：\n- 卫星与商业航天：NASA’s MAVEN Illuminates New Understanding of Auroras at Mars（NASA News，2026-07-23T15:19+00:00）\n  https://science.nasa.gov/missions/maven/nasas-maven-illuminates-new-understanding-of-auroras-at-mars/\n- 机器人与具身智能：Robotic Servicing Mission Launches with NASA Support（NASA News，2026-07-22T18:04+00:00）\n  https://www.nasa.gov/technology/robotic-servicing-mission-launches-with-nasa-support/\n- 军工与国防科技：Greece to buy $4 billion air defense system from Israel（Defense News，2026-07-23T13:41+00:00）\n  https://www.defensenews.com/global/europe/2026/07/23/greece-to-buy-4-billion-air-defence-system-from-israel/\n- 科技与芯片：The Download: energy transmission and US threats against Chinese AI（MIT Technology Review，2026-07-23T12:10+00:00）\n  https://www.technologyreview.com/2026/07/23/1140753/the-download-energy-transmission-and-us-threats-chinese-ai/\n\n网页版完整报告：https://LPT111.github.io/daily_stock_analysis/\n仅供研究参考，不构成投资建议。"
+  "digest": "【A股科技主题决策雷达】\n个股建议：待确认（基于近3个月K线，保守模式）\n执行参考：买入区间 仅在MA20附近企稳时考虑低吸，不追涨｜仓位 控制在3成以内\n风控纪律：止损 有效跌破MA20且两个交易日未收回｜失效条件 跌破止损位或量价结构转空时，持有逻辑失效\n大盘摘要：\n600118 双源校验：价格：57.78；涨跌幅：-5.37；动态PE：-400.12（亏损状态）；PB：10.83\n\n可核验科技新闻：\n- 卫星与商业航天：NASA Announces New Spacecraft Technology Demonstration Mission at Moon（NASA News，2026-07-24T16:35+00:00）\n  https://www.nasa.gov/directorates/armd/nasa-announces-new-spacecraft-technology-demonstration-mission-at-moon/\n- 军工与国防科技：From steppe to sea, a Ukrainian drone unit hunts Russian ships（Defense News，2026-07-24T20:59+00:00）\n  https://www.defensenews.com/global/europe/2026/07/24/from-steppe-to-sea-a-ukrainian-drone-unit-hunts-russian-ships/\n- 科技与芯片：The Download: an organ transplant breakthrough, and homegrown Chinese chips（MIT Technology Review，2026-07-24T12:10+00:00）\n  https://www.technologyreview.com/2026/07/24/1140776/the-download-organ-transplant-breakthrough-chinese-chips/\n- 机器人与具身智能：Robot snakes searched for Venezuela earthquake survivors in collapsed buildings（Ars Technica，2026-07-24T11:20+00:00）\n  https://arstechnica.com/gadgets/2026/07/robot-snakes-searched-for-venezuela-earthquake-survivors-in-collapsed-buildings/\n\n网页版完整报告：https://LPT111.github.io/daily_stock_analysis/\n仅供研究参考，不构成投资建议。"
 }
