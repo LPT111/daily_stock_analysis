@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-26T01:45:00+00:00",
+  "generated_at": "2026-07-26T09:23:37+00:00",
   "dashboard_url": "https://LPT111.github.io/daily_stock_analysis/",
   "stock_report": null,
   "market_report": null,
@@ -9,43 +9,43 @@
       "policy": "仅 status=confirmed 的字段可用于结论；待核实字段必须忽略。",
       "metrics": {
         "price": {
-          "status": "待核实",
-          "value": null,
-          "display": "待核实",
-          "interpretation": "两个数据源未同时返回一致结果，不得用于决策。",
+          "status": "confirmed",
+          "value": 57.78,
+          "display": "57.78",
+          "interpretation": "腾讯财经与东方财富交叉核验一致。",
           "sources": {
             "腾讯财经": 57.78,
-            "东方财富": null
+            "东方财富": 57.78
           }
         },
         "change_pct": {
-          "status": "待核实",
-          "value": null,
-          "display": "待核实",
-          "interpretation": "两个数据源未同时返回一致结果，不得用于决策。",
+          "status": "confirmed",
+          "value": -5.37,
+          "display": "-5.37",
+          "interpretation": "腾讯财经与东方财富交叉核验一致。",
           "sources": {
             "腾讯财经": -5.37,
-            "东方财富": null
+            "东方财富": -5.37
           }
         },
         "dynamic_pe": {
-          "status": "待核实",
-          "value": null,
-          "display": "待核实",
-          "interpretation": "两个数据源未同时返回一致结果，不得用于决策。",
+          "status": "confirmed",
+          "value": -400.12,
+          "display": "-400.12（亏损状态）",
+          "interpretation": "动态市盈率为负，表示当前口径下盈利为负，不能按正 PE 倍数进行估值判断。",
           "sources": {
             "腾讯财经": -400.12,
-            "东方财富": null
+            "东方财富": -400.12
           }
         },
         "pb": {
-          "status": "待核实",
-          "value": null,
-          "display": "待核实",
-          "interpretation": "两个数据源未同时返回一致结果，不得用于决策。",
+          "status": "confirmed",
+          "value": 10.83,
+          "display": "10.83",
+          "interpretation": "腾讯财经与东方财富交叉核验一致。",
           "sources": {
             "腾讯财经": 10.83,
-            "东方财富": null
+            "东方财富": 10.83
           }
         }
       },
@@ -58,11 +58,18 @@
           "dynamic_pe": -400.12,
           "pb": 10.83,
           "source_url": "https://gu.qq.com/sh600118"
+        },
+        {
+          "source": "东方财富",
+          "price": 57.78,
+          "previous_close": 61.06,
+          "change_pct": -5.37,
+          "dynamic_pe": -400.12,
+          "pb": 10.83,
+          "source_url": "https://quote.eastmoney.com/sh600118.html"
         }
       ],
-      "errors": [
-        "东方财富: 502 Server Error: Bad Gateway for url: https://push2.eastmoney.com/api/qt/stock/get?secid=1.600118&fields=f43%2Cf57%2Cf58%2Cf60%2Cf162%2Cf167%2Cf170"
-      ]
+      "errors": []
     }
   ],
   "sector_news": {
@@ -230,38 +237,29 @@
         "source_weight": 9
       },
       {
-        "title": "特斯拉在智利、哥伦比亚招聘 AI 安全员，为 Robotaxi 出海铺路",
-        "published_at": "2026-07-26T00:10+00:00",
+        "title": "欧盟 AI 透明度准则 8 月 2 日起生效：聊天机器人需“自报身份”，深度伪造内容须带有机读标签",
+        "published_at": "2026-07-26T08:16+00:00",
         "source": "IT之家",
-        "url": "https://www.ithome.com/0/981/621.htm",
+        "url": "https://www.ithome.com/0/981/755.htm",
         "category": "机器人与具身智能",
         "region": "国内",
         "source_weight": 8
       },
       {
-        "title": "日媒发布宇树 G1 拆机视频后认输，称人形机器人短期内赶不上中国",
-        "published_at": "2026-07-26T00:07+00:00",
+        "title": "微电影《返航日》官宣 7 月 27 日上映，采用荣耀 Robot Phone 完成一镜到底视觉叙事",
+        "published_at": "2026-07-26T07:04+00:00",
         "source": "IT之家",
-        "url": "https://www.ithome.com/0/981/619.htm",
+        "url": "https://www.ithome.com/0/981/701.htm",
         "category": "机器人与具身智能",
         "region": "国内",
         "source_weight": 8
       },
       {
-        "title": "特斯拉 FSD v15 早期版本已上路，Robotaxi 车队率先搭载",
-        "published_at": "2026-07-25T23:57+00:00",
+        "title": "我国蜂群无人机首次实现台风过境全程立体观测",
+        "published_at": "2026-07-26T06:52+00:00",
         "source": "IT之家",
-        "url": "https://www.ithome.com/0/981/618.htm",
-        "category": "机器人与具身智能",
-        "region": "国内",
-        "source_weight": 8
-      },
-      {
-        "title": "2025 年我国服务机器人产量达 1858.1 万套，同比增长 16.1%",
-        "published_at": "2026-07-25T15:07+00:00",
-        "source": "IT之家",
-        "url": "https://www.ithome.com/0/981/599.htm",
-        "category": "机器人与具身智能",
+        "url": "https://www.ithome.com/0/981/693.htm",
+        "category": "军工与国防科技",
         "region": "国内",
         "source_weight": 8
       },
@@ -275,20 +273,28 @@
         "source_weight": 8
       },
       {
-        "title": "众目睽睽之下消失！美国研发隐形无人机 如何做到的？",
-        "published_at": "2026-07-24T06:56+00:00",
-        "source": "快科技-科学",
-        "url": "https://news.mydrivers.com/1/1138/1138673.htm",
-        "category": "军工与国防科技",
-        "region": "国内",
-        "source_weight": 7
+        "title": "BrainCo demos thought-controlled robots at WAIC 2026",
+        "published_at": "2026-07-21T07:59+00:00",
+        "source": "TechNode",
+        "url": "https://technode.com/2026/07/21/brainco-demos-thought-controlled-robots-at-waic-2026/",
+        "category": "机器人与具身智能",
+        "region": "国际",
+        "source_weight": 8
+      },
+      {
+        "title": "XPENG releases TuringViT for smart driving and humanoid robots",
+        "published_at": "2026-07-21T07:53+00:00",
+        "source": "TechNode",
+        "url": "https://technode.com/2026/07/21/xpeng-releases-turingvit-for-smart-driving-and-humanoid-robots/",
+        "category": "机器人与具身智能",
+        "region": "国际",
+        "source_weight": 8
       }
     ],
     "errors": [
-      "国内科技新闻: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=%28%E5%8D%AB%E6%98%9F+OR+%E8%88%AA%E5%A4%A9+OR+%E5%8C%97%E6%96%97+OR+%E6%9C%BA%E5%99%A8%E4%BA%BA+OR+%E5%85%B7%E8%BA%AB%E6%99%BA%E8%83%BD+OR+%E8%8A%AF%E7%89%87+OR+%E5%8D%8A%E5%AF%BC%E4%BD%93+OR+%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD+OR+%E5%86%9B%E5%B7%A5+OR+%E5%9B%BD%E9%98%B2%E7%A7%91%E6%8A%80%29+sourcelang%3AChinese&mode=artlist&format=json&maxrecords=24&sort=datedesc&timespan=3d",
-      "国际科技新闻: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=%28satellite+OR+spaceflight+OR+robotics+OR+humanoid+OR+semiconductor+OR+%22artificial+intelligence%22+OR+%22defense+technology%22%29+sourcelang%3AEnglish&mode=artlist&format=json&maxrecords=24&sort=datedesc&timespan=3d"
+      "国内科技新闻: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=%28%E5%8D%AB%E6%98%9F+OR+%E8%88%AA%E5%A4%A9+OR+%E5%8C%97%E6%96%97+OR+%E6%9C%BA%E5%99%A8%E4%BA%BA+OR+%E5%85%B7%E8%BA%AB%E6%99%BA%E8%83%BD+OR+%E8%8A%AF%E7%89%87+OR+%E5%8D%8A%E5%AF%BC%E4%BD%93+OR+%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD+OR+%E5%86%9B%E5%B7%A5+OR+%E5%9B%BD%E9%98%B2%E7%A7%91%E6%8A%80%29+sourcelang%3AChinese&mode=artlist&format=json&maxrecords=24&sort=datedesc&timespan=3d"
     ],
     "policy": "仅展示含标题、发布时间、来源和原文链接的新闻；不据此自动推断股价因果。"
   },
-  "digest": "【A股科技主题决策雷达】\n个股建议：待确认（基于近3个月K线，保守模式）\n执行参考：买入区间 仅在MA20附近企稳时考虑低吸，不追涨｜仓位 控制在3成以内\n风控纪律：止损 有效跌破MA20且两个交易日未收回｜失效条件 跌破止损位或量价结构转空时，持有逻辑失效\n大盘摘要：\n600118 双源校验：价格：待核实；涨跌幅：待核实；动态PE：待核实；PB：待核实\n\n可核验科技新闻：\n- 卫星与商业航天：NASA Announces New Spacecraft Technology Demonstration Mission at Moon（NASA News，2026-07-24T16:35+00:00）\n  https://www.nasa.gov/directorates/armd/nasa-announces-new-spacecraft-technology-demonstration-mission-at-moon/\n- 军工与国防科技：From steppe to sea, a Ukrainian drone unit hunts Russian ships（Defense News，2026-07-24T20:59+00:00）\n  https://www.defensenews.com/global/europe/2026/07/24/from-steppe-to-sea-a-ukrainian-drone-unit-hunts-russian-ships/\n- 科技与芯片：The Download: an organ transplant breakthrough, and homegrown Chinese chips（MIT Technology Review，2026-07-24T12:10+00:00）\n  https://www.technologyreview.com/2026/07/24/1140776/the-download-organ-transplant-breakthrough-chinese-chips/\n- 机器人与具身智能：Robot snakes searched for Venezuela earthquake survivors in collapsed buildings（Ars Technica，2026-07-24T11:20+00:00）\n  https://arstechnica.com/gadgets/2026/07/robot-snakes-searched-for-venezuela-earthquake-survivors-in-collapsed-buildings/\n\n网页版完整报告：https://LPT111.github.io/daily_stock_analysis/\n仅供研究参考，不构成投资建议。"
+  "digest": "【A股科技主题决策雷达】\n个股建议：待确认（基于近3个月K线，保守模式）\n执行参考：买入区间 仅在MA20附近企稳时考虑低吸，不追涨｜仓位 控制在3成以内\n风控纪律：止损 有效跌破MA20且两个交易日未收回｜失效条件 跌破止损位或量价结构转空时，持有逻辑失效\n大盘摘要：\n600118 双源校验：价格：57.78；涨跌幅：-5.37；动态PE：-400.12（亏损状态）；PB：10.83\n\n可核验科技新闻：\n- 卫星与商业航天：NASA Announces New Spacecraft Technology Demonstration Mission at Moon（NASA News，2026-07-24T16:35+00:00）\n  https://www.nasa.gov/directorates/armd/nasa-announces-new-spacecraft-technology-demonstration-mission-at-moon/\n- 军工与国防科技：From steppe to sea, a Ukrainian drone unit hunts Russian ships（Defense News，2026-07-24T20:59+00:00）\n  https://www.defensenews.com/global/europe/2026/07/24/from-steppe-to-sea-a-ukrainian-drone-unit-hunts-russian-ships/\n- 科技与芯片：The Download: an organ transplant breakthrough, and homegrown Chinese chips（MIT Technology Review，2026-07-24T12:10+00:00）\n  https://www.technologyreview.com/2026/07/24/1140776/the-download-organ-transplant-breakthrough-chinese-chips/\n- 机器人与具身智能：Robot snakes searched for Venezuela earthquake survivors in collapsed buildings（Ars Technica，2026-07-24T11:20+00:00）\n  https://arstechnica.com/gadgets/2026/07/robot-snakes-searched-for-venezuela-earthquake-survivors-in-collapsed-buildings/\n\n网页版完整报告：https://LPT111.github.io/daily_stock_analysis/\n仅供研究参考，不构成投资建议。"
 }
