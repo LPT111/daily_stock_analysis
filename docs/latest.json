@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-28T01:31:52+00:00",
+  "generated_at": "2026-07-28T09:48:30+00:00",
   "dashboard_url": "https://LPT111.github.io/daily_stock_analysis/",
   "stock_report": "report_20260728.md",
   "market_report": "market_review_20260728.md",
@@ -9,13 +9,13 @@
       "policy": "仅 status=confirmed 的字段可用于结论；待核实字段必须忽略。",
       "metrics": {
         "price": {
-          "status": "confirmed",
-          "value": 59.82,
-          "display": "59.82",
-          "interpretation": "腾讯财经与东方财富交叉核验一致。",
+          "status": "待核实",
+          "value": null,
+          "display": "待核实",
+          "interpretation": "两个数据源未同时返回一致结果，不得用于决策。",
           "sources": {
-            "腾讯财经": 59.77,
-            "东方财富": 59.87
+            "腾讯财经": 57.94,
+            "东方财富": null
           }
         },
         "change_pct": {
@@ -24,65 +24,49 @@
           "display": "待核实",
           "interpretation": "两个数据源未同时返回一致结果，不得用于决策。",
           "sources": {
-            "腾讯财经": 0.12,
-            "东方财富": 0.28
+            "腾讯财经": -2.95,
+            "东方财富": null
           }
         },
         "dynamic_pe": {
-          "status": "confirmed",
-          "value": -414.245,
-          "display": "-414.25（亏损状态）",
-          "interpretation": "动态市盈率为负，表示当前口径下盈利为负，不能按正 PE 倍数进行估值判断。",
+          "status": "待核实",
+          "value": null,
+          "display": "待核实",
+          "interpretation": "两个数据源未同时返回一致结果，不得用于决策。",
           "sources": {
-            "腾讯财经": -413.9,
-            "东方财富": -414.59
+            "腾讯财经": -401.22,
+            "东方财富": null
           }
         },
         "pb": {
-          "status": "confirmed",
-          "value": 11.21,
-          "display": "11.21",
-          "interpretation": "腾讯财经与东方财富交叉核验一致。",
+          "status": "待核实",
+          "value": null,
+          "display": "待核实",
+          "interpretation": "两个数据源未同时返回一致结果，不得用于决策。",
           "sources": {
-            "腾讯财经": 11.2,
-            "东方财富": 11.22
+            "腾讯财经": 10.86,
+            "东方财富": null
           }
         }
       },
       "raw_sources": [
         {
           "source": "腾讯财经",
-          "price": 59.77,
+          "price": 57.94,
           "previous_close": 59.7,
-          "change_pct": 0.12,
-          "dynamic_pe": -413.9,
-          "pb": 11.2,
+          "change_pct": -2.95,
+          "dynamic_pe": -401.22,
+          "pb": 10.86,
           "source_url": "https://gu.qq.com/sh600118"
-        },
-        {
-          "source": "东方财富",
-          "price": 59.87,
-          "previous_close": 59.7,
-          "change_pct": 0.28,
-          "dynamic_pe": -414.59,
-          "pb": 11.22,
-          "source_url": "https://quote.eastmoney.com/sh600118.html"
         }
       ],
-      "errors": []
+      "errors": [
+        "东方财富: 502 Server Error: Bad Gateway for url: https://push2.eastmoney.com/api/qt/stock/get?secid=1.600118&fields=f43%2Cf57%2Cf58%2Cf60%2Cf162%2Cf167%2Cf170"
+      ]
     }
   ],
   "sector_news": {
     "items": [
-      {
-        "title": "NASA Announces New Spacecraft Technology Demonstration Mission at Moon",
-        "published_at": "2026-07-24T16:35+00:00",
-        "source": "NASA News",
-        "url": "https://www.nasa.gov/directorates/armd/nasa-announces-new-spacecraft-technology-demonstration-mission-at-moon/",
-        "category": "卫星与商业航天",
-        "region": "国际",
-        "source_weight": 14
-      },
       {
         "title": "Sphinx Defense wins $287 million contract for strategic satellite communications software",
         "published_at": "2026-07-27T19:02+00:00",
@@ -219,6 +203,51 @@
         "source_weight": 9
       },
       {
+        "title": "百度萝卜快跑启动英国伦敦 Robotaxi 车辆测试，2027 年搭载公众乘客",
+        "published_at": "2026-07-28T08:46+00:00",
+        "source": "IT之家",
+        "url": "https://www.ithome.com/0/982/636.htm",
+        "category": "机器人与具身智能",
+        "region": "国内",
+        "source_weight": 8
+      },
+      {
+        "title": "因校方、工会强烈反对，美国纽约州暂停人形机器人教学试点计划",
+        "published_at": "2026-07-28T08:26+00:00",
+        "source": "IT之家",
+        "url": "https://www.ithome.com/0/982/619.htm",
+        "category": "机器人与具身智能",
+        "region": "国内",
+        "source_weight": 8
+      },
+      {
+        "title": "2026 世界物联网 500 强公布，华为、SpaceX、中国航天科技集团排名金榜前三",
+        "published_at": "2026-07-28T08:11+00:00",
+        "source": "IT之家",
+        "url": "https://www.ithome.com/0/982/613.htm",
+        "category": "卫星与商业航天",
+        "region": "国内",
+        "source_weight": 8
+      },
+      {
+        "title": "Lyft and Baidu enter London’s robotaxi battleground as testing begins",
+        "published_at": "2026-07-28T08:00+00:00",
+        "source": "TechCrunch",
+        "url": "https://techcrunch.com/2026/07/28/lyft-and-baidu-enter-londons-robotaxi-battleground-as-testing-begins/",
+        "category": "机器人与具身智能",
+        "region": "国际",
+        "source_weight": 8
+      },
+      {
+        "title": "宇树科技：预计今年机器人出货至少翻倍，未来或考虑海外生产",
+        "published_at": "2026-07-28T07:24+00:00",
+        "source": "IT之家",
+        "url": "https://www.ithome.com/0/982/586.htm",
+        "category": "机器人与具身智能",
+        "region": "国内",
+        "source_weight": 8
+      },
+      {
         "title": "Enigma raises $71M to make controlling a robot as easy as adjusting the volume",
         "published_at": "2026-07-27T13:00+00:00",
         "source": "TechCrunch",
@@ -237,47 +266,11 @@
         "source_weight": 8
       },
       {
-        "title": "Honor confirms August launch for Robot Phone with 4DoF gimbal",
-        "published_at": "2026-07-24T05:28+00:00",
-        "source": "TechNode",
-        "url": "https://technode.com/2026/07/24/honor-confirms-august-launch-for-robot-phone-with-4dof-gimbal/",
-        "category": "机器人与具身智能",
-        "region": "国际",
-        "source_weight": 8
-      },
-      {
-        "title": "BrainCo demos thought-controlled robots at WAIC 2026",
-        "published_at": "2026-07-21T07:59+00:00",
-        "source": "TechNode",
-        "url": "https://technode.com/2026/07/21/brainco-demos-thought-controlled-robots-at-waic-2026/",
-        "category": "机器人与具身智能",
-        "region": "国际",
-        "source_weight": 8
-      },
-      {
-        "title": "XPENG releases TuringViT for smart driving and humanoid robots",
-        "published_at": "2026-07-21T07:53+00:00",
-        "source": "TechNode",
-        "url": "https://technode.com/2026/07/21/xpeng-releases-turingvit-for-smart-driving-and-humanoid-robots/",
-        "category": "机器人与具身智能",
-        "region": "国际",
-        "source_weight": 8
-      },
-      {
         "title": "国内首款！TP200大型多功能长航时无人机成功首飞",
         "published_at": "2026-07-27T07:24+00:00",
         "source": "快科技-科学",
         "url": "https://news.mydrivers.com/1/1139/1139151.htm",
         "category": "军工与国防科技",
-        "region": "国内",
-        "source_weight": 7
-      },
-      {
-        "title": "8点1氪丨携程因滥用市场支配地位被罚没51.79亿元；长鑫科技今日上市；日本技术人员拆解宇树机器人：短期内赶不上中国",
-        "published_at": "2026-07-27",
-        "source": "36氪",
-        "url": "https://36kr.com/p/3913118530819457?f=rss",
-        "category": "机器人与具身智能",
         "region": "国内",
         "source_weight": 7
       },
@@ -291,11 +284,8 @@
         "source_weight": 7
       }
     ],
-    "errors": [
-      "国内科技新闻: HTTPSConnectionPool(host='api.gdeltproject.org', port=443): Read timed out. (read timeout=15)",
-      "国际科技新闻: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=%28satellite+OR+spaceflight+OR+robotics+OR+humanoid+OR+semiconductor+OR+%22artificial+intelligence%22+OR+%22defense+technology%22%29+sourcelang%3AEnglish&mode=artlist&format=json&maxrecords=24&sort=datedesc&timespan=3d"
-    ],
+    "errors": [],
     "policy": "仅展示含标题、发布时间、来源和原文链接的新闻；不据此自动推断股价因果。"
   },
-  "digest": "【A股科技主题决策雷达】\n个股建议：减仓（基于近3个月K线，保守模式）\n执行参考：买入区间 暂不设置（多头排列未形成）｜仓位 0成（空仓）或1成以下（持仓者反弹减仓）\n风控纪律：止损 持仓者：跌破前低57.50元或MA20（73.12元）｜失效条件 未来3个交易日重新站稳73.12且量价修复，则减仓判断失效并重新评估\n大盘摘要：🎯 大盘复盘 2026-07-28 大盘复盘 今日市场全面走弱，指数普跌、成交额萎缩至冰点，赚钱效应极差。核心矛盾在于科技成长板块大幅杀跌拖累创业板与科创50，而银行、消费等防御品种小幅护盘但无法扭转颓势。明日优先观察成交额能否回升以及领跌板块是否扩散，防守为主。 一、盘面总览 今日市场呈现明显的“指数与情绪双杀”格局。上证指数下跌0.91%，深证成指、创业…\n600118 双源校验：价格：59.82；涨跌幅：待核实；动态PE：-414.25（亏损状态）；PB：11.21\n\n可核验科技新闻：\n- 卫星与商业航天：NASA Announces New Spacecraft Technology Demonstration Mission at Moon（NASA News，2026-07-24T16:35+00:00）\n  https://www.nasa.gov/directorates/armd/nasa-announces-new-spacecraft-technology-demonstration-mission-at-moon/\n- 军工与国防科技：India moves closer to a homegrown, long-range air defense（Defense News，2026-07-27T15:59+00:00）\n  https://www.defensenews.com/global/asia-pacific/2026/07/27/india-moves-closer-to-a-homegrown-long-range-air-defense/\n- 科技与芯片：Intel debuts new chip for space computing（SpaceNews，2026-07-27T13:00+00:00）\n  https://spacenews.com/intel-debuts-new-chip-for-space-computing/\n- 机器人与具身智能：Enigma raises $71M to make controlling a robot as easy as adjusting the volume（TechCrunch，2026-07-27T13:00+00:00）\n  https://techcrunch.com/2026/07/27/enigma-raises-70m-to-make-controlling-a-robot-as-easy-as-adjusting-the-volume/\n\n网页版完整报告：https://LPT111.github.io/daily_stock_analysis/\n仅供研究参考，不构成投资建议。"
+  "digest": "【A股科技主题决策雷达】\n个股建议：减仓（基于近3个月K线，保守模式）\n执行参考：买入区间 暂不设置（空头排列，不满足买入条件）｜仓位 0成\n风控纪律：止损 57.5元｜失效条件 未来3个交易日重新站稳73.07且量价修复，则减仓判断失效并重新评估\n大盘摘要：🎯 大盘复盘 📉 2026-07-28 大盘复盘 今日市场呈极端分化状态：权重股（上证50）护盘但科技成长股（创业板、科创50）大跌超6%，成交额放大至2万亿以上，亏钱效应显著。核心矛盾在于主线题材退潮与权重补跌的传导。明日优先观察上证3800点支撑与科技板块是否止跌。 📊 一、盘面总览 指数严重分化：上证50仅跌0.92%，而创业板指暴跌7.34%，科创5…\n600118 双源校验：价格：待核实；涨跌幅：待核实；动态PE：待核实；PB：待核实\n\n可核验科技新闻：\n- 卫星与商业航天：Sphinx Defense wins $287 million contract for strategic satellite communications software（SpaceNews，2026-07-27T19:02+00:00）\n  https://spacenews.com/sphinx-defense-wins-287-million-contract-for-strategic-satellite-communications-software/\n- 军工与国防科技：India moves closer to a homegrown, long-range air defense（Defense News，2026-07-27T15:59+00:00）\n  https://www.defensenews.com/global/asia-pacific/2026/07/27/india-moves-closer-to-a-homegrown-long-range-air-defense/\n- 科技与芯片：Intel debuts new chip for space computing（SpaceNews，2026-07-27T13:00+00:00）\n  https://spacenews.com/intel-debuts-new-chip-for-space-computing/\n- 机器人与具身智能：百度萝卜快跑启动英国伦敦 Robotaxi 车辆测试，2027 年搭载公众乘客（IT之家，2026-07-28T08:46+00:00）\n  https://www.ithome.com/0/982/636.htm\n\n网页版完整报告：https://LPT111.github.io/daily_stock_analysis/\n仅供研究参考，不构成投资建议。"
 }
