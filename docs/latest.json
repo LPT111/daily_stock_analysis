@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-07-27T10:56:14+00:00",
+  "generated_at": "2026-07-28T01:31:52+00:00",
   "dashboard_url": "https://LPT111.github.io/daily_stock_analysis/",
-  "stock_report": "report_20260727.md",
-  "market_report": "market_review_20260727.md",
+  "stock_report": "report_20260728.md",
+  "market_report": "market_review_20260728.md",
   "validations": [
     {
       "code": "600118",
@@ -10,62 +10,62 @@
       "metrics": {
         "price": {
           "status": "confirmed",
-          "value": 59.7,
-          "display": "59.70",
+          "value": 59.82,
+          "display": "59.82",
           "interpretation": "腾讯财经与东方财富交叉核验一致。",
           "sources": {
-            "腾讯财经": 59.7,
-            "东方财富": 59.7
+            "腾讯财经": 59.77,
+            "东方财富": 59.87
           }
         },
         "change_pct": {
-          "status": "confirmed",
-          "value": 3.32,
-          "display": "3.32",
-          "interpretation": "腾讯财经与东方财富交叉核验一致。",
+          "status": "待核实",
+          "value": null,
+          "display": "待核实",
+          "interpretation": "两个数据源未同时返回一致结果，不得用于决策。",
           "sources": {
-            "腾讯财经": 3.32,
-            "东方财富": 3.32
+            "腾讯财经": 0.12,
+            "东方财富": 0.28
           }
         },
         "dynamic_pe": {
           "status": "confirmed",
-          "value": -413.41,
-          "display": "-413.41（亏损状态）",
+          "value": -414.245,
+          "display": "-414.25（亏损状态）",
           "interpretation": "动态市盈率为负，表示当前口径下盈利为负，不能按正 PE 倍数进行估值判断。",
           "sources": {
-            "腾讯财经": -413.41,
-            "东方财富": -413.41
+            "腾讯财经": -413.9,
+            "东方财富": -414.59
           }
         },
         "pb": {
           "status": "confirmed",
-          "value": 11.19,
-          "display": "11.19",
+          "value": 11.21,
+          "display": "11.21",
           "interpretation": "腾讯财经与东方财富交叉核验一致。",
           "sources": {
-            "腾讯财经": 11.19,
-            "东方财富": 11.19
+            "腾讯财经": 11.2,
+            "东方财富": 11.22
           }
         }
       },
       "raw_sources": [
         {
           "source": "腾讯财经",
-          "price": 59.7,
-          "previous_close": 57.78,
-          "change_pct": 3.32,
-          "dynamic_pe": -413.41,
-          "pb": 11.19,
+          "price": 59.77,
+          "previous_close": 59.7,
+          "change_pct": 0.12,
+          "dynamic_pe": -413.9,
+          "pb": 11.2,
           "source_url": "https://gu.qq.com/sh600118"
         },
         {
           "source": "东方财富",
-          "price": 59.7,
-          "previous_close": 57.78,
-          "change_pct": 3.32,
-          "dynamic_pe": -413.41,
-          "pb": 11.19,
+          "price": 59.87,
+          "previous_close": 59.7,
+          "change_pct": 0.28,
+          "dynamic_pe": -414.59,
+          "pb": 11.22,
           "source_url": "https://quote.eastmoney.com/sh600118.html"
         }
       ],
@@ -84,28 +84,55 @@
         "source_weight": 14
       },
       {
-        "title": "NASA to Support Blue Origin New Glenn Rocket Testing, Advance Artemis",
-        "published_at": "2026-07-24T15:30+00:00",
-        "source": "NASA News",
-        "url": "https://www.nasa.gov/news-release/nasa-to-support-blue-origin-new-glenn-rocket-testing-advance-artemis/",
+        "title": "Sphinx Defense wins $287 million contract for strategic satellite communications software",
+        "published_at": "2026-07-27T19:02+00:00",
+        "source": "SpaceNews",
+        "url": "https://spacenews.com/sphinx-defense-wins-287-million-contract-for-strategic-satellite-communications-software/",
         "category": "卫星与商业航天",
         "region": "国际",
-        "source_weight": 14
+        "source_weight": 13
+      },
+      {
+        "title": "India moves closer to a homegrown, long-range air defense",
+        "published_at": "2026-07-27T15:59+00:00",
+        "source": "Defense News",
+        "url": "https://www.defensenews.com/global/asia-pacific/2026/07/27/india-moves-closer-to-a-homegrown-long-range-air-defense/",
+        "category": "军工与国防科技",
+        "region": "国际",
+        "source_weight": 13
+      },
+      {
+        "title": "Intel debuts new chip for space computing",
+        "published_at": "2026-07-27T13:00+00:00",
+        "source": "SpaceNews",
+        "url": "https://spacenews.com/intel-debuts-new-chip-for-space-computing/",
+        "category": "科技与芯片",
+        "region": "国际",
+        "source_weight": 13
+      },
+      {
+        "title": "Amazon files application for direct-to-device satellite constellation",
+        "published_at": "2026-07-27T11:59+00:00",
+        "source": "SpaceNews",
+        "url": "https://spacenews.com/amazon-files-application-for-direct-to-device-satellite-constellation/",
+        "category": "卫星与商业航天",
+        "region": "国际",
+        "source_weight": 13
+      },
+      {
+        "title": "US Congress approves money for Taiwan defense. Does it mean Trump is done hesitating?",
+        "published_at": "2026-07-27T11:00+00:00",
+        "source": "Defense News",
+        "url": "https://www.defensenews.com/global/asia-pacific/2026/07/27/us-congress-approves-money-for-taiwan-defense-does-it-mean-trump-is-done-hesitating/",
+        "category": "军工与国防科技",
+        "region": "国际",
+        "source_weight": 13
       },
       {
         "title": "Rocket Lab to open Alaska launch site under $266 million Space Force deal",
         "published_at": "2026-07-27T10:48+00:00",
         "source": "SpaceNews",
         "url": "https://spacenews.com/rocket-lab-to-open-alaska-launch-site-under-266-million-space-force-deal/",
-        "category": "卫星与商业航天",
-        "region": "国际",
-        "source_weight": 13
-      },
-      {
-        "title": "AI in orbit is a double-edged sword. Here’s how to keep it from cutting space cooperation apart",
-        "published_at": "2026-07-27T10:00+00:00",
-        "source": "SpaceNews",
-        "url": "https://spacenews.com/ai-in-orbit-is-a-double-edged-sword-heres-how-to-keep-it-from-cutting-space-cooperation-apart/",
         "category": "卫星与商业航天",
         "region": "国际",
         "source_weight": 13
@@ -120,24 +147,6 @@
         "source_weight": 13
       },
       {
-        "title": "LatConnect 60 Unveils Proprietary AI Capabilities Following Growing Indo-Pacific Defence Interest in SWIRSAT",
-        "published_at": "2026-07-24T14:59+00:00",
-        "source": "SpaceNews",
-        "url": "https://spacenews.com/latconnect-60-unveils-proprietary-ai-capabilities-following-growing-indo-pacific-defence-interest-in-swirsat/",
-        "category": "军工与国防科技",
-        "region": "国际",
-        "source_weight": 13
-      },
-      {
-        "title": "Lightning strikes Long March 3B after liftoff, Kinetica-1 launches 5 satellites",
-        "published_at": "2026-07-24T10:32+00:00",
-        "source": "SpaceNews",
-        "url": "https://spacenews.com/lightning-strikes-long-march-3b-after-liftoff-kinetica-1-launches-5-satellites/",
-        "category": "卫星与商业航天",
-        "region": "国际",
-        "source_weight": 13
-      },
-      {
         "title": "Greece to buy $4 billion air defense system from Israel",
         "published_at": "2026-07-23T13:41+00:00",
         "source": "Defense News",
@@ -147,55 +156,37 @@
         "source_weight": 13
       },
       {
-        "title": "Australia whips together a hybrid air defense weapon",
-        "published_at": "2026-07-23T10:35+00:00",
-        "source": "Defense News",
-        "url": "https://www.defensenews.com/global/asia-pacific/2026/07/23/australia-whips-together-a-hybrid-air-defense-weapon/",
-        "category": "军工与国防科技",
+        "title": "OpenAI called the Hugging Face attack unprecedented. But we’ve been here before.",
+        "published_at": "2026-07-27T18:00+00:00",
+        "source": "MIT Technology Review",
+        "url": "https://www.technologyreview.com/2026/07/27/1140836/openai-hugging-face-attack-precedent/",
+        "category": "科技与芯片",
         "region": "国际",
-        "source_weight": 13
+        "source_weight": 12
       },
       {
-        "title": "New British prime minister gains early defense win with Canada fighter jet tie-up",
-        "published_at": "2026-07-21T16:45+00:00",
-        "source": "Defense News",
-        "url": "https://www.defensenews.com/global/europe/2026/07/21/new-british-prime-minister-gains-early-defense-win-with-canada-fighter-jet-tie-up/",
-        "category": "军工与国防科技",
+        "title": "Closing the data loop in AI-driven drug discovery",
+        "published_at": "2026-07-27T11:40+00:00",
+        "source": "MIT Technology Review",
+        "url": "https://www.technologyreview.com/2026/07/27/1139667/closing-the-data-loop-in-ai-driven-drug-discovery/",
+        "category": "科技与芯片",
         "region": "国际",
-        "source_weight": 13
+        "source_weight": 12
+      },
+      {
+        "title": "Building the enterprise environment for agentic AI",
+        "published_at": "2026-07-27T11:32+00:00",
+        "source": "MIT Technology Review",
+        "url": "https://www.technologyreview.com/2026/07/27/1140668/building-the-enterprise-environment-for-agentic-ai/",
+        "category": "科技与芯片",
+        "region": "国际",
+        "source_weight": 12
       },
       {
         "title": "The Download: an organ transplant breakthrough, and homegrown Chinese chips",
         "published_at": "2026-07-24T12:10+00:00",
         "source": "MIT Technology Review",
         "url": "https://www.technologyreview.com/2026/07/24/1140776/the-download-organ-transplant-breakthrough-chinese-chips/",
-        "category": "科技与芯片",
-        "region": "国际",
-        "source_weight": 12
-      },
-      {
-        "title": "The Download: energy transmission and US threats against Chinese AI",
-        "published_at": "2026-07-23T12:10+00:00",
-        "source": "MIT Technology Review",
-        "url": "https://www.technologyreview.com/2026/07/23/1140753/the-download-energy-transmission-and-us-threats-chinese-ai/",
-        "category": "科技与芯片",
-        "region": "国际",
-        "source_weight": 12
-      },
-      {
-        "title": "How AI helps scientists design the next generation of medicines",
-        "published_at": "2026-07-23T12:00+00:00",
-        "source": "MIT Technology Review",
-        "url": "https://www.technologyreview.com/2026/07/23/1140346/how-ai-helps-scientists-design-the-next-generation-of-medicines/",
-        "category": "科技与芯片",
-        "region": "国际",
-        "source_weight": 12
-      },
-      {
-        "title": "The Download: NASA’s new space telescope and OpenAI’s autonomous hacker",
-        "published_at": "2026-07-22T12:10+00:00",
-        "source": "MIT Technology Review",
-        "url": "https://www.technologyreview.com/2026/07/22/1140717/the-download-nasa-space-telescope-openai-hugging-face-hack/",
         "category": "科技与芯片",
         "region": "国际",
         "source_weight": 12
@@ -210,13 +201,13 @@
         "source_weight": 11
       },
       {
-        "title": "AI ‘ghosts’ can comfort mourners — even when the bots get the facts wrong",
-        "published_at": "2026-07-20T15:00+00:00",
-        "source": "Science News",
-        "url": "https://www.sciencenews.org/article/ai-ghosts-grief-facts-wrong-chatbot",
-        "category": "科技与芯片",
+        "title": "Amazon seeks federal approval to launch 5,105 satellites for direct-to-device network",
+        "published_at": "2026-07-27T17:42+00:00",
+        "source": "CNBC Technology",
+        "url": "https://www.cnbc.com/2026/07/27/amazon-satellite-internet-network.html",
+        "category": "卫星与商业航天",
         "region": "国际",
-        "source_weight": 11
+        "source_weight": 9
       },
       {
         "title": "SpaceX launches massive Starship rocket in first test flight since IPO",
@@ -228,13 +219,13 @@
         "source_weight": 9
       },
       {
-        "title": "Robot snakes searched for Venezuela earthquake survivors in collapsed buildings",
-        "published_at": "2026-07-24T11:20+00:00",
-        "source": "Ars Technica",
-        "url": "https://arstechnica.com/gadgets/2026/07/robot-snakes-searched-for-venezuela-earthquake-survivors-in-collapsed-buildings/",
+        "title": "Enigma raises $71M to make controlling a robot as easy as adjusting the volume",
+        "published_at": "2026-07-27T13:00+00:00",
+        "source": "TechCrunch",
+        "url": "https://techcrunch.com/2026/07/27/enigma-raises-70m-to-make-controlling-a-robot-as-easy-as-adjusting-the-volume/",
         "category": "机器人与具身智能",
         "region": "国际",
-        "source_weight": 9
+        "source_weight": 8
       },
       {
         "title": "BYD to unveil first humanoid robot in early August",
@@ -289,13 +280,22 @@
         "category": "机器人与具身智能",
         "region": "国内",
         "source_weight": 7
+      },
+      {
+        "title": "众目睽睽之下消失！美国研发隐形无人机 如何做到的？",
+        "published_at": "2026-07-24T06:56+00:00",
+        "source": "快科技-科学",
+        "url": "https://news.mydrivers.com/1/1138/1138673.htm",
+        "category": "军工与国防科技",
+        "region": "国内",
+        "source_weight": 7
       }
     ],
     "errors": [
-      "国内科技新闻: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=%28%E5%8D%AB%E6%98%9F+OR+%E8%88%AA%E5%A4%A9+OR+%E5%8C%97%E6%96%97+OR+%E6%9C%BA%E5%99%A8%E4%BA%BA+OR+%E5%85%B7%E8%BA%AB%E6%99%BA%E8%83%BD+OR+%E8%8A%AF%E7%89%87+OR+%E5%8D%8A%E5%AF%BC%E4%BD%93+OR+%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD+OR+%E5%86%9B%E5%B7%A5+OR+%E5%9B%BD%E9%98%B2%E7%A7%91%E6%8A%80%29+sourcelang%3AChinese&mode=artlist&format=json&maxrecords=24&sort=datedesc&timespan=3d",
+      "国内科技新闻: HTTPSConnectionPool(host='api.gdeltproject.org', port=443): Read timed out. (read timeout=15)",
       "国际科技新闻: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=%28satellite+OR+spaceflight+OR+robotics+OR+humanoid+OR+semiconductor+OR+%22artificial+intelligence%22+OR+%22defense+technology%22%29+sourcelang%3AEnglish&mode=artlist&format=json&maxrecords=24&sort=datedesc&timespan=3d"
     ],
     "policy": "仅展示含标题、发布时间、来源和原文链接的新闻；不据此自动推断股价因果。"
   },
-  "digest": "【A股科技主题决策雷达】\n个股建议：减仓（基于近3个月K线，保守模式）\n执行参考：买入区间 暂不设置｜仓位 持仓者建议降至2成以内，空仓者0成\n风控纪律：止损 持仓者：若跌破57.06前低则必须止损｜失效条件 未来3个交易日重新站稳10且量价修复，则减仓判断失效并重新评估\n大盘摘要：🎯 大盘复盘 2026-07-27 大盘复盘 今日市场呈普涨格局，小盘成长显著强于权重蓝筹，成交量放大至2万亿以上，情绪偏热；但主线板块缺乏事件催化确认，明日需观察领涨持续性及上证50能否企稳。 一、盘面总览 三大指数全线上涨，创业板指领涨3.16%，深成指涨2.72%，上证指数涨1.16%，但上证50逆势微跌0.20%，大小分化明显。两市涨跌比5194:2…\n600118 双源校验：价格：59.70；涨跌幅：3.32；动态PE：-413.41（亏损状态）；PB：11.19\n\n可核验科技新闻：\n- 卫星与商业航天：NASA Announces New Spacecraft Technology Demonstration Mission at Moon（NASA News，2026-07-24T16:35+00:00）\n  https://www.nasa.gov/directorates/armd/nasa-announces-new-spacecraft-technology-demonstration-mission-at-moon/\n- 军工与国防科技：From steppe to sea, a Ukrainian drone unit hunts Russian ships（Defense News，2026-07-24T20:59+00:00）\n  https://www.defensenews.com/global/europe/2026/07/24/from-steppe-to-sea-a-ukrainian-drone-unit-hunts-russian-ships/\n- 科技与芯片：The Download: an organ transplant breakthrough, and homegrown Chinese chips（MIT Technology Review，2026-07-24T12:10+00:00）\n  https://www.technologyreview.com/2026/07/24/1140776/the-download-organ-transplant-breakthrough-chinese-chips/\n- 机器人与具身智能：Robot snakes searched for Venezuela earthquake survivors in collapsed buildings（Ars Technica，2026-07-24T11:20+00:00）\n  https://arstechnica.com/gadgets/2026/07/robot-snakes-searched-for-venezuela-earthquake-survivors-in-collapsed-buildings/\n\n网页版完整报告：https://LPT111.github.io/daily_stock_analysis/\n仅供研究参考，不构成投资建议。"
+  "digest": "【A股科技主题决策雷达】\n个股建议：减仓（基于近3个月K线，保守模式）\n执行参考：买入区间 暂不设置（多头排列未形成）｜仓位 0成（空仓）或1成以下（持仓者反弹减仓）\n风控纪律：止损 持仓者：跌破前低57.50元或MA20（73.12元）｜失效条件 未来3个交易日重新站稳73.12且量价修复，则减仓判断失效并重新评估\n大盘摘要：🎯 大盘复盘 2026-07-28 大盘复盘 今日市场全面走弱，指数普跌、成交额萎缩至冰点，赚钱效应极差。核心矛盾在于科技成长板块大幅杀跌拖累创业板与科创50，而银行、消费等防御品种小幅护盘但无法扭转颓势。明日优先观察成交额能否回升以及领跌板块是否扩散，防守为主。 一、盘面总览 今日市场呈现明显的“指数与情绪双杀”格局。上证指数下跌0.91%，深证成指、创业…\n600118 双源校验：价格：59.82；涨跌幅：待核实；动态PE：-414.25（亏损状态）；PB：11.21\n\n可核验科技新闻：\n- 卫星与商业航天：NASA Announces New Spacecraft Technology Demonstration Mission at Moon（NASA News，2026-07-24T16:35+00:00）\n  https://www.nasa.gov/directorates/armd/nasa-announces-new-spacecraft-technology-demonstration-mission-at-moon/\n- 军工与国防科技：India moves closer to a homegrown, long-range air defense（Defense News，2026-07-27T15:59+00:00）\n  https://www.defensenews.com/global/asia-pacific/2026/07/27/india-moves-closer-to-a-homegrown-long-range-air-defense/\n- 科技与芯片：Intel debuts new chip for space computing（SpaceNews，2026-07-27T13:00+00:00）\n  https://spacenews.com/intel-debuts-new-chip-for-space-computing/\n- 机器人与具身智能：Enigma raises $71M to make controlling a robot as easy as adjusting the volume（TechCrunch，2026-07-27T13:00+00:00）\n  https://techcrunch.com/2026/07/27/enigma-raises-70m-to-make-controlling-a-robot-as-easy-as-adjusting-the-volume/\n\n网页版完整报告：https://LPT111.github.io/daily_stock_analysis/\n仅供研究参考，不构成投资建议。"
 }
