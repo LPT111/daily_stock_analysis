@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-29T01:30:07+00:00",
+  "generated_at": "2026-07-29T09:50:28+00:00",
   "dashboard_url": "https://LPT111.github.io/daily_stock_analysis/",
   "stock_report": "report_20260729.md",
   "market_report": "market_review_20260729.md",
@@ -10,62 +10,62 @@
       "metrics": {
         "price": {
           "status": "confirmed",
-          "value": 58.42,
-          "display": "58.42",
+          "value": 57.69,
+          "display": "57.69",
           "interpretation": "腾讯财经与东方财富交叉核验一致。",
           "sources": {
-            "腾讯财经": 58.42,
-            "东方财富": 58.42
+            "腾讯财经": 57.69,
+            "东方财富": 57.69
           }
         },
         "change_pct": {
           "status": "confirmed",
-          "value": 0.83,
-          "display": "0.83",
+          "value": -0.43,
+          "display": "-0.43",
           "interpretation": "腾讯财经与东方财富交叉核验一致。",
           "sources": {
-            "腾讯财经": 0.83,
-            "东方财富": 0.83
+            "腾讯财经": -0.43,
+            "东方财富": -0.43
           }
         },
         "dynamic_pe": {
           "status": "confirmed",
-          "value": -404.55,
-          "display": "-404.55（亏损状态）",
+          "value": -399.49,
+          "display": "-399.49（亏损状态）",
           "interpretation": "动态市盈率为负，表示当前口径下盈利为负，不能按正 PE 倍数进行估值判断。",
           "sources": {
-            "腾讯财经": -404.55,
-            "东方财富": -404.55
+            "腾讯财经": -399.49,
+            "东方财富": -399.49
           }
         },
         "pb": {
           "status": "confirmed",
-          "value": 10.95,
-          "display": "10.95",
+          "value": 10.81,
+          "display": "10.81",
           "interpretation": "腾讯财经与东方财富交叉核验一致。",
           "sources": {
-            "腾讯财经": 10.95,
-            "东方财富": 10.95
+            "腾讯财经": 10.81,
+            "东方财富": 10.81
           }
         }
       },
       "raw_sources": [
         {
           "source": "腾讯财经",
-          "price": 58.42,
+          "price": 57.69,
           "previous_close": 57.94,
-          "change_pct": 0.83,
-          "dynamic_pe": -404.55,
-          "pb": 10.95,
+          "change_pct": -0.43,
+          "dynamic_pe": -399.49,
+          "pb": 10.81,
           "source_url": "https://gu.qq.com/sh600118"
         },
         {
           "source": "东方财富",
-          "price": 58.42,
+          "price": 57.69,
           "previous_close": 57.94,
-          "change_pct": 0.83,
-          "dynamic_pe": -404.55,
-          "pb": 10.95,
+          "change_pct": -0.43,
+          "dynamic_pe": -399.49,
+          "pb": 10.81,
           "source_url": "https://quote.eastmoney.com/sh600118.html"
         }
       ],
@@ -147,6 +147,15 @@
         "source_weight": 13
       },
       {
+        "title": "The AI Hype Index: Unsexy AI",
+        "published_at": "2026-07-29T08:42+00:00",
+        "source": "MIT Technology Review",
+        "url": "https://www.technologyreview.com/2026/07/29/1140795/the-ai-hype-index-unsexy-ai/",
+        "category": "科技与芯片",
+        "region": "国际",
+        "source_weight": 12
+      },
+      {
         "title": "The Download: OpenAI’s predictable hack, and an AI stock sell-off",
         "published_at": "2026-07-28T12:10+00:00",
         "source": "MIT Technology Review",
@@ -169,15 +178,6 @@
         "published_at": "2026-07-27T18:00+00:00",
         "source": "MIT Technology Review",
         "url": "https://www.technologyreview.com/2026/07/27/1140836/openai-hugging-face-attack-precedent/",
-        "category": "科技与芯片",
-        "region": "国际",
-        "source_weight": 12
-      },
-      {
-        "title": "Closing the data loop in AI-driven drug discovery",
-        "published_at": "2026-07-27T11:40+00:00",
-        "source": "MIT Technology Review",
-        "url": "https://www.technologyreview.com/2026/07/27/1139667/closing-the-data-loop-in-ai-driven-drug-discovery/",
         "category": "科技与芯片",
         "region": "国际",
         "source_weight": 12
@@ -210,30 +210,21 @@
         "source_weight": 9
       },
       {
-        "title": "24 小时巡视：我国首颗文物遥感卫星“文物 01 星”完成首批图像采集，实现常态化动态监测",
-        "published_at": "2026-07-29T01:04+00:00",
+        "title": "商用航天器失控翻滚，NASA 望远镜轨道抬升任务遇挫",
+        "published_at": "2026-07-29T07:19+00:00",
         "source": "IT之家",
-        "url": "https://www.ithome.com/0/982/829.htm",
+        "url": "https://www.ithome.com/0/983/099.htm",
         "category": "卫星与商业航天",
         "region": "国内",
         "source_weight": 8
       },
       {
-        "title": "美国 FCC 宣布禁止进口外国产人形机器人及电力逆变器",
-        "published_at": "2026-07-29T00:56+00:00",
-        "source": "IT之家",
-        "url": "https://www.ithome.com/0/982/826.htm",
+        "title": "China’s Robotaxi enters London for first time as Baidu’s Apollo Go begins UK road tests with Uber and Lyft",
+        "published_at": "2026-07-29T02:16+00:00",
+        "source": "TechNode",
+        "url": "https://technode.com/2026/07/29/chinas-robotaxi-enters-london-for-first-time-as-baidus-apollo-go-begins-uk-road-tests-with-uber-and-lyft/",
         "category": "机器人与具身智能",
-        "region": "国内",
-        "source_weight": 8
-      },
-      {
-        "title": "被解雇的特斯拉 FSD 区域经理起诉前东家，直言 Robotaxi 是“移动的危险”",
-        "published_at": "2026-07-28T23:33+00:00",
-        "source": "IT之家",
-        "url": "https://www.ithome.com/0/982/808.htm",
-        "category": "机器人与具身智能",
-        "region": "国内",
+        "region": "国际",
         "source_weight": 8
       },
       {
@@ -243,15 +234,6 @@
         "url": "https://techcrunch.com/2026/07/28/waymo-robotaxi-operators-face-fresh-scrutiny-over-emergency-response-failures/",
         "category": "机器人与具身智能",
         "region": "国际",
-        "source_weight": 8
-      },
-      {
-        "title": "东风日产启辰 × 哈啰首台 Robotaxi 交付：CLTC 续航 510 公里，拥有 3.64 立方米乘员舱",
-        "published_at": "2026-07-28T13:59+00:00",
-        "source": "IT之家",
-        "url": "https://www.ithome.com/0/982/767.htm",
-        "category": "机器人与具身智能",
-        "region": "国内",
         "source_weight": 8
       },
       {
@@ -271,6 +253,24 @@
         "category": "机器人与具身智能",
         "region": "国际",
         "source_weight": 8
+      },
+      {
+        "title": "Honor confirms August launch for Robot Phone with 4DoF gimbal",
+        "published_at": "2026-07-24T05:28+00:00",
+        "source": "TechNode",
+        "url": "https://technode.com/2026/07/24/honor-confirms-august-launch-for-robot-phone-with-4dof-gimbal/",
+        "category": "机器人与具身智能",
+        "region": "国际",
+        "source_weight": 8
+      },
+      {
+        "title": "UCLA博士团队创业做人形机器人基础模型，拿下近5亿元天使++轮融资｜硬氪首发",
+        "published_at": "2026-07-28",
+        "source": "36氪",
+        "url": "https://36kr.com/p/3913213962540164?f=rss",
+        "category": "机器人与具身智能",
+        "region": "国内",
+        "source_weight": 7
       },
       {
         "title": "国内首款！TP200大型多功能长航时无人机成功首飞",
@@ -297,5 +297,5 @@
     ],
     "policy": "仅展示含标题、发布时间、来源和原文链接的新闻；不据此自动推断股价因果。"
   },
-  "digest": "【A股科技主题决策雷达】\n个股建议：减仓（基于近3个月K线，保守模式）\n执行参考：买入区间 暂不设置（空头排列禁止买入）｜仓位 空仓者0成；持仓者建议降至2成以内\n风控纪律：止损 持仓者止损：跌破55.00元（前低下方3%）或放量跌破MA20则清仓｜失效条件 未来3个交易日重新站稳71.71且量价修复，则减仓判断失效并重新评估\n大盘摘要：🎯 大盘复盘 2026-07-29 大盘复盘 今日市场呈现极致缩量分化格局：上证50护盘，科技及中小盘方向略有回弹，但成交额仅157亿元，短线情绪冰点，主线缺失。明日优先观察量能能否恢复及教育板块持续性。 一、盘面总览 三大指数涨跌不一，上证指数微涨0.26%，深证成指微跌0.08%，创业板指涨0.19%，整体处于震荡偏弱状态。上涨家数2352家略多于下跌2…\n600118 双源校验：价格：58.42；涨跌幅：0.83；动态PE：-404.55（亏损状态）；PB：10.95\n\n可核验科技新闻：\n- 军工与国防科技：Finland closes airspace, restricts maritime traffic near Russia over drone risk（Defense News，2026-07-28T14:09+00:00）\n  https://www.defensenews.com/global/europe/2026/07/28/finland-closes-airspace-restricts-maritime-traffic-near-russia-over-drone-risk/\n- 卫星与商业航天：NASA selects successor to CAPSTONE lunar mission（SpaceNews，2026-07-28T12:03+00:00）\n  https://spacenews.com/nasa-selects-successor-to-capstone-lunar-mission/\n- 科技与芯片：Intel debuts new chip for space computing（SpaceNews，2026-07-27T13:00+00:00）\n  https://spacenews.com/intel-debuts-new-chip-for-space-computing/\n- 机器人与具身智能：美国 FCC 宣布禁止进口外国产人形机器人及电力逆变器（IT之家，2026-07-29T00:56+00:00）\n  https://www.ithome.com/0/982/826.htm\n\n网页版完整报告：https://LPT111.github.io/daily_stock_analysis/\n仅供研究参考，不构成投资建议。"
+  "digest": "【A股科技主题决策雷达】\n个股建议：减仓（基于近3个月K线，保守模式）\n执行参考：买入区间 暂不设置（空头趋势不建议买入）｜仓位 0~2成（空仓者0成，持仓者建议减至2成以下）\n风控纪律：止损 55.81元（今日最低价，跌破则止损离场）｜失效条件 未来3个交易日重新站稳71.67且量价修复，则减仓判断失效并重新评估\n大盘摘要：🎯 大盘复盘 2026-07-29 大盘复盘 市场整体偏暖但结构分化显著，小盘成长股活跃，权重股走弱，成交额维持高位，需警惕科创与上证50的拖累。 一、盘面总览 三大指数（上证、深证、创业板）集体收涨，创业板指领涨1.55%，但科创50与上证50逆势收跌，呈现明显的风格分化。全市场上涨家数占比约77%，涨停83家、跌停13家，成交额2.31万亿元，市场情绪处…\n600118 双源校验：价格：57.69；涨跌幅：-0.43；动态PE：-399.49（亏损状态）；PB：10.81\n\n可核验科技新闻：\n- 军工与国防科技：Finland closes airspace, restricts maritime traffic near Russia over drone risk（Defense News，2026-07-28T14:09+00:00）\n  https://www.defensenews.com/global/europe/2026/07/28/finland-closes-airspace-restricts-maritime-traffic-near-russia-over-drone-risk/\n- 卫星与商业航天：NASA selects successor to CAPSTONE lunar mission（SpaceNews，2026-07-28T12:03+00:00）\n  https://spacenews.com/nasa-selects-successor-to-capstone-lunar-mission/\n- 科技与芯片：Intel debuts new chip for space computing（SpaceNews，2026-07-27T13:00+00:00）\n  https://spacenews.com/intel-debuts-new-chip-for-space-computing/\n- 机器人与具身智能：China’s Robotaxi enters London for first time as Baidu’s Apollo Go begins UK road tests with Uber and Lyft（TechNode，2026-07-29T02:16+00:00）\n  https://technode.com/2026/07/29/chinas-robotaxi-enters-london-for-first-time-as-baidus-apollo-go-begins-uk-road-tests-with-uber-and-lyft/\n\n网页版完整报告：https://LPT111.github.io/daily_stock_analysis/\n仅供研究参考，不构成投资建议。"
 }
