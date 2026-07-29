@@ -1,72 +1,97 @@
 {
-  "generated_at": "2026-07-28T09:48:30+00:00",
+  "generated_at": "2026-07-29T01:30:07+00:00",
   "dashboard_url": "https://LPT111.github.io/daily_stock_analysis/",
-  "stock_report": "report_20260728.md",
-  "market_report": "market_review_20260728.md",
+  "stock_report": "report_20260729.md",
+  "market_report": "market_review_20260729.md",
   "validations": [
     {
       "code": "600118",
       "policy": "仅 status=confirmed 的字段可用于结论；待核实字段必须忽略。",
       "metrics": {
         "price": {
-          "status": "待核实",
-          "value": null,
-          "display": "待核实",
-          "interpretation": "两个数据源未同时返回一致结果，不得用于决策。",
+          "status": "confirmed",
+          "value": 58.42,
+          "display": "58.42",
+          "interpretation": "腾讯财经与东方财富交叉核验一致。",
           "sources": {
-            "腾讯财经": 57.94,
-            "东方财富": null
+            "腾讯财经": 58.42,
+            "东方财富": 58.42
           }
         },
         "change_pct": {
-          "status": "待核实",
-          "value": null,
-          "display": "待核实",
-          "interpretation": "两个数据源未同时返回一致结果，不得用于决策。",
+          "status": "confirmed",
+          "value": 0.83,
+          "display": "0.83",
+          "interpretation": "腾讯财经与东方财富交叉核验一致。",
           "sources": {
-            "腾讯财经": -2.95,
-            "东方财富": null
+            "腾讯财经": 0.83,
+            "东方财富": 0.83
           }
         },
         "dynamic_pe": {
-          "status": "待核实",
-          "value": null,
-          "display": "待核实",
-          "interpretation": "两个数据源未同时返回一致结果，不得用于决策。",
+          "status": "confirmed",
+          "value": -404.55,
+          "display": "-404.55（亏损状态）",
+          "interpretation": "动态市盈率为负，表示当前口径下盈利为负，不能按正 PE 倍数进行估值判断。",
           "sources": {
-            "腾讯财经": -401.22,
-            "东方财富": null
+            "腾讯财经": -404.55,
+            "东方财富": -404.55
           }
         },
         "pb": {
-          "status": "待核实",
-          "value": null,
-          "display": "待核实",
-          "interpretation": "两个数据源未同时返回一致结果，不得用于决策。",
+          "status": "confirmed",
+          "value": 10.95,
+          "display": "10.95",
+          "interpretation": "腾讯财经与东方财富交叉核验一致。",
           "sources": {
-            "腾讯财经": 10.86,
-            "东方财富": null
+            "腾讯财经": 10.95,
+            "东方财富": 10.95
           }
         }
       },
       "raw_sources": [
         {
           "source": "腾讯财经",
-          "price": 57.94,
-          "previous_close": 59.7,
-          "change_pct": -2.95,
-          "dynamic_pe": -401.22,
-          "pb": 10.86,
+          "price": 58.42,
+          "previous_close": 57.94,
+          "change_pct": 0.83,
+          "dynamic_pe": -404.55,
+          "pb": 10.95,
           "source_url": "https://gu.qq.com/sh600118"
+        },
+        {
+          "source": "东方财富",
+          "price": 58.42,
+          "previous_close": 57.94,
+          "change_pct": 0.83,
+          "dynamic_pe": -404.55,
+          "pb": 10.95,
+          "source_url": "https://quote.eastmoney.com/sh600118.html"
         }
       ],
-      "errors": [
-        "东方财富: 502 Server Error: Bad Gateway for url: https://push2.eastmoney.com/api/qt/stock/get?secid=1.600118&fields=f43%2Cf57%2Cf58%2Cf60%2Cf162%2Cf167%2Cf170"
-      ]
+      "errors": []
     }
   ],
   "sector_news": {
     "items": [
+      {
+        "title": "Finland closes airspace, restricts maritime traffic near Russia over drone risk",
+        "published_at": "2026-07-28T14:09+00:00",
+        "source": "Defense News",
+        "url": "https://www.defensenews.com/global/europe/2026/07/28/finland-closes-airspace-restricts-maritime-traffic-near-russia-over-drone-risk/",
+        "category": "军工与国防科技",
+        "region": "国际",
+        "source_weight": 13
+      },
+      {
+        "title": "NASA selects successor to CAPSTONE lunar mission",
+        "published_at": "2026-07-28T12:03+00:00",
+        "source": "SpaceNews",
+        "url": "https://spacenews.com/nasa-selects-successor-to-capstone-lunar-mission/",
+        "category": "卫星与商业航天",
+        "region": "国际",
+        "source_weight": 13
+      },
       {
         "title": "Sphinx Defense wins $287 million contract for strategic satellite communications software",
         "published_at": "2026-07-27T19:02+00:00",
@@ -113,15 +138,6 @@
         "source_weight": 13
       },
       {
-        "title": "Rocket Lab to open Alaska launch site under $266 million Space Force deal",
-        "published_at": "2026-07-27T10:48+00:00",
-        "source": "SpaceNews",
-        "url": "https://spacenews.com/rocket-lab-to-open-alaska-launch-site-under-266-million-space-force-deal/",
-        "category": "卫星与商业航天",
-        "region": "国际",
-        "source_weight": 13
-      },
-      {
         "title": "From steppe to sea, a Ukrainian drone unit hunts Russian ships",
         "published_at": "2026-07-24T20:59+00:00",
         "source": "Defense News",
@@ -131,13 +147,22 @@
         "source_weight": 13
       },
       {
-        "title": "Greece to buy $4 billion air defense system from Israel",
-        "published_at": "2026-07-23T13:41+00:00",
-        "source": "Defense News",
-        "url": "https://www.defensenews.com/global/europe/2026/07/23/greece-to-buy-4-billion-air-defence-system-from-israel/",
-        "category": "军工与国防科技",
+        "title": "The Download: OpenAI’s predictable hack, and an AI stock sell-off",
+        "published_at": "2026-07-28T12:10+00:00",
+        "source": "MIT Technology Review",
+        "url": "https://www.technologyreview.com/2026/07/28/1140868/the-download-openai-hack-ai-stock-sell-off/",
+        "category": "科技与芯片",
         "region": "国际",
-        "source_weight": 13
+        "source_weight": 12
+      },
+      {
+        "title": "Samsung’s chip workers are jumping ship to rival SK Hynix",
+        "published_at": "2026-07-28T09:18+00:00",
+        "source": "MIT Technology Review",
+        "url": "https://www.technologyreview.com/2026/07/28/1140853/samsung-chip-workers-exodus-sk-hynix/",
+        "category": "科技与芯片",
+        "region": "国际",
+        "source_weight": 12
       },
       {
         "title": "OpenAI called the Hugging Face attack unprecedented. But we’ve been here before.",
@@ -158,24 +183,6 @@
         "source_weight": 12
       },
       {
-        "title": "Building the enterprise environment for agentic AI",
-        "published_at": "2026-07-27T11:32+00:00",
-        "source": "MIT Technology Review",
-        "url": "https://www.technologyreview.com/2026/07/27/1140668/building-the-enterprise-environment-for-agentic-ai/",
-        "category": "科技与芯片",
-        "region": "国际",
-        "source_weight": 12
-      },
-      {
-        "title": "The Download: an organ transplant breakthrough, and homegrown Chinese chips",
-        "published_at": "2026-07-24T12:10+00:00",
-        "source": "MIT Technology Review",
-        "url": "https://www.technologyreview.com/2026/07/24/1140776/the-download-organ-transplant-breakthrough-chinese-chips/",
-        "category": "科技与芯片",
-        "region": "国际",
-        "source_weight": 12
-      },
-      {
         "title": "Struggling with a hard life choice? AI future selves have tips",
         "published_at": "2026-07-24T15:00+00:00",
         "source": "Science News",
@@ -183,6 +190,15 @@
         "category": "科技与芯片",
         "region": "国际",
         "source_weight": 11
+      },
+      {
+        "title": "Reaction wheel failures leave Swift rescue mission spinning in orbit",
+        "published_at": "2026-07-28T22:09+00:00",
+        "source": "Ars Technica",
+        "url": "https://arstechnica.com/space/2026/07/reaction-wheel-failures-leave-swift-rescue-mission-spinning-in-orbit/",
+        "category": "卫星与商业航天",
+        "region": "国际",
+        "source_weight": 9
       },
       {
         "title": "Amazon seeks federal approval to launch 5,105 satellites for direct-to-device network",
@@ -194,38 +210,47 @@
         "source_weight": 9
       },
       {
-        "title": "SpaceX launches massive Starship rocket in first test flight since IPO",
-        "published_at": "2026-07-25T02:17+00:00",
-        "source": "CNBC Technology",
-        "url": "https://www.cnbc.com/2026/07/24/spacex-launches-massive-starship-rocket-in-first-test-flight-since-ipo.html",
+        "title": "24 小时巡视：我国首颗文物遥感卫星“文物 01 星”完成首批图像采集，实现常态化动态监测",
+        "published_at": "2026-07-29T01:04+00:00",
+        "source": "IT之家",
+        "url": "https://www.ithome.com/0/982/829.htm",
         "category": "卫星与商业航天",
+        "region": "国内",
+        "source_weight": 8
+      },
+      {
+        "title": "美国 FCC 宣布禁止进口外国产人形机器人及电力逆变器",
+        "published_at": "2026-07-29T00:56+00:00",
+        "source": "IT之家",
+        "url": "https://www.ithome.com/0/982/826.htm",
+        "category": "机器人与具身智能",
+        "region": "国内",
+        "source_weight": 8
+      },
+      {
+        "title": "被解雇的特斯拉 FSD 区域经理起诉前东家，直言 Robotaxi 是“移动的危险”",
+        "published_at": "2026-07-28T23:33+00:00",
+        "source": "IT之家",
+        "url": "https://www.ithome.com/0/982/808.htm",
+        "category": "机器人与具身智能",
+        "region": "国内",
+        "source_weight": 8
+      },
+      {
+        "title": "Waymo, robotaxi operators face fresh scrutiny over emergency response failures",
+        "published_at": "2026-07-28T19:06+00:00",
+        "source": "TechCrunch",
+        "url": "https://techcrunch.com/2026/07/28/waymo-robotaxi-operators-face-fresh-scrutiny-over-emergency-response-failures/",
+        "category": "机器人与具身智能",
         "region": "国际",
-        "source_weight": 9
-      },
-      {
-        "title": "百度萝卜快跑启动英国伦敦 Robotaxi 车辆测试，2027 年搭载公众乘客",
-        "published_at": "2026-07-28T08:46+00:00",
-        "source": "IT之家",
-        "url": "https://www.ithome.com/0/982/636.htm",
-        "category": "机器人与具身智能",
-        "region": "国内",
         "source_weight": 8
       },
       {
-        "title": "因校方、工会强烈反对，美国纽约州暂停人形机器人教学试点计划",
-        "published_at": "2026-07-28T08:26+00:00",
+        "title": "东风日产启辰 × 哈啰首台 Robotaxi 交付：CLTC 续航 510 公里，拥有 3.64 立方米乘员舱",
+        "published_at": "2026-07-28T13:59+00:00",
         "source": "IT之家",
-        "url": "https://www.ithome.com/0/982/619.htm",
+        "url": "https://www.ithome.com/0/982/767.htm",
         "category": "机器人与具身智能",
-        "region": "国内",
-        "source_weight": 8
-      },
-      {
-        "title": "2026 世界物联网 500 强公布，华为、SpaceX、中国航天科技集团排名金榜前三",
-        "published_at": "2026-07-28T08:11+00:00",
-        "source": "IT之家",
-        "url": "https://www.ithome.com/0/982/613.htm",
-        "category": "卫星与商业航天",
         "region": "国内",
         "source_weight": 8
       },
@@ -234,24 +259,6 @@
         "published_at": "2026-07-28T08:00+00:00",
         "source": "TechCrunch",
         "url": "https://techcrunch.com/2026/07/28/lyft-and-baidu-enter-londons-robotaxi-battleground-as-testing-begins/",
-        "category": "机器人与具身智能",
-        "region": "国际",
-        "source_weight": 8
-      },
-      {
-        "title": "宇树科技：预计今年机器人出货至少翻倍，未来或考虑海外生产",
-        "published_at": "2026-07-28T07:24+00:00",
-        "source": "IT之家",
-        "url": "https://www.ithome.com/0/982/586.htm",
-        "category": "机器人与具身智能",
-        "region": "国内",
-        "source_weight": 8
-      },
-      {
-        "title": "Enigma raises $71M to make controlling a robot as easy as adjusting the volume",
-        "published_at": "2026-07-27T13:00+00:00",
-        "source": "TechCrunch",
-        "url": "https://techcrunch.com/2026/07/27/enigma-raises-70m-to-make-controlling-a-robot-as-easy-as-adjusting-the-volume/",
         "category": "机器人与具身智能",
         "region": "国际",
         "source_weight": 8
@@ -284,8 +291,11 @@
         "source_weight": 7
       }
     ],
-    "errors": [],
+    "errors": [
+      "国内科技新闻: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=%28%E5%8D%AB%E6%98%9F+OR+%E8%88%AA%E5%A4%A9+OR+%E5%8C%97%E6%96%97+OR+%E6%9C%BA%E5%99%A8%E4%BA%BA+OR+%E5%85%B7%E8%BA%AB%E6%99%BA%E8%83%BD+OR+%E8%8A%AF%E7%89%87+OR+%E5%8D%8A%E5%AF%BC%E4%BD%93+OR+%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD+OR+%E5%86%9B%E5%B7%A5+OR+%E5%9B%BD%E9%98%B2%E7%A7%91%E6%8A%80%29+sourcelang%3AChinese&mode=artlist&format=json&maxrecords=24&sort=datedesc&timespan=3d",
+      "国际科技新闻: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=%28satellite+OR+spaceflight+OR+robotics+OR+humanoid+OR+semiconductor+OR+%22artificial+intelligence%22+OR+%22defense+technology%22%29+sourcelang%3AEnglish&mode=artlist&format=json&maxrecords=24&sort=datedesc&timespan=3d"
+    ],
     "policy": "仅展示含标题、发布时间、来源和原文链接的新闻；不据此自动推断股价因果。"
   },
-  "digest": "【A股科技主题决策雷达】\n个股建议：减仓（基于近3个月K线，保守模式）\n执行参考：买入区间 暂不设置（空头排列，不满足买入条件）｜仓位 0成\n风控纪律：止损 57.5元｜失效条件 未来3个交易日重新站稳73.07且量价修复，则减仓判断失效并重新评估\n大盘摘要：🎯 大盘复盘 📉 2026-07-28 大盘复盘 今日市场呈极端分化状态：权重股（上证50）护盘但科技成长股（创业板、科创50）大跌超6%，成交额放大至2万亿以上，亏钱效应显著。核心矛盾在于主线题材退潮与权重补跌的传导。明日优先观察上证3800点支撑与科技板块是否止跌。 📊 一、盘面总览 指数严重分化：上证50仅跌0.92%，而创业板指暴跌7.34%，科创5…\n600118 双源校验：价格：待核实；涨跌幅：待核实；动态PE：待核实；PB：待核实\n\n可核验科技新闻：\n- 卫星与商业航天：Sphinx Defense wins $287 million contract for strategic satellite communications software（SpaceNews，2026-07-27T19:02+00:00）\n  https://spacenews.com/sphinx-defense-wins-287-million-contract-for-strategic-satellite-communications-software/\n- 军工与国防科技：India moves closer to a homegrown, long-range air defense（Defense News，2026-07-27T15:59+00:00）\n  https://www.defensenews.com/global/asia-pacific/2026/07/27/india-moves-closer-to-a-homegrown-long-range-air-defense/\n- 科技与芯片：Intel debuts new chip for space computing（SpaceNews，2026-07-27T13:00+00:00）\n  https://spacenews.com/intel-debuts-new-chip-for-space-computing/\n- 机器人与具身智能：百度萝卜快跑启动英国伦敦 Robotaxi 车辆测试，2027 年搭载公众乘客（IT之家，2026-07-28T08:46+00:00）\n  https://www.ithome.com/0/982/636.htm\n\n网页版完整报告：https://LPT111.github.io/daily_stock_analysis/\n仅供研究参考，不构成投资建议。"
+  "digest": "【A股科技主题决策雷达】\n个股建议：减仓（基于近3个月K线，保守模式）\n执行参考：买入区间 暂不设置（空头排列禁止买入）｜仓位 空仓者0成；持仓者建议降至2成以内\n风控纪律：止损 持仓者止损：跌破55.00元（前低下方3%）或放量跌破MA20则清仓｜失效条件 未来3个交易日重新站稳71.71且量价修复，则减仓判断失效并重新评估\n大盘摘要：🎯 大盘复盘 2026-07-29 大盘复盘 今日市场呈现极致缩量分化格局：上证50护盘，科技及中小盘方向略有回弹，但成交额仅157亿元，短线情绪冰点，主线缺失。明日优先观察量能能否恢复及教育板块持续性。 一、盘面总览 三大指数涨跌不一，上证指数微涨0.26%，深证成指微跌0.08%，创业板指涨0.19%，整体处于震荡偏弱状态。上涨家数2352家略多于下跌2…\n600118 双源校验：价格：58.42；涨跌幅：0.83；动态PE：-404.55（亏损状态）；PB：10.95\n\n可核验科技新闻：\n- 军工与国防科技：Finland closes airspace, restricts maritime traffic near Russia over drone risk（Defense News，2026-07-28T14:09+00:00）\n  https://www.defensenews.com/global/europe/2026/07/28/finland-closes-airspace-restricts-maritime-traffic-near-russia-over-drone-risk/\n- 卫星与商业航天：NASA selects successor to CAPSTONE lunar mission（SpaceNews，2026-07-28T12:03+00:00）\n  https://spacenews.com/nasa-selects-successor-to-capstone-lunar-mission/\n- 科技与芯片：Intel debuts new chip for space computing（SpaceNews，2026-07-27T13:00+00:00）\n  https://spacenews.com/intel-debuts-new-chip-for-space-computing/\n- 机器人与具身智能：美国 FCC 宣布禁止进口外国产人形机器人及电力逆变器（IT之家，2026-07-29T00:56+00:00）\n  https://www.ithome.com/0/982/826.htm\n\n网页版完整报告：https://LPT111.github.io/daily_stock_analysis/\n仅供研究参考，不构成投资建议。"
 }
