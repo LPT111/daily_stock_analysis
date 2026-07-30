@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-30T01:23:19+00:00",
+  "generated_at": "2026-07-30T09:41:27+00:00",
   "dashboard_url": "https://LPT111.github.io/daily_stock_analysis/",
   "stock_report": "report_20260730.md",
   "market_report": "market_review_20260730.md",
@@ -10,62 +10,62 @@
       "metrics": {
         "price": {
           "status": "confirmed",
-          "value": 57.69,
-          "display": "57.69",
+          "value": 54.79,
+          "display": "54.79",
           "interpretation": "腾讯财经与东方财富交叉核验一致。",
           "sources": {
-            "腾讯财经": 57.69,
-            "东方财富": 57.69
+            "腾讯财经": 54.79,
+            "东方财富": 54.79
           }
         },
         "change_pct": {
           "status": "confirmed",
-          "value": 0.0,
-          "display": "0.00",
+          "value": -5.03,
+          "display": "-5.03",
           "interpretation": "腾讯财经与东方财富交叉核验一致。",
           "sources": {
-            "腾讯财经": 0.0,
-            "东方财富": 0.0
+            "腾讯财经": -5.03,
+            "东方财富": -5.03
           }
         },
         "dynamic_pe": {
           "status": "confirmed",
-          "value": -399.49,
-          "display": "-399.49（亏损状态）",
+          "value": -379.41,
+          "display": "-379.41（亏损状态）",
           "interpretation": "动态市盈率为负，表示当前口径下盈利为负，不能按正 PE 倍数进行估值判断。",
           "sources": {
-            "腾讯财经": -399.49,
-            "东方财富": -399.49
+            "腾讯财经": -379.41,
+            "东方财富": -379.41
           }
         },
         "pb": {
           "status": "confirmed",
-          "value": 10.81,
-          "display": "10.81",
+          "value": 10.27,
+          "display": "10.27",
           "interpretation": "腾讯财经与东方财富交叉核验一致。",
           "sources": {
-            "腾讯财经": 10.81,
-            "东方财富": 10.81
+            "腾讯财经": 10.27,
+            "东方财富": 10.27
           }
         }
       },
       "raw_sources": [
         {
           "source": "腾讯财经",
-          "price": 57.69,
+          "price": 54.79,
           "previous_close": 57.69,
-          "change_pct": 0.0,
-          "dynamic_pe": -399.49,
-          "pb": 10.81,
+          "change_pct": -5.03,
+          "dynamic_pe": -379.41,
+          "pb": 10.27,
           "source_url": "https://gu.qq.com/sh600118"
         },
         {
           "source": "东方财富",
-          "price": 57.69,
+          "price": 54.79,
           "previous_close": 57.69,
-          "change_pct": 0.0,
-          "dynamic_pe": -399.49,
-          "pb": 10.81,
+          "change_pct": -5.03,
+          "dynamic_pe": -379.41,
+          "pb": 10.27,
           "source_url": "https://quote.eastmoney.com/sh600118.html"
         }
       ],
@@ -210,6 +210,24 @@
         "source_weight": 11
       },
       {
+        "title": "Rolls-Royce hikes guidance as it benefits from both the defense boom and AI data center buildout",
+        "published_at": "2026-07-30T08:18+00:00",
+        "source": "CNBC Technology",
+        "url": "https://www.cnbc.com/2026/07/30/rolls-royce-earnings-q2-stock-defense-ai.html",
+        "category": "军工与国防科技",
+        "region": "国际",
+        "source_weight": 9
+      },
+      {
+        "title": "China threatens retaliation against U.S. humanoid robot ban, says it 'severely damages' relations",
+        "published_at": "2026-07-30T02:52+00:00",
+        "source": "CNBC Technology",
+        "url": "https://www.cnbc.com/2026/07/30/china-us-robot-humanoid-ban-trump-visit.html",
+        "category": "机器人与具身智能",
+        "region": "国际",
+        "source_weight": 9
+      },
+      {
         "title": "Who wins and who loses after US bans foreign robots?",
         "published_at": "2026-07-29T20:03+00:00",
         "source": "Ars Technica",
@@ -228,30 +246,39 @@
         "source_weight": 9
       },
       {
+        "title": "三星 SDI：全固态电池按既定计划 2027H2 量产，首单很可能来自人形机器人",
+        "published_at": "2026-07-30T08:38+00:00",
+        "source": "IT之家",
+        "url": "https://www.ithome.com/0/983/722.htm",
+        "category": "机器人与具身智能",
+        "region": "国内",
+        "source_weight": 8
+      },
+      {
+        "title": "三星 AI 家用机器人 Ballie 配套应用设计草图曝光：支持家庭监控、迎宾等功能",
+        "published_at": "2026-07-30T08:26+00:00",
+        "source": "IT之家",
+        "url": "https://www.ithome.com/0/983/721.htm",
+        "category": "机器人与具身智能",
+        "region": "国内",
+        "source_weight": 8
+      },
+      {
+        "title": "沃尔沃放弃激光雷达，马斯克称早就警告过他们",
+        "published_at": "2026-07-30T07:59+00:00",
+        "source": "IT之家",
+        "url": "https://www.ithome.com/0/983/668.htm",
+        "category": "军工与国防科技",
+        "region": "国内",
+        "source_weight": 8
+      },
+      {
         "title": "Waymo robotaxis are starting to return to freeways",
         "published_at": "2026-07-29T17:50+00:00",
         "source": "TechCrunch",
         "url": "https://techcrunch.com/2026/07/29/waymo-robotaxis-are-starting-to-return-to-freeways/",
         "category": "机器人与具身智能",
         "region": "国际",
-        "source_weight": 8
-      },
-      {
-        "title": "US government bans new foreign-made humanoids, robot dogs, and solar inverters, citing risks to national security",
-        "published_at": "2026-07-29T17:41+00:00",
-        "source": "TechCrunch",
-        "url": "https://techcrunch.com/2026/07/29/us-government-bans-new-foreign-made-humanoids-robot-dogs-and-solar-inverters-citing-risks-to-national-security/",
-        "category": "机器人与具身智能",
-        "region": "国际",
-        "source_weight": 8
-      },
-      {
-        "title": "雷军晒小米机器人在工厂工作视频：“督工”竟也是机器人，还会比耶耍酷",
-        "published_at": "2026-07-29T14:57+00:00",
-        "source": "IT之家",
-        "url": "https://www.ithome.com/0/983/342.htm",
-        "category": "机器人与具身智能",
-        "region": "国内",
         "source_weight": 8
       },
       {
@@ -262,40 +289,12 @@
         "category": "军工与国防科技",
         "region": "国际",
         "source_weight": 8
-      },
-      {
-        "title": "China’s Robotaxi enters London for first time as Baidu’s Apollo Go begins UK road tests with Uber and Lyft",
-        "published_at": "2026-07-29T02:16+00:00",
-        "source": "TechNode",
-        "url": "https://technode.com/2026/07/29/chinas-robotaxi-enters-london-for-first-time-as-baidus-apollo-go-begins-uk-road-tests-with-uber-and-lyft/",
-        "category": "机器人与具身智能",
-        "region": "国际",
-        "source_weight": 8
-      },
-      {
-        "title": "国内首款！TP200大型多功能长航时无人机成功首飞",
-        "published_at": "2026-07-27T07:24+00:00",
-        "source": "快科技-科学",
-        "url": "https://news.mydrivers.com/1/1139/1139151.htm",
-        "category": "军工与国防科技",
-        "region": "国内",
-        "source_weight": 7
-      },
-      {
-        "title": "众目睽睽之下消失！美国研发隐形无人机 如何做到的？",
-        "published_at": "2026-07-24T06:56+00:00",
-        "source": "快科技-科学",
-        "url": "https://news.mydrivers.com/1/1138/1138673.htm",
-        "category": "军工与国防科技",
-        "region": "国内",
-        "source_weight": 7
       }
     ],
     "errors": [
-      "国内科技新闻: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=%28%E5%8D%AB%E6%98%9F+OR+%E8%88%AA%E5%A4%A9+OR+%E5%8C%97%E6%96%97+OR+%E6%9C%BA%E5%99%A8%E4%BA%BA+OR+%E5%85%B7%E8%BA%AB%E6%99%BA%E8%83%BD+OR+%E8%8A%AF%E7%89%87+OR+%E5%8D%8A%E5%AF%BC%E4%BD%93+OR+%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD+OR+%E5%86%9B%E5%B7%A5+OR+%E5%9B%BD%E9%98%B2%E7%A7%91%E6%8A%80%29+sourcelang%3AChinese&mode=artlist&format=json&maxrecords=24&sort=datedesc&timespan=3d",
-      "国际科技新闻: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=%28satellite+OR+spaceflight+OR+robotics+OR+humanoid+OR+semiconductor+OR+%22artificial+intelligence%22+OR+%22defense+technology%22%29+sourcelang%3AEnglish&mode=artlist&format=json&maxrecords=24&sort=datedesc&timespan=3d"
+      "国内科技新闻: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=%28%E5%8D%AB%E6%98%9F+OR+%E8%88%AA%E5%A4%A9+OR+%E5%8C%97%E6%96%97+OR+%E6%9C%BA%E5%99%A8%E4%BA%BA+OR+%E5%85%B7%E8%BA%AB%E6%99%BA%E8%83%BD+OR+%E8%8A%AF%E7%89%87+OR+%E5%8D%8A%E5%AF%BC%E4%BD%93+OR+%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD+OR+%E5%86%9B%E5%B7%A5+OR+%E5%9B%BD%E9%98%B2%E7%A7%91%E6%8A%80%29+sourcelang%3AChinese&mode=artlist&format=json&maxrecords=24&sort=datedesc&timespan=3d"
     ],
     "policy": "仅展示含标题、发布时间、来源和原文链接的新闻；不据此自动推断股价因果。"
   },
-  "digest": "【A股科技主题决策雷达】\n个股建议：减仓（基于近3个月K线，保守模式）\n执行参考：买入区间 暂不设置，需等待均线多头排列或放量突破MA20｜仓位 0成（空仓）；持仓者不超过2成\n风控纪律：止损 55.0元（近3月低点，跌破止损）｜失效条件 未来3个交易日重新站稳70.48且量价修复，则减仓判断失效并重新评估\n大盘摘要：🎯 大盘复盘 2026-07-30 大盘复盘 今日市场数据大面积缺失（涨跌家数、成交额、板块涨跌幅均为零或空值），无法正常解读量价结构；核心矛盾在于数据完整性，优先等待交易所或行情端补正后再做方向判断。 一、盘面总览 今日主要指数涨跌幅度极微（上证-0.02%，沪深300-0.02%，其余指数零涨跌），但涨跌家数、成交额、涨停跌停家数均显示为0，板块领涨领跌…\n600118 双源校验：价格：57.69；涨跌幅：0.00；动态PE：-399.49（亏损状态）；PB：10.81\n\n可核验科技新闻：\n- 卫星与商业航天：NASA’s Curiosity Mars Rover Discovers Field of Honeycomb Textures（NASA News，2026-07-29T15:30+00:00）\n  https://www.nasa.gov/missions/mars-science-laboratory/curiosity-rover/nasas-curiosity-mars-rover-discovers-field-of-honeycomb-textures/\n- 军工与国防科技：L3Harris delays missile business IPO to 2027 despite surging defense demand（SpaceNews，2026-07-29T22:57+00:00）\n  https://spacenews.com/l3harris-delays-missile-business-ipo-to-2027-despite-surging-defense-demand/\n- 机器人与具身智能：Pentagon puts out call for robot boats that launch attack drones（Defense News，2026-07-29T19:22+00:00）\n  https://www.defensenews.com/industry/techwatch/2026/07/29/pentagon-puts-out-call-for-robot-boats-that-launch-attack-drones/\n- 科技与芯片：US Central Command, UAE to launch artificial intelligence task force（Defense News，2026-07-28T15:42+00:00）\n  https://www.defensenews.com/industry/techwatch/2026/07/28/us-central-command-uae-to-launch-artifical-intelligence-task-force/\n\n网页版完整报告：https://LPT111.github.io/daily_stock_analysis/\n仅供研究参考，不构成投资建议。"
+  "digest": "【A股科技主题决策雷达】\n个股建议：卖出（基于近3个月K线，保守模式）\n执行参考：买入区间 暂不设置：空头排列下不抄底｜仓位 0成（空仓）；持仓者建议减至1成以内\n风控纪律：止损 已持仓者止损位：54.00元（跌破今日最低点确认加速下跌）｜失效条件 未来3个交易日重新站稳5.03且量价修复，则卖出判断失效并重新评估\n大盘摘要：🎯 大盘复盘 2026-07-30 大盘复盘 今日市场极端分化：上证50独自维稳但科创50暴跌超5%，放量下杀叠加跌停家数远超涨停，亏钱效应显著。明日优先观察创业板指能否在3200点附近企稳，以及科技领跌板块是否出现缩量止跌信号。 一、盘面总览 两市涨跌比约1:2，下跌家数超3600家，涨停52家而跌停80家，市场情绪明显偏弱。成交额放大至23575亿元，属…\n600118 双源校验：价格：54.79；涨跌幅：-5.03；动态PE：-379.41（亏损状态）；PB：10.27\n\n可核验科技新闻：\n- 卫星与商业航天：NASA’s Curiosity Mars Rover Discovers Field of Honeycomb Textures（NASA News，2026-07-29T15:30+00:00）\n  https://www.nasa.gov/missions/mars-science-laboratory/curiosity-rover/nasas-curiosity-mars-rover-discovers-field-of-honeycomb-textures/\n- 军工与国防科技：L3Harris delays missile business IPO to 2027 despite surging defense demand（SpaceNews，2026-07-29T22:57+00:00）\n  https://spacenews.com/l3harris-delays-missile-business-ipo-to-2027-despite-surging-defense-demand/\n- 机器人与具身智能：Pentagon puts out call for robot boats that launch attack drones（Defense News，2026-07-29T19:22+00:00）\n  https://www.defensenews.com/industry/techwatch/2026/07/29/pentagon-puts-out-call-for-robot-boats-that-launch-attack-drones/\n- 科技与芯片：US Central Command, UAE to launch artificial intelligence task force（Defense News，2026-07-28T15:42+00:00）\n  https://www.defensenews.com/industry/techwatch/2026/07/28/us-central-command-uae-to-launch-artifical-intelligence-task-force/\n\n网页版完整报告：https://LPT111.github.io/daily_stock_analysis/\n仅供研究参考，不构成投资建议。"
 }
