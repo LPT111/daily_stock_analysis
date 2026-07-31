@@ -1,96 +1,134 @@
 {
-  "generated_at": "2026-07-30T09:41:27+00:00",
+  "generated_at": "2026-07-31T01:57:24+00:00",
   "dashboard_url": "https://LPT111.github.io/daily_stock_analysis/",
-  "stock_report": "report_20260730.md",
-  "market_report": "market_review_20260730.md",
+  "stock_report": "report_20260731.md",
+  "market_report": "market_review_20260731.md",
   "validations": [
     {
       "code": "600118",
       "policy": "仅 status=confirmed 的字段可用于结论；待核实字段必须忽略。",
       "metrics": {
         "price": {
-          "status": "confirmed",
-          "value": 54.79,
-          "display": "54.79",
-          "interpretation": "腾讯财经与东方财富交叉核验一致。",
+          "status": "待核实",
+          "value": null,
+          "display": "待核实",
+          "interpretation": "两个数据源未同时返回一致结果，不得用于决策。",
           "sources": {
-            "腾讯财经": 54.79,
-            "东方财富": 54.79
+            "腾讯财经": 57.77,
+            "东方财富": null
           }
         },
         "change_pct": {
-          "status": "confirmed",
-          "value": -5.03,
-          "display": "-5.03",
-          "interpretation": "腾讯财经与东方财富交叉核验一致。",
+          "status": "待核实",
+          "value": null,
+          "display": "待核实",
+          "interpretation": "两个数据源未同时返回一致结果，不得用于决策。",
           "sources": {
-            "腾讯财经": -5.03,
-            "东方财富": -5.03
+            "腾讯财经": 5.44,
+            "东方财富": null
           }
         },
         "dynamic_pe": {
-          "status": "confirmed",
-          "value": -379.41,
-          "display": "-379.41（亏损状态）",
-          "interpretation": "动态市盈率为负，表示当前口径下盈利为负，不能按正 PE 倍数进行估值判断。",
+          "status": "待核实",
+          "value": null,
+          "display": "待核实",
+          "interpretation": "两个数据源未同时返回一致结果，不得用于决策。",
           "sources": {
-            "腾讯财经": -379.41,
-            "东方财富": -379.41
+            "腾讯财经": -400.05,
+            "东方财富": null
           }
         },
         "pb": {
-          "status": "confirmed",
-          "value": 10.27,
-          "display": "10.27",
-          "interpretation": "腾讯财经与东方财富交叉核验一致。",
+          "status": "待核实",
+          "value": null,
+          "display": "待核实",
+          "interpretation": "两个数据源未同时返回一致结果，不得用于决策。",
           "sources": {
-            "腾讯财经": 10.27,
-            "东方财富": 10.27
+            "腾讯财经": 10.82,
+            "东方财富": null
           }
         }
       },
       "raw_sources": [
         {
           "source": "腾讯财经",
-          "price": 54.79,
-          "previous_close": 57.69,
-          "change_pct": -5.03,
-          "dynamic_pe": -379.41,
-          "pb": 10.27,
+          "price": 57.77,
+          "previous_close": 54.79,
+          "change_pct": 5.44,
+          "dynamic_pe": -400.05,
+          "pb": 10.82,
           "source_url": "https://gu.qq.com/sh600118"
-        },
-        {
-          "source": "东方财富",
-          "price": 54.79,
-          "previous_close": 57.69,
-          "change_pct": -5.03,
-          "dynamic_pe": -379.41,
-          "pb": 10.27,
-          "source_url": "https://quote.eastmoney.com/sh600118.html"
         }
       ],
-      "errors": []
+      "errors": [
+        "东方财富: HTTPSConnectionPool(host='push2.eastmoney.com', port=443): Read timed out. (read timeout=8)"
+      ]
     }
   ],
   "sector_news": {
     "items": [
       {
-        "title": "NASA’s Curiosity Mars Rover Discovers Field of Honeycomb Textures",
-        "published_at": "2026-07-29T15:30+00:00",
-        "source": "NASA News",
-        "url": "https://www.nasa.gov/missions/mars-science-laboratory/curiosity-rover/nasas-curiosity-mars-rover-discovers-field-of-honeycomb-textures/",
+        "title": "Rules of the road needed for orbital data center constellations",
+        "published_at": "2026-07-31T00:00+00:00",
+        "source": "SpaceNews",
+        "url": "https://spacenews.com/rules-of-the-road-needed-for-orbital-data-center-constellations/",
         "category": "卫星与商业航天",
         "region": "国际",
-        "source_weight": 14
+        "source_weight": 13
       },
       {
-        "title": "APOD: 2026 July 29 – Psyche Receives Gravity Assist from Mars",
-        "published_at": "2026-07-29T15:25+00:00",
-        "source": "NASA News",
-        "url": "https://science.nasa.gov/image-article/apod/apod-2026-july-29-psyche-receives-gravity-assist-from-mars/",
+        "title": "K2 Space raises $500 million for commercial, defense satellite expansion",
+        "published_at": "2026-07-30T18:42+00:00",
+        "source": "SpaceNews",
+        "url": "https://spacenews.com/k2-space-raises-500-million-for-commercial-defense-satellite-expansion/",
         "category": "卫星与商业航天",
         "region": "国际",
-        "source_weight": 14
+        "source_weight": 13
+      },
+      {
+        "title": "Iran war depleted US Patriot missile stockpiles, creating readiness challenges, experts say",
+        "published_at": "2026-07-30T17:48+00:00",
+        "source": "Defense News",
+        "url": "https://www.defensenews.com/news/your-military/2026/07/30/iran-war-depleted-us-patriot-missile-stockpiles-creating-readiness-challenges-experts-say/",
+        "category": "军工与国防科技",
+        "region": "国际",
+        "source_weight": 13
+      },
+      {
+        "title": "Iran to get Chinese shoulder-launched missile systems in weeks, sources say",
+        "published_at": "2026-07-30T15:33+00:00",
+        "source": "Defense News",
+        "url": "https://www.defensenews.com/industry/techwatch/2026/07/30/iran-to-get-chinese-shoulder-launched-missile-systems-in-weeks-sources-say/",
+        "category": "军工与国防科技",
+        "region": "国际",
+        "source_weight": 13
+      },
+      {
+        "title": "US strikes $58.6 billion Patriot missile deal amid rising stockpile concerns",
+        "published_at": "2026-07-30T13:52+00:00",
+        "source": "Defense News",
+        "url": "https://www.defensenews.com/industry/techwatch/2026/07/30/us-strikes-586-billion-patriot-missile-deal-amid-rising-stockpile-concerns/",
+        "category": "军工与国防科技",
+        "region": "国际",
+        "source_weight": 13
+      },
+      {
+        "title": "DARPA challenge pushes limits of heavy-lift drone technology",
+        "published_at": "2026-07-30T13:45+00:00",
+        "source": "Defense News",
+        "url": "https://www.defensenews.com/news/your-military/2026/07/30/darpa-challenge-pushes-limits-of-heavy-lift-drone-technology/",
+        "category": "军工与国防科技",
+        "region": "国际",
+        "source_weight": 13
+      },
+      {
+        "title": "Rocket Lab wins another launch contract from Japan’s iQPS",
+        "published_at": "2026-07-30T11:59+00:00",
+        "source": "SpaceNews",
+        "url": "https://spacenews.com/rocket-lab-wins-another-launch-contract-from-japans-iqps/",
+        "category": "卫星与商业航天",
+        "region": "国际",
+        "source_weight": 13
       },
       {
         "title": "L3Harris delays missile business IPO to 2027 despite surging defense demand",
@@ -98,69 +136,6 @@
         "source": "SpaceNews",
         "url": "https://spacenews.com/l3harris-delays-missile-business-ipo-to-2027-despite-surging-defense-demand/",
         "category": "军工与国防科技",
-        "region": "国际",
-        "source_weight": 13
-      },
-      {
-        "title": "SpaceX wins $1.6 billion in launch orders for military satellite networks",
-        "published_at": "2026-07-29T20:43+00:00",
-        "source": "SpaceNews",
-        "url": "https://spacenews.com/spacex-wins-1-6-billion-in-launch-orders-for-military-satellite-networks/",
-        "category": "卫星与商业航天",
-        "region": "国际",
-        "source_weight": 13
-      },
-      {
-        "title": "Space Force awards All Points $250 million to expand satellite processing at Vandenberg",
-        "published_at": "2026-07-29T19:45+00:00",
-        "source": "SpaceNews",
-        "url": "https://spacenews.com/space-force-awards-all-points-250-million-to-expand-satellite-processing-at-vandenberg/",
-        "category": "卫星与商业航天",
-        "region": "国际",
-        "source_weight": 13
-      },
-      {
-        "title": "Pentagon puts out call for robot boats that launch attack drones",
-        "published_at": "2026-07-29T19:22+00:00",
-        "source": "Defense News",
-        "url": "https://www.defensenews.com/industry/techwatch/2026/07/29/pentagon-puts-out-call-for-robot-boats-that-launch-attack-drones/",
-        "category": "机器人与具身智能",
-        "region": "国际",
-        "source_weight": 13
-      },
-      {
-        "title": "Fortastra and Hadrian join forces to streamline satellite production",
-        "published_at": "2026-07-29T13:00+00:00",
-        "source": "SpaceNews",
-        "url": "https://spacenews.com/fortastra-and-hadrian-join-forces-to-streamline-satellite-production/",
-        "category": "卫星与商业航天",
-        "region": "国际",
-        "source_weight": 13
-      },
-      {
-        "title": "Ford, GM Defense, BC Customs to compete for US Army’s new infantry squad vehicle",
-        "published_at": "2026-07-29T12:54+00:00",
-        "source": "Defense News",
-        "url": "https://www.defensenews.com/news/your-military/2026/07/29/ford-gm-defense-bc-customs-to-compete-for-us-armys-new-infantry-squad-vehicle/",
-        "category": "军工与国防科技",
-        "region": "国际",
-        "source_weight": 13
-      },
-      {
-        "title": "House-passed defense bill includes controversial US-Israel tech measure",
-        "published_at": "2026-07-29T12:00+00:00",
-        "source": "Defense News",
-        "url": "https://www.defensenews.com/news/pentagon-congress/2026/07/29/house-passed-defense-bill-includes-controversial-us-israel-tech-measure/",
-        "category": "军工与国防科技",
-        "region": "国际",
-        "source_weight": 13
-      },
-      {
-        "title": "US Central Command, UAE to launch artificial intelligence task force",
-        "published_at": "2026-07-28T15:42+00:00",
-        "source": "Defense News",
-        "url": "https://www.defensenews.com/industry/techwatch/2026/07/28/us-central-command-uae-to-launch-artifical-intelligence-task-force/",
-        "category": "科技与芯片",
         "region": "国际",
         "source_weight": 13
       },
@@ -210,11 +185,11 @@
         "source_weight": 11
       },
       {
-        "title": "Rolls-Royce hikes guidance as it benefits from both the defense boom and AI data center buildout",
-        "published_at": "2026-07-30T08:18+00:00",
+        "title": "Anthropic says its Claude models 'gained unauthorized access' to other organizations' systems",
+        "published_at": "2026-07-31T01:11+00:00",
         "source": "CNBC Technology",
-        "url": "https://www.cnbc.com/2026/07/30/rolls-royce-earnings-q2-stock-defense-ai.html",
-        "category": "军工与国防科技",
+        "url": "https://www.cnbc.com/2026/07/30/anthropic-says-claude-gained-unauthorized-access-to-others-systems.html",
+        "category": "科技与芯片",
         "region": "国际",
         "source_weight": 9
       },
@@ -246,55 +221,71 @@
         "source_weight": 9
       },
       {
-        "title": "三星 SDI：全固态电池按既定计划 2027H2 量产，首单很可能来自人形机器人",
-        "published_at": "2026-07-30T08:38+00:00",
+        "title": "亚马逊 Zoox 获得首份专用 Robotaxi 临时豁免，可在美国开展付费服务",
+        "published_at": "2026-07-31T01:12+00:00",
         "source": "IT之家",
-        "url": "https://www.ithome.com/0/983/722.htm",
+        "url": "https://www.ithome.com/0/983/941.htm",
         "category": "机器人与具身智能",
         "region": "国内",
         "source_weight": 8
       },
       {
-        "title": "三星 AI 家用机器人 Ballie 配套应用设计草图曝光：支持家庭监控、迎宾等功能",
-        "published_at": "2026-07-30T08:26+00:00",
+        "title": "谷歌最强具身推理模型：Gemini Robotics ER 2 登场，支持连续视频理解与多机器人协作",
+        "published_at": "2026-07-30T23:12+00:00",
         "source": "IT之家",
-        "url": "https://www.ithome.com/0/983/721.htm",
+        "url": "https://www.ithome.com/0/983/915.htm",
         "category": "机器人与具身智能",
         "region": "国内",
         "source_weight": 8
       },
       {
-        "title": "沃尔沃放弃激光雷达，马斯克称早就警告过他们",
-        "published_at": "2026-07-30T07:59+00:00",
+        "title": "SpaceX 猎鹰 9 号火箭下月撞击月球，科学家预计可观测到喷射羽流",
+        "published_at": "2026-07-30T13:07+00:00",
         "source": "IT之家",
-        "url": "https://www.ithome.com/0/983/668.htm",
-        "category": "军工与国防科技",
+        "url": "https://www.ithome.com/0/983/886.htm",
+        "category": "卫星与商业航天",
         "region": "国内",
         "source_weight": 8
       },
       {
-        "title": "Waymo robotaxis are starting to return to freeways",
-        "published_at": "2026-07-29T17:50+00:00",
-        "source": "TechCrunch",
-        "url": "https://techcrunch.com/2026/07/29/waymo-robotaxis-are-starting-to-return-to-freeways/",
+        "title": "China’s top court finds patent lawsuits against Unitree Robotics malicious",
+        "published_at": "2026-07-30T09:54+00:00",
+        "source": "TechNode",
+        "url": "https://technode.com/2026/07/30/chinas-top-court-finds-patent-lawsuits-against-unitree-robotics-malicious/",
         "category": "机器人与具身智能",
         "region": "国际",
         "source_weight": 8
       },
       {
-        "title": "DoorDash is building its own drone delivery business",
-        "published_at": "2026-07-29T13:00+00:00",
-        "source": "TechCrunch",
-        "url": "https://techcrunch.com/2026/07/29/doordash-is-building-its-own-drone-delivery-business/",
-        "category": "军工与国防科技",
+        "title": "China’s Robotaxi enters London for first time as Baidu’s Apollo Go begins UK road tests with Uber and Lyft",
+        "published_at": "2026-07-29T02:16+00:00",
+        "source": "TechNode",
+        "url": "https://technode.com/2026/07/29/chinas-robotaxi-enters-london-for-first-time-as-baidus-apollo-go-begins-uk-road-tests-with-uber-and-lyft/",
+        "category": "机器人与具身智能",
         "region": "国际",
         "source_weight": 8
+      },
+      {
+        "title": "第三代中继卫星升空！天链三号01星成功发射",
+        "published_at": "2026-07-29T21:46+00:00",
+        "source": "快科技-科学",
+        "url": "https://news.mydrivers.com/1/1140/1140003.htm",
+        "category": "卫星与商业航天",
+        "region": "国内",
+        "source_weight": 7
+      },
+      {
+        "title": "国内首款！TP200大型多功能长航时无人机成功首飞",
+        "published_at": "2026-07-27T07:24+00:00",
+        "source": "快科技-科学",
+        "url": "https://news.mydrivers.com/1/1139/1139151.htm",
+        "category": "军工与国防科技",
+        "region": "国内",
+        "source_weight": 7
       }
     ],
-    "errors": [
-      "国内科技新闻: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=%28%E5%8D%AB%E6%98%9F+OR+%E8%88%AA%E5%A4%A9+OR+%E5%8C%97%E6%96%97+OR+%E6%9C%BA%E5%99%A8%E4%BA%BA+OR+%E5%85%B7%E8%BA%AB%E6%99%BA%E8%83%BD+OR+%E8%8A%AF%E7%89%87+OR+%E5%8D%8A%E5%AF%BC%E4%BD%93+OR+%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD+OR+%E5%86%9B%E5%B7%A5+OR+%E5%9B%BD%E9%98%B2%E7%A7%91%E6%8A%80%29+sourcelang%3AChinese&mode=artlist&format=json&maxrecords=24&sort=datedesc&timespan=3d"
-    ],
+    "errors": [],
     "policy": "仅展示含标题、发布时间、来源和原文链接的新闻；不据此自动推断股价因果。"
   },
-  "digest": "【A股科技主题决策雷达】\n个股建议：卖出（基于近3个月K线，保守模式）\n执行参考：买入区间 暂不设置：空头排列下不抄底｜仓位 0成（空仓）；持仓者建议减至1成以内\n风控纪律：止损 已持仓者止损位：54.00元（跌破今日最低点确认加速下跌）｜失效条件 未来3个交易日重新站稳5.03且量价修复，则卖出判断失效并重新评估\n大盘摘要：🎯 大盘复盘 2026-07-30 大盘复盘 今日市场极端分化：上证50独自维稳但科创50暴跌超5%，放量下杀叠加跌停家数远超涨停，亏钱效应显著。明日优先观察创业板指能否在3200点附近企稳，以及科技领跌板块是否出现缩量止跌信号。 一、盘面总览 两市涨跌比约1:2，下跌家数超3600家，涨停52家而跌停80家，市场情绪明显偏弱。成交额放大至23575亿元，属…\n600118 双源校验：价格：54.79；涨跌幅：-5.03；动态PE：-379.41（亏损状态）；PB：10.27\n\n可核验科技新闻：\n- 卫星与商业航天：NASA’s Curiosity Mars Rover Discovers Field of Honeycomb Textures（NASA News，2026-07-29T15:30+00:00）\n  https://www.nasa.gov/missions/mars-science-laboratory/curiosity-rover/nasas-curiosity-mars-rover-discovers-field-of-honeycomb-textures/\n- 军工与国防科技：L3Harris delays missile business IPO to 2027 despite surging defense demand（SpaceNews，2026-07-29T22:57+00:00）\n  https://spacenews.com/l3harris-delays-missile-business-ipo-to-2027-despite-surging-defense-demand/\n- 机器人与具身智能：Pentagon puts out call for robot boats that launch attack drones（Defense News，2026-07-29T19:22+00:00）\n  https://www.defensenews.com/industry/techwatch/2026/07/29/pentagon-puts-out-call-for-robot-boats-that-launch-attack-drones/\n- 科技与芯片：US Central Command, UAE to launch artificial intelligence task force（Defense News，2026-07-28T15:42+00:00）\n  https://www.defensenews.com/industry/techwatch/2026/07/28/us-central-command-uae-to-launch-artifical-intelligence-task-force/\n\n网页版完整报告：https://LPT111.github.io/daily_stock_analysis/\n仅供研究参考，不构成投资建议。"
+  "digest": "【A股科技主题决策雷达】\n个股建议：减仓（基于近3个月K线，保守模式）\n执行参考：买入区间 暂不设置（需技术转多确认）｜仓位 建议仓位：空仓者0成；持仓者不高于2成\n风控纪律：止损 56.00元（跌破今日低点/近期支撑）｜失效条件 未来3个交易日重新站稳68.896且量价修复，则减仓判断失效并重新评估\n大盘摘要：🎯 大盘复盘 2026-07-31 大盘复盘 今日市场呈“极致分化式进攻”：科创成长全面爆发，权重蓝筹明显滞涨，赚钱效应集中在科技硬件方向。明日优先观察成交额能否持续放大，以及科创50在1700点上方能否维持强势。 一、盘面总览 今日市场整体偏暖，呈现“指数强、个股更强”的结构。上证指数上涨1.01%，深证成指上涨3.87%，创业板指大涨6.18%，科创50…\n600118 双源校验：价格：待核实；涨跌幅：待核实；动态PE：待核实；PB：待核实\n\n可核验科技新闻：\n- 卫星与商业航天：Rules of the road needed for orbital data center constellations（SpaceNews，2026-07-31T00:00+00:00）\n  https://spacenews.com/rules-of-the-road-needed-for-orbital-data-center-constellations/\n- 军工与国防科技：Iran war depleted US Patriot missile stockpiles, creating readiness challenges, experts say（Defense News，2026-07-30T17:48+00:00）\n  https://www.defensenews.com/news/your-military/2026/07/30/iran-war-depleted-us-patriot-missile-stockpiles-creating-readiness-challenges-experts-say/\n- 科技与芯片：The Download: a chip talent battle, and deflating AI hype（MIT Technology Review，2026-07-29T12:10+00:00）\n  https://www.technologyreview.com/2026/07/29/1140884/the-download-chip-talent-battle-deflating-ai-hype/\n- 机器人与具身智能：China threatens retaliation against U.S. humanoid robot ban, says it 'severely damages' relations（CNBC Technology，2026-07-30T02:52+00:00）\n  https://www.cnbc.com/2026/07/30/china-us-robot-humanoid-ban-trump-visit.html\n\n网页版完整报告：https://LPT111.github.io/daily_stock_analysis/\n仅供研究参考，不构成投资建议。"
 }
