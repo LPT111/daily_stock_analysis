@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-01T09:13:55+00:00",
+  "generated_at": "2026-08-02T01:44:48+00:00",
   "dashboard_url": "https://LPT111.github.io/daily_stock_analysis/",
   "stock_report": null,
   "market_report": null,
@@ -84,6 +84,15 @@
         "source_weight": 14
       },
       {
+        "title": "China launches secretive TJS-27 pair, orbits next-gen Tianlian relay sat",
+        "published_at": "2026-08-01T13:38+00:00",
+        "source": "SpaceNews",
+        "url": "https://spacenews.com/china-launches-secretive-tjs-27-pair-orbits-next-gen-tianlian-relay-sat/",
+        "category": "卫星与商业航天",
+        "region": "国际",
+        "source_weight": 13
+      },
+      {
         "title": "Sending repurposed Mars rover to the moon could cost more than $1 billion",
         "published_at": "2026-07-31T20:53+00:00",
         "source": "SpaceNews",
@@ -147,15 +156,6 @@
         "source_weight": 13
       },
       {
-        "title": "Rocket Lab wins another launch contract from Japan’s iQPS",
-        "published_at": "2026-07-30T11:59+00:00",
-        "source": "SpaceNews",
-        "url": "https://spacenews.com/rocket-lab-wins-another-launch-contract-from-japans-iqps/",
-        "category": "卫星与商业航天",
-        "region": "国际",
-        "source_weight": 13
-      },
-      {
         "title": "The Download: a chip talent battle, and deflating AI hype",
         "published_at": "2026-07-29T12:10+00:00",
         "source": "MIT Technology Review",
@@ -201,19 +201,19 @@
         "source_weight": 10
       },
       {
-        "title": "Fintech broker Clear Street offers investors pre-IPO access to $188 billion AI giant Databricks",
-        "published_at": "2026-07-31T21:49+00:00",
-        "source": "CNBC Technology",
-        "url": "https://www.cnbc.com/2026/07/31/clear-street-pre-ipo-platform-databricks.html",
+        "title": "As Reddit stock falls, CEO questions value of Google's AI Overviews",
+        "published_at": "2026-08-01T12:30+00:00",
+        "source": "Ars Technica",
+        "url": "https://arstechnica.com/ai/2026/08/reddit-ceo-on-ai-overviews-were-still-looking-for-that-win-win/",
         "category": "科技与芯片",
         "region": "国际",
         "source_weight": 9
       },
       {
-        "title": "How Leopold Aschenbrenner built a $45 billion AI hedge fund — and lost most of it in days",
-        "published_at": "2026-07-31T20:19+00:00",
+        "title": "Fintech broker Clear Street offers investors pre-IPO access to $188 billion AI giant Databricks",
+        "published_at": "2026-07-31T21:49+00:00",
         "source": "CNBC Technology",
-        "url": "https://www.cnbc.com/2026/07/31/leopold-aschenbrenner-situational-awareness-fund-fire-sale.html",
+        "url": "https://www.cnbc.com/2026/07/31/clear-street-pre-ipo-platform-databricks.html",
         "category": "科技与芯片",
         "region": "国际",
         "source_weight": 9
@@ -226,6 +226,42 @@
         "category": "机器人与具身智能",
         "region": "国际",
         "source_weight": 9
+      },
+      {
+        "title": "影石 CEO 刘靖康：接下来一个月，我们会再一次重新定义全景无人机",
+        "published_at": "2026-08-01T15:22+00:00",
+        "source": "IT之家",
+        "url": "https://www.ithome.com/0/984/634.htm",
+        "category": "军工与国防科技",
+        "region": "国内",
+        "source_weight": 8
+      },
+      {
+        "title": "IDC 报告：2025 年中国工业具身智能机器人市场达 57.4 亿元，商业化进程全面提速",
+        "published_at": "2026-08-01T14:01+00:00",
+        "source": "IT之家",
+        "url": "https://www.ithome.com/0/984/627.htm",
+        "category": "机器人与具身智能",
+        "region": "国内",
+        "source_weight": 8
+      },
+      {
+        "title": "全程无遥操机器人比赛全国决赛在北京开赛，200 多支队伍冲击冠军",
+        "published_at": "2026-08-01T10:58+00:00",
+        "source": "IT之家",
+        "url": "https://www.ithome.com/0/984/608.htm",
+        "category": "机器人与具身智能",
+        "region": "国内",
+        "source_weight": 8
+      },
+      {
+        "title": "人形机器人家政清洁服务走入现实，每小时 30 美元",
+        "published_at": "2026-08-01T09:36+00:00",
+        "source": "IT之家",
+        "url": "https://www.ithome.com/0/984/573.htm",
+        "category": "机器人与具身智能",
+        "region": "国内",
+        "source_weight": 8
       },
       {
         "title": "Unitree Robotics moves closer to Shanghai STAR Market IPO",
@@ -246,33 +282,6 @@
         "source_weight": 8
       },
       {
-        "title": "China’s Robotaxi enters London for first time as Baidu’s Apollo Go begins UK road tests with Uber and Lyft",
-        "published_at": "2026-07-29T02:16+00:00",
-        "source": "TechNode",
-        "url": "https://technode.com/2026/07/29/chinas-robotaxi-enters-london-for-first-time-as-baidus-apollo-go-begins-uk-road-tests-with-uber-and-lyft/",
-        "category": "机器人与具身智能",
-        "region": "国际",
-        "source_weight": 8
-      },
-      {
-        "title": "BYD to unveil first humanoid robot in early August",
-        "published_at": "2026-07-27T02:42+00:00",
-        "source": "TechNode",
-        "url": "https://technode.com/2026/07/27/byd-to-unveil-first-humanoid-robot-in-early-august/",
-        "category": "机器人与具身智能",
-        "region": "国际",
-        "source_weight": 8
-      },
-      {
-        "title": "美国一高中花6万美元买女机器人当老师 家长扒出真相尴尬非常",
-        "published_at": "2026-07-30T00:40+00:00",
-        "source": "快科技-科学",
-        "url": "https://news.mydrivers.com/1/1140/1140022.htm",
-        "category": "机器人与具身智能",
-        "region": "国内",
-        "source_weight": 7
-      },
-      {
         "title": "国内首款！TP200大型多功能长航时无人机成功首飞",
         "published_at": "2026-07-27T07:24+00:00",
         "source": "快科技-科学",
@@ -280,18 +289,10 @@
         "category": "军工与国防科技",
         "region": "国内",
         "source_weight": 7
-      },
-      {
-        "title": "影石刘靖康：接下来一个月 我们会再一次重新定义无人机",
-        "published_at": "2026-08-01T13:26+00:00",
-        "source": "快科技-综合",
-        "url": "https://news.mydrivers.com/1/1140/1140662.htm",
-        "category": "军工与国防科技",
-        "region": "国内",
-        "source_weight": 5
       }
     ],
     "errors": [
+      "国内科技新闻: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=%28%E5%8D%AB%E6%98%9F+OR+%E8%88%AA%E5%A4%A9+OR+%E5%8C%97%E6%96%97+OR+%E6%9C%BA%E5%99%A8%E4%BA%BA+OR+%E5%85%B7%E8%BA%AB%E6%99%BA%E8%83%BD+OR+%E8%8A%AF%E7%89%87+OR+%E5%8D%8A%E5%AF%BC%E4%BD%93+OR+%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD+OR+%E5%86%9B%E5%B7%A5+OR+%E5%9B%BD%E9%98%B2%E7%A7%91%E6%8A%80%29+sourcelang%3AChinese&mode=artlist&format=json&maxrecords=24&sort=datedesc&timespan=3d",
       "国际科技新闻: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=%28satellite+OR+spaceflight+OR+robotics+OR+humanoid+OR+semiconductor+OR+%22artificial+intelligence%22+OR+%22defense+technology%22%29+sourcelang%3AEnglish&mode=artlist&format=json&maxrecords=24&sort=datedesc&timespan=3d"
     ],
     "policy": "仅展示含标题、发布时间、来源和原文链接的新闻；不据此自动推断股价因果。"
