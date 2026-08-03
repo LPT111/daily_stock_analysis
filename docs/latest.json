@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-08-03T01:55:39+00:00",
+  "generated_at": "2026-08-03T10:59:48+00:00",
   "dashboard_url": "https://LPT111.github.io/daily_stock_analysis/",
-  "stock_report": "report_20260803.md",
+  "stock_report": null,
   "market_report": "market_review_20260803.md",
   "validations": [
     {
@@ -14,7 +14,7 @@
           "display": "待核实",
           "interpretation": "两个数据源未同时返回一致结果，不得用于决策。",
           "sources": {
-            "腾讯财经": 58.48,
+            "腾讯财经": 59.77,
             "东方财富": null
           }
         },
@@ -24,7 +24,7 @@
           "display": "待核实",
           "interpretation": "两个数据源未同时返回一致结果，不得用于决策。",
           "sources": {
-            "腾讯财经": 1.81,
+            "腾讯财经": 4.06,
             "东方财富": null
           }
         },
@@ -34,7 +34,7 @@
           "display": "待核实",
           "interpretation": "两个数据源未同时返回一致结果，不得用于决策。",
           "sources": {
-            "腾讯财经": -404.96,
+            "腾讯财经": -413.9,
             "东方财富": null
           }
         },
@@ -44,7 +44,7 @@
           "display": "待核实",
           "interpretation": "两个数据源未同时返回一致结果，不得用于决策。",
           "sources": {
-            "腾讯财经": 10.96,
+            "腾讯财经": 11.2,
             "东方财富": null
           }
         }
@@ -52,16 +52,16 @@
       "raw_sources": [
         {
           "source": "腾讯财经",
-          "price": 58.48,
+          "price": 59.77,
           "previous_close": 57.44,
-          "change_pct": 1.81,
-          "dynamic_pe": -404.96,
-          "pb": 10.96,
+          "change_pct": 4.06,
+          "dynamic_pe": -413.9,
+          "pb": 11.2,
           "source_url": "https://gu.qq.com/sh600118"
         }
       ],
       "errors": [
-        "东方财富: 502 Server Error: Bad Gateway for url: https://push2.eastmoney.com/api/qt/stock/get?secid=1.600118&fields=f43%2Cf57%2Cf58%2Cf60%2Cf162%2Cf167%2Cf170"
+        "东方财富: HTTPSConnectionPool(host='push2.eastmoney.com', port=443): Read timed out. (read timeout=8)"
       ]
     }
   ],
@@ -149,6 +149,15 @@
         "source_weight": 13
       },
       {
+        "title": "Here’s why AI agents lie and cheat to reach their goals",
+        "published_at": "2026-08-03T08:30+00:00",
+        "source": "MIT Technology Review",
+        "url": "https://www.technologyreview.com/2026/08/03/1141009/heres-why-ai-agents-lie-and-cheat-to-reach-their-goals/",
+        "category": "科技与芯片",
+        "region": "国际",
+        "source_weight": 12
+      },
+      {
         "title": "The Download: a chip talent battle, and deflating AI hype",
         "published_at": "2026-07-29T12:10+00:00",
         "source": "MIT Technology Review",
@@ -171,15 +180,6 @@
         "published_at": "2026-07-28T12:10+00:00",
         "source": "MIT Technology Review",
         "url": "https://www.technologyreview.com/2026/07/28/1140868/the-download-openai-hack-ai-stock-sell-off/",
-        "category": "科技与芯片",
-        "region": "国际",
-        "source_weight": 12
-      },
-      {
-        "title": "Samsung’s chip workers are jumping ship to rival SK Hynix",
-        "published_at": "2026-07-28T09:18+00:00",
-        "source": "MIT Technology Review",
-        "url": "https://www.technologyreview.com/2026/07/28/1140853/samsung-chip-workers-exodus-sk-hynix/",
         "category": "科技与芯片",
         "region": "国际",
         "source_weight": 12
@@ -221,20 +221,20 @@
         "source_weight": 9
       },
       {
-        "title": "美外卖平台 DoorDash 让骑手给配送机器人装餐，5 分钟支付 5 美元",
-        "published_at": "2026-08-02T23:20+00:00",
+        "title": "荣耀 Robot Phone 手机核心配置曝光：骁龙 8 Elite Gen5 处理器、7060mAh 电池，8 月 12 日发布",
+        "published_at": "2026-08-03T10:13+00:00",
         "source": "IT之家",
-        "url": "https://www.ithome.com/0/984/833.htm",
+        "url": "https://www.ithome.com/0/985/192.htm",
         "category": "机器人与具身智能",
         "region": "国内",
         "source_weight": 8
       },
       {
-        "title": "贾跃亭：法拉第未来 FF EAI 机器人 7 月实现销售及出货 152 台，创单月新高",
-        "published_at": "2026-08-02T23:16+00:00",
+        "title": "上汽大众 ID.ERA 首款纯电车型官宣即将亮相，搭载行云智能辅助驾驶与全新激光雷达",
+        "published_at": "2026-08-03T08:50+00:00",
         "source": "IT之家",
-        "url": "https://www.ithome.com/0/984/831.htm",
-        "category": "机器人与具身智能",
+        "url": "https://www.ithome.com/0/985/113.htm",
+        "category": "军工与国防科技",
         "region": "国内",
         "source_weight": 8
       },
@@ -266,13 +266,13 @@
         "source_weight": 8
       },
       {
-        "title": "国内首款！TP200大型多功能长航时无人机成功首飞",
-        "published_at": "2026-07-27T07:24+00:00",
-        "source": "快科技-科学",
-        "url": "https://news.mydrivers.com/1/1139/1139151.htm",
-        "category": "军工与国防科技",
-        "region": "国内",
-        "source_weight": 7
+        "title": "China’s Robotaxi enters London for first time as Baidu’s Apollo Go begins UK road tests with Uber and Lyft",
+        "published_at": "2026-07-29T02:16+00:00",
+        "source": "TechNode",
+        "url": "https://technode.com/2026/07/29/chinas-robotaxi-enters-london-for-first-time-as-baidus-apollo-go-begins-uk-road-tests-with-uber-and-lyft/",
+        "category": "机器人与具身智能",
+        "region": "国际",
+        "source_weight": 8
       },
       {
         "title": "K2 Space raises $500 million for commercial, defense satellite expansion",
@@ -290,5 +290,5 @@
     ],
     "policy": "仅展示含标题、发布时间、来源和原文链接的新闻；不据此自动推断股价因果。"
   },
-  "digest": "【A股科技主题决策雷达】\n个股建议：减仓（基于近3个月K线，保守模式）\n执行参考：买入区间 暂不设置（空头排列未修复，不满足买点条件）｜仓位 建议仓位：0成（空仓观望）\n风控纪律：止损 持仓者止损位：57.20元（跌破MA5）；空仓者暂无止损位｜失效条件 未来3个交易日重新站稳67.65且量价修复，则减仓判断失效并重新评估\n大盘摘要：🎯 大盘复盘 2026-08-03 大盘复盘 今日缩量分化：指数全线收跌、个股却涨多跌少，权重与科技成长股拖累指数，传统周期板块逆势活跃，核心矛盾是高低切换能否延续。明日优先观察科创50能否止跌及成交额能否回升。 一、盘面总览 📊 三大指数集体收跌，科创50以3.87%领跌，创业板指亦跌1.67%，沪指相对抗跌仅跌0.54%；但盘面宽度与指数方向背离，上涨3…\n600118 双源校验：价格：待核实；涨跌幅：待核实；动态PE：待核实；PB：待核实\n\n可核验科技新闻：\n- 卫星与商业航天：NASA, SpaceX Advance Wind Tunnel Tests for Starship Rocket（NASA News，2026-07-31T18:39+00:00）\n  https://www.nasa.gov/directorates/esdmd/artemis-campaign-development-division/human-landing-system-program/nasa-spacex-advance-wind-tunnel-tests-for-starship-rocket/\n- 军工与国防科技：Chinese military researchers tap US AI models to train defense systems（Defense News，2026-07-31T12:34+00:00）\n  https://www.defensenews.com/industry/techwatch/2026/07/31/chinese-military-researchers-tap-us-ai-models-to-train-defense-systems/\n- 科技与芯片：The Download: a chip talent battle, and deflating AI hype（MIT Technology Review，2026-07-29T12:10+00:00）\n  https://www.technologyreview.com/2026/07/29/1140884/the-download-chip-talent-battle-deflating-ai-hype/\n- 机器人与具身智能：China threatens retaliation against U.S. humanoid robot ban, says it 'severely damages' relations（CNBC Technology，2026-07-30T02:52+00:00）\n  https://www.cnbc.com/2026/07/30/china-us-robot-humanoid-ban-trump-visit.html\n\n网页版完整报告：https://LPT111.github.io/daily_stock_analysis/\n仅供研究参考，不构成投资建议。"
+  "digest": "【A股科技主题决策雷达】\n个股建议：待确认（基于近3个月K线，保守模式）\n执行参考：买入区间 仅在MA20附近企稳时考虑低吸，不追涨｜仓位 控制在3成以内\n风控纪律：止损 有效跌破MA20且两个交易日未收回｜失效条件 跌破止损位或量价结构转空时，持有逻辑失效\n大盘摘要：🎯 大盘复盘 2026-08-03 大盘复盘 今日市场呈现典型的“指数跌、个股涨”分化格局：权重与科创50拖累指数，但超4000家个股上涨、涨停82家，说明短线情绪并不弱。明日优先观察科创50能否止跌，以及低位周期板块的轮动能否延续。 一、盘面总览 📊 主要指数全线收跌，其中科创50重挫逾5%，成为核心拖累；上证指数相对抗跌，跌幅不足1%。然而，市场宽度极佳…\n600118 双源校验：价格：待核实；涨跌幅：待核实；动态PE：待核实；PB：待核实\n\n可核验科技新闻：\n- 卫星与商业航天：NASA, SpaceX Advance Wind Tunnel Tests for Starship Rocket（NASA News，2026-07-31T18:39+00:00）\n  https://www.nasa.gov/directorates/esdmd/artemis-campaign-development-division/human-landing-system-program/nasa-spacex-advance-wind-tunnel-tests-for-starship-rocket/\n- 军工与国防科技：Chinese military researchers tap US AI models to train defense systems（Defense News，2026-07-31T12:34+00:00）\n  https://www.defensenews.com/industry/techwatch/2026/07/31/chinese-military-researchers-tap-us-ai-models-to-train-defense-systems/\n- 科技与芯片：Here’s why AI agents lie and cheat to reach their goals（MIT Technology Review，2026-08-03T08:30+00:00）\n  https://www.technologyreview.com/2026/08/03/1141009/heres-why-ai-agents-lie-and-cheat-to-reach-their-goals/\n- 机器人与具身智能：China threatens retaliation against U.S. humanoid robot ban, says it 'severely damages' relations（CNBC Technology，2026-07-30T02:52+00:00）\n  https://www.cnbc.com/2026/07/30/china-us-robot-humanoid-ban-trump-visit.html\n\n网页版完整报告：https://LPT111.github.io/daily_stock_analysis/\n仅供研究参考，不构成投资建议。"
 }
