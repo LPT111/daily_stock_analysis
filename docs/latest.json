@@ -1,112 +1,150 @@
 {
-  "generated_at": "2026-08-04T09:54:25+00:00",
+  "generated_at": "2026-08-05T01:36:40+00:00",
   "dashboard_url": "https://LPT111.github.io/daily_stock_analysis/",
   "stock_report": null,
-  "market_report": "market_review_20260804.md",
+  "market_report": "market_review_20260805.md",
   "validations": [
     {
       "code": "600118",
       "policy": "仅 status=confirmed 的字段可用于结论；待核实字段必须忽略。",
       "metrics": {
         "price": {
-          "status": "confirmed",
-          "value": 61.84,
-          "display": "61.84",
-          "interpretation": "腾讯财经与东方财富交叉核验一致。",
+          "status": "待核实",
+          "value": null,
+          "display": "待核实",
+          "interpretation": "两个数据源未同时返回一致结果，不得用于决策。",
           "sources": {
-            "腾讯财经": 61.84,
-            "东方财富": 61.84
+            "腾讯财经": 62.44,
+            "东方财富": null
           }
         },
         "change_pct": {
-          "status": "confirmed",
-          "value": 3.46,
-          "display": "3.46",
-          "interpretation": "腾讯财经与东方财富交叉核验一致。",
+          "status": "待核实",
+          "value": null,
+          "display": "待核实",
+          "interpretation": "两个数据源未同时返回一致结果，不得用于决策。",
           "sources": {
-            "腾讯财经": 3.46,
-            "东方财富": 3.46
+            "腾讯财经": 0.97,
+            "东方财富": null
           }
         },
         "dynamic_pe": {
-          "status": "confirmed",
-          "value": -428.23,
-          "display": "-428.23（亏损状态）",
-          "interpretation": "动态市盈率为负，表示当前口径下盈利为负，不能按正 PE 倍数进行估值判断。",
+          "status": "待核实",
+          "value": null,
+          "display": "待核实",
+          "interpretation": "两个数据源未同时返回一致结果，不得用于决策。",
           "sources": {
-            "腾讯财经": -428.23,
-            "东方财富": -428.23
+            "腾讯财经": -432.39,
+            "东方财富": null
           }
         },
         "pb": {
-          "status": "confirmed",
-          "value": 11.59,
-          "display": "11.59",
-          "interpretation": "腾讯财经与东方财富交叉核验一致。",
+          "status": "待核实",
+          "value": null,
+          "display": "待核实",
+          "interpretation": "两个数据源未同时返回一致结果，不得用于决策。",
           "sources": {
-            "腾讯财经": 11.59,
-            "东方财富": 11.59
+            "腾讯财经": 11.7,
+            "东方财富": null
           }
         }
       },
       "raw_sources": [
         {
           "source": "腾讯财经",
-          "price": 61.84,
-          "previous_close": 59.77,
-          "change_pct": 3.46,
-          "dynamic_pe": -428.23,
-          "pb": 11.59,
+          "price": 62.44,
+          "previous_close": 61.84,
+          "change_pct": 0.97,
+          "dynamic_pe": -432.39,
+          "pb": 11.7,
           "source_url": "https://gu.qq.com/sh600118"
-        },
-        {
-          "source": "东方财富",
-          "price": 61.84,
-          "previous_close": 59.77,
-          "change_pct": 3.46,
-          "dynamic_pe": -428.23,
-          "pb": 11.59,
-          "source_url": "https://quote.eastmoney.com/sh600118.html"
         }
       ],
-      "errors": []
+      "errors": [
+        "东方财富: 502 Server Error: Bad Gateway for url: https://push2.eastmoney.com/api/qt/stock/get?secid=1.600118&fields=f43%2Cf57%2Cf58%2Cf60%2Cf162%2Cf167%2Cf170"
+      ]
     }
   ],
   "sector_news": {
     "items": [
       {
-        "title": "NASA Delivers Navigation System for Commercial Lunar Relay",
-        "published_at": "2026-08-03T14:20+00:00",
+        "title": "NASA Will Attempt to Observe Rocket Part’s Lunar Impact",
+        "published_at": "2026-08-04T20:00+00:00",
         "source": "NASA News",
-        "url": "https://www.nasa.gov/technology/space-comms/nasa-delivers-navigation-system-for-commercial-lunar-relay/",
+        "url": "https://www.nasa.gov/humans-in-space/commercial-space/nasa-will-attempt-to-observe-rocket-parts-lunar-impact/",
         "category": "卫星与商业航天",
         "region": "国际",
         "source_weight": 14
       },
       {
-        "title": "Rocketdyne reemerges as standalone space company",
-        "published_at": "2026-08-04T09:20+00:00",
+        "title": "August 2026 Satellite Puzzler",
+        "published_at": "2026-08-04T16:31+00:00",
+        "source": "NASA News",
+        "url": "https://science.nasa.gov/earth/earth-observatory/august-2026-satellite-puzzler/",
+        "category": "卫星与商业航天",
+        "region": "国际",
+        "source_weight": 14
+      },
+      {
+        "title": "SpaceX to begin Starship orbital flights",
+        "published_at": "2026-08-04T22:51+00:00",
         "source": "SpaceNews",
-        "url": "https://spacenews.com/rocketdyne-reemerges-as-standalone-space-company/",
+        "url": "https://spacenews.com/spacex-to-begin-starship-orbital-flights/",
         "category": "卫星与商业航天",
         "region": "国际",
         "source_weight": 13
       },
       {
-        "title": "NASA, SpaceX studying how to prevent future upper stage lunar collisions",
-        "published_at": "2026-08-04T02:03+00:00",
+        "title": "Rocket Lab, STR win Space Force contracts for airborne-target tracking",
+        "published_at": "2026-08-04T22:47+00:00",
         "source": "SpaceNews",
-        "url": "https://spacenews.com/nasa-spacex-studying-how-to-prevent-future-upper-stage-lunar-collisions/",
+        "url": "https://spacenews.com/rocket-lab-str-win-space-force-contracts-for-airborne-target-tracking-technologies/",
         "category": "卫星与商业航天",
         "region": "国际",
         "source_weight": 13
       },
       {
-        "title": "Xona secures spectrum approval for satellite navigation network",
-        "published_at": "2026-08-03T15:36+00:00",
+        "title": "Telesat lands $1.63 billion Canadian defense contract",
+        "published_at": "2026-08-04T22:00+00:00",
         "source": "SpaceNews",
-        "url": "https://spacenews.com/xona-secures-spectrum-approval-for-250-satellite-navigation-network/",
+        "url": "https://spacenews.com/telesat-lands-1-63-billion-canadian-defense-contract/",
+        "category": "军工与国防科技",
+        "region": "国际",
+        "source_weight": 13
+      },
+      {
+        "title": "US Army wants a surface-to-air missile that can destroy small drones",
+        "published_at": "2026-08-04T19:29+00:00",
+        "source": "Defense News",
+        "url": "https://www.defensenews.com/industry/techwatch/2026/08/04/us-army-wants-a-surface-to-air-missile-that-can-destroy-small-drones/",
+        "category": "军工与国防科技",
+        "region": "国际",
+        "source_weight": 13
+      },
+      {
+        "title": "Military demand shapes market for satellite propulsion",
+        "published_at": "2026-08-04T15:00+00:00",
+        "source": "SpaceNews",
+        "url": "https://spacenews.com/military-demand-shapes-market-for-sat-propulsion/",
         "category": "卫星与商业航天",
+        "region": "国际",
+        "source_weight": 13
+      },
+      {
+        "title": "Ukraine’s Fire Point starts to integrate European tech into missile defense system",
+        "published_at": "2026-08-04T13:51+00:00",
+        "source": "Defense News",
+        "url": "https://www.defensenews.com/global/europe/2026/08/04/ukraines-fire-point-starts-to-integrate-european-tech-into-missile-defense-system/",
+        "category": "军工与国防科技",
+        "region": "国际",
+        "source_weight": 13
+      },
+      {
+        "title": "US used ‘virtually all’ long-range precision missiles during Iran war, sources say",
+        "published_at": "2026-08-04T13:08+00:00",
+        "source": "Defense News",
+        "url": "https://www.defensenews.com/industry/techwatch/2026/08/04/us-used-virtually-all-long-range-precision-missiles-during-iran-war-sources-say/",
+        "category": "军工与国防科技",
         "region": "国际",
         "source_weight": 13
       },
@@ -120,40 +158,13 @@
         "source_weight": 13
       },
       {
-        "title": "U.S. Air Force expands Blue Origin rocket cargo contract",
-        "published_at": "2026-08-02T12:03+00:00",
-        "source": "SpaceNews",
-        "url": "https://spacenews.com/u-s-air-force-expands-blue-origin-rocket-cargo-contract/",
-        "category": "卫星与商业航天",
+        "title": "The Download: US robot restrictions, and ICE’s DNA grab",
+        "published_at": "2026-08-04T12:14+00:00",
+        "source": "MIT Technology Review",
+        "url": "https://www.technologyreview.com/2026/08/04/1141098/the-download-robot-restrictions-ice-dna/",
+        "category": "机器人与具身智能",
         "region": "国际",
-        "source_weight": 13
-      },
-      {
-        "title": "Chinese military researchers tap US AI models to train defense systems",
-        "published_at": "2026-07-31T12:34+00:00",
-        "source": "Defense News",
-        "url": "https://www.defensenews.com/industry/techwatch/2026/07/31/chinese-military-researchers-tap-us-ai-models-to-train-defense-systems/",
-        "category": "军工与国防科技",
-        "region": "国际",
-        "source_weight": 13
-      },
-      {
-        "title": "Iran war depleted US Patriot missile stockpiles, creating readiness challenges, experts say",
-        "published_at": "2026-07-30T17:48+00:00",
-        "source": "Defense News",
-        "url": "https://www.defensenews.com/news/your-military/2026/07/30/iran-war-depleted-us-patriot-missile-stockpiles-creating-readiness-challenges-experts-say/",
-        "category": "军工与国防科技",
-        "region": "国际",
-        "source_weight": 13
-      },
-      {
-        "title": "Iran to get Chinese shoulder-launched missile systems in weeks, sources say",
-        "published_at": "2026-07-30T15:33+00:00",
-        "source": "Defense News",
-        "url": "https://www.defensenews.com/industry/techwatch/2026/07/30/iran-to-get-chinese-shoulder-launched-missile-systems-in-weeks-sources-say/",
-        "category": "军工与国防科技",
-        "region": "国际",
-        "source_weight": 13
+        "source_weight": 12
       },
       {
         "title": "Trump’s AI protectionism has come for robotics",
@@ -174,13 +185,13 @@
         "source_weight": 12
       },
       {
-        "title": "The Download: a chip talent battle, and deflating AI hype",
-        "published_at": "2026-07-29T12:10+00:00",
-        "source": "MIT Technology Review",
-        "url": "https://www.technologyreview.com/2026/07/29/1140884/the-download-chip-talent-battle-deflating-ai-hype/",
+        "title": "Is AI making us dumber? Maybe not. But our skills are at risk",
+        "published_at": "2026-08-04T15:00+00:00",
+        "source": "Science News",
+        "url": "https://www.sciencenews.org/article/ai-making-us-dumber-learning-skills-risk",
         "category": "科技与芯片",
         "region": "国际",
-        "source_weight": 12
+        "source_weight": 11
       },
       {
         "title": "The SpaceX Falcon Lunar Crash Is a Warning for Moon Bases",
@@ -190,6 +201,24 @@
         "category": "卫星与商业航天",
         "region": "国际",
         "source_weight": 10
+      },
+      {
+        "title": "SoftBank jumps 10% as Asia tech stocks track Wall Street AI rally",
+        "published_at": "2026-08-05T01:27+00:00",
+        "source": "CNBC Technology",
+        "url": "https://www.cnbc.com/2026/08/05/softbank-samsung-sk-hynix-samsung-tech-rally.html",
+        "category": "科技与芯片",
+        "region": "国际",
+        "source_weight": 9
+      },
+      {
+        "title": "OpenAI says Apple's trade secrets lawsuit is \"aggressive and oddly personal\"",
+        "published_at": "2026-08-04T13:38+00:00",
+        "source": "Ars Technica",
+        "url": "https://arstechnica.com/tech-policy/2026/08/openai-says-apples-trade-secrets-lawsuit-is-aggressive-and-oddly-personal/",
+        "category": "科技与芯片",
+        "region": "国际",
+        "source_weight": 9
       },
       {
         "title": "Anthropic, OpenAI among firms facing new scrutiny under EU AI Act enforcement powers",
@@ -210,24 +239,6 @@
         "source_weight": 9
       },
       {
-        "title": "Big Tech's Anthropic and OpenAI stakes are distorting the corporate earnings picture",
-        "published_at": "2026-08-03T22:48+00:00",
-        "source": "CNBC Technology",
-        "url": "https://www.cnbc.com/2026/08/03/big-techs-anthropic-and-openai-stakes-distort-corporate-earnings.html",
-        "category": "科技与芯片",
-        "region": "国际",
-        "source_weight": 9
-      },
-      {
-        "title": "Jim Cramer says the market has warmed up to Big Tech's AI spending. Here's what flipped the switch",
-        "published_at": "2026-08-03T22:20+00:00",
-        "source": "CNBC Technology",
-        "url": "https://www.cnbc.com/2026/08/03/jim-cramer-market-warmed-up-big-tech-ai-spending.html",
-        "category": "科技与芯片",
-        "region": "国际",
-        "source_weight": 9
-      },
-      {
         "title": "US company’s AI lets Ukraine’s cheap kamikaze drones track targets on their own",
         "published_at": "2026-08-03T22:11+00:00",
         "source": "Ars Technica",
@@ -237,58 +248,40 @@
         "source_weight": 9
       },
       {
-        "title": "Unitree Robotics moves closer to Shanghai STAR Market IPO",
-        "published_at": "2026-07-31T07:14+00:00",
-        "source": "TechNode",
-        "url": "https://technode.com/2026/07/31/unitree-robotics-moves-closer-to-shanghai-star-market-ipo/",
-        "category": "机器人与具身智能",
-        "region": "国际",
-        "source_weight": 8
-      },
-      {
-        "title": "China’s top court finds patent lawsuits against Unitree Robotics malicious",
-        "published_at": "2026-07-30T09:54+00:00",
-        "source": "TechNode",
-        "url": "https://technode.com/2026/07/30/chinas-top-court-finds-patent-lawsuits-against-unitree-robotics-malicious/",
-        "category": "机器人与具身智能",
-        "region": "国际",
-        "source_weight": 8
-      },
-      {
-        "title": "China’s Robotaxi enters London for first time as Baidu’s Apollo Go begins UK road tests with Uber and Lyft",
-        "published_at": "2026-07-29T02:16+00:00",
-        "source": "TechNode",
-        "url": "https://technode.com/2026/07/29/chinas-robotaxi-enters-london-for-first-time-as-baidus-apollo-go-begins-uk-road-tests-with-uber-and-lyft/",
-        "category": "机器人与具身智能",
-        "region": "国际",
-        "source_weight": 8
-      },
-      {
-        "title": "美国一高中花6万美元买女机器人当老师 家长扒出真相尴尬非常",
-        "published_at": "2026-07-30T00:40+00:00",
-        "source": "快科技-科学",
-        "url": "https://news.mydrivers.com/1/1140/1140022.htm",
+        "title": "特斯拉财报电话会议数据：马斯克近半发言聚焦 AI 与机器人业务",
+        "published_at": "2026-08-04T23:20+00:00",
+        "source": "IT之家",
+        "url": "https://www.ithome.com/0/985/744.htm",
         "category": "机器人与具身智能",
         "region": "国内",
-        "source_weight": 7
+        "source_weight": 8
       },
       {
-        "title": "宿舍手搓双足机器人！22岁哈工大本科生拿下5亿元融资",
-        "published_at": "2026-08-04T11:17+00:00",
-        "source": "快科技-硬件",
-        "url": "https://news.mydrivers.com/1/1141/1141201.htm",
+        "title": "Lucid’s turnaround plan hinges on $1.4B in cash savings, robotaxis",
+        "published_at": "2026-08-04T22:24+00:00",
+        "source": "TechCrunch",
+        "url": "https://techcrunch.com/2026/08/04/lucids-turnaround-plan-hinges-on-1-4b-in-cash-savings-robotaxis/",
         "category": "机器人与具身智能",
-        "region": "国内",
-        "source_weight": 6
+        "region": "国际",
+        "source_weight": 8
       },
       {
-        "title": "China launches secretive TJS-27 pair, orbits next-gen Tianlian relay sat",
-        "published_at": "2026-08-01T13:38+00:00",
-        "source": "SpaceNews",
-        "url": "https://spacenews.com/china-launches-secretive-tjs-27-pair-orbits-next-gen-tianlian-relay-sat/",
-        "category": "卫星与商业航天",
+        "title": "Waymo opens up robotaxi service in Dallas to everyone",
+        "published_at": "2026-08-04T17:31+00:00",
+        "source": "TechCrunch",
+        "url": "https://techcrunch.com/2026/08/04/waymo-opens-up-robotaxi-service-in-dallas-to-everyone/",
+        "category": "机器人与具身智能",
         "region": "国际",
-        "source_weight": 13
+        "source_weight": 8
+      },
+      {
+        "title": "Elon Musk spends half his time talking robots and AI on Tesla earnings calls",
+        "published_at": "2026-08-04T15:20+00:00",
+        "source": "TechCrunch",
+        "url": "https://techcrunch.com/2026/08/04/elon-musk-spends-half-his-time-talking-robots-and-ai-on-tesla-earnings-calls/",
+        "category": "机器人与具身智能",
+        "region": "国际",
+        "source_weight": 8
       }
     ],
     "errors": [
@@ -297,5 +290,5 @@
     ],
     "policy": "仅展示含标题、发布时间、来源和原文链接的新闻；不据此自动推断股价因果。"
   },
-  "digest": "【A股科技主题决策雷达】\n个股建议：待确认（基于近3个月K线，保守模式）\n执行参考：买入区间 仅在MA20附近企稳时考虑低吸，不追涨｜仓位 控制在3成以内\n风控纪律：止损 有效跌破MA20且两个交易日未收回｜失效条件 跌破止损位或量价结构转空时，持有逻辑失效\n大盘摘要：🎯 大盘复盘 2026-08-04 大盘复盘 今天是成长股主导的普涨行情，创业板指放量大涨5.64%，上证指数仅微涨0.33%，大小盘强烈分化。核心矛盾在于“指数温和、个股火热”的结构能否延续；明日优先观察科技成长方向能否承接量能、权重股是否止跌。 一、盘面总览 📊 今日市场整体呈现强势特征，但内部结构分化极为显著。指数层面，上证微涨，创业板、科创50大涨…\n600118 双源校验：价格：61.84；涨跌幅：3.46；动态PE：-428.23（亏损状态）；PB：11.59\n\n可核验科技新闻：\n- 卫星与商业航天：NASA Delivers Navigation System for Commercial Lunar Relay（NASA News，2026-08-03T14:20+00:00）\n  https://www.nasa.gov/technology/space-comms/nasa-delivers-navigation-system-for-commercial-lunar-relay/\n- 军工与国防科技：Poland readies Ukraine ‘Coalition of Willing’ drills, eyes NATO support for border defense（Defense News，2026-08-03T15:05+00:00）\n  https://www.defensenews.com/global/europe/2026/08/03/poland-readies-ukraine-coalition-of-willing-drills-eyes-nato-support-for-border-defense/\n- 机器人与具身智能：Trump’s AI protectionism has come for robotics（MIT Technology Review，2026-08-03T18:43+00:00）\n  https://www.technologyreview.com/2026/08/03/1141056/trumps-ai-protectionism-has-come-for-robotics/\n- 科技与芯片：Here’s why AI agents lie and cheat to reach their goals（MIT Technology Review，2026-08-03T08:30+00:00）\n  https://www.technologyreview.com/2026/08/03/1141009/heres-why-ai-agents-lie-and-cheat-to-reach-their-goals/\n\n网页版完整报告：https://LPT111.github.io/daily_stock_analysis/\n仅供研究参考，不构成投资建议。"
+  "digest": "【A股科技主题决策雷达】\n个股建议：待确认（基于近3个月K线，保守模式）\n执行参考：买入区间 仅在MA20附近企稳时考虑低吸，不追涨｜仓位 控制在3成以内\n风控纪律：止损 有效跌破MA20且两个交易日未收回｜失效条件 跌破止损位或量价结构转空时，持有逻辑失效\n大盘摘要：🎯 大盘复盘 2026-08-05 大盘复盘 📊 指数分化加剧，权重护盘而成长杀跌，两市成交不足300亿元的极端地量显示多空双方均无主动发力意愿——明日优先观察深成指能否止跌以及成交能否显著放大。 一、盘面总览 今日市场呈明显分化格局：上证指数微跌0.19%，上证50逆势收红，而深证成指跌1.74%、创业板指重挫3.35%，成长方向遭到集中抛压。全市场下跌家…\n600118 双源校验：价格：待核实；涨跌幅：待核实；动态PE：待核实；PB：待核实\n\n可核验科技新闻：\n- 卫星与商业航天：NASA Will Attempt to Observe Rocket Part’s Lunar Impact（NASA News，2026-08-04T20:00+00:00）\n  https://www.nasa.gov/humans-in-space/commercial-space/nasa-will-attempt-to-observe-rocket-parts-lunar-impact/\n- 军工与国防科技：Telesat lands $1.63 billion Canadian defense contract（SpaceNews，2026-08-04T22:00+00:00）\n  https://spacenews.com/telesat-lands-1-63-billion-canadian-defense-contract/\n- 机器人与具身智能：The Download: US robot restrictions, and ICE’s DNA grab（MIT Technology Review，2026-08-04T12:14+00:00）\n  https://www.technologyreview.com/2026/08/04/1141098/the-download-robot-restrictions-ice-dna/\n- 科技与芯片：Here’s why AI agents lie and cheat to reach their goals（MIT Technology Review，2026-08-03T08:30+00:00）\n  https://www.technologyreview.com/2026/08/03/1141009/heres-why-ai-agents-lie-and-cheat-to-reach-their-goals/\n\n网页版完整报告：https://LPT111.github.io/daily_stock_analysis/\n仅供研究参考，不构成投资建议。"
 }
