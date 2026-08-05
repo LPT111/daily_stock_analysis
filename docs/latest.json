@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-08-05T01:36:40+00:00",
+  "generated_at": "2026-08-05T09:49:06+00:00",
   "dashboard_url": "https://LPT111.github.io/daily_stock_analysis/",
-  "stock_report": null,
+  "stock_report": "report_20260805.md",
   "market_report": "market_review_20260805.md",
   "validations": [
     {
@@ -9,60 +9,67 @@
       "policy": "仅 status=confirmed 的字段可用于结论；待核实字段必须忽略。",
       "metrics": {
         "price": {
-          "status": "待核实",
-          "value": null,
-          "display": "待核实",
-          "interpretation": "两个数据源未同时返回一致结果，不得用于决策。",
+          "status": "confirmed",
+          "value": 63.13,
+          "display": "63.13",
+          "interpretation": "腾讯财经与东方财富交叉核验一致。",
           "sources": {
-            "腾讯财经": 62.44,
-            "东方财富": null
+            "腾讯财经": 63.13,
+            "东方财富": 63.13
           }
         },
         "change_pct": {
-          "status": "待核实",
-          "value": null,
-          "display": "待核实",
-          "interpretation": "两个数据源未同时返回一致结果，不得用于决策。",
+          "status": "confirmed",
+          "value": 2.09,
+          "display": "2.09",
+          "interpretation": "腾讯财经与东方财富交叉核验一致。",
           "sources": {
-            "腾讯财经": 0.97,
-            "东方财富": null
+            "腾讯财经": 2.09,
+            "东方财富": 2.09
           }
         },
         "dynamic_pe": {
-          "status": "待核实",
-          "value": null,
-          "display": "待核实",
-          "interpretation": "两个数据源未同时返回一致结果，不得用于决策。",
+          "status": "confirmed",
+          "value": -437.16,
+          "display": "-437.16（亏损状态）",
+          "interpretation": "动态市盈率为负，表示当前口径下盈利为负，不能按正 PE 倍数进行估值判断。",
           "sources": {
-            "腾讯财经": -432.39,
-            "东方财富": null
+            "腾讯财经": -437.16,
+            "东方财富": -437.16
           }
         },
         "pb": {
-          "status": "待核实",
-          "value": null,
-          "display": "待核实",
-          "interpretation": "两个数据源未同时返回一致结果，不得用于决策。",
+          "status": "confirmed",
+          "value": 11.83,
+          "display": "11.83",
+          "interpretation": "腾讯财经与东方财富交叉核验一致。",
           "sources": {
-            "腾讯财经": 11.7,
-            "东方财富": null
+            "腾讯财经": 11.83,
+            "东方财富": 11.83
           }
         }
       },
       "raw_sources": [
         {
           "source": "腾讯财经",
-          "price": 62.44,
+          "price": 63.13,
           "previous_close": 61.84,
-          "change_pct": 0.97,
-          "dynamic_pe": -432.39,
-          "pb": 11.7,
+          "change_pct": 2.09,
+          "dynamic_pe": -437.16,
+          "pb": 11.83,
           "source_url": "https://gu.qq.com/sh600118"
+        },
+        {
+          "source": "东方财富",
+          "price": 63.13,
+          "previous_close": 61.84,
+          "change_pct": 2.09,
+          "dynamic_pe": -437.16,
+          "pb": 11.83,
+          "source_url": "https://quote.eastmoney.com/sh600118.html"
         }
       ],
-      "errors": [
-        "东方财富: 502 Server Error: Bad Gateway for url: https://push2.eastmoney.com/api/qt/stock/get?secid=1.600118&fields=f43%2Cf57%2Cf58%2Cf60%2Cf162%2Cf167%2Cf170"
-      ]
+      "errors": []
     }
   ],
   "sector_news": {
@@ -84,6 +91,15 @@
         "category": "卫星与商业航天",
         "region": "国际",
         "source_weight": 14
+      },
+      {
+        "title": "Think tank warns Europe’s orbital compute gap is widening",
+        "published_at": "2026-08-05T08:00+00:00",
+        "source": "SpaceNews",
+        "url": "https://spacenews.com/think-tank-warns-europes-orbital-compute-gap-is-widening/",
+        "category": "卫星与商业航天",
+        "region": "国际",
+        "source_weight": 13
       },
       {
         "title": "SpaceX to begin Starship orbital flights",
@@ -118,15 +134,6 @@
         "source": "Defense News",
         "url": "https://www.defensenews.com/industry/techwatch/2026/08/04/us-army-wants-a-surface-to-air-missile-that-can-destroy-small-drones/",
         "category": "军工与国防科技",
-        "region": "国际",
-        "source_weight": 13
-      },
-      {
-        "title": "Military demand shapes market for satellite propulsion",
-        "published_at": "2026-08-04T15:00+00:00",
-        "source": "SpaceNews",
-        "url": "https://spacenews.com/military-demand-shapes-market-for-sat-propulsion/",
-        "category": "卫星与商业航天",
         "region": "国际",
         "source_weight": 13
       },
@@ -203,10 +210,28 @@
         "source_weight": 10
       },
       {
-        "title": "SoftBank jumps 10% as Asia tech stocks track Wall Street AI rally",
-        "published_at": "2026-08-05T01:27+00:00",
+        "title": "SpaceX dives 10% after AI spending surge rattles investors",
+        "published_at": "2026-08-05T09:04+00:00",
+        "source": "CNBC Technology",
+        "url": "https://www.cnbc.com/2026/08/05/spacex-spcx-stock-today-earnings.html",
+        "category": "科技与芯片",
+        "region": "国际",
+        "source_weight": 9
+      },
+      {
+        "title": "SoftBank jumps 13% as Asia tech stocks track Wall Street AI rally",
+        "published_at": "2026-08-05T08:05+00:00",
         "source": "CNBC Technology",
         "url": "https://www.cnbc.com/2026/08/05/softbank-samsung-sk-hynix-samsung-tech-rally.html",
+        "category": "科技与芯片",
+        "region": "国际",
+        "source_weight": 9
+      },
+      {
+        "title": "SpaceX's AI spending unnerves Wall Street despite promises of quick payoff",
+        "published_at": "2026-08-05T01:43+00:00",
+        "source": "CNBC Technology",
+        "url": "https://www.cnbc.com/2026/08/04/spacex-ai-spending-unnerves-wall-street-despite-promising-quick-payoff.html",
         "category": "科技与芯片",
         "region": "国际",
         "source_weight": 9
@@ -221,24 +246,6 @@
         "source_weight": 9
       },
       {
-        "title": "Anthropic, OpenAI among firms facing new scrutiny under EU AI Act enforcement powers",
-        "published_at": "2026-08-04T08:57+00:00",
-        "source": "CNBC Technology",
-        "url": "https://www.cnbc.com/2026/08/03/eu-ai-act-enforcement-powers.html",
-        "category": "科技与芯片",
-        "region": "国际",
-        "source_weight": 9
-      },
-      {
-        "title": "AI is helping Grab ship products more than 30% faster, CFO says, as company raises forecasts",
-        "published_at": "2026-08-04T05:47+00:00",
-        "source": "CNBC Technology",
-        "url": "https://www.cnbc.com/2026/08/04/grab-earnings-ai-forecast-cfo-.html",
-        "category": "科技与芯片",
-        "region": "国际",
-        "source_weight": 9
-      },
-      {
         "title": "US company’s AI lets Ukraine’s cheap kamikaze drones track targets on their own",
         "published_at": "2026-08-03T22:11+00:00",
         "source": "Ars Technica",
@@ -248,10 +255,19 @@
         "source_weight": 9
       },
       {
-        "title": "特斯拉财报电话会议数据：马斯克近半发言聚焦 AI 与机器人业务",
-        "published_at": "2026-08-04T23:20+00:00",
+        "title": "Xiaomi open-sources embodied-AI foundation model Xiaomi-Robotics-1",
+        "published_at": "2026-08-05T08:30+00:00",
+        "source": "TechNode",
+        "url": "https://technode.com/2026/08/05/xiaomi-open-sources-embodied-ai-foundation-model-xiaomi-robotics-1/",
+        "category": "机器人与具身智能",
+        "region": "国际",
+        "source_weight": 8
+      },
+      {
+        "title": "小米具身基座模型 Xiaomi-Robotics-1 正式开源",
+        "published_at": "2026-08-05T07:40+00:00",
         "source": "IT之家",
-        "url": "https://www.ithome.com/0/985/744.htm",
+        "url": "https://www.ithome.com/0/985/985.htm",
         "category": "机器人与具身智能",
         "region": "国内",
         "source_weight": 8
@@ -273,22 +289,12 @@
         "category": "机器人与具身智能",
         "region": "国际",
         "source_weight": 8
-      },
-      {
-        "title": "Elon Musk spends half his time talking robots and AI on Tesla earnings calls",
-        "published_at": "2026-08-04T15:20+00:00",
-        "source": "TechCrunch",
-        "url": "https://techcrunch.com/2026/08/04/elon-musk-spends-half-his-time-talking-robots-and-ai-on-tesla-earnings-calls/",
-        "category": "机器人与具身智能",
-        "region": "国际",
-        "source_weight": 8
       }
     ],
     "errors": [
-      "国内科技新闻: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=%28%E5%8D%AB%E6%98%9F+OR+%E8%88%AA%E5%A4%A9+OR+%E5%8C%97%E6%96%97+OR+%E6%9C%BA%E5%99%A8%E4%BA%BA+OR+%E5%85%B7%E8%BA%AB%E6%99%BA%E8%83%BD+OR+%E8%8A%AF%E7%89%87+OR+%E5%8D%8A%E5%AF%BC%E4%BD%93+OR+%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD+OR+%E5%86%9B%E5%B7%A5+OR+%E5%9B%BD%E9%98%B2%E7%A7%91%E6%8A%80%29+sourcelang%3AChinese&mode=artlist&format=json&maxrecords=24&sort=datedesc&timespan=3d",
-      "国际科技新闻: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=%28satellite+OR+spaceflight+OR+robotics+OR+humanoid+OR+semiconductor+OR+%22artificial+intelligence%22+OR+%22defense+technology%22%29+sourcelang%3AEnglish&mode=artlist&format=json&maxrecords=24&sort=datedesc&timespan=3d"
+      "36氪: not well-formed (invalid token): line 9, column 542"
     ],
     "policy": "仅展示含标题、发布时间、来源和原文链接的新闻；不据此自动推断股价因果。"
   },
-  "digest": "【A股科技主题决策雷达】\n个股建议：待确认（基于近3个月K线，保守模式）\n执行参考：买入区间 仅在MA20附近企稳时考虑低吸，不追涨｜仓位 控制在3成以内\n风控纪律：止损 有效跌破MA20且两个交易日未收回｜失效条件 跌破止损位或量价结构转空时，持有逻辑失效\n大盘摘要：🎯 大盘复盘 2026-08-05 大盘复盘 📊 指数分化加剧，权重护盘而成长杀跌，两市成交不足300亿元的极端地量显示多空双方均无主动发力意愿——明日优先观察深成指能否止跌以及成交能否显著放大。 一、盘面总览 今日市场呈明显分化格局：上证指数微跌0.19%，上证50逆势收红，而深证成指跌1.74%、创业板指重挫3.35%，成长方向遭到集中抛压。全市场下跌家…\n600118 双源校验：价格：待核实；涨跌幅：待核实；动态PE：待核实；PB：待核实\n\n可核验科技新闻：\n- 卫星与商业航天：NASA Will Attempt to Observe Rocket Part’s Lunar Impact（NASA News，2026-08-04T20:00+00:00）\n  https://www.nasa.gov/humans-in-space/commercial-space/nasa-will-attempt-to-observe-rocket-parts-lunar-impact/\n- 军工与国防科技：Telesat lands $1.63 billion Canadian defense contract（SpaceNews，2026-08-04T22:00+00:00）\n  https://spacenews.com/telesat-lands-1-63-billion-canadian-defense-contract/\n- 机器人与具身智能：The Download: US robot restrictions, and ICE’s DNA grab（MIT Technology Review，2026-08-04T12:14+00:00）\n  https://www.technologyreview.com/2026/08/04/1141098/the-download-robot-restrictions-ice-dna/\n- 科技与芯片：Here’s why AI agents lie and cheat to reach their goals（MIT Technology Review，2026-08-03T08:30+00:00）\n  https://www.technologyreview.com/2026/08/03/1141009/heres-why-ai-agents-lie-and-cheat-to-reach-their-goals/\n\n网页版完整报告：https://LPT111.github.io/daily_stock_analysis/\n仅供研究参考，不构成投资建议。"
+  "digest": "【A股科技主题决策雷达】\n个股建议：减仓（基于近3个月K线，保守模式）\n执行参考：买入区间 暂不设置（乖离率6.29% 5%，严禁追高；待回调至59.40元MA5附近缩量企稳后再评估）｜仓位 建议仓位：空仓者0成，等待回调；持仓者维持现有仓位，不加仓\n风控纪律：止损 58.00元（跌破短期均线密集区，趋势结构走坏）｜失效条件 未来3个交易日重新站稳66.10且量价修复，则减仓判断失效并重新评估\n大盘摘要：🎯 大盘复盘 2026-08-05 大盘复盘 📝 今日市场为放量普涨格局，科创50以近4.8%的涨幅领跑全场，周期资源与科技成长双轮驱动；核心矛盾在于消息面真空背景下，行情更多由资金行为主导而非外部催化；明日优先观察成交额能否维持高位、科创50与周期板块的持续性。 一、盘面总览 📋 市场情绪偏强，属于普涨日。全市场超过3700家个股上涨，涨停103家而跌停仅…\n600118 双源校验：价格：63.13；涨跌幅：2.09；动态PE：-437.16（亏损状态）；PB：11.83\n\n可核验科技新闻：\n- 卫星与商业航天：NASA Will Attempt to Observe Rocket Part’s Lunar Impact（NASA News，2026-08-04T20:00+00:00）\n  https://www.nasa.gov/humans-in-space/commercial-space/nasa-will-attempt-to-observe-rocket-parts-lunar-impact/\n- 军工与国防科技：Telesat lands $1.63 billion Canadian defense contract（SpaceNews，2026-08-04T22:00+00:00）\n  https://spacenews.com/telesat-lands-1-63-billion-canadian-defense-contract/\n- 机器人与具身智能：The Download: US robot restrictions, and ICE’s DNA grab（MIT Technology Review，2026-08-04T12:14+00:00）\n  https://www.technologyreview.com/2026/08/04/1141098/the-download-robot-restrictions-ice-dna/\n- 科技与芯片：Here’s why AI agents lie and cheat to reach their goals（MIT Technology Review，2026-08-03T08:30+00:00）\n  https://www.technologyreview.com/2026/08/03/1141009/heres-why-ai-agents-lie-and-cheat-to-reach-their-goals/\n\n网页版完整报告：https://LPT111.github.io/daily_stock_analysis/\n仅供研究参考，不构成投资建议。"
 }
