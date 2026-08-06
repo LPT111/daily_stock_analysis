@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-08-06T01:32:40+00:00",
+  "generated_at": "2026-08-06T09:53:34+00:00",
   "dashboard_url": "https://LPT111.github.io/daily_stock_analysis/",
-  "stock_report": null,
+  "stock_report": "report_20260806.md",
   "market_report": "market_review_20260806.md",
   "validations": [
     {
@@ -10,62 +10,62 @@
       "metrics": {
         "price": {
           "status": "confirmed",
-          "value": 63.375,
-          "display": "63.38",
+          "value": 65.33,
+          "display": "65.33",
           "interpretation": "腾讯财经与东方财富交叉核验一致。",
           "sources": {
-            "腾讯财经": 63.35,
-            "东方财富": 63.4
+            "腾讯财经": 65.33,
+            "东方财富": 65.33
           }
         },
         "change_pct": {
           "status": "confirmed",
-          "value": 0.39,
-          "display": "0.39",
+          "value": 3.48,
+          "display": "3.48",
           "interpretation": "腾讯财经与东方财富交叉核验一致。",
           "sources": {
-            "腾讯财经": 0.35,
-            "东方财富": 0.43
+            "腾讯财经": 3.48,
+            "东方财富": 3.48
           }
         },
         "dynamic_pe": {
           "status": "confirmed",
-          "value": -438.86,
-          "display": "-438.86（亏损状态）",
+          "value": -452.4,
+          "display": "-452.40（亏损状态）",
           "interpretation": "动态市盈率为负，表示当前口径下盈利为负，不能按正 PE 倍数进行估值判断。",
           "sources": {
-            "腾讯财经": -438.69,
-            "东方财富": -439.03
+            "腾讯财经": -452.4,
+            "东方财富": -452.4
           }
         },
         "pb": {
           "status": "confirmed",
-          "value": 11.875,
-          "display": "11.88",
+          "value": 12.24,
+          "display": "12.24",
           "interpretation": "腾讯财经与东方财富交叉核验一致。",
           "sources": {
-            "腾讯财经": 11.87,
-            "东方财富": 11.88
+            "腾讯财经": 12.24,
+            "东方财富": 12.24
           }
         }
       },
       "raw_sources": [
         {
           "source": "腾讯财经",
-          "price": 63.35,
+          "price": 65.33,
           "previous_close": 63.13,
-          "change_pct": 0.35,
-          "dynamic_pe": -438.69,
-          "pb": 11.87,
+          "change_pct": 3.48,
+          "dynamic_pe": -452.4,
+          "pb": 12.24,
           "source_url": "https://gu.qq.com/sh600118"
         },
         {
           "source": "东方财富",
-          "price": 63.4,
+          "price": 65.33,
           "previous_close": 63.13,
-          "change_pct": 0.43,
-          "dynamic_pe": -439.03,
-          "pb": 11.88,
+          "change_pct": 3.48,
+          "dynamic_pe": -452.4,
+          "pb": 12.24,
           "source_url": "https://quote.eastmoney.com/sh600118.html"
         }
       ],
@@ -201,49 +201,49 @@
         "source_weight": 10
       },
       {
-        "title": "SpaceX ramps up Tesla Megapack purchases in Q2 to power its AI data centers",
-        "published_at": "2026-08-05T21:32+00:00",
+        "title": "Khanna to introduce 'Data Center Bill of Rights' as fight over AI power plants heats up",
+        "published_at": "2026-08-06T09:30+00:00",
         "source": "CNBC Technology",
-        "url": "https://www.cnbc.com/2026/08/05/spacex-tesla-megapack-ai-data-centers.html",
+        "url": "https://www.cnbc.com/2026/08/06/khanna-to-introduce-data-center-bill-of-rights-in-ai-power-plants-fight.html",
         "category": "科技与芯片",
         "region": "国际",
         "source_weight": 9
       },
       {
-        "title": "Meta debuts first AI coding agent to take on Anthropic and OpenAI",
-        "published_at": "2026-08-05T21:03+00:00",
+        "title": "SoftBank gets $8.2 billion boost from Intel as OpenAI takes a backseat",
+        "published_at": "2026-08-06T09:11+00:00",
         "source": "CNBC Technology",
-        "url": "https://www.cnbc.com/2026/08/05/meta-debuts-muse-code-to-take-on-anthropic-and-openai-.html",
+        "url": "https://www.cnbc.com/2026/08/06/softbank-q1-earnings-intel-bytedance-stakes.html",
         "category": "科技与芯片",
         "region": "国际",
         "source_weight": 9
       },
       {
-        "title": "Anthropic’s AI used fake identities, malware in rogue attack on GitHub project",
-        "published_at": "2026-08-05T20:47+00:00",
-        "source": "Ars Technica",
-        "url": "https://arstechnica.com/security/2026/08/anthropics-ai-used-fake-identities-malware-in-rogue-attack-on-github-project/",
+        "title": "Google is expanding its AI empire — and losing the people who built it",
+        "published_at": "2026-08-06T06:06+00:00",
+        "source": "CNBC Technology",
+        "url": "https://www.cnbc.com/2026/08/05/google-is-expanding-its-ai-empire-and-losing-the-people-who-built-it.html",
         "category": "科技与芯片",
         "region": "国际",
         "source_weight": 9
       },
       {
-        "title": "Lisa Su brushes off Musk's Nvidia commitment as AMD stock sinks after earnings",
-        "published_at": "2026-08-05T20:02+00:00",
+        "title": "Asian tech stocks drop with SK Hynix plunging 10% after Wall Street AI names fall",
+        "published_at": "2026-08-06T05:27+00:00",
         "source": "CNBC Technology",
-        "url": "https://www.cnbc.com/2026/08/05/amd-stock-today-earnings-q2.html",
+        "url": "https://www.cnbc.com/2026/08/06/asia-tech-selloff-wall-street-samsung-sk-hynix.html",
         "category": "科技与芯片",
         "region": "国际",
         "source_weight": 9
       },
       {
-        "title": "Amazon's Zoox to launch paid robotaxi service in Las Vegas on Aug. 10",
-        "published_at": "2026-08-05T16:45+00:00",
-        "source": "CNBC Technology",
-        "url": "https://www.cnbc.com/2026/08/05/amazon-zoox-paid-robotaxi-rides-las-vegas.html",
+        "title": "4699 → 2399 元：24800Pa 吸力 + 活水洗地，科沃斯 T80S 上下水扫拖机器人再降价",
+        "published_at": "2026-08-06T08:05+00:00",
+        "source": "IT之家",
+        "url": "https://www.ithome.com/0/986/560.htm",
         "category": "机器人与具身智能",
-        "region": "国际",
-        "source_weight": 9
+        "region": "国内",
+        "source_weight": 8
       },
       {
         "title": "Travis Kalanick’s robotics startup Atoms taps former Uber finance chief as CFO",
@@ -293,9 +293,10 @@
     ],
     "errors": [
       "36氪: not well-formed (invalid token): line 9, column 542",
-      "国内科技新闻: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=%28%E5%8D%AB%E6%98%9F+OR+%E8%88%AA%E5%A4%A9+OR+%E5%8C%97%E6%96%97+OR+%E6%9C%BA%E5%99%A8%E4%BA%BA+OR+%E5%85%B7%E8%BA%AB%E6%99%BA%E8%83%BD+OR+%E8%8A%AF%E7%89%87+OR+%E5%8D%8A%E5%AF%BC%E4%BD%93+OR+%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD+OR+%E5%86%9B%E5%B7%A5+OR+%E5%9B%BD%E9%98%B2%E7%A7%91%E6%8A%80%29+sourcelang%3AChinese&mode=artlist&format=json&maxrecords=24&sort=datedesc&timespan=3d"
+      "国内科技新闻: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=%28%E5%8D%AB%E6%98%9F+OR+%E8%88%AA%E5%A4%A9+OR+%E5%8C%97%E6%96%97+OR+%E6%9C%BA%E5%99%A8%E4%BA%BA+OR+%E5%85%B7%E8%BA%AB%E6%99%BA%E8%83%BD+OR+%E8%8A%AF%E7%89%87+OR+%E5%8D%8A%E5%AF%BC%E4%BD%93+OR+%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD+OR+%E5%86%9B%E5%B7%A5+OR+%E5%9B%BD%E9%98%B2%E7%A7%91%E6%8A%80%29+sourcelang%3AChinese&mode=artlist&format=json&maxrecords=24&sort=datedesc&timespan=3d",
+      "国际科技新闻: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=%28satellite+OR+spaceflight+OR+robotics+OR+humanoid+OR+semiconductor+OR+%22artificial+intelligence%22+OR+%22defense+technology%22%29+sourcelang%3AEnglish&mode=artlist&format=json&maxrecords=24&sort=datedesc&timespan=3d"
     ],
     "policy": "仅展示含标题、发布时间、来源和原文链接的新闻；不据此自动推断股价因果。"
   },
-  "digest": "【A股科技主题决策雷达】\n个股建议：待确认（基于近3个月K线，保守模式）\n执行参考：买入区间 仅在MA20附近企稳时考虑低吸，不追涨｜仓位 控制在3成以内\n风控纪律：止损 有效跌破MA20且两个交易日未收回｜失效条件 跌破止损位或量价结构转空时，持有逻辑失效\n大盘摘要：🎯 大盘复盘 2026-08-06 大盘复盘 📋 今日市场接近平盘报收，但资源与科技板块呈明显分化；由于成交额、涨跌家数等关键数据缺失，当前只能判定为“数据真空下的震荡格局”。明日优先观察量能是否恢复、资源品行情能否延续，以及科技板块是否进一步扩散杀跌。 一、盘面总览 上证指数收于3878.33点，涨跌幅约0.00%，属于平盘状态；科创50、上证50、沪深3…\n600118 双源校验：价格：63.38；涨跌幅：0.39；动态PE：-438.86（亏损状态）；PB：11.88\n\n可核验科技新闻：\n- 卫星与商业航天：NASA Will Attempt to Observe Rocket Part’s Lunar Impact（NASA News，2026-08-04T20:00+00:00）\n  https://www.nasa.gov/humans-in-space/commercial-space/nasa-will-attempt-to-observe-rocket-parts-lunar-impact/\n- 军工与国防科技：Firestorm Labs builds drones aboard USS Essex without shore resupply（Defense News，2026-08-05T23:14+00:00）\n  https://www.defensenews.com/industry/techwatch/2026/08/05/firestorm-labs-builds-drones-aboard-uss-essex-without-shore-resupply/\n- 机器人与具身智能：The Download: US robot restrictions and ICE’s DNA grab（MIT Technology Review，2026-08-04T12:14+00:00）\n  https://www.technologyreview.com/2026/08/04/1141098/the-download-robot-restrictions-ice-dna/\n- 科技与芯片：Here’s why AI agents lie and cheat to reach their goals（MIT Technology Review，2026-08-03T08:30+00:00）\n  https://www.technologyreview.com/2026/08/03/1141009/heres-why-ai-agents-lie-and-cheat-to-reach-their-goals/\n\n网页版完整报告：https://LPT111.github.io/daily_stock_analysis/\n仅供研究参考，不构成投资建议。"
+  "digest": "【A股科技主题决策雷达】\n个股建议：减仓（基于近3个月K线，保守模式）\n执行参考：买入区间 暂不设置（乖离率6.22% 5%，严禁追高；需等待回踩MA5附近61.50元且缩量企稳后再评估）｜仓位 建议仓位：0-2成（空仓者暂不建仓；若回踩企稳可小仓试错）\n风控纪律：止损 持仓者放量跌破MA20（65.28元）减仓；新建仓者以买入价下方5%为止损参考｜失效条件 未来3个交易日重新站稳6.22且量价修复，则减仓判断失效并重新评估\n大盘摘要：🎯 大盘复盘 2026-08-06 大盘复盘 📊 一句话：指数分化、量能维持高位，市场呈结构性偏暖而非全面进攻；核心矛盾是周期权重拉升与成长赛道回调并存，明日优先观察煤炭、食品等领涨方向的持续性和创业板能否止跌。 一、盘面总览 今日市场整体呈现“指数涨少跌多、个股涨跌互现”的分化格局。上证指数上涨0.56%，深证成指、创业板指分别下跌0.24%和0.55%…\n600118 双源校验：价格：65.33；涨跌幅：3.48；动态PE：-452.40（亏损状态）；PB：12.24\n\n可核验科技新闻：\n- 卫星与商业航天：NASA Will Attempt to Observe Rocket Part’s Lunar Impact（NASA News，2026-08-04T20:00+00:00）\n  https://www.nasa.gov/humans-in-space/commercial-space/nasa-will-attempt-to-observe-rocket-parts-lunar-impact/\n- 军工与国防科技：Firestorm Labs builds drones aboard USS Essex without shore resupply（Defense News，2026-08-05T23:14+00:00）\n  https://www.defensenews.com/industry/techwatch/2026/08/05/firestorm-labs-builds-drones-aboard-uss-essex-without-shore-resupply/\n- 机器人与具身智能：The Download: US robot restrictions and ICE’s DNA grab（MIT Technology Review，2026-08-04T12:14+00:00）\n  https://www.technologyreview.com/2026/08/04/1141098/the-download-robot-restrictions-ice-dna/\n- 科技与芯片：Here’s why AI agents lie and cheat to reach their goals（MIT Technology Review，2026-08-03T08:30+00:00）\n  https://www.technologyreview.com/2026/08/03/1141009/heres-why-ai-agents-lie-and-cheat-to-reach-their-goals/\n\n网页版完整报告：https://LPT111.github.io/daily_stock_analysis/\n仅供研究参考，不构成投资建议。"
 }
