@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-08-05T09:49:06+00:00",
+  "generated_at": "2026-08-06T01:32:40+00:00",
   "dashboard_url": "https://LPT111.github.io/daily_stock_analysis/",
-  "stock_report": "report_20260805.md",
-  "market_report": "market_review_20260805.md",
+  "stock_report": null,
+  "market_report": "market_review_20260806.md",
   "validations": [
     {
       "code": "600118",
@@ -10,62 +10,62 @@
       "metrics": {
         "price": {
           "status": "confirmed",
-          "value": 63.13,
-          "display": "63.13",
+          "value": 63.375,
+          "display": "63.38",
           "interpretation": "腾讯财经与东方财富交叉核验一致。",
           "sources": {
-            "腾讯财经": 63.13,
-            "东方财富": 63.13
+            "腾讯财经": 63.35,
+            "东方财富": 63.4
           }
         },
         "change_pct": {
           "status": "confirmed",
-          "value": 2.09,
-          "display": "2.09",
+          "value": 0.39,
+          "display": "0.39",
           "interpretation": "腾讯财经与东方财富交叉核验一致。",
           "sources": {
-            "腾讯财经": 2.09,
-            "东方财富": 2.09
+            "腾讯财经": 0.35,
+            "东方财富": 0.43
           }
         },
         "dynamic_pe": {
           "status": "confirmed",
-          "value": -437.16,
-          "display": "-437.16（亏损状态）",
+          "value": -438.86,
+          "display": "-438.86（亏损状态）",
           "interpretation": "动态市盈率为负，表示当前口径下盈利为负，不能按正 PE 倍数进行估值判断。",
           "sources": {
-            "腾讯财经": -437.16,
-            "东方财富": -437.16
+            "腾讯财经": -438.69,
+            "东方财富": -439.03
           }
         },
         "pb": {
           "status": "confirmed",
-          "value": 11.83,
-          "display": "11.83",
+          "value": 11.875,
+          "display": "11.88",
           "interpretation": "腾讯财经与东方财富交叉核验一致。",
           "sources": {
-            "腾讯财经": 11.83,
-            "东方财富": 11.83
+            "腾讯财经": 11.87,
+            "东方财富": 11.88
           }
         }
       },
       "raw_sources": [
         {
           "source": "腾讯财经",
-          "price": 63.13,
-          "previous_close": 61.84,
-          "change_pct": 2.09,
-          "dynamic_pe": -437.16,
-          "pb": 11.83,
+          "price": 63.35,
+          "previous_close": 63.13,
+          "change_pct": 0.35,
+          "dynamic_pe": -438.69,
+          "pb": 11.87,
           "source_url": "https://gu.qq.com/sh600118"
         },
         {
           "source": "东方财富",
-          "price": 63.13,
-          "previous_close": 61.84,
-          "change_pct": 2.09,
-          "dynamic_pe": -437.16,
-          "pb": 11.83,
+          "price": 63.4,
+          "previous_close": 63.13,
+          "change_pct": 0.43,
+          "dynamic_pe": -439.03,
+          "pb": 11.88,
           "source_url": "https://quote.eastmoney.com/sh600118.html"
         }
       ],
@@ -84,13 +84,49 @@
         "source_weight": 14
       },
       {
-        "title": "August 2026 Satellite Puzzler",
-        "published_at": "2026-08-04T16:31+00:00",
-        "source": "NASA News",
-        "url": "https://science.nasa.gov/earth/earth-observatory/august-2026-satellite-puzzler/",
+        "title": "Firestorm Labs builds drones aboard USS Essex without shore resupply",
+        "published_at": "2026-08-05T23:14+00:00",
+        "source": "Defense News",
+        "url": "https://www.defensenews.com/industry/techwatch/2026/08/05/firestorm-labs-builds-drones-aboard-uss-essex-without-shore-resupply/",
+        "category": "军工与国防科技",
+        "region": "国际",
+        "source_weight": 13
+      },
+      {
+        "title": "New Glenn explosion linked to rocket engine valve",
+        "published_at": "2026-08-05T22:30+00:00",
+        "source": "SpaceNews",
+        "url": "https://spacenews.com/new-glenn-explosion-linked-to-rocket-engine-valve/",
         "category": "卫星与商业航天",
         "region": "国际",
-        "source_weight": 14
+        "source_weight": 13
+      },
+      {
+        "title": "US Navy, Saildrone to use unmanned systems in expanded counternarcotics role",
+        "published_at": "2026-08-05T14:37+00:00",
+        "source": "Defense News",
+        "url": "https://www.defensenews.com/industry/techwatch/2026/08/05/us-navy-saildrone-to-use-unmanned-systems-in-expanded-counternarcotics-role/",
+        "category": "军工与国防科技",
+        "region": "国际",
+        "source_weight": 13
+      },
+      {
+        "title": "France’s drone production shifts from policy ambition to factory floor",
+        "published_at": "2026-08-05T12:48+00:00",
+        "source": "Defense News",
+        "url": "https://www.defensenews.com/industry/techwatch/2026/08/05/frances-drone-production-shifts-from-policy-ambition-to-factory-floor/",
+        "category": "军工与国防科技",
+        "region": "国际",
+        "source_weight": 13
+      },
+      {
+        "title": "Satellite manufacturing thrives in California despite cost and regulatory pressures",
+        "published_at": "2026-08-05T12:00+00:00",
+        "source": "SpaceNews",
+        "url": "https://spacenews.com/satellite-manufacturing-thrives-in-california-despite-cost-and-regulatory-pressures/",
+        "category": "卫星与商业航天",
+        "region": "国际",
+        "source_weight": 13
       },
       {
         "title": "Think tank warns Europe’s orbital compute gap is widening",
@@ -111,24 +147,6 @@
         "source_weight": 13
       },
       {
-        "title": "Rocket Lab, STR win Space Force contracts for airborne-target tracking",
-        "published_at": "2026-08-04T22:47+00:00",
-        "source": "SpaceNews",
-        "url": "https://spacenews.com/rocket-lab-str-win-space-force-contracts-for-airborne-target-tracking-technologies/",
-        "category": "卫星与商业航天",
-        "region": "国际",
-        "source_weight": 13
-      },
-      {
-        "title": "Telesat lands $1.63 billion Canadian defense contract",
-        "published_at": "2026-08-04T22:00+00:00",
-        "source": "SpaceNews",
-        "url": "https://spacenews.com/telesat-lands-1-63-billion-canadian-defense-contract/",
-        "category": "军工与国防科技",
-        "region": "国际",
-        "source_weight": 13
-      },
-      {
         "title": "US Army wants a surface-to-air missile that can destroy small drones",
         "published_at": "2026-08-04T19:29+00:00",
         "source": "Defense News",
@@ -138,34 +156,7 @@
         "source_weight": 13
       },
       {
-        "title": "Ukraine’s Fire Point starts to integrate European tech into missile defense system",
-        "published_at": "2026-08-04T13:51+00:00",
-        "source": "Defense News",
-        "url": "https://www.defensenews.com/global/europe/2026/08/04/ukraines-fire-point-starts-to-integrate-european-tech-into-missile-defense-system/",
-        "category": "军工与国防科技",
-        "region": "国际",
-        "source_weight": 13
-      },
-      {
-        "title": "US used ‘virtually all’ long-range precision missiles during Iran war, sources say",
-        "published_at": "2026-08-04T13:08+00:00",
-        "source": "Defense News",
-        "url": "https://www.defensenews.com/industry/techwatch/2026/08/04/us-used-virtually-all-long-range-precision-missiles-during-iran-war-sources-say/",
-        "category": "军工与国防科技",
-        "region": "国际",
-        "source_weight": 13
-      },
-      {
-        "title": "Poland readies Ukraine ‘Coalition of Willing’ drills, eyes NATO support for border defense",
-        "published_at": "2026-08-03T15:05+00:00",
-        "source": "Defense News",
-        "url": "https://www.defensenews.com/global/europe/2026/08/03/poland-readies-ukraine-coalition-of-willing-drills-eyes-nato-support-for-border-defense/",
-        "category": "军工与国防科技",
-        "region": "国际",
-        "source_weight": 13
-      },
-      {
-        "title": "The Download: US robot restrictions, and ICE’s DNA grab",
+        "title": "The Download: US robot restrictions and ICE’s DNA grab",
         "published_at": "2026-08-04T12:14+00:00",
         "source": "MIT Technology Review",
         "url": "https://www.technologyreview.com/2026/08/04/1141098/the-download-robot-restrictions-ice-dna/",
@@ -201,100 +192,110 @@
         "source_weight": 11
       },
       {
-        "title": "The SpaceX Falcon Lunar Crash Is a Warning for Moon Bases",
-        "published_at": "2026-08-03T19:58+00:00",
+        "title": "Welp, Nobody Saw SpaceX’s Falcon 9 Rocket Crash Into the Moon",
+        "published_at": "2026-08-05T22:40+00:00",
         "source": "WIRED Science",
-        "url": "https://www.wired.com/story/spacex-falcon-moon-crash-warning-for-lunar-bases/",
+        "url": "https://www.wired.com/story/nobody-saw-spacex-rocket-moon-crash/",
         "category": "卫星与商业航天",
         "region": "国际",
         "source_weight": 10
       },
       {
-        "title": "SpaceX dives 10% after AI spending surge rattles investors",
-        "published_at": "2026-08-05T09:04+00:00",
+        "title": "SpaceX ramps up Tesla Megapack purchases in Q2 to power its AI data centers",
+        "published_at": "2026-08-05T21:32+00:00",
         "source": "CNBC Technology",
-        "url": "https://www.cnbc.com/2026/08/05/spacex-spcx-stock-today-earnings.html",
+        "url": "https://www.cnbc.com/2026/08/05/spacex-tesla-megapack-ai-data-centers.html",
         "category": "科技与芯片",
         "region": "国际",
         "source_weight": 9
       },
       {
-        "title": "SoftBank jumps 13% as Asia tech stocks track Wall Street AI rally",
-        "published_at": "2026-08-05T08:05+00:00",
+        "title": "Meta debuts first AI coding agent to take on Anthropic and OpenAI",
+        "published_at": "2026-08-05T21:03+00:00",
         "source": "CNBC Technology",
-        "url": "https://www.cnbc.com/2026/08/05/softbank-samsung-sk-hynix-samsung-tech-rally.html",
+        "url": "https://www.cnbc.com/2026/08/05/meta-debuts-muse-code-to-take-on-anthropic-and-openai-.html",
         "category": "科技与芯片",
         "region": "国际",
         "source_weight": 9
       },
       {
-        "title": "SpaceX's AI spending unnerves Wall Street despite promises of quick payoff",
-        "published_at": "2026-08-05T01:43+00:00",
-        "source": "CNBC Technology",
-        "url": "https://www.cnbc.com/2026/08/04/spacex-ai-spending-unnerves-wall-street-despite-promising-quick-payoff.html",
-        "category": "科技与芯片",
-        "region": "国际",
-        "source_weight": 9
-      },
-      {
-        "title": "OpenAI says Apple's trade secrets lawsuit is \"aggressive and oddly personal\"",
-        "published_at": "2026-08-04T13:38+00:00",
+        "title": "Anthropic’s AI used fake identities, malware in rogue attack on GitHub project",
+        "published_at": "2026-08-05T20:47+00:00",
         "source": "Ars Technica",
-        "url": "https://arstechnica.com/tech-policy/2026/08/openai-says-apples-trade-secrets-lawsuit-is-aggressive-and-oddly-personal/",
+        "url": "https://arstechnica.com/security/2026/08/anthropics-ai-used-fake-identities-malware-in-rogue-attack-on-github-project/",
         "category": "科技与芯片",
         "region": "国际",
         "source_weight": 9
       },
       {
-        "title": "US company’s AI lets Ukraine’s cheap kamikaze drones track targets on their own",
-        "published_at": "2026-08-03T22:11+00:00",
-        "source": "Ars Technica",
-        "url": "https://arstechnica.com/ai/2026/08/ukraines-drones-get-ai-upgrades-for-kamikaze-strikes-future-swarm-attacks/",
+        "title": "Lisa Su brushes off Musk's Nvidia commitment as AMD stock sinks after earnings",
+        "published_at": "2026-08-05T20:02+00:00",
+        "source": "CNBC Technology",
+        "url": "https://www.cnbc.com/2026/08/05/amd-stock-today-earnings-q2.html",
+        "category": "科技与芯片",
+        "region": "国际",
+        "source_weight": 9
+      },
+      {
+        "title": "Amazon's Zoox to launch paid robotaxi service in Las Vegas on Aug. 10",
+        "published_at": "2026-08-05T16:45+00:00",
+        "source": "CNBC Technology",
+        "url": "https://www.cnbc.com/2026/08/05/amazon-zoox-paid-robotaxi-rides-las-vegas.html",
+        "category": "机器人与具身智能",
+        "region": "国际",
+        "source_weight": 9
+      },
+      {
+        "title": "Travis Kalanick’s robotics startup Atoms taps former Uber finance chief as CFO",
+        "published_at": "2026-08-05T21:26+00:00",
+        "source": "TechCrunch",
+        "url": "https://techcrunch.com/2026/08/05/travis-kalanicks-robotics-startup-atoms-taps-former-uber-finance-chief-as-cfo/",
+        "category": "机器人与具身智能",
+        "region": "国际",
+        "source_weight": 8
+      },
+      {
+        "title": "Moove raises $250M to become the backbone of the robotaxi industry",
+        "published_at": "2026-08-05T20:50+00:00",
+        "source": "TechCrunch",
+        "url": "https://techcrunch.com/2026/08/05/moove-raises-250m-to-become-the-backbone-of-the-robotaxi-industry/",
+        "category": "机器人与具身智能",
+        "region": "国际",
+        "source_weight": 8
+      },
+      {
+        "title": "Zoox to start charging for robotaxi rides in Las Vegas",
+        "published_at": "2026-08-05T15:06+00:00",
+        "source": "TechCrunch",
+        "url": "https://techcrunch.com/2026/08/05/zoox-to-start-charging-for-robotaxi-rides-in-las-vegas/",
+        "category": "机器人与具身智能",
+        "region": "国际",
+        "source_weight": 8
+      },
+      {
+        "title": "彻底颠覆传统作战模式！我军三型无人机成体系应用首次公开",
+        "published_at": "2026-08-04T18:28+00:00",
+        "source": "快科技-科学",
+        "url": "https://news.mydrivers.com/1/1141/1141364.htm",
         "category": "军工与国防科技",
-        "region": "国际",
-        "source_weight": 9
-      },
-      {
-        "title": "Xiaomi open-sources embodied-AI foundation model Xiaomi-Robotics-1",
-        "published_at": "2026-08-05T08:30+00:00",
-        "source": "TechNode",
-        "url": "https://technode.com/2026/08/05/xiaomi-open-sources-embodied-ai-foundation-model-xiaomi-robotics-1/",
-        "category": "机器人与具身智能",
-        "region": "国际",
-        "source_weight": 8
-      },
-      {
-        "title": "小米具身基座模型 Xiaomi-Robotics-1 正式开源",
-        "published_at": "2026-08-05T07:40+00:00",
-        "source": "IT之家",
-        "url": "https://www.ithome.com/0/985/985.htm",
-        "category": "机器人与具身智能",
         "region": "国内",
-        "source_weight": 8
+        "source_weight": 7
       },
       {
-        "title": "Lucid’s turnaround plan hinges on $1.4B in cash savings, robotaxis",
-        "published_at": "2026-08-04T22:24+00:00",
-        "source": "TechCrunch",
-        "url": "https://techcrunch.com/2026/08/04/lucids-turnaround-plan-hinges-on-1-4b-in-cash-savings-robotaxis/",
-        "category": "机器人与具身智能",
+        "title": "Rocket Lab, STR win Space Force contracts for airborne-target tracking",
+        "published_at": "2026-08-04T22:47+00:00",
+        "source": "SpaceNews",
+        "url": "https://spacenews.com/rocket-lab-str-win-space-force-contracts-for-airborne-target-tracking-technologies/",
+        "category": "卫星与商业航天",
         "region": "国际",
-        "source_weight": 8
-      },
-      {
-        "title": "Waymo opens up robotaxi service in Dallas to everyone",
-        "published_at": "2026-08-04T17:31+00:00",
-        "source": "TechCrunch",
-        "url": "https://techcrunch.com/2026/08/04/waymo-opens-up-robotaxi-service-in-dallas-to-everyone/",
-        "category": "机器人与具身智能",
-        "region": "国际",
-        "source_weight": 8
+        "source_weight": 13
       }
     ],
     "errors": [
-      "36氪: not well-formed (invalid token): line 9, column 542"
+      "36氪: not well-formed (invalid token): line 9, column 542",
+      "国内科技新闻: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=%28%E5%8D%AB%E6%98%9F+OR+%E8%88%AA%E5%A4%A9+OR+%E5%8C%97%E6%96%97+OR+%E6%9C%BA%E5%99%A8%E4%BA%BA+OR+%E5%85%B7%E8%BA%AB%E6%99%BA%E8%83%BD+OR+%E8%8A%AF%E7%89%87+OR+%E5%8D%8A%E5%AF%BC%E4%BD%93+OR+%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD+OR+%E5%86%9B%E5%B7%A5+OR+%E5%9B%BD%E9%98%B2%E7%A7%91%E6%8A%80%29+sourcelang%3AChinese&mode=artlist&format=json&maxrecords=24&sort=datedesc&timespan=3d"
     ],
     "policy": "仅展示含标题、发布时间、来源和原文链接的新闻；不据此自动推断股价因果。"
   },
-  "digest": "【A股科技主题决策雷达】\n个股建议：减仓（基于近3个月K线，保守模式）\n执行参考：买入区间 暂不设置（乖离率6.29% 5%，严禁追高；待回调至59.40元MA5附近缩量企稳后再评估）｜仓位 建议仓位：空仓者0成，等待回调；持仓者维持现有仓位，不加仓\n风控纪律：止损 58.00元（跌破短期均线密集区，趋势结构走坏）｜失效条件 未来3个交易日重新站稳66.10且量价修复，则减仓判断失效并重新评估\n大盘摘要：🎯 大盘复盘 2026-08-05 大盘复盘 📝 今日市场为放量普涨格局，科创50以近4.8%的涨幅领跑全场，周期资源与科技成长双轮驱动；核心矛盾在于消息面真空背景下，行情更多由资金行为主导而非外部催化；明日优先观察成交额能否维持高位、科创50与周期板块的持续性。 一、盘面总览 📋 市场情绪偏强，属于普涨日。全市场超过3700家个股上涨，涨停103家而跌停仅…\n600118 双源校验：价格：63.13；涨跌幅：2.09；动态PE：-437.16（亏损状态）；PB：11.83\n\n可核验科技新闻：\n- 卫星与商业航天：NASA Will Attempt to Observe Rocket Part’s Lunar Impact（NASA News，2026-08-04T20:00+00:00）\n  https://www.nasa.gov/humans-in-space/commercial-space/nasa-will-attempt-to-observe-rocket-parts-lunar-impact/\n- 军工与国防科技：Telesat lands $1.63 billion Canadian defense contract（SpaceNews，2026-08-04T22:00+00:00）\n  https://spacenews.com/telesat-lands-1-63-billion-canadian-defense-contract/\n- 机器人与具身智能：The Download: US robot restrictions, and ICE’s DNA grab（MIT Technology Review，2026-08-04T12:14+00:00）\n  https://www.technologyreview.com/2026/08/04/1141098/the-download-robot-restrictions-ice-dna/\n- 科技与芯片：Here’s why AI agents lie and cheat to reach their goals（MIT Technology Review，2026-08-03T08:30+00:00）\n  https://www.technologyreview.com/2026/08/03/1141009/heres-why-ai-agents-lie-and-cheat-to-reach-their-goals/\n\n网页版完整报告：https://LPT111.github.io/daily_stock_analysis/\n仅供研究参考，不构成投资建议。"
+  "digest": "【A股科技主题决策雷达】\n个股建议：待确认（基于近3个月K线，保守模式）\n执行参考：买入区间 仅在MA20附近企稳时考虑低吸，不追涨｜仓位 控制在3成以内\n风控纪律：止损 有效跌破MA20且两个交易日未收回｜失效条件 跌破止损位或量价结构转空时，持有逻辑失效\n大盘摘要：🎯 大盘复盘 2026-08-06 大盘复盘 📋 今日市场接近平盘报收，但资源与科技板块呈明显分化；由于成交额、涨跌家数等关键数据缺失，当前只能判定为“数据真空下的震荡格局”。明日优先观察量能是否恢复、资源品行情能否延续，以及科技板块是否进一步扩散杀跌。 一、盘面总览 上证指数收于3878.33点，涨跌幅约0.00%，属于平盘状态；科创50、上证50、沪深3…\n600118 双源校验：价格：63.38；涨跌幅：0.39；动态PE：-438.86（亏损状态）；PB：11.88\n\n可核验科技新闻：\n- 卫星与商业航天：NASA Will Attempt to Observe Rocket Part’s Lunar Impact（NASA News，2026-08-04T20:00+00:00）\n  https://www.nasa.gov/humans-in-space/commercial-space/nasa-will-attempt-to-observe-rocket-parts-lunar-impact/\n- 军工与国防科技：Firestorm Labs builds drones aboard USS Essex without shore resupply（Defense News，2026-08-05T23:14+00:00）\n  https://www.defensenews.com/industry/techwatch/2026/08/05/firestorm-labs-builds-drones-aboard-uss-essex-without-shore-resupply/\n- 机器人与具身智能：The Download: US robot restrictions and ICE’s DNA grab（MIT Technology Review，2026-08-04T12:14+00:00）\n  https://www.technologyreview.com/2026/08/04/1141098/the-download-robot-restrictions-ice-dna/\n- 科技与芯片：Here’s why AI agents lie and cheat to reach their goals（MIT Technology Review，2026-08-03T08:30+00:00）\n  https://www.technologyreview.com/2026/08/03/1141009/heres-why-ai-agents-lie-and-cheat-to-reach-their-goals/\n\n网页版完整报告：https://LPT111.github.io/daily_stock_analysis/\n仅供研究参考，不构成投资建议。"
 }
