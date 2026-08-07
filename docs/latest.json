@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-08-06T09:53:34+00:00",
+  "generated_at": "2026-08-07T02:15:30+00:00",
   "dashboard_url": "https://LPT111.github.io/daily_stock_analysis/",
-  "stock_report": "report_20260806.md",
-  "market_report": "market_review_20260806.md",
+  "stock_report": null,
+  "market_report": "market_review_20260807.md",
   "validations": [
     {
       "code": "600118",
@@ -10,62 +10,62 @@
       "metrics": {
         "price": {
           "status": "confirmed",
-          "value": 65.33,
-          "display": "65.33",
+          "value": 66.345,
+          "display": "66.34",
           "interpretation": "腾讯财经与东方财富交叉核验一致。",
           "sources": {
-            "腾讯财经": 65.33,
-            "东方财富": 65.33
+            "腾讯财经": 66.35,
+            "东方财富": 66.34
           }
         },
         "change_pct": {
           "status": "confirmed",
-          "value": 3.48,
-          "display": "3.48",
+          "value": 1.5550000000000002,
+          "display": "1.56",
           "interpretation": "腾讯财经与东方财富交叉核验一致。",
           "sources": {
-            "腾讯财经": 3.48,
-            "东方财富": 3.48
+            "腾讯财经": 1.56,
+            "东方财富": 1.55
           }
         },
         "dynamic_pe": {
           "status": "confirmed",
-          "value": -452.4,
-          "display": "-452.40（亏损状态）",
+          "value": -459.42499999999995,
+          "display": "-459.42（亏损状态）",
           "interpretation": "动态市盈率为负，表示当前口径下盈利为负，不能按正 PE 倍数进行估值判断。",
           "sources": {
-            "腾讯财经": -452.4,
-            "东方财富": -452.4
+            "腾讯财经": -459.46,
+            "东方财富": -459.39
           }
         },
         "pb": {
           "status": "confirmed",
-          "value": 12.24,
-          "display": "12.24",
+          "value": 12.43,
+          "display": "12.43",
           "interpretation": "腾讯财经与东方财富交叉核验一致。",
           "sources": {
-            "腾讯财经": 12.24,
-            "东方财富": 12.24
+            "腾讯财经": 12.43,
+            "东方财富": 12.43
           }
         }
       },
       "raw_sources": [
         {
           "source": "腾讯财经",
-          "price": 65.33,
-          "previous_close": 63.13,
-          "change_pct": 3.48,
-          "dynamic_pe": -452.4,
-          "pb": 12.24,
+          "price": 66.35,
+          "previous_close": 65.33,
+          "change_pct": 1.56,
+          "dynamic_pe": -459.46,
+          "pb": 12.43,
           "source_url": "https://gu.qq.com/sh600118"
         },
         {
           "source": "东方财富",
-          "price": 65.33,
-          "previous_close": 63.13,
-          "change_pct": 3.48,
-          "dynamic_pe": -452.4,
-          "pb": 12.24,
+          "price": 66.34,
+          "previous_close": 65.33,
+          "change_pct": 1.55,
+          "dynamic_pe": -459.39,
+          "pb": 12.43,
           "source_url": "https://quote.eastmoney.com/sh600118.html"
         }
       ],
@@ -75,13 +75,31 @@
   "sector_news": {
     "items": [
       {
-        "title": "NASA Will Attempt to Observe Rocket Part’s Lunar Impact",
-        "published_at": "2026-08-04T20:00+00:00",
-        "source": "NASA News",
-        "url": "https://www.nasa.gov/humans-in-space/commercial-space/nasa-will-attempt-to-observe-rocket-parts-lunar-impact/",
+        "title": "Lessons for the future of NASA Mars exploration from a 1970s mission",
+        "published_at": "2026-08-06T15:00+00:00",
+        "source": "SpaceNews",
+        "url": "https://spacenews.com/lessons-for-the-future-of-nasa-mars-exploration-from-a-1970s-mission/",
         "category": "卫星与商业航天",
         "region": "国际",
-        "source_weight": 14
+        "source_weight": 13
+      },
+      {
+        "title": "Rocket Lab launches 8th iQPS satellite",
+        "published_at": "2026-08-06T11:17+00:00",
+        "source": "SpaceNews",
+        "url": "https://spacenews.com/rocket-lab-launches-8th-iqps-satellite/",
+        "category": "卫星与商业航天",
+        "region": "国际",
+        "source_weight": 13
+      },
+      {
+        "title": "Chinese launch startup Orienspace targets IPO, secures funding for reusable Gravity-2 rocket",
+        "published_at": "2026-08-06T10:48+00:00",
+        "source": "SpaceNews",
+        "url": "https://spacenews.com/chinese-launch-startup-orienspace-targets-ipo-secures-funding-for-reusable-gravity-2-rocket/",
+        "category": "卫星与商业航天",
+        "region": "国际",
+        "source_weight": 13
       },
       {
         "title": "Firestorm Labs builds drones aboard USS Essex without shore resupply",
@@ -120,33 +138,6 @@
         "source_weight": 13
       },
       {
-        "title": "Satellite manufacturing thrives in California despite cost and regulatory pressures",
-        "published_at": "2026-08-05T12:00+00:00",
-        "source": "SpaceNews",
-        "url": "https://spacenews.com/satellite-manufacturing-thrives-in-california-despite-cost-and-regulatory-pressures/",
-        "category": "卫星与商业航天",
-        "region": "国际",
-        "source_weight": 13
-      },
-      {
-        "title": "Think tank warns Europe’s orbital compute gap is widening",
-        "published_at": "2026-08-05T08:00+00:00",
-        "source": "SpaceNews",
-        "url": "https://spacenews.com/think-tank-warns-europes-orbital-compute-gap-is-widening/",
-        "category": "卫星与商业航天",
-        "region": "国际",
-        "source_weight": 13
-      },
-      {
-        "title": "SpaceX to begin Starship orbital flights",
-        "published_at": "2026-08-04T22:51+00:00",
-        "source": "SpaceNews",
-        "url": "https://spacenews.com/spacex-to-begin-starship-orbital-flights/",
-        "category": "卫星与商业航天",
-        "region": "国际",
-        "source_weight": 13
-      },
-      {
         "title": "US Army wants a surface-to-air missile that can destroy small drones",
         "published_at": "2026-08-04T19:29+00:00",
         "source": "Defense News",
@@ -154,6 +145,15 @@
         "category": "军工与国防科技",
         "region": "国际",
         "source_weight": 13
+      },
+      {
+        "title": "The Download: Google’s AI shake-up and Meta’s rogue model",
+        "published_at": "2026-08-06T12:10+00:00",
+        "source": "MIT Technology Review",
+        "url": "https://www.technologyreview.com/2026/08/06/1141278/the-download-google-ai-shake-up-meta-rogue-model/",
+        "category": "科技与芯片",
+        "region": "国际",
+        "source_weight": 12
       },
       {
         "title": "The Download: US robot restrictions and ICE’s DNA grab",
@@ -192,6 +192,15 @@
         "source_weight": 11
       },
       {
+        "title": "DeepMind Says Its AI Can Predict Hurricanes Earlier Than Everyone Else",
+        "published_at": "2026-08-06T16:23+00:00",
+        "source": "WIRED Science",
+        "url": "https://www.wired.com/story/deepmind-ai-model-can-predict-hurricanes-earlier/",
+        "category": "科技与芯片",
+        "region": "国际",
+        "source_weight": 10
+      },
+      {
         "title": "Welp, Nobody Saw SpaceX’s Falcon 9 Rocket Crash Into the Moon",
         "published_at": "2026-08-05T22:40+00:00",
         "source": "WIRED Science",
@@ -201,102 +210,92 @@
         "source_weight": 10
       },
       {
-        "title": "Khanna to introduce 'Data Center Bill of Rights' as fight over AI power plants heats up",
-        "published_at": "2026-08-06T09:30+00:00",
-        "source": "CNBC Technology",
-        "url": "https://www.cnbc.com/2026/08/06/khanna-to-introduce-data-center-bill-of-rights-in-ai-power-plants-fight.html",
-        "category": "科技与芯片",
-        "region": "国际",
-        "source_weight": 9
-      },
-      {
-        "title": "SoftBank gets $8.2 billion boost from Intel as OpenAI takes a backseat",
-        "published_at": "2026-08-06T09:11+00:00",
-        "source": "CNBC Technology",
-        "url": "https://www.cnbc.com/2026/08/06/softbank-q1-earnings-intel-bytedance-stakes.html",
-        "category": "科技与芯片",
-        "region": "国际",
-        "source_weight": 9
-      },
-      {
-        "title": "Google is expanding its AI empire — and losing the people who built it",
-        "published_at": "2026-08-06T06:06+00:00",
-        "source": "CNBC Technology",
-        "url": "https://www.cnbc.com/2026/08/05/google-is-expanding-its-ai-empire-and-losing-the-people-who-built-it.html",
-        "category": "科技与芯片",
-        "region": "国际",
-        "source_weight": 9
-      },
-      {
-        "title": "Asian tech stocks drop with SK Hynix plunging 10% after Wall Street AI names fall",
-        "published_at": "2026-08-06T05:27+00:00",
-        "source": "CNBC Technology",
-        "url": "https://www.cnbc.com/2026/08/06/asia-tech-selloff-wall-street-samsung-sk-hynix.html",
-        "category": "科技与芯片",
-        "region": "国际",
-        "source_weight": 9
-      },
-      {
-        "title": "4699 → 2399 元：24800Pa 吸力 + 活水洗地，科沃斯 T80S 上下水扫拖机器人再降价",
-        "published_at": "2026-08-06T08:05+00:00",
-        "source": "IT之家",
-        "url": "https://www.ithome.com/0/986/560.htm",
-        "category": "机器人与具身智能",
-        "region": "国内",
-        "source_weight": 8
-      },
-      {
-        "title": "Travis Kalanick’s robotics startup Atoms taps former Uber finance chief as CFO",
-        "published_at": "2026-08-05T21:26+00:00",
-        "source": "TechCrunch",
-        "url": "https://techcrunch.com/2026/08/05/travis-kalanicks-robotics-startup-atoms-taps-former-uber-finance-chief-as-cfo/",
-        "category": "机器人与具身智能",
-        "region": "国际",
-        "source_weight": 8
-      },
-      {
-        "title": "Moove raises $250M to become the backbone of the robotaxi industry",
-        "published_at": "2026-08-05T20:50+00:00",
-        "source": "TechCrunch",
-        "url": "https://techcrunch.com/2026/08/05/moove-raises-250m-to-become-the-backbone-of-the-robotaxi-industry/",
-        "category": "机器人与具身智能",
-        "region": "国际",
-        "source_weight": 8
-      },
-      {
-        "title": "Zoox to start charging for robotaxi rides in Las Vegas",
-        "published_at": "2026-08-05T15:06+00:00",
-        "source": "TechCrunch",
-        "url": "https://techcrunch.com/2026/08/05/zoox-to-start-charging-for-robotaxi-rides-in-las-vegas/",
-        "category": "机器人与具身智能",
-        "region": "国际",
-        "source_weight": 8
-      },
-      {
-        "title": "彻底颠覆传统作战模式！我军三型无人机成体系应用首次公开",
-        "published_at": "2026-08-04T18:28+00:00",
-        "source": "快科技-科学",
-        "url": "https://news.mydrivers.com/1/1141/1141364.htm",
-        "category": "军工与国防科技",
-        "region": "国内",
-        "source_weight": 7
-      },
-      {
-        "title": "Rocket Lab, STR win Space Force contracts for airborne-target tracking",
-        "published_at": "2026-08-04T22:47+00:00",
-        "source": "SpaceNews",
-        "url": "https://spacenews.com/rocket-lab-str-win-space-force-contracts-for-airborne-target-tracking-technologies/",
+        "title": "The SpaceX Falcon Lunar Crash Is a Warning for Moon Bases",
+        "published_at": "2026-08-03T19:58+00:00",
+        "source": "WIRED Science",
+        "url": "https://www.wired.com/story/spacex-falcon-moon-crash-warning-for-lunar-bases/",
         "category": "卫星与商业航天",
         "region": "国际",
-        "source_weight": 13
+        "source_weight": 10
+      },
+      {
+        "title": "Grindr's AI spend is paying off and its pricey new tier has had some surprises, CEO says",
+        "published_at": "2026-08-06T22:26+00:00",
+        "source": "CNBC Technology",
+        "url": "https://www.cnbc.com/2026/08/06/grindr-grnd-stock-earnings-ai.html",
+        "category": "科技与芯片",
+        "region": "国际",
+        "source_weight": 9
+      },
+      {
+        "title": "Explosive drone found hovering near Ukrainian cargo aircraft at German airport",
+        "published_at": "2026-08-06T22:01+00:00",
+        "source": "Ars Technica",
+        "url": "https://arstechnica.com/gadgets/2026/08/germany-disarms-explosive-drone-found-at-airport-hunts-possible-second-drone/",
+        "category": "军工与国防科技",
+        "region": "国际",
+        "source_weight": 9
+      },
+      {
+        "title": "AMD buys chip startup that hardwires AI models into its silicon",
+        "published_at": "2026-08-06T21:42+00:00",
+        "source": "CNBC Technology",
+        "url": "https://www.cnbc.com/2026/08/06/amd-buys-taalas-startup-that-hardwires-ai-models-into-its-silicon.html",
+        "category": "科技与芯片",
+        "region": "国际",
+        "source_weight": 9
+      },
+      {
+        "title": "Hadrian valued at nearly $8 billion after fresh funding as money pours into defense tech",
+        "published_at": "2026-08-06T14:07+00:00",
+        "source": "CNBC Technology",
+        "url": "https://www.cnbc.com/2026/08/06/hadrian-defense-tech-ai-manufacturing.html",
+        "category": "军工与国防科技",
+        "region": "国际",
+        "source_weight": 9
+      },
+      {
+        "title": "消息称前小鹏副总裁陈永海加入众擎机器人，担任运营总裁",
+        "published_at": "2026-08-06T23:36+00:00",
+        "source": "IT之家",
+        "url": "https://www.ithome.com/0/986/783.htm",
+        "category": "机器人与具身智能",
+        "region": "国内",
+        "source_weight": 8
+      },
+      {
+        "title": "Xiaomi open-sources embodied-AI foundation model Xiaomi-Robotics-1",
+        "published_at": "2026-08-05T08:30+00:00",
+        "source": "TechNode",
+        "url": "https://technode.com/2026/08/05/xiaomi-open-sources-embodied-ai-foundation-model-xiaomi-robotics-1/",
+        "category": "机器人与具身智能",
+        "region": "国际",
+        "source_weight": 8
+      },
+      {
+        "title": "Unitree Robotics moves closer to Shanghai STAR Market IPO",
+        "published_at": "2026-07-31T07:14+00:00",
+        "source": "TechNode",
+        "url": "https://technode.com/2026/07/31/unitree-robotics-moves-closer-to-shanghai-star-market-ipo/",
+        "category": "机器人与具身智能",
+        "region": "国际",
+        "source_weight": 8
+      },
+      {
+        "title": "全球人形机器人龙头上市在即！宇树科技发行价150.80元/股",
+        "published_at": "2026-08-06T19:25+00:00",
+        "source": "快科技-硬件",
+        "url": "https://news.mydrivers.com/1/1141/1141963.htm",
+        "category": "机器人与具身智能",
+        "region": "国内",
+        "source_weight": 6
       }
     ],
     "errors": [
       "36氪: not well-formed (invalid token): line 9, column 542",
-      "国内科技新闻: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=%28%E5%8D%AB%E6%98%9F+OR+%E8%88%AA%E5%A4%A9+OR+%E5%8C%97%E6%96%97+OR+%E6%9C%BA%E5%99%A8%E4%BA%BA+OR+%E5%85%B7%E8%BA%AB%E6%99%BA%E8%83%BD+OR+%E8%8A%AF%E7%89%87+OR+%E5%8D%8A%E5%AF%BC%E4%BD%93+OR+%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD+OR+%E5%86%9B%E5%B7%A5+OR+%E5%9B%BD%E9%98%B2%E7%A7%91%E6%8A%80%29+sourcelang%3AChinese&mode=artlist&format=json&maxrecords=24&sort=datedesc&timespan=3d",
-      "国际科技新闻: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=%28satellite+OR+spaceflight+OR+robotics+OR+humanoid+OR+semiconductor+OR+%22artificial+intelligence%22+OR+%22defense+technology%22%29+sourcelang%3AEnglish&mode=artlist&format=json&maxrecords=24&sort=datedesc&timespan=3d"
+      "国内科技新闻: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=%28%E5%8D%AB%E6%98%9F+OR+%E8%88%AA%E5%A4%A9+OR+%E5%8C%97%E6%96%97+OR+%E6%9C%BA%E5%99%A8%E4%BA%BA+OR+%E5%85%B7%E8%BA%AB%E6%99%BA%E8%83%BD+OR+%E8%8A%AF%E7%89%87+OR+%E5%8D%8A%E5%AF%BC%E4%BD%93+OR+%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD+OR+%E5%86%9B%E5%B7%A5+OR+%E5%9B%BD%E9%98%B2%E7%A7%91%E6%8A%80%29+sourcelang%3AChinese&mode=artlist&format=json&maxrecords=24&sort=datedesc&timespan=3d"
     ],
     "policy": "仅展示含标题、发布时间、来源和原文链接的新闻；不据此自动推断股价因果。"
   },
-  "digest": "【A股科技主题决策雷达】\n个股建议：减仓（基于近3个月K线，保守模式）\n执行参考：买入区间 暂不设置（乖离率6.22% 5%，严禁追高；需等待回踩MA5附近61.50元且缩量企稳后再评估）｜仓位 建议仓位：0-2成（空仓者暂不建仓；若回踩企稳可小仓试错）\n风控纪律：止损 持仓者放量跌破MA20（65.28元）减仓；新建仓者以买入价下方5%为止损参考｜失效条件 未来3个交易日重新站稳6.22且量价修复，则减仓判断失效并重新评估\n大盘摘要：🎯 大盘复盘 2026-08-06 大盘复盘 📊 一句话：指数分化、量能维持高位，市场呈结构性偏暖而非全面进攻；核心矛盾是周期权重拉升与成长赛道回调并存，明日优先观察煤炭、食品等领涨方向的持续性和创业板能否止跌。 一、盘面总览 今日市场整体呈现“指数涨少跌多、个股涨跌互现”的分化格局。上证指数上涨0.56%，深证成指、创业板指分别下跌0.24%和0.55%…\n600118 双源校验：价格：65.33；涨跌幅：3.48；动态PE：-452.40（亏损状态）；PB：12.24\n\n可核验科技新闻：\n- 卫星与商业航天：NASA Will Attempt to Observe Rocket Part’s Lunar Impact（NASA News，2026-08-04T20:00+00:00）\n  https://www.nasa.gov/humans-in-space/commercial-space/nasa-will-attempt-to-observe-rocket-parts-lunar-impact/\n- 军工与国防科技：Firestorm Labs builds drones aboard USS Essex without shore resupply（Defense News，2026-08-05T23:14+00:00）\n  https://www.defensenews.com/industry/techwatch/2026/08/05/firestorm-labs-builds-drones-aboard-uss-essex-without-shore-resupply/\n- 机器人与具身智能：The Download: US robot restrictions and ICE’s DNA grab（MIT Technology Review，2026-08-04T12:14+00:00）\n  https://www.technologyreview.com/2026/08/04/1141098/the-download-robot-restrictions-ice-dna/\n- 科技与芯片：Here’s why AI agents lie and cheat to reach their goals（MIT Technology Review，2026-08-03T08:30+00:00）\n  https://www.technologyreview.com/2026/08/03/1141009/heres-why-ai-agents-lie-and-cheat-to-reach-their-goals/\n\n网页版完整报告：https://LPT111.github.io/daily_stock_analysis/\n仅供研究参考，不构成投资建议。"
+  "digest": "【A股科技主题决策雷达】\n个股建议：待确认（基于近3个月K线，保守模式）\n执行参考：买入区间 仅在MA20附近企稳时考虑低吸，不追涨｜仓位 控制在3成以内\n风控纪律：止损 有效跌破MA20且两个交易日未收回｜失效条件 跌破止损位或量价结构转空时，持有逻辑失效\n大盘摘要：🎯 大盘复盘 2026-08-07 大盘复盘 今日指数在权重股带动下全线收红，但市场宽度极差——超3700只个股下跌，呈现典型的“指数强、个股弱”分化格局。明日优先观察有色主线能否带动赚钱效应扩散，以及权重护盘是否具有持续性。 一、盘面总览 📊 今日上证指数涨0.16%、创业板指涨0.83%，指数层面全线收涨，但盘面温度偏低：两市仅1642家上涨，却有379…\n600118 双源校验：价格：66.34；涨跌幅：1.56；动态PE：-459.42（亏损状态）；PB：12.43\n\n可核验科技新闻：\n- 卫星与商业航天：Lessons for the future of NASA Mars exploration from a 1970s mission（SpaceNews，2026-08-06T15:00+00:00）\n  https://spacenews.com/lessons-for-the-future-of-nasa-mars-exploration-from-a-1970s-mission/\n- 军工与国防科技：Firestorm Labs builds drones aboard USS Essex without shore resupply（Defense News，2026-08-05T23:14+00:00）\n  https://www.defensenews.com/industry/techwatch/2026/08/05/firestorm-labs-builds-drones-aboard-uss-essex-without-shore-resupply/\n- 科技与芯片：The Download: Google’s AI shake-up and Meta’s rogue model（MIT Technology Review，2026-08-06T12:10+00:00）\n  https://www.technologyreview.com/2026/08/06/1141278/the-download-google-ai-shake-up-meta-rogue-model/\n- 机器人与具身智能：The Download: US robot restrictions and ICE’s DNA grab（MIT Technology Review，2026-08-04T12:14+00:00）\n  https://www.technologyreview.com/2026/08/04/1141098/the-download-robot-restrictions-ice-dna/\n\n网页版完整报告：https://LPT111.github.io/daily_stock_analysis/\n仅供研究参考，不构成投资建议。"
 }
