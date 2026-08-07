@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-07T02:15:30+00:00",
+  "generated_at": "2026-08-07T08:30:57+00:00",
   "dashboard_url": "https://LPT111.github.io/daily_stock_analysis/",
   "stock_report": null,
   "market_report": "market_review_20260807.md",
@@ -10,62 +10,62 @@
       "metrics": {
         "price": {
           "status": "confirmed",
-          "value": 66.345,
-          "display": "66.34",
+          "value": 68.68,
+          "display": "68.68",
           "interpretation": "腾讯财经与东方财富交叉核验一致。",
           "sources": {
-            "腾讯财经": 66.35,
-            "东方财富": 66.34
+            "腾讯财经": 68.68,
+            "东方财富": 68.68
           }
         },
         "change_pct": {
           "status": "confirmed",
-          "value": 1.5550000000000002,
-          "display": "1.56",
+          "value": 5.13,
+          "display": "5.13",
           "interpretation": "腾讯财经与东方财富交叉核验一致。",
           "sources": {
-            "腾讯财经": 1.56,
-            "东方财富": 1.55
+            "腾讯财经": 5.13,
+            "东方财富": 5.13
           }
         },
         "dynamic_pe": {
           "status": "confirmed",
-          "value": -459.42499999999995,
-          "display": "-459.42（亏损状态）",
+          "value": -475.6,
+          "display": "-475.60（亏损状态）",
           "interpretation": "动态市盈率为负，表示当前口径下盈利为负，不能按正 PE 倍数进行估值判断。",
           "sources": {
-            "腾讯财经": -459.46,
-            "东方财富": -459.39
+            "腾讯财经": -475.6,
+            "东方财富": -475.6
           }
         },
         "pb": {
           "status": "confirmed",
-          "value": 12.43,
-          "display": "12.43",
+          "value": 12.87,
+          "display": "12.87",
           "interpretation": "腾讯财经与东方财富交叉核验一致。",
           "sources": {
-            "腾讯财经": 12.43,
-            "东方财富": 12.43
+            "腾讯财经": 12.87,
+            "东方财富": 12.87
           }
         }
       },
       "raw_sources": [
         {
           "source": "腾讯财经",
-          "price": 66.35,
+          "price": 68.68,
           "previous_close": 65.33,
-          "change_pct": 1.56,
-          "dynamic_pe": -459.46,
-          "pb": 12.43,
+          "change_pct": 5.13,
+          "dynamic_pe": -475.6,
+          "pb": 12.87,
           "source_url": "https://gu.qq.com/sh600118"
         },
         {
           "source": "东方财富",
-          "price": 66.34,
+          "price": 68.68,
           "previous_close": 65.33,
-          "change_pct": 1.55,
-          "dynamic_pe": -459.39,
-          "pb": 12.43,
+          "change_pct": 5.13,
+          "dynamic_pe": -475.6,
+          "pb": 12.87,
           "source_url": "https://quote.eastmoney.com/sh600118.html"
         }
       ],
@@ -74,6 +74,15 @@
   ],
   "sector_news": {
     "items": [
+      {
+        "title": "NASA’s Lunar Development and Test Facility Prepares Artemis Hardware for Moon",
+        "published_at": "2026-08-07T06:25+00:00",
+        "source": "NASA News",
+        "url": "https://www.nasa.gov/centers-and-facilities/johnson/nasas-lunar-development-and-test-facility-prepares-artemis-hardware-for-moon/",
+        "category": "卫星与商业航天",
+        "region": "国际",
+        "source_weight": 14
+      },
       {
         "title": "Lessons for the future of NASA Mars exploration from a 1970s mission",
         "published_at": "2026-08-06T15:00+00:00",
@@ -210,15 +219,6 @@
         "source_weight": 10
       },
       {
-        "title": "The SpaceX Falcon Lunar Crash Is a Warning for Moon Bases",
-        "published_at": "2026-08-03T19:58+00:00",
-        "source": "WIRED Science",
-        "url": "https://www.wired.com/story/spacex-falcon-moon-crash-warning-for-lunar-bases/",
-        "category": "卫星与商业航天",
-        "region": "国际",
-        "source_weight": 10
-      },
-      {
         "title": "Grindr's AI spend is paying off and its pricey new tier has had some surprises, CEO says",
         "published_at": "2026-08-06T22:26+00:00",
         "source": "CNBC Technology",
@@ -255,10 +255,10 @@
         "source_weight": 9
       },
       {
-        "title": "消息称前小鹏副总裁陈永海加入众擎机器人，担任运营总裁",
-        "published_at": "2026-08-06T23:36+00:00",
+        "title": "王兴兴：宇树科技将积极探索人形机器人、机甲等更多产品形态",
+        "published_at": "2026-08-07T06:56+00:00",
         "source": "IT之家",
-        "url": "https://www.ithome.com/0/986/783.htm",
+        "url": "https://www.ithome.com/0/986/984.htm",
         "category": "机器人与具身智能",
         "region": "国内",
         "source_weight": 8
@@ -273,15 +273,6 @@
         "source_weight": 8
       },
       {
-        "title": "Unitree Robotics moves closer to Shanghai STAR Market IPO",
-        "published_at": "2026-07-31T07:14+00:00",
-        "source": "TechNode",
-        "url": "https://technode.com/2026/07/31/unitree-robotics-moves-closer-to-shanghai-star-market-ipo/",
-        "category": "机器人与具身智能",
-        "region": "国际",
-        "source_weight": 8
-      },
-      {
         "title": "全球人形机器人龙头上市在即！宇树科技发行价150.80元/股",
         "published_at": "2026-08-06T19:25+00:00",
         "source": "快科技-硬件",
@@ -289,13 +280,22 @@
         "category": "机器人与具身智能",
         "region": "国内",
         "source_weight": 6
+      },
+      {
+        "title": "瑞萨电子将首次亮相2026中国具身智能机器人产业大会",
+        "published_at": "2026-08-06T19:05+00:00",
+        "source": "快科技-硬件",
+        "url": "https://news.mydrivers.com/1/1141/1141957.htm",
+        "category": "机器人与具身智能",
+        "region": "国内",
+        "source_weight": 6
       }
     ],
     "errors": [
       "36氪: not well-formed (invalid token): line 9, column 542",
-      "国内科技新闻: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=%28%E5%8D%AB%E6%98%9F+OR+%E8%88%AA%E5%A4%A9+OR+%E5%8C%97%E6%96%97+OR+%E6%9C%BA%E5%99%A8%E4%BA%BA+OR+%E5%85%B7%E8%BA%AB%E6%99%BA%E8%83%BD+OR+%E8%8A%AF%E7%89%87+OR+%E5%8D%8A%E5%AF%BC%E4%BD%93+OR+%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD+OR+%E5%86%9B%E5%B7%A5+OR+%E5%9B%BD%E9%98%B2%E7%A7%91%E6%8A%80%29+sourcelang%3AChinese&mode=artlist&format=json&maxrecords=24&sort=datedesc&timespan=3d"
+      "国际科技新闻: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=%28satellite+OR+spaceflight+OR+robotics+OR+humanoid+OR+semiconductor+OR+%22artificial+intelligence%22+OR+%22defense+technology%22%29+sourcelang%3AEnglish&mode=artlist&format=json&maxrecords=24&sort=datedesc&timespan=3d"
     ],
     "policy": "仅展示含标题、发布时间、来源和原文链接的新闻；不据此自动推断股价因果。"
   },
-  "digest": "【A股科技主题决策雷达】\n个股建议：待确认（基于近3个月K线，保守模式）\n执行参考：买入区间 仅在MA20附近企稳时考虑低吸，不追涨｜仓位 控制在3成以内\n风控纪律：止损 有效跌破MA20且两个交易日未收回｜失效条件 跌破止损位或量价结构转空时，持有逻辑失效\n大盘摘要：🎯 大盘复盘 2026-08-07 大盘复盘 今日指数在权重股带动下全线收红，但市场宽度极差——超3700只个股下跌，呈现典型的“指数强、个股弱”分化格局。明日优先观察有色主线能否带动赚钱效应扩散，以及权重护盘是否具有持续性。 一、盘面总览 📊 今日上证指数涨0.16%、创业板指涨0.83%，指数层面全线收涨，但盘面温度偏低：两市仅1642家上涨，却有379…\n600118 双源校验：价格：66.34；涨跌幅：1.56；动态PE：-459.42（亏损状态）；PB：12.43\n\n可核验科技新闻：\n- 卫星与商业航天：Lessons for the future of NASA Mars exploration from a 1970s mission（SpaceNews，2026-08-06T15:00+00:00）\n  https://spacenews.com/lessons-for-the-future-of-nasa-mars-exploration-from-a-1970s-mission/\n- 军工与国防科技：Firestorm Labs builds drones aboard USS Essex without shore resupply（Defense News，2026-08-05T23:14+00:00）\n  https://www.defensenews.com/industry/techwatch/2026/08/05/firestorm-labs-builds-drones-aboard-uss-essex-without-shore-resupply/\n- 科技与芯片：The Download: Google’s AI shake-up and Meta’s rogue model（MIT Technology Review，2026-08-06T12:10+00:00）\n  https://www.technologyreview.com/2026/08/06/1141278/the-download-google-ai-shake-up-meta-rogue-model/\n- 机器人与具身智能：The Download: US robot restrictions and ICE’s DNA grab（MIT Technology Review，2026-08-04T12:14+00:00）\n  https://www.technologyreview.com/2026/08/04/1141098/the-download-robot-restrictions-ice-dna/\n\n网页版完整报告：https://LPT111.github.io/daily_stock_analysis/\n仅供研究参考，不构成投资建议。"
+  "digest": "【A股科技主题决策雷达】\n个股建议：待确认（基于近3个月K线，保守模式）\n执行参考：买入区间 仅在MA20附近企稳时考虑低吸，不追涨｜仓位 控制在3成以内\n风控纪律：止损 有效跌破MA20且两个交易日未收回｜失效条件 跌破止损位或量价结构转空时，持有逻辑失效\n大盘摘要：🎯 大盘复盘 2026-08-07 大盘复盘 今日市场放量普涨，指数全部收红、科创50以2.51%领涨；核心矛盾是局部赚钱效应极热（医药/有色）与市场宽度偏低并存的结构性分化；明日优先观察成交额能否守住高位，以及医药产业链能否延续主线效应。 一、盘面总览 🔍 今日主要指数无一下跌，沪指站上3940点逼近4000点整数关，科创50涨幅领先。全市场上涨2856家…\n600118 双源校验：价格：68.68；涨跌幅：5.13；动态PE：-475.60（亏损状态）；PB：12.87\n\n可核验科技新闻：\n- 卫星与商业航天：NASA’s Lunar Development and Test Facility Prepares Artemis Hardware for Moon（NASA News，2026-08-07T06:25+00:00）\n  https://www.nasa.gov/centers-and-facilities/johnson/nasas-lunar-development-and-test-facility-prepares-artemis-hardware-for-moon/\n- 军工与国防科技：Firestorm Labs builds drones aboard USS Essex without shore resupply（Defense News，2026-08-05T23:14+00:00）\n  https://www.defensenews.com/industry/techwatch/2026/08/05/firestorm-labs-builds-drones-aboard-uss-essex-without-shore-resupply/\n- 科技与芯片：The Download: Google’s AI shake-up and Meta’s rogue model（MIT Technology Review，2026-08-06T12:10+00:00）\n  https://www.technologyreview.com/2026/08/06/1141278/the-download-google-ai-shake-up-meta-rogue-model/\n- 机器人与具身智能：The Download: US robot restrictions and ICE’s DNA grab（MIT Technology Review，2026-08-04T12:14+00:00）\n  https://www.technologyreview.com/2026/08/04/1141098/the-download-robot-restrictions-ice-dna/\n\n网页版完整报告：https://LPT111.github.io/daily_stock_analysis/\n仅供研究参考，不构成投资建议。"
 }
