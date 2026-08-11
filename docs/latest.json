@@ -1,51 +1,51 @@
 {
-  "generated_at": "2026-08-10T08:56:56+00:00",
+  "generated_at": "2026-08-11T01:02:57+00:00",
   "dashboard_url": "https://LPT111.github.io/daily_stock_analysis/",
   "stock_report": null,
-  "market_report": "market_review_20260810.md",
+  "market_report": "market_review_20260811.md",
   "validations": [
     {
       "code": "600118",
       "policy": "仅 status=confirmed 的字段可用于结论；待核实字段必须忽略。",
       "metrics": {
         "price": {
-          "status": "confirmed",
-          "value": 69.13,
-          "display": "69.13",
-          "interpretation": "腾讯财经与东方财富交叉核验一致。",
+          "status": "待核实",
+          "value": null,
+          "display": "待核实",
+          "interpretation": "两个数据源未同时返回一致结果，不得用于决策。",
           "sources": {
             "腾讯财经": 69.13,
-            "东方财富": 69.13
+            "东方财富": null
           }
         },
         "change_pct": {
-          "status": "confirmed",
-          "value": 0.66,
-          "display": "0.66",
-          "interpretation": "腾讯财经与东方财富交叉核验一致。",
+          "status": "待核实",
+          "value": null,
+          "display": "待核实",
+          "interpretation": "两个数据源未同时返回一致结果，不得用于决策。",
           "sources": {
             "腾讯财经": 0.66,
-            "东方财富": 0.66
+            "东方财富": null
           }
         },
         "dynamic_pe": {
-          "status": "confirmed",
-          "value": -478.71,
-          "display": "-478.71（亏损状态）",
-          "interpretation": "动态市盈率为负，表示当前口径下盈利为负，不能按正 PE 倍数进行估值判断。",
+          "status": "待核实",
+          "value": null,
+          "display": "待核实",
+          "interpretation": "两个数据源未同时返回一致结果，不得用于决策。",
           "sources": {
             "腾讯财经": -478.71,
-            "东方财富": -478.71
+            "东方财富": null
           }
         },
         "pb": {
-          "status": "confirmed",
-          "value": 12.95,
-          "display": "12.95",
-          "interpretation": "腾讯财经与东方财富交叉核验一致。",
+          "status": "待核实",
+          "value": null,
+          "display": "待核实",
+          "interpretation": "两个数据源未同时返回一致结果，不得用于决策。",
           "sources": {
             "腾讯财经": 12.95,
-            "东方财富": 12.95
+            "东方财富": null
           }
         }
       },
@@ -58,30 +58,77 @@
           "dynamic_pe": -478.71,
           "pb": 12.95,
           "source_url": "https://gu.qq.com/sh600118"
-        },
-        {
-          "source": "东方财富",
-          "price": 69.13,
-          "previous_close": 68.68,
-          "change_pct": 0.66,
-          "dynamic_pe": -478.71,
-          "pb": 12.95,
-          "source_url": "https://quote.eastmoney.com/sh600118.html"
         }
       ],
-      "errors": []
+      "errors": [
+        "东方财富: 502 Server Error: Bad Gateway for url: https://push2.eastmoney.com/api/qt/stock/get?secid=1.600118&fields=f43%2Cf57%2Cf58%2Cf60%2Cf162%2Cf167%2Cf170"
+      ]
     }
   ],
   "sector_news": {
     "items": [
       {
-        "title": "NASA’s Lunar Development and Test Facility Prepares Artemis Hardware for Moon",
-        "published_at": "2026-08-07T06:25+00:00",
-        "source": "NASA News",
-        "url": "https://www.nasa.gov/centers-and-facilities/johnson/nasas-lunar-development-and-test-facility-prepares-artemis-hardware-for-moon/",
+        "title": "Rocket Lab builds deployable infrastructure for Electron launches",
+        "published_at": "2026-08-10T21:31+00:00",
+        "source": "SpaceNews",
+        "url": "https://spacenews.com/rocket-lab-builds-deployable-infrastructure-for-electron-launches/",
         "category": "卫星与商业航天",
         "region": "国际",
-        "source_weight": 14
+        "source_weight": 13
+      },
+      {
+        "title": "DARPA developing hypersonic cruise missile to evade enemy air defenses",
+        "published_at": "2026-08-10T20:54+00:00",
+        "source": "Defense News",
+        "url": "https://www.defensenews.com/industry/techwatch/2026/08/10/darpa-developing-hypersonic-cruise-missile-to-evade-enemy-air-defenses/",
+        "category": "军工与国防科技",
+        "region": "国际",
+        "source_weight": 13
+      },
+      {
+        "title": "US Army exploring 50mm cannon to destroy drones",
+        "published_at": "2026-08-10T18:10+00:00",
+        "source": "Defense News",
+        "url": "https://www.defensenews.com/industry/techwatch/2026/08/10/us-army-exploring-50mm-cannon-to-destroy-drones/",
+        "category": "军工与国防科技",
+        "region": "国际",
+        "source_weight": 13
+      },
+      {
+        "title": "US Navy tests AI-powered submarine hunter",
+        "published_at": "2026-08-10T15:01+00:00",
+        "source": "Defense News",
+        "url": "https://www.defensenews.com/industry/techwatch/2026/08/10/us-navy-tests-ai-powered-submarine-hunter/",
+        "category": "科技与芯片",
+        "region": "国际",
+        "source_weight": 13
+      },
+      {
+        "title": "Japan’s 2026 defense white paper highlights ‘new era of crisis’ in Indo-Pacific",
+        "published_at": "2026-08-10T13:44+00:00",
+        "source": "Defense News",
+        "url": "https://www.defensenews.com/global/asia-pacific/2026/08/10/japans-2026-defense-white-paper-highlights-new-era-of-crisis-in-indo-pacific/",
+        "category": "军工与国防科技",
+        "region": "国际",
+        "source_weight": 13
+      },
+      {
+        "title": "Chinese Long March 7A rocket explodes shortly after liftoff",
+        "published_at": "2026-08-10T13:24+00:00",
+        "source": "SpaceNews",
+        "url": "https://spacenews.com/chinese-long-march-7a-rocket-explodes-shortly-after-liftoff/",
+        "category": "卫星与商业航天",
+        "region": "国际",
+        "source_weight": 13
+      },
+      {
+        "title": "Astrolight, ATMOS Space Cargo eye first in-flight laser link between reentry vehicle, satellite",
+        "published_at": "2026-08-10T12:00+00:00",
+        "source": "SpaceNews",
+        "url": "https://spacenews.com/astrolight-atmos-space-cargo-eye-first-in-flight-laser-link-between-reentry-vehicle-satellite/",
+        "category": "卫星与商业航天",
+        "region": "国际",
+        "source_weight": 13
       },
       {
         "title": "Katalyst Space makes progress in restoring control of Swift servicing spacecraft",
@@ -93,67 +140,31 @@
         "source_weight": 13
       },
       {
-        "title": "Senate installs new chiefs for U.S. military space acquisition, spy satellites",
-        "published_at": "2026-08-07T21:03+00:00",
-        "source": "SpaceNews",
-        "url": "https://spacenews.com/senate-installs-new-chiefs-for-u-s-military-space-acquisition-spy-satellites/",
-        "category": "卫星与商业航天",
+        "title": "AI professors are negotiating the new realities of academic research",
+        "published_at": "2026-08-10T20:00+00:00",
+        "source": "MIT Technology Review",
+        "url": "https://www.technologyreview.com/2026/08/10/1141597/ai-professors-are-negotiating-the-new-realities-of-academic-research/",
+        "category": "科技与芯片",
         "region": "国际",
-        "source_weight": 13
+        "source_weight": 12
       },
       {
-        "title": "Lessons for the future of NASA Mars exploration from a 1970s mission",
-        "published_at": "2026-08-06T15:00+00:00",
-        "source": "SpaceNews",
-        "url": "https://spacenews.com/lessons-for-the-future-of-nasa-mars-exploration-from-a-1970s-mission/",
-        "category": "卫星与商业航天",
+        "title": "The Download: AI agents for science, and the “censorship-industrial complex”",
+        "published_at": "2026-08-10T12:10+00:00",
+        "source": "MIT Technology Review",
+        "url": "https://www.technologyreview.com/2026/08/10/1141526/the-download-ai-agents-science-censorship-industrial-complex/",
+        "category": "科技与芯片",
         "region": "国际",
-        "source_weight": 13
+        "source_weight": 12
       },
       {
-        "title": "Rocket Lab launches 8th iQPS satellite",
-        "published_at": "2026-08-06T11:17+00:00",
-        "source": "SpaceNews",
-        "url": "https://spacenews.com/rocket-lab-launches-8th-iqps-satellite/",
-        "category": "卫星与商业航天",
+        "title": "AI for science needs reasoning, not just data",
+        "published_at": "2026-08-10T09:00+00:00",
+        "source": "MIT Technology Review",
+        "url": "https://www.technologyreview.com/2026/08/10/1141384/ai-agents-for-science/",
+        "category": "科技与芯片",
         "region": "国际",
-        "source_weight": 13
-      },
-      {
-        "title": "Firestorm Labs builds drones aboard USS Essex without shore resupply",
-        "published_at": "2026-08-05T23:14+00:00",
-        "source": "Defense News",
-        "url": "https://www.defensenews.com/industry/techwatch/2026/08/05/firestorm-labs-builds-drones-aboard-uss-essex-without-shore-resupply/",
-        "category": "军工与国防科技",
-        "region": "国际",
-        "source_weight": 13
-      },
-      {
-        "title": "US Navy, Saildrone to use unmanned systems in expanded counternarcotics role",
-        "published_at": "2026-08-05T14:37+00:00",
-        "source": "Defense News",
-        "url": "https://www.defensenews.com/industry/techwatch/2026/08/05/us-navy-saildrone-to-use-unmanned-systems-in-expanded-counternarcotics-role/",
-        "category": "军工与国防科技",
-        "region": "国际",
-        "source_weight": 13
-      },
-      {
-        "title": "France’s drone production shifts from policy ambition to factory floor",
-        "published_at": "2026-08-05T12:48+00:00",
-        "source": "Defense News",
-        "url": "https://www.defensenews.com/industry/techwatch/2026/08/05/frances-drone-production-shifts-from-policy-ambition-to-factory-floor/",
-        "category": "军工与国防科技",
-        "region": "国际",
-        "source_weight": 13
-      },
-      {
-        "title": "US Army wants a surface-to-air missile that can destroy small drones",
-        "published_at": "2026-08-04T19:29+00:00",
-        "source": "Defense News",
-        "url": "https://www.defensenews.com/industry/techwatch/2026/08/04/us-army-wants-a-surface-to-air-missile-that-can-destroy-small-drones/",
-        "category": "军工与国防科技",
-        "region": "国际",
-        "source_weight": 13
+        "source_weight": 12
       },
       {
         "title": "The Download: a censorship conspiracy theory and the first virus created by AI",
@@ -165,46 +176,10 @@
         "source_weight": 12
       },
       {
-        "title": "The Download: Google’s AI shake-up and Meta’s rogue model",
-        "published_at": "2026-08-06T12:10+00:00",
-        "source": "MIT Technology Review",
-        "url": "https://www.technologyreview.com/2026/08/06/1141278/the-download-google-ai-shake-up-meta-rogue-model/",
-        "category": "科技与芯片",
-        "region": "国际",
-        "source_weight": 12
-      },
-      {
-        "title": "The Download: US robot restrictions and ICE’s DNA grab",
-        "published_at": "2026-08-04T12:14+00:00",
-        "source": "MIT Technology Review",
-        "url": "https://www.technologyreview.com/2026/08/04/1141098/the-download-robot-restrictions-ice-dna/",
-        "category": "机器人与具身智能",
-        "region": "国际",
-        "source_weight": 12
-      },
-      {
-        "title": "Trump’s AI protectionism has come for robotics",
-        "published_at": "2026-08-03T18:43+00:00",
-        "source": "MIT Technology Review",
-        "url": "https://www.technologyreview.com/2026/08/03/1141056/trumps-ai-protectionism-has-come-for-robotics/",
-        "category": "机器人与具身智能",
-        "region": "国际",
-        "source_weight": 12
-      },
-      {
         "title": "AI may respond differently to bosses and subordinates",
         "published_at": "2026-08-07T14:00+00:00",
         "source": "Science News",
         "url": "https://www.sciencenews.org/article/ai-bosses-subordinate-response-safety",
-        "category": "科技与芯片",
-        "region": "国际",
-        "source_weight": 11
-      },
-      {
-        "title": "Is AI making us dumber? Maybe not. But our skills are at risk",
-        "published_at": "2026-08-04T15:00+00:00",
-        "source": "Science News",
-        "url": "https://www.sciencenews.org/article/ai-making-us-dumber-learning-skills-risk",
         "category": "科技与芯片",
         "region": "国际",
         "source_weight": 11
@@ -219,37 +194,19 @@
         "source_weight": 10
       },
       {
-        "title": "Scientists Used AI to Create 16 New Viruses",
-        "published_at": "2026-08-07T14:13+00:00",
+        "title": "Welp, Nobody Saw SpaceX’s Falcon 9 Rocket Crash Into the Moon",
+        "published_at": "2026-08-05T22:40+00:00",
         "source": "WIRED Science",
-        "url": "https://www.wired.com/story/scientists-used-ai-to-create-16-new-viruses/",
-        "category": "科技与芯片",
+        "url": "https://www.wired.com/story/nobody-saw-spacex-rocket-moon-crash/",
+        "category": "卫星与商业航天",
         "region": "国际",
         "source_weight": 10
       },
       {
-        "title": "DeepMind Says Its AI Can Predict Hurricanes Earlier Than Everyone Else",
-        "published_at": "2026-08-06T16:23+00:00",
-        "source": "WIRED Science",
-        "url": "https://www.wired.com/story/deepmind-ai-model-can-predict-hurricanes-earlier/",
-        "category": "科技与芯片",
-        "region": "国际",
-        "source_weight": 10
-      },
-      {
-        "title": "Explosive drone found hovering near Ukrainian cargo aircraft at German airport",
-        "published_at": "2026-08-06T22:01+00:00",
-        "source": "Ars Technica",
-        "url": "https://arstechnica.com/gadgets/2026/08/germany-disarms-explosive-drone-found-at-airport-hunts-possible-second-drone/",
-        "category": "军工与国防科技",
-        "region": "国际",
-        "source_weight": 9
-      },
-      {
-        "title": "Hadrian valued at nearly $8 billion after fresh funding as money pours into defense tech",
-        "published_at": "2026-08-06T14:07+00:00",
+        "title": "Australian rare earth miner surges after U.S. Department of Defense investment",
+        "published_at": "2026-08-10T11:44+00:00",
         "source": "CNBC Technology",
-        "url": "https://www.cnbc.com/2026/08/06/hadrian-defense-tech-ai-manufacturing.html",
+        "url": "https://www.cnbc.com/2026/08/10/rare-earths-sunrise-energy-metals-trump-cina.html",
         "category": "军工与国防科技",
         "region": "国际",
         "source_weight": 9
@@ -273,6 +230,33 @@
         "source_weight": 8
       },
       {
+        "title": "彻底颠覆传统作战模式！我军三型无人机成体系应用首次公开",
+        "published_at": "2026-08-04T18:28+00:00",
+        "source": "快科技-科学",
+        "url": "https://news.mydrivers.com/1/1141/1141364.htm",
+        "category": "军工与国防科技",
+        "region": "国内",
+        "source_weight": 7
+      },
+      {
+        "title": "人形机器人第一股！宇树科技网上申购超8288倍：中签率0.0181%",
+        "published_at": "2026-08-10T19:18+00:00",
+        "source": "快科技-硬件",
+        "url": "https://news.mydrivers.com/1/1142/1142696.htm",
+        "category": "机器人与具身智能",
+        "region": "国内",
+        "source_weight": 6
+      },
+      {
+        "title": "3年后超30%车企淘汰 韩路劝汽车博主抓紧转型机器人赛道",
+        "published_at": "2026-08-10T17:06+00:00",
+        "source": "快科技-硬件",
+        "url": "https://news.mydrivers.com/1/1142/1142653.htm",
+        "category": "机器人与具身智能",
+        "region": "国内",
+        "source_weight": 6
+      },
+      {
         "title": "告别停车难！现代汽车试点自动泊车机器人：车位能凭空多出一半",
         "published_at": "2026-08-10T11:02+00:00",
         "source": "快科技-硬件",
@@ -289,13 +273,22 @@
         "category": "机器人与具身智能",
         "region": "国内",
         "source_weight": 6
+      },
+      {
+        "title": "Marine Corps to get ‘production-ready’ microwave drone swarm killer",
+        "published_at": "2026-08-10T12:59+00:00",
+        "source": "Defense News",
+        "url": "https://www.defensenews.com/news/your-military/2026/08/10/marine-corps-to-get-production-ready-microwave-drone-swarm-killer/",
+        "category": "军工与国防科技",
+        "region": "国际",
+        "source_weight": 13
       }
     ],
     "errors": [
       "36氪: not well-formed (invalid token): line 9, column 542",
-      "国际科技新闻: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=%28satellite+OR+spaceflight+OR+robotics+OR+humanoid+OR+semiconductor+OR+%22artificial+intelligence%22+OR+%22defense+technology%22%29+sourcelang%3AEnglish&mode=artlist&format=json&maxrecords=24&sort=datedesc&timespan=3d"
+      "国内科技新闻: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=%28%E5%8D%AB%E6%98%9F+OR+%E8%88%AA%E5%A4%A9+OR+%E5%8C%97%E6%96%97+OR+%E6%9C%BA%E5%99%A8%E4%BA%BA+OR+%E5%85%B7%E8%BA%AB%E6%99%BA%E8%83%BD+OR+%E8%8A%AF%E7%89%87+OR+%E5%8D%8A%E5%AF%BC%E4%BD%93+OR+%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD+OR+%E5%86%9B%E5%B7%A5+OR+%E5%9B%BD%E9%98%B2%E7%A7%91%E6%8A%80%29+sourcelang%3AChinese&mode=artlist&format=json&maxrecords=24&sort=datedesc&timespan=3d"
     ],
     "policy": "仅展示含标题、发布时间、来源和原文链接的新闻；不据此自动推断股价因果。"
   },
-  "digest": "【A股科技主题决策雷达】\n个股建议：待确认（基于近3个月K线，保守模式）\n执行参考：买入区间 仅在MA20附近企稳时考虑低吸，不追涨｜仓位 控制在3成以内\n风控纪律：止损 有效跌破MA20且两个交易日未收回｜失效条件 跌破止损位或量价结构转空时，持有逻辑失效\n大盘摘要：🎯 大盘复盘 2026-08-10 大盘复盘 📊 今日A股呈“权重护盘、题材分化”的偏暖震荡格局。核心矛盾是上证走强而创业板、科创50走弱，资金呈现高位科技向低位板块切换的特征。明日优先观察高低切换能否延续，以及科技板块是否出现止跌信号。 一、盘面总览 🏦 今日指数整体偏暖但结构分化：上证指数上涨0.67%，深证成指微涨0.04%，而创业板指和科创50分别下…\n600118 双源校验：价格：69.13；涨跌幅：0.66；动态PE：-478.71（亏损状态）；PB：12.95\n\n可核验科技新闻：\n- 卫星与商业航天：NASA’s Lunar Development and Test Facility Prepares Artemis Hardware for Moon（NASA News，2026-08-07T06:25+00:00）\n  https://www.nasa.gov/centers-and-facilities/johnson/nasas-lunar-development-and-test-facility-prepares-artemis-hardware-for-moon/\n- 军工与国防科技：Firestorm Labs builds drones aboard USS Essex without shore resupply（Defense News，2026-08-05T23:14+00:00）\n  https://www.defensenews.com/industry/techwatch/2026/08/05/firestorm-labs-builds-drones-aboard-uss-essex-without-shore-resupply/\n- 科技与芯片：The Download: a censorship conspiracy theory and the first virus created by AI（MIT Technology Review，2026-08-07T14:20+00:00）\n  https://www.technologyreview.com/2026/08/07/1141389/the-download-censorship-conspiracy-theory-first-ai-virus/\n- 机器人与具身智能：The Download: US robot restrictions and ICE’s DNA grab（MIT Technology Review，2026-08-04T12:14+00:00）\n  https://www.technologyreview.com/2026/08/04/1141098/the-download-robot-restrictions-ice-dna/\n\n网页版完整报告：https://LPT111.github.io/daily_stock_analysis/\n仅供研究参考，不构成投资建议。"
+  "digest": "【A股科技主题决策雷达】\n个股建议：待确认（基于近3个月K线，保守模式）\n执行参考：买入区间 仅在MA20附近企稳时考虑低吸，不追涨｜仓位 控制在3成以内\n风控纪律：止损 有效跌破MA20且两个交易日未收回｜失效条件 跌破止损位或量价结构转空时，持有逻辑失效\n大盘摘要：🎯 大盘复盘 2026-08-11 大盘复盘 今日市场呈现“指数权重稳、题材个股活”的结构性偏暖状态：上证指数收涨而创业板收跌，市场宽度极佳但指数分化明显。核心矛盾在大盘权重与中小成长之间的资金跷跷板，明日优先观察成交额能否维持 2.5 万亿以上以及创业板能否止跌修复。 一、盘面总览 📊 今日市场整体判定为“偏暖震荡”。上证指数上涨 0.67%，深证成指微涨…\n600118 双源校验：价格：待核实；涨跌幅：待核实；动态PE：待核实；PB：待核实\n\n可核验科技新闻：\n- 卫星与商业航天：Rocket Lab builds deployable infrastructure for Electron launches（SpaceNews，2026-08-10T21:31+00:00）\n  https://spacenews.com/rocket-lab-builds-deployable-infrastructure-for-electron-launches/\n- 军工与国防科技：DARPA developing hypersonic cruise missile to evade enemy air defenses（Defense News，2026-08-10T20:54+00:00）\n  https://www.defensenews.com/industry/techwatch/2026/08/10/darpa-developing-hypersonic-cruise-missile-to-evade-enemy-air-defenses/\n- 科技与芯片：US Navy tests AI-powered submarine hunter（Defense News，2026-08-10T15:01+00:00）\n  https://www.defensenews.com/industry/techwatch/2026/08/10/us-navy-tests-ai-powered-submarine-hunter/\n- 机器人与具身智能：Former ByteDance robotics head reportedly joins Xiaomi（TechNode，2026-08-10T07:22+00:00）\n  https://technode.com/2026/08/10/former-bytedance-robotics-head-reportedly-joins-xiaomi/\n\n网页版完整报告：https://LPT111.github.io/daily_stock_analysis/\n仅供研究参考，不构成投资建议。"
 }
