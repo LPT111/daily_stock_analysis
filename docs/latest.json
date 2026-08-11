@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-08-11T01:02:57+00:00",
+  "generated_at": "2026-08-11T08:20:42+00:00",
   "dashboard_url": "https://LPT111.github.io/daily_stock_analysis/",
-  "stock_report": null,
+  "stock_report": "report_20260811.md",
   "market_report": "market_review_20260811.md",
   "validations": [
     {
@@ -14,7 +14,7 @@
           "display": "待核实",
           "interpretation": "两个数据源未同时返回一致结果，不得用于决策。",
           "sources": {
-            "腾讯财经": 69.13,
+            "腾讯财经": 63.52,
             "东方财富": null
           }
         },
@@ -24,7 +24,7 @@
           "display": "待核实",
           "interpretation": "两个数据源未同时返回一致结果，不得用于决策。",
           "sources": {
-            "腾讯财经": 0.66,
+            "腾讯财经": -8.12,
             "东方财富": null
           }
         },
@@ -34,7 +34,7 @@
           "display": "待核实",
           "interpretation": "两个数据源未同时返回一致结果，不得用于决策。",
           "sources": {
-            "腾讯财经": -478.71,
+            "腾讯财经": -439.86,
             "东方财富": null
           }
         },
@@ -44,7 +44,7 @@
           "display": "待核实",
           "interpretation": "两个数据源未同时返回一致结果，不得用于决策。",
           "sources": {
-            "腾讯财经": 12.95,
+            "腾讯财经": 11.9,
             "东方财富": null
           }
         }
@@ -52,11 +52,11 @@
       "raw_sources": [
         {
           "source": "腾讯财经",
-          "price": 69.13,
-          "previous_close": 68.68,
-          "change_pct": 0.66,
-          "dynamic_pe": -478.71,
-          "pb": 12.95,
+          "price": 63.52,
+          "previous_close": 69.13,
+          "change_pct": -8.12,
+          "dynamic_pe": -439.86,
+          "pb": 11.9,
           "source_url": "https://gu.qq.com/sh600118"
         }
       ],
@@ -212,6 +212,42 @@
         "source_weight": 9
       },
       {
+        "title": "腾讯《王者荣耀世界》公布后续计划：移动端性能优化，重做新手体验并调整战斗机制",
+        "published_at": "2026-08-11T08:16+00:00",
+        "source": "IT之家",
+        "url": "https://www.ithome.com/0/988/366.htm",
+        "category": "军工与国防科技",
+        "region": "国内",
+        "source_weight": 8
+      },
+      {
+        "title": "集结全公司之力，消息称三星加快自研人形机器人",
+        "published_at": "2026-08-11T07:59+00:00",
+        "source": "IT之家",
+        "url": "https://www.ithome.com/0/988/358.htm",
+        "category": "机器人与具身智能",
+        "region": "国内",
+        "source_weight": 8
+      },
+      {
+        "title": "Chinese Makers Accounted for More Than 97% of Global Humanoid Robot Shipments in H1 2026",
+        "published_at": "2026-08-11T04:48+00:00",
+        "source": "TechNode",
+        "url": "https://technode.com/2026/08/11/chinese-makers-accounted-for-more-than-97-of-global-humanoid-robot-shipments-in-h1-2026/",
+        "category": "机器人与具身智能",
+        "region": "国际",
+        "source_weight": 8
+      },
+      {
+        "title": "Beyond mobility: Unitree’s GD01 signals the next phase of China’s robotics battle",
+        "published_at": "2026-08-11T02:44+00:00",
+        "source": "TechNode",
+        "url": "https://technode.com/2026/08/11/beyond-mobility-unitrees-gd01-signals-the-next-phase-of-chinas-robotics-battle/",
+        "category": "机器人与具身智能",
+        "region": "国际",
+        "source_weight": 8
+      },
+      {
         "title": "Former ByteDance robotics head reportedly joins Xiaomi",
         "published_at": "2026-08-10T07:22+00:00",
         "source": "TechNode",
@@ -230,6 +266,15 @@
         "source_weight": 8
       },
       {
+        "title": "美国一滚动机器人创纪录：从5.7米高处坠落后仍能行动",
+        "published_at": "2026-08-11T14:15+00:00",
+        "source": "快科技-科学",
+        "url": "https://news.mydrivers.com/1/1142/1142863.htm",
+        "category": "机器人与具身智能",
+        "region": "国内",
+        "source_weight": 7
+      },
+      {
         "title": "彻底颠覆传统作战模式！我军三型无人机成体系应用首次公开",
         "published_at": "2026-08-04T18:28+00:00",
         "source": "快科技-科学",
@@ -237,58 +282,14 @@
         "category": "军工与国防科技",
         "region": "国内",
         "source_weight": 7
-      },
-      {
-        "title": "人形机器人第一股！宇树科技网上申购超8288倍：中签率0.0181%",
-        "published_at": "2026-08-10T19:18+00:00",
-        "source": "快科技-硬件",
-        "url": "https://news.mydrivers.com/1/1142/1142696.htm",
-        "category": "机器人与具身智能",
-        "region": "国内",
-        "source_weight": 6
-      },
-      {
-        "title": "3年后超30%车企淘汰 韩路劝汽车博主抓紧转型机器人赛道",
-        "published_at": "2026-08-10T17:06+00:00",
-        "source": "快科技-硬件",
-        "url": "https://news.mydrivers.com/1/1142/1142653.htm",
-        "category": "机器人与具身智能",
-        "region": "国内",
-        "source_weight": 6
-      },
-      {
-        "title": "告别停车难！现代汽车试点自动泊车机器人：车位能凭空多出一半",
-        "published_at": "2026-08-10T11:02+00:00",
-        "source": "快科技-硬件",
-        "url": "https://news.mydrivers.com/1/1142/1142549.htm",
-        "category": "机器人与具身智能",
-        "region": "国内",
-        "source_weight": 6
-      },
-      {
-        "title": "A股人形机器人第一股即将登场 宇树科技明天申购：150.8元/股",
-        "published_at": "2026-08-09T13:37+00:00",
-        "source": "快科技-硬件",
-        "url": "https://news.mydrivers.com/1/1142/1142429.htm",
-        "category": "机器人与具身智能",
-        "region": "国内",
-        "source_weight": 6
-      },
-      {
-        "title": "Marine Corps to get ‘production-ready’ microwave drone swarm killer",
-        "published_at": "2026-08-10T12:59+00:00",
-        "source": "Defense News",
-        "url": "https://www.defensenews.com/news/your-military/2026/08/10/marine-corps-to-get-production-ready-microwave-drone-swarm-killer/",
-        "category": "军工与国防科技",
-        "region": "国际",
-        "source_weight": 13
       }
     ],
     "errors": [
       "36氪: not well-formed (invalid token): line 9, column 542",
-      "国内科技新闻: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=%28%E5%8D%AB%E6%98%9F+OR+%E8%88%AA%E5%A4%A9+OR+%E5%8C%97%E6%96%97+OR+%E6%9C%BA%E5%99%A8%E4%BA%BA+OR+%E5%85%B7%E8%BA%AB%E6%99%BA%E8%83%BD+OR+%E8%8A%AF%E7%89%87+OR+%E5%8D%8A%E5%AF%BC%E4%BD%93+OR+%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD+OR+%E5%86%9B%E5%B7%A5+OR+%E5%9B%BD%E9%98%B2%E7%A7%91%E6%8A%80%29+sourcelang%3AChinese&mode=artlist&format=json&maxrecords=24&sort=datedesc&timespan=3d"
+      "国内科技新闻: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=%28%E5%8D%AB%E6%98%9F+OR+%E8%88%AA%E5%A4%A9+OR+%E5%8C%97%E6%96%97+OR+%E6%9C%BA%E5%99%A8%E4%BA%BA+OR+%E5%85%B7%E8%BA%AB%E6%99%BA%E8%83%BD+OR+%E8%8A%AF%E7%89%87+OR+%E5%8D%8A%E5%AF%BC%E4%BD%93+OR+%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD+OR+%E5%86%9B%E5%B7%A5+OR+%E5%9B%BD%E9%98%B2%E7%A7%91%E6%8A%80%29+sourcelang%3AChinese&mode=artlist&format=json&maxrecords=24&sort=datedesc&timespan=3d",
+      "国际科技新闻: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=%28satellite+OR+spaceflight+OR+robotics+OR+humanoid+OR+semiconductor+OR+%22artificial+intelligence%22+OR+%22defense+technology%22%29+sourcelang%3AEnglish&mode=artlist&format=json&maxrecords=24&sort=datedesc&timespan=3d"
     ],
     "policy": "仅展示含标题、发布时间、来源和原文链接的新闻；不据此自动推断股价因果。"
   },
-  "digest": "【A股科技主题决策雷达】\n个股建议：待确认（基于近3个月K线，保守模式）\n执行参考：买入区间 仅在MA20附近企稳时考虑低吸，不追涨｜仓位 控制在3成以内\n风控纪律：止损 有效跌破MA20且两个交易日未收回｜失效条件 跌破止损位或量价结构转空时，持有逻辑失效\n大盘摘要：🎯 大盘复盘 2026-08-11 大盘复盘 今日市场呈现“指数权重稳、题材个股活”的结构性偏暖状态：上证指数收涨而创业板收跌，市场宽度极佳但指数分化明显。核心矛盾在大盘权重与中小成长之间的资金跷跷板，明日优先观察成交额能否维持 2.5 万亿以上以及创业板能否止跌修复。 一、盘面总览 📊 今日市场整体判定为“偏暖震荡”。上证指数上涨 0.67%，深证成指微涨…\n600118 双源校验：价格：待核实；涨跌幅：待核实；动态PE：待核实；PB：待核实\n\n可核验科技新闻：\n- 卫星与商业航天：Rocket Lab builds deployable infrastructure for Electron launches（SpaceNews，2026-08-10T21:31+00:00）\n  https://spacenews.com/rocket-lab-builds-deployable-infrastructure-for-electron-launches/\n- 军工与国防科技：DARPA developing hypersonic cruise missile to evade enemy air defenses（Defense News，2026-08-10T20:54+00:00）\n  https://www.defensenews.com/industry/techwatch/2026/08/10/darpa-developing-hypersonic-cruise-missile-to-evade-enemy-air-defenses/\n- 科技与芯片：US Navy tests AI-powered submarine hunter（Defense News，2026-08-10T15:01+00:00）\n  https://www.defensenews.com/industry/techwatch/2026/08/10/us-navy-tests-ai-powered-submarine-hunter/\n- 机器人与具身智能：Former ByteDance robotics head reportedly joins Xiaomi（TechNode，2026-08-10T07:22+00:00）\n  https://technode.com/2026/08/10/former-bytedance-robotics-head-reportedly-joins-xiaomi/\n\n网页版完整报告：https://LPT111.github.io/daily_stock_analysis/\n仅供研究参考，不构成投资建议。"
+  "digest": "【A股科技主题决策雷达】\n个股建议：减仓（基于近3个月K线，保守模式）\n执行参考：买入区间 暂不设置（放量下跌，需等待企稳信号）｜仓位 建议仓位：0-2成（仅限已持仓者逢低小幅试探，空仓者建议0成）\n风控纪律：止损 61.50元（收盘跌破MA20且失守62元整数关口）｜失效条件 未来3个交易日重新站稳62.1768且量价修复，则减仓判断失效并重新评估\n大盘摘要：🎯 大盘复盘 2026-08-11 大盘复盘 一句话：今日市场呈“指数分化、个股普跌”的防守特征，创业板逆势收红但上证、科创50明显走弱，资源权重股拖累指数；明日重点观察创业板能否带动情绪回暖，以及资源股下跌是否扩散至更多周期方向。 一、盘面总览 📊 今日市场整体偏弱。上证指数下跌0.82%，深证成指下跌0.40%，创业板指逆势上涨0.34%，科创50大跌1…\n600118 双源校验：价格：待核实；涨跌幅：待核实；动态PE：待核实；PB：待核实\n\n可核验科技新闻：\n- 卫星与商业航天：Rocket Lab builds deployable infrastructure for Electron launches（SpaceNews，2026-08-10T21:31+00:00）\n  https://spacenews.com/rocket-lab-builds-deployable-infrastructure-for-electron-launches/\n- 军工与国防科技：DARPA developing hypersonic cruise missile to evade enemy air defenses（Defense News，2026-08-10T20:54+00:00）\n  https://www.defensenews.com/industry/techwatch/2026/08/10/darpa-developing-hypersonic-cruise-missile-to-evade-enemy-air-defenses/\n- 科技与芯片：US Navy tests AI-powered submarine hunter（Defense News，2026-08-10T15:01+00:00）\n  https://www.defensenews.com/industry/techwatch/2026/08/10/us-navy-tests-ai-powered-submarine-hunter/\n- 机器人与具身智能：集结全公司之力，消息称三星加快自研人形机器人（IT之家，2026-08-11T07:59+00:00）\n  https://www.ithome.com/0/988/358.htm\n\n网页版完整报告：https://LPT111.github.io/daily_stock_analysis/\n仅供研究参考，不构成投资建议。"
 }
