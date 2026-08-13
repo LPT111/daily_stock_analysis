@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-13T01:20:59+00:00",
+  "generated_at": "2026-08-13T08:34:00+00:00",
   "dashboard_url": "https://LPT111.github.io/daily_stock_analysis/",
   "stock_report": "report_20260813.md",
   "market_report": "market_review_20260813.md",
@@ -9,73 +9,71 @@
       "policy": "仅 status=confirmed 的字段可用于结论；待核实字段必须忽略。",
       "metrics": {
         "price": {
-          "status": "待核实",
-          "value": null,
-          "display": "待核实",
-          "interpretation": "两个数据源未同时返回一致结果，不得用于决策。",
+          "status": "confirmed",
+          "value": 66.1,
+          "display": "66.10",
+          "interpretation": "腾讯财经与东方财富交叉核验一致。",
           "sources": {
-            "腾讯财经": null,
-            "东方财富": 65.58
+            "腾讯财经": 66.1,
+            "东方财富": 66.1
           }
         },
         "change_pct": {
-          "status": "待核实",
-          "value": null,
-          "display": "待核实",
-          "interpretation": "两个数据源未同时返回一致结果，不得用于决策。",
+          "status": "confirmed",
+          "value": 0.81,
+          "display": "0.81",
+          "interpretation": "腾讯财经与东方财富交叉核验一致。",
           "sources": {
-            "腾讯财经": null,
-            "东方财富": 0.02
+            "腾讯财经": 0.81,
+            "东方财富": 0.81
           }
         },
         "dynamic_pe": {
-          "status": "待核实",
-          "value": null,
-          "display": "待核实",
-          "interpretation": "两个数据源未同时返回一致结果，不得用于决策。",
+          "status": "confirmed",
+          "value": -457.73,
+          "display": "-457.73（亏损状态）",
+          "interpretation": "动态市盈率为负，表示当前口径下盈利为负，不能按正 PE 倍数进行估值判断。",
           "sources": {
-            "腾讯财经": null,
-            "东方财富": -454.13
+            "腾讯财经": -457.73,
+            "东方财富": -457.73
           }
         },
         "pb": {
-          "status": "待核实",
-          "value": null,
-          "display": "待核实",
-          "interpretation": "两个数据源未同时返回一致结果，不得用于决策。",
+          "status": "confirmed",
+          "value": 12.39,
+          "display": "12.39",
+          "interpretation": "腾讯财经与东方财富交叉核验一致。",
           "sources": {
-            "腾讯财经": null,
-            "东方财富": 12.29
+            "腾讯财经": 12.39,
+            "东方财富": 12.39
           }
         }
       },
       "raw_sources": [
         {
-          "source": "东方财富",
-          "price": 65.58,
+          "source": "腾讯财经",
+          "price": 66.1,
           "previous_close": 65.57,
-          "change_pct": 0.02,
-          "dynamic_pe": -454.13,
-          "pb": 12.29,
+          "change_pct": 0.81,
+          "dynamic_pe": -457.73,
+          "pb": 12.39,
+          "source_url": "https://gu.qq.com/sh600118"
+        },
+        {
+          "source": "东方财富",
+          "price": 66.1,
+          "previous_close": 65.57,
+          "change_pct": 0.81,
+          "dynamic_pe": -457.73,
+          "pb": 12.39,
           "source_url": "https://quote.eastmoney.com/sh600118.html"
         }
       ],
-      "errors": [
-        "腾讯财经: HTTPSConnectionPool(host='qt.gtimg.cn', port=443): Max retries exceeded with url: /q=sh600118 (Caused by NewConnectionError(\"HTTPSConnection(host='qt.gtimg.cn', port=443): Failed to establish a new connection: [Errno 101] Network is unreachable\"))"
-      ]
+      "errors": []
     }
   ],
   "sector_news": {
     "items": [
-      {
-        "title": "NASA Completes Astronaut-Deployed Science Instrument for Lunar Surface",
-        "published_at": "2026-08-11T19:41+00:00",
-        "source": "NASA News",
-        "url": "https://science.nasa.gov/missions/artemis/nasa-completes-astronaut-deployed-science-instrument-for-lunar-surface/",
-        "category": "卫星与商业航天",
-        "region": "国际",
-        "source_weight": 14
-      },
       {
         "title": "Pentagon missile buildup changing the factory floor",
         "published_at": "2026-08-12T23:00+00:00",
@@ -212,6 +210,33 @@
         "source_weight": 9
       },
       {
+        "title": "机器人 AI 模型 DYNA-2 登场：超 100 万小时人类视频训练，任务成功率可达 90%",
+        "published_at": "2026-08-13T06:15+00:00",
+        "source": "IT之家",
+        "url": "https://www.ithome.com/0/989/200.htm",
+        "category": "机器人与具身智能",
+        "region": "国内",
+        "source_weight": 8
+      },
+      {
+        "title": "Honor Launches Robot Phone with Gimbal Camera and AI Agent Features",
+        "published_at": "2026-08-13T05:40+00:00",
+        "source": "TechNode",
+        "url": "https://technode.com/2026/08/13/honor-launches-robot-phone-with-gimbal-camera-and-ai-agent-features/",
+        "category": "机器人与具身智能",
+        "region": "国际",
+        "source_weight": 8
+      },
+      {
+        "title": "防辐射背心通过阿尔忒弥斯 1 号月球实测，可为航天员抵御深空辐射",
+        "published_at": "2026-08-13T04:56+00:00",
+        "source": "IT之家",
+        "url": "https://www.ithome.com/0/989/177.htm",
+        "category": "卫星与商业航天",
+        "region": "国内",
+        "source_weight": 8
+      },
+      {
         "title": "Northrop’s robot space mechanic is a new way to keep satellites at work longer",
         "published_at": "2026-08-12T20:53+00:00",
         "source": "TechCrunch",
@@ -248,15 +273,6 @@
         "source_weight": 8
       },
       {
-        "title": "Former ByteDance robotics head reportedly joins Xiaomi",
-        "published_at": "2026-08-10T07:22+00:00",
-        "source": "TechNode",
-        "url": "https://technode.com/2026/08/10/former-bytedance-robotics-head-reportedly-joins-xiaomi/",
-        "category": "机器人与具身智能",
-        "region": "国际",
-        "source_weight": 8
-      },
-      {
         "title": "越南也要冲向太空！航天巨头牵手马斯克SpaceX：计划明年发射卫星",
         "published_at": "2026-08-11T16:04+00:00",
         "source": "快科技-科学",
@@ -273,24 +289,13 @@
         "category": "机器人与具身智能",
         "region": "国内",
         "source_weight": 7
-      },
-      {
-        "title": "中国人形机器人横扫全球！拿下97%市场份额：智元超宇树居第一",
-        "published_at": "2026-08-11T11:17+00:00",
-        "source": "快科技-科学",
-        "url": "https://news.mydrivers.com/1/1142/1142824.htm",
-        "category": "机器人与具身智能",
-        "region": "国内",
-        "source_weight": 7
       }
     ],
     "errors": [
       "36氪: not well-formed (invalid token): line 9, column 542",
-      "IT之家: HTTPSConnectionPool(host='www.ithome.com', port=443): Max retries exceeded with url: /rss/ (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.ithome.com', port=443) at 0x7f3601ba17d0>, 'Connection to www.ithome.com timed out. (connect timeout=12)'))",
-      "国内科技新闻: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=%28%E5%8D%AB%E6%98%9F+OR+%E8%88%AA%E5%A4%A9+OR+%E5%8C%97%E6%96%97+OR+%E6%9C%BA%E5%99%A8%E4%BA%BA+OR+%E5%85%B7%E8%BA%AB%E6%99%BA%E8%83%BD+OR+%E8%8A%AF%E7%89%87+OR+%E5%8D%8A%E5%AF%BC%E4%BD%93+OR+%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD+OR+%E5%86%9B%E5%B7%A5+OR+%E5%9B%BD%E9%98%B2%E7%A7%91%E6%8A%80%29+sourcelang%3AChinese&mode=artlist&format=json&maxrecords=24&sort=datedesc&timespan=3d",
       "国际科技新闻: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=%28satellite+OR+spaceflight+OR+robotics+OR+humanoid+OR+semiconductor+OR+%22artificial+intelligence%22+OR+%22defense+technology%22%29+sourcelang%3AEnglish&mode=artlist&format=json&maxrecords=24&sort=datedesc&timespan=3d"
     ],
     "policy": "仅展示含标题、发布时间、来源和原文链接的新闻；不据此自动推断股价因果。"
   },
-  "digest": "【A股科技主题决策雷达】\n个股建议：持有（基于近3个月K线，保守模式）\n执行参考：买入区间 65.50元（MA5下方回踩，昨日收盘65.57附近）｜仓位 建议仓位：3成（首次建仓），确认后最多5成\n风控纪律：止损 61.76元（跌破MA20）；短线减仓位63.00元（近期低点）｜失效条件 跌破止损位或量价结构转空时，持有逻辑失效\n大盘摘要：🎯 大盘复盘 2026-08-13 大盘复盘 今日数据质量异常，市场实质状态无法确认；核心矛盾不是涨跌方向，而是行情数据与真实盘面不匹配。明日优先观察数据源是否修复，以及成交额、涨跌家数能否恢复正常。 一、盘面总览 📊 今日主要指数表面接近平盘：上证指数与沪深300微跌，其余指数显示为-0.00%或0.00%。但涨跌家数、涨跌停家数、两市成交额全部为0，且行…\n600118 双源校验：价格：待核实；涨跌幅：待核实；动态PE：待核实；PB：待核实\n\n可核验科技新闻：\n- 卫星与商业航天：NASA Completes Astronaut-Deployed Science Instrument for Lunar Surface（NASA News，2026-08-11T19:41+00:00）\n  https://science.nasa.gov/missions/artemis/nasa-completes-astronaut-deployed-science-instrument-for-lunar-surface/\n- 军工与国防科技：Pentagon missile buildup changing the factory floor（SpaceNews，2026-08-12T23:00+00:00）\n  https://spacenews.com/pentagon-missile-buildup-changing-the-factory-floor/\n- 科技与芯片：US Navy tests AI-powered submarine hunter（Defense News，2026-08-10T15:01+00:00）\n  https://www.defensenews.com/industry/techwatch/2026/08/10/us-navy-tests-ai-powered-submarine-hunter/\n- 机器人与具身智能：Honor Sets Aug. 12 Launch for Its Robot Phone in China（TechNode，2026-08-12T05:59+00:00）\n  https://technode.com/2026/08/12/honor-sets-aug-12-launch-for-its-robot-phone-in-china/\n\n网页版完整报告：https://LPT111.github.io/daily_stock_analysis/\n仅供研究参考，不构成投资建议。"
+  "digest": "【A股科技主题决策雷达】\n个股建议：持有（基于近3个月K线，保守模式）\n执行参考：买入区间 65.50元附近（MA5回踩确认）｜仓位 建议仓位：2-3成（轻仓分批）\n风控纪律：止损 62.50元（跌破MA20 61.61或收盘失守62.5）｜失效条件 跌破止损位或量价结构转空时，持有逻辑失效\n大盘摘要：🎯 大盘复盘 2026-08-13 大盘复盘 今日市场整体偏弱，指数全线收跌，个股普跌但涨停家数尚可，呈现缩量分化格局。核心矛盾在于权重护盘与题材退潮并存，明日优先观察量能能否回补及医药、科研方向的持续性。 一、盘面总览 今日市场呈普跌态势，主要指数全面收绿，其中科创50、深证成指跌幅居前，上证50相对抗跌。全市场下跌家数超过4300家，赚钱效应明显收缩，但…\n600118 双源校验：价格：66.10；涨跌幅：0.81；动态PE：-457.73（亏损状态）；PB：12.39\n\n可核验科技新闻：\n- 军工与国防科技：Pentagon missile buildup changing the factory floor（SpaceNews，2026-08-12T23:00+00:00）\n  https://spacenews.com/pentagon-missile-buildup-changing-the-factory-floor/\n- 卫星与商业航天：China’s iSpace raises first batch of series E funding for reusable rocketry（SpaceNews，2026-08-12T12:48+00:00）\n  https://spacenews.com/chinas-ispace-raises-first-batch-of-series-e-funding-for-reusable-rocketry/\n- 科技与芯片：US Navy tests AI-powered submarine hunter（Defense News，2026-08-10T15:01+00:00）\n  https://www.defensenews.com/industry/techwatch/2026/08/10/us-navy-tests-ai-powered-submarine-hunter/\n- 机器人与具身智能：机器人 AI 模型 DYNA-2 登场：超 100 万小时人类视频训练，任务成功率可达 90%（IT之家，2026-08-13T06:15+00:00）\n  https://www.ithome.com/0/989/200.htm\n\n网页版完整报告：https://LPT111.github.io/daily_stock_analysis/\n仅供研究参考，不构成投资建议。"
 }
