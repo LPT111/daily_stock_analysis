@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-08-12T08:35:05+00:00",
+  "generated_at": "2026-08-13T01:20:59+00:00",
   "dashboard_url": "https://LPT111.github.io/daily_stock_analysis/",
-  "stock_report": "report_20260812.md",
-  "market_report": "market_review_20260812.md",
+  "stock_report": "report_20260813.md",
+  "market_report": "market_review_20260813.md",
   "validations": [
     {
       "code": "600118",
@@ -14,8 +14,8 @@
           "display": "待核实",
           "interpretation": "两个数据源未同时返回一致结果，不得用于决策。",
           "sources": {
-            "腾讯财经": 65.57,
-            "东方财富": null
+            "腾讯财经": null,
+            "东方财富": 65.58
           }
         },
         "change_pct": {
@@ -24,8 +24,8 @@
           "display": "待核实",
           "interpretation": "两个数据源未同时返回一致结果，不得用于决策。",
           "sources": {
-            "腾讯财经": 3.23,
-            "东方财富": null
+            "腾讯财经": null,
+            "东方财富": 0.02
           }
         },
         "dynamic_pe": {
@@ -34,8 +34,8 @@
           "display": "待核实",
           "interpretation": "两个数据源未同时返回一致结果，不得用于决策。",
           "sources": {
-            "腾讯财经": -454.06,
-            "东方财富": null
+            "腾讯财经": null,
+            "东方财富": -454.13
           }
         },
         "pb": {
@@ -44,24 +44,24 @@
           "display": "待核实",
           "interpretation": "两个数据源未同时返回一致结果，不得用于决策。",
           "sources": {
-            "腾讯财经": 12.29,
-            "东方财富": null
+            "腾讯财经": null,
+            "东方财富": 12.29
           }
         }
       },
       "raw_sources": [
         {
-          "source": "腾讯财经",
-          "price": 65.57,
-          "previous_close": 63.52,
-          "change_pct": 3.23,
-          "dynamic_pe": -454.06,
+          "source": "东方财富",
+          "price": 65.58,
+          "previous_close": 65.57,
+          "change_pct": 0.02,
+          "dynamic_pe": -454.13,
           "pb": 12.29,
-          "source_url": "https://gu.qq.com/sh600118"
+          "source_url": "https://quote.eastmoney.com/sh600118.html"
         }
       ],
       "errors": [
-        "东方财富: 502 Server Error: Bad Gateway for url: https://push2.eastmoney.com/api/qt/stock/get?secid=1.600118&fields=f43%2Cf57%2Cf58%2Cf60%2Cf162%2Cf167%2Cf170"
+        "腾讯财经: HTTPSConnectionPool(host='qt.gtimg.cn', port=443): Max retries exceeded with url: /q=sh600118 (Caused by NewConnectionError(\"HTTPSConnection(host='qt.gtimg.cn', port=443): Failed to establish a new connection: [Errno 101] Network is unreachable\"))"
       ]
     }
   ],
@@ -77,13 +77,31 @@
         "source_weight": 14
       },
       {
-        "title": "NASA Shares Station Research Today Supporting Moon, Mars Tomorrow",
-        "published_at": "2026-08-11T14:00+00:00",
-        "source": "NASA News",
-        "url": "https://www.nasa.gov/missions/station/iss-research/nasa-shares-station-research-today-supporting-moon-mars-tomorrow/",
+        "title": "Pentagon missile buildup changing the factory floor",
+        "published_at": "2026-08-12T23:00+00:00",
+        "source": "SpaceNews",
+        "url": "https://spacenews.com/pentagon-missile-buildup-changing-the-factory-floor/",
+        "category": "军工与国防科技",
+        "region": "国际",
+        "source_weight": 13
+      },
+      {
+        "title": "China’s iSpace raises first batch of series E funding for reusable rocketry",
+        "published_at": "2026-08-12T12:48+00:00",
+        "source": "SpaceNews",
+        "url": "https://spacenews.com/chinas-ispace-raises-first-batch-of-series-e-funding-for-reusable-rocketry/",
         "category": "卫星与商业航天",
         "region": "国际",
-        "source_weight": 14
+        "source_weight": 13
+      },
+      {
+        "title": "One species, one planet: The moon is our ethical dress rehearsal for Mars",
+        "published_at": "2026-08-12T12:00+00:00",
+        "source": "SpaceNews",
+        "url": "https://spacenews.com/one-species-one-planet-the-moon-is-our-ethical-dress-rehearsal-for-mars/",
+        "category": "卫星与商业航天",
+        "region": "国际",
+        "source_weight": 13
       },
       {
         "title": "U.S. expands missile production as Army seeks more depth in its arsenal",
@@ -100,33 +118,6 @@
         "source": "Defense News",
         "url": "https://www.defensenews.com/news/your-military/2026/08/11/lockheed-martin-launches-modular-missile-tech-with-dedicated-storefront/",
         "category": "军工与国防科技",
-        "region": "国际",
-        "source_weight": 13
-      },
-      {
-        "title": "SpaceX increasing footprint in missile defense",
-        "published_at": "2026-08-11T14:34+00:00",
-        "source": "SpaceNews",
-        "url": "https://spacenews.com/spacex-increasing-footprint-in-missile-defense/",
-        "category": "军工与国防科技",
-        "region": "国际",
-        "source_weight": 13
-      },
-      {
-        "title": "Former Space Force general joins Lunar Outpost board",
-        "published_at": "2026-08-11T13:00+00:00",
-        "source": "SpaceNews",
-        "url": "https://spacenews.com/former-space-force-general-joins-lunar-outpost-board/",
-        "category": "卫星与商业航天",
-        "region": "国际",
-        "source_weight": 13
-      },
-      {
-        "title": "H3 launches navigation satellite",
-        "published_at": "2026-08-11T09:52+00:00",
-        "source": "SpaceNews",
-        "url": "https://spacenews.com/h3-launches-navigation-satellite/",
-        "category": "卫星与商业航天",
         "region": "国际",
         "source_weight": 13
       },
@@ -158,6 +149,15 @@
         "source_weight": 13
       },
       {
+        "title": "Scaling AI agents with trustworthy data",
+        "published_at": "2026-08-12T16:51+00:00",
+        "source": "MIT Technology Review",
+        "url": "https://www.technologyreview.com/2026/08/12/1141032/scaling-ai-agents-with-trustworthy-data/",
+        "category": "科技与芯片",
+        "region": "国际",
+        "source_weight": 12
+      },
+      {
         "title": "The Download: the next big thing in LLMs and how AI academic research is shifting",
         "published_at": "2026-08-11T12:10+00:00",
         "source": "MIT Technology Review",
@@ -185,15 +185,6 @@
         "source_weight": 12
       },
       {
-        "title": "AI for science needs reasoning, not just data",
-        "published_at": "2026-08-10T09:00+00:00",
-        "source": "MIT Technology Review",
-        "url": "https://www.technologyreview.com/2026/08/10/1141384/ai-agents-for-science/",
-        "category": "科技与芯片",
-        "region": "国际",
-        "source_weight": 12
-      },
-      {
         "title": "AI may respond differently to bosses and subordinates",
         "published_at": "2026-08-07T14:00+00:00",
         "source": "Science News",
@@ -212,30 +203,21 @@
         "source_weight": 10
       },
       {
-        "title": "Welp, Nobody Saw SpaceX’s Falcon 9 Rocket Crash Into the Moon",
-        "published_at": "2026-08-05T22:40+00:00",
-        "source": "WIRED Science",
-        "url": "https://www.wired.com/story/nobody-saw-spacex-rocket-moon-crash/",
-        "category": "卫星与商业航天",
-        "region": "国际",
-        "source_weight": 10
-      },
-      {
-        "title": "Russian drones found near vital European offshore gas site, get blown up",
-        "published_at": "2026-08-11T21:20+00:00",
+        "title": "US boosts drone surveillance as flesh-eating screwworms spread in Texas",
+        "published_at": "2026-08-12T19:40+00:00",
         "source": "Ars Technica",
-        "url": "https://arstechnica.com/gadgets/2026/08/romania-destroys-russian-drones-drifting-near-vital-european-offshore-gas-site/",
+        "url": "https://arstechnica.com/gadgets/2026/08/us-boosts-drone-surveillance-as-flesh-eating-screwworms-spread-in-texas/",
         "category": "军工与国防科技",
         "region": "国际",
         "source_weight": 9
       },
       {
-        "title": "荣耀 Robot Phone 手机规格曝光：6.3 英寸 LTPO 直屏、248 克重量、9.59mm 厚度...",
-        "published_at": "2026-08-12T06:39+00:00",
-        "source": "IT之家",
-        "url": "https://www.ithome.com/0/988/764.htm",
-        "category": "机器人与具身智能",
-        "region": "国内",
+        "title": "Northrop’s robot space mechanic is a new way to keep satellites at work longer",
+        "published_at": "2026-08-12T20:53+00:00",
+        "source": "TechCrunch",
+        "url": "https://techcrunch.com/2026/08/12/northrops-robot-space-mechanic-is-a-new-way-to-keep-satellites-at-work-longer/",
+        "category": "卫星与商业航天",
+        "region": "国际",
         "source_weight": 8
       },
       {
@@ -243,24 +225,6 @@
         "published_at": "2026-08-12T05:59+00:00",
         "source": "TechNode",
         "url": "https://technode.com/2026/08/12/honor-sets-aug-12-launch-for-its-robot-phone-in-china/",
-        "category": "机器人与具身智能",
-        "region": "国际",
-        "source_weight": 8
-      },
-      {
-        "title": "Uber surprised robotics company Serve by selling its entire stake",
-        "published_at": "2026-08-11T20:02+00:00",
-        "source": "TechCrunch",
-        "url": "https://techcrunch.com/2026/08/11/uber-surprised-robotics-company-serve-by-selling-its-entire-stake/",
-        "category": "机器人与具身智能",
-        "region": "国际",
-        "source_weight": 8
-      },
-      {
-        "title": "Rivian CEO RJ Scaringe is betting on EVs, robots, and autonomy all at once — he’ll explain why at Disrupt 2026",
-        "published_at": "2026-08-11T15:30+00:00",
-        "source": "TechCrunch",
-        "url": "https://techcrunch.com/2026/08/11/rivian-ceo-rj-scaringe-is-betting-on-evs-robots-and-autonomy-all-at-once-hell-explain-why-at-disrupt-2026/",
         "category": "机器人与具身智能",
         "region": "国际",
         "source_weight": 8
@@ -282,13 +246,51 @@
         "category": "机器人与具身智能",
         "region": "国际",
         "source_weight": 8
+      },
+      {
+        "title": "Former ByteDance robotics head reportedly joins Xiaomi",
+        "published_at": "2026-08-10T07:22+00:00",
+        "source": "TechNode",
+        "url": "https://technode.com/2026/08/10/former-bytedance-robotics-head-reportedly-joins-xiaomi/",
+        "category": "机器人与具身智能",
+        "region": "国际",
+        "source_weight": 8
+      },
+      {
+        "title": "越南也要冲向太空！航天巨头牵手马斯克SpaceX：计划明年发射卫星",
+        "published_at": "2026-08-11T16:04+00:00",
+        "source": "快科技-科学",
+        "url": "https://news.mydrivers.com/1/1142/1142915.htm",
+        "category": "卫星与商业航天",
+        "region": "国内",
+        "source_weight": 7
+      },
+      {
+        "title": "美国一滚动机器人创纪录：从5.7米高处坠落后仍能行动",
+        "published_at": "2026-08-11T14:15+00:00",
+        "source": "快科技-科学",
+        "url": "https://news.mydrivers.com/1/1142/1142863.htm",
+        "category": "机器人与具身智能",
+        "region": "国内",
+        "source_weight": 7
+      },
+      {
+        "title": "中国人形机器人横扫全球！拿下97%市场份额：智元超宇树居第一",
+        "published_at": "2026-08-11T11:17+00:00",
+        "source": "快科技-科学",
+        "url": "https://news.mydrivers.com/1/1142/1142824.htm",
+        "category": "机器人与具身智能",
+        "region": "国内",
+        "source_weight": 7
       }
     ],
     "errors": [
       "36氪: not well-formed (invalid token): line 9, column 542",
+      "IT之家: HTTPSConnectionPool(host='www.ithome.com', port=443): Max retries exceeded with url: /rss/ (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.ithome.com', port=443) at 0x7f3601ba17d0>, 'Connection to www.ithome.com timed out. (connect timeout=12)'))",
+      "国内科技新闻: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=%28%E5%8D%AB%E6%98%9F+OR+%E8%88%AA%E5%A4%A9+OR+%E5%8C%97%E6%96%97+OR+%E6%9C%BA%E5%99%A8%E4%BA%BA+OR+%E5%85%B7%E8%BA%AB%E6%99%BA%E8%83%BD+OR+%E8%8A%AF%E7%89%87+OR+%E5%8D%8A%E5%AF%BC%E4%BD%93+OR+%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD+OR+%E5%86%9B%E5%B7%A5+OR+%E5%9B%BD%E9%98%B2%E7%A7%91%E6%8A%80%29+sourcelang%3AChinese&mode=artlist&format=json&maxrecords=24&sort=datedesc&timespan=3d",
       "国际科技新闻: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=%28satellite+OR+spaceflight+OR+robotics+OR+humanoid+OR+semiconductor+OR+%22artificial+intelligence%22+OR+%22defense+technology%22%29+sourcelang%3AEnglish&mode=artlist&format=json&maxrecords=24&sort=datedesc&timespan=3d"
     ],
     "policy": "仅展示含标题、发布时间、来源和原文链接的新闻；不据此自动推断股价因果。"
   },
-  "digest": "【A股科技主题决策雷达】\n个股建议：持有（基于近3个月K线，保守模式）\n执行参考：买入区间 65.00元（MA5附近回踩）｜仓位 建议仓位：1-2成\n风控纪律：止损 61.50元（跌破MA20，-2.5%）｜失效条件 跌破止损位或量价结构转空时，持有逻辑失效\n大盘摘要：🎯 大盘复盘 2026-08-12 大盘复盘 一句话结论：今日市场呈普涨格局，成长风格明显强于权重，两市成交额2.17万亿维持高位，情绪偏暖；核心矛盾在于指数新高后量价配合是否延续，明日优先观察科创板与创业板能否继续领涨，以及领涨板块是否有持续资金承接。 一、盘面总览 今日市场整体偏强，三大指数全线收涨且涨幅呈“成长 权重”梯度：创业板指涨1.49%、科创5…\n600118 双源校验：价格：待核实；涨跌幅：待核实；动态PE：待核实；PB：待核实\n\n可核验科技新闻：\n- 卫星与商业航天：NASA Completes Astronaut-Deployed Science Instrument for Lunar Surface（NASA News，2026-08-11T19:41+00:00）\n  https://science.nasa.gov/missions/artemis/nasa-completes-astronaut-deployed-science-instrument-for-lunar-surface/\n- 军工与国防科技：U.S. expands missile production as Army seeks more depth in its arsenal（SpaceNews，2026-08-12T01:34+00:00）\n  https://spacenews.com/u-s-expands-missile-production-as-army-seeks-more-depth-in-its-arsenal/\n- 科技与芯片：US Navy tests AI-powered submarine hunter（Defense News，2026-08-10T15:01+00:00）\n  https://www.defensenews.com/industry/techwatch/2026/08/10/us-navy-tests-ai-powered-submarine-hunter/\n- 机器人与具身智能：荣耀 Robot Phone 手机规格曝光：6.3 英寸 LTPO 直屏、248 克重量、9.59mm 厚度...（IT之家，2026-08-12T06:39+00:00）\n  https://www.ithome.com/0/988/764.htm\n\n网页版完整报告：https://LPT111.github.io/daily_stock_analysis/\n仅供研究参考，不构成投资建议。"
+  "digest": "【A股科技主题决策雷达】\n个股建议：持有（基于近3个月K线，保守模式）\n执行参考：买入区间 65.50元（MA5下方回踩，昨日收盘65.57附近）｜仓位 建议仓位：3成（首次建仓），确认后最多5成\n风控纪律：止损 61.76元（跌破MA20）；短线减仓位63.00元（近期低点）｜失效条件 跌破止损位或量价结构转空时，持有逻辑失效\n大盘摘要：🎯 大盘复盘 2026-08-13 大盘复盘 今日数据质量异常，市场实质状态无法确认；核心矛盾不是涨跌方向，而是行情数据与真实盘面不匹配。明日优先观察数据源是否修复，以及成交额、涨跌家数能否恢复正常。 一、盘面总览 📊 今日主要指数表面接近平盘：上证指数与沪深300微跌，其余指数显示为-0.00%或0.00%。但涨跌家数、涨跌停家数、两市成交额全部为0，且行…\n600118 双源校验：价格：待核实；涨跌幅：待核实；动态PE：待核实；PB：待核实\n\n可核验科技新闻：\n- 卫星与商业航天：NASA Completes Astronaut-Deployed Science Instrument for Lunar Surface（NASA News，2026-08-11T19:41+00:00）\n  https://science.nasa.gov/missions/artemis/nasa-completes-astronaut-deployed-science-instrument-for-lunar-surface/\n- 军工与国防科技：Pentagon missile buildup changing the factory floor（SpaceNews，2026-08-12T23:00+00:00）\n  https://spacenews.com/pentagon-missile-buildup-changing-the-factory-floor/\n- 科技与芯片：US Navy tests AI-powered submarine hunter（Defense News，2026-08-10T15:01+00:00）\n  https://www.defensenews.com/industry/techwatch/2026/08/10/us-navy-tests-ai-powered-submarine-hunter/\n- 机器人与具身智能：Honor Sets Aug. 12 Launch for Its Robot Phone in China（TechNode，2026-08-12T05:59+00:00）\n  https://technode.com/2026/08/12/honor-sets-aug-12-launch-for-its-robot-phone-in-china/\n\n网页版完整报告：https://LPT111.github.io/daily_stock_analysis/\n仅供研究参考，不构成投资建议。"
 }
