@@ -1,31 +1,31 @@
 {
-  "generated_at": "2026-08-13T08:34:00+00:00",
+  "generated_at": "2026-08-14T01:09:33+00:00",
   "dashboard_url": "https://LPT111.github.io/daily_stock_analysis/",
-  "stock_report": "report_20260813.md",
-  "market_report": "market_review_20260813.md",
+  "stock_report": null,
+  "market_report": "market_review_20260814.md",
   "validations": [
     {
       "code": "600118",
       "policy": "仅 status=confirmed 的字段可用于结论；待核实字段必须忽略。",
       "metrics": {
         "price": {
-          "status": "confirmed",
-          "value": 66.1,
-          "display": "66.10",
-          "interpretation": "腾讯财经与东方财富交叉核验一致。",
+          "status": "待核实",
+          "value": null,
+          "display": "待核实",
+          "interpretation": "两个数据源未同时返回一致结果，不得用于决策。",
           "sources": {
             "腾讯财经": 66.1,
-            "东方财富": 66.1
+            "东方财富": 0.0
           }
         },
         "change_pct": {
-          "status": "confirmed",
-          "value": 0.81,
-          "display": "0.81",
-          "interpretation": "腾讯财经与东方财富交叉核验一致。",
+          "status": "待核实",
+          "value": null,
+          "display": "待核实",
+          "interpretation": "两个数据源未同时返回一致结果，不得用于决策。",
           "sources": {
             "腾讯财经": 0.81,
-            "东方财富": 0.81
+            "东方财富": 0.0
           }
         },
         "dynamic_pe": {
@@ -61,9 +61,9 @@
         },
         {
           "source": "东方财富",
-          "price": 66.1,
-          "previous_close": 65.57,
-          "change_pct": 0.81,
+          "price": 0.0,
+          "previous_close": 66.1,
+          "change_pct": 0.0,
           "dynamic_pe": -457.73,
           "pb": 12.39,
           "source_url": "https://quote.eastmoney.com/sh600118.html"
@@ -75,37 +75,37 @@
   "sector_news": {
     "items": [
       {
+        "title": "Space Force awards five companies $60 million for multi-vendor satellite network tests",
+        "published_at": "2026-08-13T22:00+00:00",
+        "source": "SpaceNews",
+        "url": "https://spacenews.com/space-force-awards-five-companies-60-million-for-multi-vendor-satellite-network-tests/",
+        "category": "卫星与商业航天",
+        "region": "国际",
+        "source_weight": 13
+      },
+      {
+        "title": "Maritime Satellite Service Revenues to Reach $3.79 Billion by 2035 as NGSO Reshapes Maritime Connectivity",
+        "published_at": "2026-08-13T14:27+00:00",
+        "source": "SpaceNews",
+        "url": "https://spacenews.com/maritime-satellite-service-revenues-to-reach-3-79-billion-by-2035-as-ngso-reshapes-maritime-connectivity/",
+        "category": "卫星与商业航天",
+        "region": "国际",
+        "source_weight": 13
+      },
+      {
+        "title": "Astranis unveils geostationary surveillance satellite",
+        "published_at": "2026-08-13T09:30+00:00",
+        "source": "SpaceNews",
+        "url": "https://spacenews.com/astranis-unveils-geostationary-surveillance-satellite/",
+        "category": "卫星与商业航天",
+        "region": "国际",
+        "source_weight": 13
+      },
+      {
         "title": "Pentagon missile buildup changing the factory floor",
         "published_at": "2026-08-12T23:00+00:00",
         "source": "SpaceNews",
         "url": "https://spacenews.com/pentagon-missile-buildup-changing-the-factory-floor/",
-        "category": "军工与国防科技",
-        "region": "国际",
-        "source_weight": 13
-      },
-      {
-        "title": "China’s iSpace raises first batch of series E funding for reusable rocketry",
-        "published_at": "2026-08-12T12:48+00:00",
-        "source": "SpaceNews",
-        "url": "https://spacenews.com/chinas-ispace-raises-first-batch-of-series-e-funding-for-reusable-rocketry/",
-        "category": "卫星与商业航天",
-        "region": "国际",
-        "source_weight": 13
-      },
-      {
-        "title": "One species, one planet: The moon is our ethical dress rehearsal for Mars",
-        "published_at": "2026-08-12T12:00+00:00",
-        "source": "SpaceNews",
-        "url": "https://spacenews.com/one-species-one-planet-the-moon-is-our-ethical-dress-rehearsal-for-mars/",
-        "category": "卫星与商业航天",
-        "region": "国际",
-        "source_weight": 13
-      },
-      {
-        "title": "U.S. expands missile production as Army seeks more depth in its arsenal",
-        "published_at": "2026-08-12T01:34+00:00",
-        "source": "SpaceNews",
-        "url": "https://spacenews.com/u-s-expands-missile-production-as-army-seeks-more-depth-in-its-arsenal/",
         "category": "军工与国防科技",
         "region": "国际",
         "source_weight": 13
@@ -147,37 +147,28 @@
         "source_weight": 13
       },
       {
+        "title": "The Download: kids’ thoughts on AI, and female clones of male mice",
+        "published_at": "2026-08-13T12:10+00:00",
+        "source": "MIT Technology Review",
+        "url": "https://www.technologyreview.com/2026/08/13/1141896/the-download-kids-thoughts-on-ai-female-clones-male-mice/",
+        "category": "科技与芯片",
+        "region": "国际",
+        "source_weight": 12
+      },
+      {
+        "title": "How kids feel about AI, in their own words",
+        "published_at": "2026-08-13T09:00+00:00",
+        "source": "MIT Technology Review",
+        "url": "https://www.technologyreview.com/2026/08/13/1141410/how-kids-feel-about-ai-own-words/",
+        "category": "科技与芯片",
+        "region": "国际",
+        "source_weight": 12
+      },
+      {
         "title": "Scaling AI agents with trustworthy data",
         "published_at": "2026-08-12T16:51+00:00",
         "source": "MIT Technology Review",
         "url": "https://www.technologyreview.com/2026/08/12/1141032/scaling-ai-agents-with-trustworthy-data/",
-        "category": "科技与芯片",
-        "region": "国际",
-        "source_weight": 12
-      },
-      {
-        "title": "The Download: the next big thing in LLMs and how AI academic research is shifting",
-        "published_at": "2026-08-11T12:10+00:00",
-        "source": "MIT Technology Review",
-        "url": "https://www.technologyreview.com/2026/08/11/1141610/the-download-next-big-thing-llms-ai-academic-research-shifting/",
-        "category": "科技与芯片",
-        "region": "国际",
-        "source_weight": 12
-      },
-      {
-        "title": "AI professors are negotiating the new realities of academic research",
-        "published_at": "2026-08-10T20:00+00:00",
-        "source": "MIT Technology Review",
-        "url": "https://www.technologyreview.com/2026/08/10/1141597/ai-professors-are-negotiating-the-new-realities-of-academic-research/",
-        "category": "科技与芯片",
-        "region": "国际",
-        "source_weight": 12
-      },
-      {
-        "title": "The Download: AI agents for science, and the “censorship-industrial complex”",
-        "published_at": "2026-08-10T12:10+00:00",
-        "source": "MIT Technology Review",
-        "url": "https://www.technologyreview.com/2026/08/10/1141526/the-download-ai-agents-science-censorship-industrial-complex/",
         "category": "科技与芯片",
         "region": "国际",
         "source_weight": 12
@@ -190,6 +181,15 @@
         "category": "科技与芯片",
         "region": "国际",
         "source_weight": 11
+      },
+      {
+        "title": "There’s a Fatty Liver Epidemic. AI Could Help Get Ahead of It",
+        "published_at": "2026-08-13T09:00+00:00",
+        "source": "WIRED Science",
+        "url": "https://www.wired.com/story/fatty-liver-disease-ai-detection-cancer/",
+        "category": "科技与芯片",
+        "region": "国际",
+        "source_weight": 10
       },
       {
         "title": "Here Are the First Images of the Crater Left on the Moon by SpaceX’s Rocket",
@@ -210,10 +210,46 @@
         "source_weight": 9
       },
       {
-        "title": "机器人 AI 模型 DYNA-2 登场：超 100 万小时人类视频训练，任务成功率可达 90%",
-        "published_at": "2026-08-13T06:15+00:00",
+        "title": "自动驾驶公司文远知行 2026 上半年营收 3.5 亿同比增长 73%，Robotaxi 超 1800 辆",
+        "published_at": "2026-08-13T23:53+00:00",
         "source": "IT之家",
-        "url": "https://www.ithome.com/0/989/200.htm",
+        "url": "https://www.ithome.com/0/989/504.htm",
+        "category": "机器人与具身智能",
+        "region": "国内",
+        "source_weight": 8
+      },
+      {
+        "title": "嫦娥六号带回的 1935 克月背土壤研究新进展：远古大撞击形成月球正反面差异",
+        "published_at": "2026-08-13T23:25+00:00",
+        "source": "IT之家",
+        "url": "https://www.ithome.com/0/989/496.htm",
+        "category": "卫星与商业航天",
+        "region": "国内",
+        "source_weight": 8
+      },
+      {
+        "title": "Who really needs a cocktail robot?",
+        "published_at": "2026-08-13T15:00+00:00",
+        "source": "TechCrunch",
+        "url": "https://techcrunch.com/2026/08/13/bartesian-duet-cocktail-maker-review/",
+        "category": "机器人与具身智能",
+        "region": "国际",
+        "source_weight": 8
+      },
+      {
+        "title": "传音推出 TECNO Pova 8 Pro 手机：灵感来自星际飞船，配个性化点阵背屏",
+        "published_at": "2026-08-13T15:00+00:00",
+        "source": "IT之家",
+        "url": "https://www.ithome.com/0/989/477.htm",
+        "category": "卫星与商业航天",
+        "region": "国内",
+        "source_weight": 8
+      },
+      {
+        "title": "双机械臂 + 4cm 高越障：小米米家扫拖机器人 5 京东 1510 元，上下水 1610 元",
+        "published_at": "2026-08-13T14:07+00:00",
+        "source": "IT之家",
+        "url": "https://www.ithome.com/0/989/464.htm",
         "category": "机器人与具身智能",
         "region": "国内",
         "source_weight": 8
@@ -224,24 +260,6 @@
         "source": "TechNode",
         "url": "https://technode.com/2026/08/13/honor-launches-robot-phone-with-gimbal-camera-and-ai-agent-features/",
         "category": "机器人与具身智能",
-        "region": "国际",
-        "source_weight": 8
-      },
-      {
-        "title": "防辐射背心通过阿尔忒弥斯 1 号月球实测，可为航天员抵御深空辐射",
-        "published_at": "2026-08-13T04:56+00:00",
-        "source": "IT之家",
-        "url": "https://www.ithome.com/0/989/177.htm",
-        "category": "卫星与商业航天",
-        "region": "国内",
-        "source_weight": 8
-      },
-      {
-        "title": "Northrop’s robot space mechanic is a new way to keep satellites at work longer",
-        "published_at": "2026-08-12T20:53+00:00",
-        "source": "TechCrunch",
-        "url": "https://techcrunch.com/2026/08/12/northrops-robot-space-mechanic-is-a-new-way-to-keep-satellites-at-work-longer/",
-        "category": "卫星与商业航天",
         "region": "国际",
         "source_weight": 8
       },
@@ -264,38 +282,19 @@
         "source_weight": 8
       },
       {
-        "title": "Beyond mobility: Unitree’s GD01 signals the next phase of China’s robotics battle",
-        "published_at": "2026-08-11T02:44+00:00",
-        "source": "TechNode",
-        "url": "https://technode.com/2026/08/11/beyond-mobility-unitrees-gd01-signals-the-next-phase-of-chinas-robotics-battle/",
-        "category": "机器人与具身智能",
-        "region": "国际",
-        "source_weight": 8
-      },
-      {
-        "title": "越南也要冲向太空！航天巨头牵手马斯克SpaceX：计划明年发射卫星",
-        "published_at": "2026-08-11T16:04+00:00",
-        "source": "快科技-科学",
-        "url": "https://news.mydrivers.com/1/1142/1142915.htm",
-        "category": "卫星与商业航天",
+        "title": "最高100%！美国宣布对进口无人机及零部件征收关税",
+        "published_at": "2026-08-14T07:39+00:00",
+        "source": "快科技-硬件",
+        "url": "https://news.mydrivers.com/1/1143/1143631.htm",
+        "category": "军工与国防科技",
         "region": "国内",
-        "source_weight": 7
-      },
-      {
-        "title": "美国一滚动机器人创纪录：从5.7米高处坠落后仍能行动",
-        "published_at": "2026-08-11T14:15+00:00",
-        "source": "快科技-科学",
-        "url": "https://news.mydrivers.com/1/1142/1142863.htm",
-        "category": "机器人与具身智能",
-        "region": "国内",
-        "source_weight": 7
+        "source_weight": 6
       }
     ],
     "errors": [
-      "36氪: not well-formed (invalid token): line 9, column 542",
-      "国际科技新闻: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=%28satellite+OR+spaceflight+OR+robotics+OR+humanoid+OR+semiconductor+OR+%22artificial+intelligence%22+OR+%22defense+technology%22%29+sourcelang%3AEnglish&mode=artlist&format=json&maxrecords=24&sort=datedesc&timespan=3d"
+      "36氪: not well-formed (invalid token): line 9, column 542"
     ],
     "policy": "仅展示含标题、发布时间、来源和原文链接的新闻；不据此自动推断股价因果。"
   },
-  "digest": "【A股科技主题决策雷达】\n个股建议：持有（基于近3个月K线，保守模式）\n执行参考：买入区间 65.50元附近（MA5回踩确认）｜仓位 建议仓位：2-3成（轻仓分批）\n风控纪律：止损 62.50元（跌破MA20 61.61或收盘失守62.5）｜失效条件 跌破止损位或量价结构转空时，持有逻辑失效\n大盘摘要：🎯 大盘复盘 2026-08-13 大盘复盘 今日市场整体偏弱，指数全线收跌，个股普跌但涨停家数尚可，呈现缩量分化格局。核心矛盾在于权重护盘与题材退潮并存，明日优先观察量能能否回补及医药、科研方向的持续性。 一、盘面总览 今日市场呈普跌态势，主要指数全面收绿，其中科创50、深证成指跌幅居前，上证50相对抗跌。全市场下跌家数超过4300家，赚钱效应明显收缩，但…\n600118 双源校验：价格：66.10；涨跌幅：0.81；动态PE：-457.73（亏损状态）；PB：12.39\n\n可核验科技新闻：\n- 军工与国防科技：Pentagon missile buildup changing the factory floor（SpaceNews，2026-08-12T23:00+00:00）\n  https://spacenews.com/pentagon-missile-buildup-changing-the-factory-floor/\n- 卫星与商业航天：China’s iSpace raises first batch of series E funding for reusable rocketry（SpaceNews，2026-08-12T12:48+00:00）\n  https://spacenews.com/chinas-ispace-raises-first-batch-of-series-e-funding-for-reusable-rocketry/\n- 科技与芯片：US Navy tests AI-powered submarine hunter（Defense News，2026-08-10T15:01+00:00）\n  https://www.defensenews.com/industry/techwatch/2026/08/10/us-navy-tests-ai-powered-submarine-hunter/\n- 机器人与具身智能：机器人 AI 模型 DYNA-2 登场：超 100 万小时人类视频训练，任务成功率可达 90%（IT之家，2026-08-13T06:15+00:00）\n  https://www.ithome.com/0/989/200.htm\n\n网页版完整报告：https://LPT111.github.io/daily_stock_analysis/\n仅供研究参考，不构成投资建议。"
+  "digest": "【A股科技主题决策雷达】\n个股建议：待确认（基于近3个月K线，保守模式）\n执行参考：买入区间 仅在MA20附近企稳时考虑低吸，不追涨｜仓位 控制在3成以内\n风控纪律：止损 有效跌破MA20且两个交易日未收回｜失效条件 跌破止损位或量价结构转空时，持有逻辑失效\n大盘摘要：🎯 大盘复盘 2026-08-14 大盘复盘 一句话：今日盘面数据严重不完整——主要指数微幅收平，但成交额、涨跌家数、板块涨跌与新闻数据大面积缺失，市场真实温度无法有效确认；明日优先观察数据恢复情况与上证指数方向选择。 一、盘面总览 📊 今日主要指数呈现极窄幅波动：上证指数微跌0.01%报3926.76点，上证50与沪深300同步下跌0.01%，科创50基本…\n600118 双源校验：价格：待核实；涨跌幅：待核实；动态PE：-457.73（亏损状态）；PB：12.39\n\n可核验科技新闻：\n- 卫星与商业航天：Space Force awards five companies $60 million for multi-vendor satellite network tests（SpaceNews，2026-08-13T22:00+00:00）\n  https://spacenews.com/space-force-awards-five-companies-60-million-for-multi-vendor-satellite-network-tests/\n- 军工与国防科技：Pentagon missile buildup changing the factory floor（SpaceNews，2026-08-12T23:00+00:00）\n  https://spacenews.com/pentagon-missile-buildup-changing-the-factory-floor/\n- 科技与芯片：US Navy tests AI-powered submarine hunter（Defense News，2026-08-10T15:01+00:00）\n  https://www.defensenews.com/industry/techwatch/2026/08/10/us-navy-tests-ai-powered-submarine-hunter/\n- 机器人与具身智能：自动驾驶公司文远知行 2026 上半年营收 3.5 亿同比增长 73%，Robotaxi 超 1800 辆（IT之家，2026-08-13T23:53+00:00）\n  https://www.ithome.com/0/989/504.htm\n\n网页版完整报告：https://LPT111.github.io/daily_stock_analysis/\n仅供研究参考，不构成投资建议。"
 }
