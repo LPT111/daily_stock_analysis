@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-08-14T01:09:33+00:00",
+  "generated_at": "2026-08-14T08:33:43+00:00",
   "dashboard_url": "https://LPT111.github.io/daily_stock_analysis/",
-  "stock_report": null,
+  "stock_report": "report_20260814.md",
   "market_report": "market_review_20260814.md",
   "validations": [
     {
@@ -9,63 +9,63 @@
       "policy": "仅 status=confirmed 的字段可用于结论；待核实字段必须忽略。",
       "metrics": {
         "price": {
-          "status": "待核实",
-          "value": null,
-          "display": "待核实",
-          "interpretation": "两个数据源未同时返回一致结果，不得用于决策。",
+          "status": "confirmed",
+          "value": 66.84,
+          "display": "66.84",
+          "interpretation": "腾讯财经与东方财富交叉核验一致。",
           "sources": {
-            "腾讯财经": 66.1,
-            "东方财富": 0.0
+            "腾讯财经": 66.84,
+            "东方财富": 66.84
           }
         },
         "change_pct": {
-          "status": "待核实",
-          "value": null,
-          "display": "待核实",
-          "interpretation": "两个数据源未同时返回一致结果，不得用于决策。",
+          "status": "confirmed",
+          "value": 1.12,
+          "display": "1.12",
+          "interpretation": "腾讯财经与东方财富交叉核验一致。",
           "sources": {
-            "腾讯财经": 0.81,
-            "东方财富": 0.0
+            "腾讯财经": 1.12,
+            "东方财富": 1.12
           }
         },
         "dynamic_pe": {
           "status": "confirmed",
-          "value": -457.73,
-          "display": "-457.73（亏损状态）",
+          "value": -462.86,
+          "display": "-462.86（亏损状态）",
           "interpretation": "动态市盈率为负，表示当前口径下盈利为负，不能按正 PE 倍数进行估值判断。",
           "sources": {
-            "腾讯财经": -457.73,
-            "东方财富": -457.73
+            "腾讯财经": -462.86,
+            "东方财富": -462.86
           }
         },
         "pb": {
           "status": "confirmed",
-          "value": 12.39,
-          "display": "12.39",
+          "value": 12.52,
+          "display": "12.52",
           "interpretation": "腾讯财经与东方财富交叉核验一致。",
           "sources": {
-            "腾讯财经": 12.39,
-            "东方财富": 12.39
+            "腾讯财经": 12.52,
+            "东方财富": 12.52
           }
         }
       },
       "raw_sources": [
         {
           "source": "腾讯财经",
-          "price": 66.1,
-          "previous_close": 65.57,
-          "change_pct": 0.81,
-          "dynamic_pe": -457.73,
-          "pb": 12.39,
+          "price": 66.84,
+          "previous_close": 66.1,
+          "change_pct": 1.12,
+          "dynamic_pe": -462.86,
+          "pb": 12.52,
           "source_url": "https://gu.qq.com/sh600118"
         },
         {
           "source": "东方财富",
-          "price": 0.0,
+          "price": 66.84,
           "previous_close": 66.1,
-          "change_pct": 0.0,
-          "dynamic_pe": -457.73,
-          "pb": 12.39,
+          "change_pct": 1.12,
+          "dynamic_pe": -462.86,
+          "pb": 12.52,
           "source_url": "https://quote.eastmoney.com/sh600118.html"
         }
       ],
@@ -74,6 +74,15 @@
   ],
   "sector_news": {
     "items": [
+      {
+        "title": "CesiumAstro buys semiconductor specialist to boost constellation plans",
+        "published_at": "2026-08-14T02:24+00:00",
+        "source": "SpaceNews",
+        "url": "https://spacenews.com/cesiumastro-buys-semiconductor-specialist-to-boost-constellation-plans/",
+        "category": "科技与芯片",
+        "region": "国际",
+        "source_weight": 13
+      },
       {
         "title": "Space Force awards five companies $60 million for multi-vendor satellite network tests",
         "published_at": "2026-08-13T22:00+00:00",
@@ -98,15 +107,6 @@
         "source": "SpaceNews",
         "url": "https://spacenews.com/astranis-unveils-geostationary-surveillance-satellite/",
         "category": "卫星与商业航天",
-        "region": "国际",
-        "source_weight": 13
-      },
-      {
-        "title": "Pentagon missile buildup changing the factory floor",
-        "published_at": "2026-08-12T23:00+00:00",
-        "source": "SpaceNews",
-        "url": "https://spacenews.com/pentagon-missile-buildup-changing-the-factory-floor/",
-        "category": "军工与国防科技",
         "region": "国际",
         "source_weight": 13
       },
@@ -183,15 +183,6 @@
         "source_weight": 11
       },
       {
-        "title": "There’s a Fatty Liver Epidemic. AI Could Help Get Ahead of It",
-        "published_at": "2026-08-13T09:00+00:00",
-        "source": "WIRED Science",
-        "url": "https://www.wired.com/story/fatty-liver-disease-ai-detection-cancer/",
-        "category": "科技与芯片",
-        "region": "国际",
-        "source_weight": 10
-      },
-      {
         "title": "Here Are the First Images of the Crater Left on the Moon by SpaceX’s Rocket",
         "published_at": "2026-08-08T12:00+00:00",
         "source": "WIRED Science",
@@ -199,6 +190,24 @@
         "category": "卫星与商业航天",
         "region": "国际",
         "source_weight": 10
+      },
+      {
+        "title": "China built robots that can do backflips – but can they make money?",
+        "published_at": "2026-08-14T08:24+00:00",
+        "source": "CNBC Technology",
+        "url": "https://www.cnbc.com/2026/08/14/china-humanoid-robots-unitree-ipo-tesla-optimus.html",
+        "category": "机器人与具身智能",
+        "region": "国际",
+        "source_weight": 9
+      },
+      {
+        "title": "Uber partners with China's Pony.ai for 2,000 robotaxis in Europe",
+        "published_at": "2026-08-14T01:02+00:00",
+        "source": "CNBC Technology",
+        "url": "https://www.cnbc.com/2026/08/14/uber-partners-with-chinas-ponyai-for-2000-robotaxis-in-europe.html",
+        "category": "机器人与具身智能",
+        "region": "国际",
+        "source_weight": 9
       },
       {
         "title": "US boosts drone surveillance as flesh-eating screwworms spread in Texas",
@@ -210,20 +219,20 @@
         "source_weight": 9
       },
       {
-        "title": "自动驾驶公司文远知行 2026 上半年营收 3.5 亿同比增长 73%，Robotaxi 超 1800 辆",
-        "published_at": "2026-08-13T23:53+00:00",
+        "title": "极氪 Eva 车载机器人上架京东：主动追踪、智能转向，预售价 799 元",
+        "published_at": "2026-08-14T06:52+00:00",
         "source": "IT之家",
-        "url": "https://www.ithome.com/0/989/504.htm",
+        "url": "https://www.ithome.com/0/989/709.htm",
         "category": "机器人与具身智能",
         "region": "国内",
         "source_weight": 8
       },
       {
-        "title": "嫦娥六号带回的 1935 克月背土壤研究新进展：远古大撞击形成月球正反面差异",
-        "published_at": "2026-08-13T23:25+00:00",
+        "title": "全球首发：京东七鲜咖啡首家 24 小时智能化无人咖啡店落地北京，AI 推荐、机器人制作",
+        "published_at": "2026-08-14T04:34+00:00",
         "source": "IT之家",
-        "url": "https://www.ithome.com/0/989/496.htm",
-        "category": "卫星与商业航天",
+        "url": "https://www.ithome.com/0/989/675.htm",
+        "category": "机器人与具身智能",
         "region": "国内",
         "source_weight": 8
       },
@@ -237,24 +246,6 @@
         "source_weight": 8
       },
       {
-        "title": "传音推出 TECNO Pova 8 Pro 手机：灵感来自星际飞船，配个性化点阵背屏",
-        "published_at": "2026-08-13T15:00+00:00",
-        "source": "IT之家",
-        "url": "https://www.ithome.com/0/989/477.htm",
-        "category": "卫星与商业航天",
-        "region": "国内",
-        "source_weight": 8
-      },
-      {
-        "title": "双机械臂 + 4cm 高越障：小米米家扫拖机器人 5 京东 1510 元，上下水 1610 元",
-        "published_at": "2026-08-13T14:07+00:00",
-        "source": "IT之家",
-        "url": "https://www.ithome.com/0/989/464.htm",
-        "category": "机器人与具身智能",
-        "region": "国内",
-        "source_weight": 8
-      },
-      {
         "title": "Honor Launches Robot Phone with Gimbal Camera and AI Agent Features",
         "published_at": "2026-08-13T05:40+00:00",
         "source": "TechNode",
@@ -264,22 +255,22 @@
         "source_weight": 8
       },
       {
-        "title": "Honor Sets Aug. 12 Launch for Its Robot Phone in China",
-        "published_at": "2026-08-12T05:59+00:00",
-        "source": "TechNode",
-        "url": "https://technode.com/2026/08/12/honor-sets-aug-12-launch-for-its-robot-phone-in-china/",
-        "category": "机器人与具身智能",
-        "region": "国际",
-        "source_weight": 8
+        "title": "首次海上发射！力箭一号遥十七运载火箭顺利出厂",
+        "published_at": "2026-08-13T18:27+00:00",
+        "source": "快科技-科学",
+        "url": "https://news.mydrivers.com/1/1143/1143551.htm",
+        "category": "卫星与商业航天",
+        "region": "国内",
+        "source_weight": 7
       },
       {
-        "title": "Chinese Makers Accounted for More Than 97% of Global Humanoid Robot Shipments in H1 2026",
-        "published_at": "2026-08-11T04:48+00:00",
-        "source": "TechNode",
-        "url": "https://technode.com/2026/08/11/chinese-makers-accounted-for-more-than-97-of-global-humanoid-robot-shipments-in-h1-2026/",
-        "category": "机器人与具身智能",
-        "region": "国际",
-        "source_weight": 8
+        "title": "越南也要冲向太空！航天巨头牵手马斯克SpaceX：计划明年发射卫星",
+        "published_at": "2026-08-11T16:04+00:00",
+        "source": "快科技-科学",
+        "url": "https://news.mydrivers.com/1/1142/1142915.htm",
+        "category": "卫星与商业航天",
+        "region": "国内",
+        "source_weight": 7
       },
       {
         "title": "最高100%！美国宣布对进口无人机及零部件征收关税",
@@ -289,12 +280,23 @@
         "category": "军工与国防科技",
         "region": "国内",
         "source_weight": 6
+      },
+      {
+        "title": "Pentagon missile buildup changing the factory floor",
+        "published_at": "2026-08-12T23:00+00:00",
+        "source": "SpaceNews",
+        "url": "https://spacenews.com/pentagon-missile-buildup-changing-the-factory-floor/",
+        "category": "军工与国防科技",
+        "region": "国际",
+        "source_weight": 13
       }
     ],
     "errors": [
-      "36氪: not well-formed (invalid token): line 9, column 542"
+      "36氪: not well-formed (invalid token): line 9, column 542",
+      "国内科技新闻: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=%28%E5%8D%AB%E6%98%9F+OR+%E8%88%AA%E5%A4%A9+OR+%E5%8C%97%E6%96%97+OR+%E6%9C%BA%E5%99%A8%E4%BA%BA+OR+%E5%85%B7%E8%BA%AB%E6%99%BA%E8%83%BD+OR+%E8%8A%AF%E7%89%87+OR+%E5%8D%8A%E5%AF%BC%E4%BD%93+OR+%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD+OR+%E5%86%9B%E5%B7%A5+OR+%E5%9B%BD%E9%98%B2%E7%A7%91%E6%8A%80%29+sourcelang%3AChinese&mode=artlist&format=json&maxrecords=24&sort=datedesc&timespan=3d",
+      "国际科技新闻: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=%28satellite+OR+spaceflight+OR+robotics+OR+humanoid+OR+semiconductor+OR+%22artificial+intelligence%22+OR+%22defense+technology%22%29+sourcelang%3AEnglish&mode=artlist&format=json&maxrecords=24&sort=datedesc&timespan=3d"
     ],
     "policy": "仅展示含标题、发布时间、来源和原文链接的新闻；不据此自动推断股价因果。"
   },
-  "digest": "【A股科技主题决策雷达】\n个股建议：待确认（基于近3个月K线，保守模式）\n执行参考：买入区间 仅在MA20附近企稳时考虑低吸，不追涨｜仓位 控制在3成以内\n风控纪律：止损 有效跌破MA20且两个交易日未收回｜失效条件 跌破止损位或量价结构转空时，持有逻辑失效\n大盘摘要：🎯 大盘复盘 2026-08-14 大盘复盘 一句话：今日盘面数据严重不完整——主要指数微幅收平，但成交额、涨跌家数、板块涨跌与新闻数据大面积缺失，市场真实温度无法有效确认；明日优先观察数据恢复情况与上证指数方向选择。 一、盘面总览 📊 今日主要指数呈现极窄幅波动：上证指数微跌0.01%报3926.76点，上证50与沪深300同步下跌0.01%，科创50基本…\n600118 双源校验：价格：待核实；涨跌幅：待核实；动态PE：-457.73（亏损状态）；PB：12.39\n\n可核验科技新闻：\n- 卫星与商业航天：Space Force awards five companies $60 million for multi-vendor satellite network tests（SpaceNews，2026-08-13T22:00+00:00）\n  https://spacenews.com/space-force-awards-five-companies-60-million-for-multi-vendor-satellite-network-tests/\n- 军工与国防科技：Pentagon missile buildup changing the factory floor（SpaceNews，2026-08-12T23:00+00:00）\n  https://spacenews.com/pentagon-missile-buildup-changing-the-factory-floor/\n- 科技与芯片：US Navy tests AI-powered submarine hunter（Defense News，2026-08-10T15:01+00:00）\n  https://www.defensenews.com/industry/techwatch/2026/08/10/us-navy-tests-ai-powered-submarine-hunter/\n- 机器人与具身智能：自动驾驶公司文远知行 2026 上半年营收 3.5 亿同比增长 73%，Robotaxi 超 1800 辆（IT之家，2026-08-13T23:53+00:00）\n  https://www.ithome.com/0/989/504.htm\n\n网页版完整报告：https://LPT111.github.io/daily_stock_analysis/\n仅供研究参考，不构成投资建议。"
+  "digest": "【A股科技主题决策雷达】\n个股建议：持有（基于近3个月K线，保守模式）\n执行参考：买入区间 66.23元（MA5附近回踩不破）｜仓位 建议仓位：2-3成（保守）\n风控纪律：止损 64.50元（跌破MA10支撑区；波段防守MA20 61.83元）｜失效条件 跌破止损位或量价结构转空时，持有逻辑失效\n大盘摘要：🎯 大盘复盘 2026-08-14 大盘复盘 一句话：今日市场呈显著结构性分化，创业板强势领涨而权重拖累上证，指数层面震荡偏暖；核心矛盾在于“指数平稳掩盖下的个股分歧加剧”，明日优先观察科技主线能否在放量后形成合力，以及高位板块是否出现亏钱效应扩散。 一、盘面总览📊 今日市场整体定性为“震荡偏暖、结构分化”。三大指数涨跌互现，创业板指收涨1.12%明显强于主…\n600118 双源校验：价格：66.84；涨跌幅：1.12；动态PE：-462.86（亏损状态）；PB：12.52\n\n可核验科技新闻：\n- 科技与芯片：CesiumAstro buys semiconductor specialist to boost constellation plans（SpaceNews，2026-08-14T02:24+00:00）\n  https://spacenews.com/cesiumastro-buys-semiconductor-specialist-to-boost-constellation-plans/\n- 卫星与商业航天：Space Force awards five companies $60 million for multi-vendor satellite network tests（SpaceNews，2026-08-13T22:00+00:00）\n  https://spacenews.com/space-force-awards-five-companies-60-million-for-multi-vendor-satellite-network-tests/\n- 军工与国防科技：Lockheed Martin launches modular missile tech with dedicated ‘storefront’（Defense News，2026-08-11T14:38+00:00）\n  https://www.defensenews.com/news/your-military/2026/08/11/lockheed-martin-launches-modular-missile-tech-with-dedicated-storefront/\n- 机器人与具身智能：China built robots that can do backflips – but can they make money?（CNBC Technology，2026-08-14T08:24+00:00）\n  https://www.cnbc.com/2026/08/14/china-humanoid-robots-unitree-ipo-tesla-optimus.html\n\n网页版完整报告：https://LPT111.github.io/daily_stock_analysis/\n仅供研究参考，不构成投资建议。"
 }
