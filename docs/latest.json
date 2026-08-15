@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-08-14T08:33:43+00:00",
+  "generated_at": "2026-08-15T00:36:47+00:00",
   "dashboard_url": "https://LPT111.github.io/daily_stock_analysis/",
-  "stock_report": "report_20260814.md",
-  "market_report": "market_review_20260814.md",
+  "stock_report": null,
+  "market_report": null,
   "validations": [
     {
       "code": "600118",
@@ -75,37 +75,64 @@
   "sector_news": {
     "items": [
       {
-        "title": "CesiumAstro buys semiconductor specialist to boost constellation plans",
-        "published_at": "2026-08-14T02:24+00:00",
-        "source": "SpaceNews",
-        "url": "https://spacenews.com/cesiumastro-buys-semiconductor-specialist-to-boost-constellation-plans/",
+        "title": "NASA Competition Invites Students to Help Imagine a Future Enabled by Lunar Technologies",
+        "published_at": "2026-08-14T20:00+00:00",
+        "source": "NASA News",
+        "url": "https://www.nasa.gov/directorates/stmd/prizes-challenges-crowdsourcing-program/nasa-competition-invites-students-to-help-imagine-a-future-enabled-by-lunar-technologies/",
+        "category": "卫星与商业航天",
+        "region": "国际",
+        "source_weight": 14
+      },
+      {
+        "title": "NASA’s COFFIES Uses AI to Predict Storm-Causing Active Regions on Sun",
+        "published_at": "2026-08-14T17:00+00:00",
+        "source": "NASA News",
+        "url": "https://science.nasa.gov/science-research/heliophysics/nasas-coffies-uses-ai-to-predict-storm-causing-active-regions-on-sun/",
         "category": "科技与芯片",
         "region": "国际",
+        "source_weight": 14
+      },
+      {
+        "title": "CENTCOM launches multinational attack drone task force",
+        "published_at": "2026-08-14T15:09+00:00",
+        "source": "Defense News",
+        "url": "https://www.defensenews.com/news/pentagon-congress/2026/08/14/centcom-launches-multinational-attack-drone-task-force/",
+        "category": "军工与国防科技",
+        "region": "国际",
         "source_weight": 13
       },
       {
-        "title": "Space Force awards five companies $60 million for multi-vendor satellite network tests",
-        "published_at": "2026-08-13T22:00+00:00",
+        "title": "Cheaper launch has moved the spacecraft bottleneck. Mass is out, surface area is in.",
+        "published_at": "2026-08-14T13:00+00:00",
         "source": "SpaceNews",
-        "url": "https://spacenews.com/space-force-awards-five-companies-60-million-for-multi-vendor-satellite-network-tests/",
+        "url": "https://spacenews.com/cheaper-launch-has-moved-the-spacecraft-bottleneck-mass-is-out-surface-area-is-in/",
         "category": "卫星与商业航天",
         "region": "国际",
         "source_weight": 13
       },
       {
-        "title": "Maritime Satellite Service Revenues to Reach $3.79 Billion by 2035 as NGSO Reshapes Maritime Connectivity",
-        "published_at": "2026-08-13T14:27+00:00",
+        "title": "Intuitive Machines wins contract for three GEO satellites",
+        "published_at": "2026-08-14T11:29+00:00",
         "source": "SpaceNews",
-        "url": "https://spacenews.com/maritime-satellite-service-revenues-to-reach-3-79-billion-by-2035-as-ngso-reshapes-maritime-connectivity/",
+        "url": "https://spacenews.com/intuitive-machines-wins-contract-for-three-geo-satellites/",
         "category": "卫星与商业航天",
         "region": "国际",
         "source_weight": 13
       },
       {
-        "title": "Astranis unveils geostationary surveillance satellite",
-        "published_at": "2026-08-13T09:30+00:00",
+        "title": "Bulgaria advances project to launch new space, defense innovation hub",
+        "published_at": "2026-08-14T09:00+00:00",
         "source": "SpaceNews",
-        "url": "https://spacenews.com/astranis-unveils-geostationary-surveillance-satellite/",
+        "url": "https://spacenews.com/bulgaria-advances-project-to-launch-new-space-defense-innovation-hub/",
+        "category": "军工与国防科技",
+        "region": "国际",
+        "source_weight": 13
+      },
+      {
+        "title": "In-Orbit Services Market to Generate $3 Billion in Revenue Over the Next Decade",
+        "published_at": "2026-08-14T09:00+00:00",
+        "source": "SpaceNews",
+        "url": "https://spacenews.com/in-orbit-services-market-to-generate-3-billion-in-revenue-over-the-next-decade/",
         "category": "卫星与商业航天",
         "region": "国际",
         "source_weight": 13
@@ -138,15 +165,6 @@
         "source_weight": 13
       },
       {
-        "title": "US Navy tests AI-powered submarine hunter",
-        "published_at": "2026-08-10T15:01+00:00",
-        "source": "Defense News",
-        "url": "https://www.defensenews.com/industry/techwatch/2026/08/10/us-navy-tests-ai-powered-submarine-hunter/",
-        "category": "科技与芯片",
-        "region": "国际",
-        "source_weight": 13
-      },
-      {
         "title": "The Download: kids’ thoughts on AI, and female clones of male mice",
         "published_at": "2026-08-13T12:10+00:00",
         "source": "MIT Technology Review",
@@ -165,22 +183,31 @@
         "source_weight": 12
       },
       {
-        "title": "Scaling AI agents with trustworthy data",
-        "published_at": "2026-08-12T16:51+00:00",
-        "source": "MIT Technology Review",
-        "url": "https://www.technologyreview.com/2026/08/12/1141032/scaling-ai-agents-with-trustworthy-data/",
+        "title": "There’s a Fatty Liver Epidemic. AI Could Help Get Ahead of It",
+        "published_at": "2026-08-13T09:00+00:00",
+        "source": "WIRED Science",
+        "url": "https://www.wired.com/story/fatty-liver-disease-ai-detection-cancer/",
         "category": "科技与芯片",
         "region": "国际",
-        "source_weight": 12
+        "source_weight": 10
       },
       {
-        "title": "AI may respond differently to bosses and subordinates",
-        "published_at": "2026-08-07T14:00+00:00",
-        "source": "Science News",
-        "url": "https://www.sciencenews.org/article/ai-bosses-subordinate-response-safety",
+        "title": "AI Could Help Fossil Fuel Companies Create More Emissions",
+        "published_at": "2026-08-11T13:45+00:00",
+        "source": "WIRED Science",
+        "url": "https://www.wired.com/story/ai-could-help-fossil-fuel-companies-create-more-emissions/",
         "category": "科技与芯片",
         "region": "国际",
-        "source_weight": 11
+        "source_weight": 10
+      },
+      {
+        "title": "AI Is Dead. Organoids Are Alive",
+        "published_at": "2026-08-11T10:00+00:00",
+        "source": "WIRED Science",
+        "url": "https://www.wired.com/story/organoids-lab-grown-brains-neural-networks/",
+        "category": "科技与芯片",
+        "region": "国际",
+        "source_weight": 10
       },
       {
         "title": "Here Are the First Images of the Crater Left on the Moon by SpaceX’s Rocket",
@@ -190,6 +217,24 @@
         "category": "卫星与商业航天",
         "region": "国际",
         "source_weight": 10
+      },
+      {
+        "title": "Drone stocks rally after Trump orders tariffs on foreign-made components",
+        "published_at": "2026-08-14T20:04+00:00",
+        "source": "CNBC Technology",
+        "url": "https://www.cnbc.com/2026/08/14/drone-stocks-trump-tariffs.html",
+        "category": "军工与国防科技",
+        "region": "国际",
+        "source_weight": 9
+      },
+      {
+        "title": "Rocket Report: Rocket Lab shows off its flexibility; Blue Origin's two-pad plan",
+        "published_at": "2026-08-14T11:00+00:00",
+        "source": "Ars Technica",
+        "url": "https://arstechnica.com/space/2026/08/rocket-report-rocket-lab-shows-off-its-flexibility-blue-origins-two-pad-plan/",
+        "category": "卫星与商业航天",
+        "region": "国际",
+        "source_weight": 9
       },
       {
         "title": "China built robots that can do backflips – but can they make money?",
@@ -210,37 +255,10 @@
         "source_weight": 9
       },
       {
-        "title": "US boosts drone surveillance as flesh-eating screwworms spread in Texas",
-        "published_at": "2026-08-12T19:40+00:00",
-        "source": "Ars Technica",
-        "url": "https://arstechnica.com/gadgets/2026/08/us-boosts-drone-surveillance-as-flesh-eating-screwworms-spread-in-texas/",
-        "category": "军工与国防科技",
-        "region": "国际",
-        "source_weight": 9
-      },
-      {
-        "title": "极氪 Eva 车载机器人上架京东：主动追踪、智能转向，预售价 799 元",
-        "published_at": "2026-08-14T06:52+00:00",
-        "source": "IT之家",
-        "url": "https://www.ithome.com/0/989/709.htm",
-        "category": "机器人与具身智能",
-        "region": "国内",
-        "source_weight": 8
-      },
-      {
-        "title": "全球首发：京东七鲜咖啡首家 24 小时智能化无人咖啡店落地北京，AI 推荐、机器人制作",
-        "published_at": "2026-08-14T04:34+00:00",
-        "source": "IT之家",
-        "url": "https://www.ithome.com/0/989/675.htm",
-        "category": "机器人与具身智能",
-        "region": "国内",
-        "source_weight": 8
-      },
-      {
-        "title": "Who really needs a cocktail robot?",
-        "published_at": "2026-08-13T15:00+00:00",
+        "title": "Uber and Pony.ai plan to bring 2,000 robotaxis to Europe",
+        "published_at": "2026-08-14T10:44+00:00",
         "source": "TechCrunch",
-        "url": "https://techcrunch.com/2026/08/13/bartesian-duet-cocktail-maker-review/",
+        "url": "https://techcrunch.com/2026/08/14/uber-and-pony-ai-plan-to-bring-2000-robotaxis-to-europe/",
         "category": "机器人与具身智能",
         "region": "国际",
         "source_weight": 8
@@ -255,48 +273,31 @@
         "source_weight": 8
       },
       {
-        "title": "首次海上发射！力箭一号遥十七运载火箭顺利出厂",
-        "published_at": "2026-08-13T18:27+00:00",
-        "source": "快科技-科学",
-        "url": "https://news.mydrivers.com/1/1143/1143551.htm",
-        "category": "卫星与商业航天",
-        "region": "国内",
-        "source_weight": 7
-      },
-      {
-        "title": "越南也要冲向太空！航天巨头牵手马斯克SpaceX：计划明年发射卫星",
-        "published_at": "2026-08-11T16:04+00:00",
-        "source": "快科技-科学",
-        "url": "https://news.mydrivers.com/1/1142/1142915.htm",
-        "category": "卫星与商业航天",
-        "region": "国内",
-        "source_weight": 7
-      },
-      {
-        "title": "最高100%！美国宣布对进口无人机及零部件征收关税",
-        "published_at": "2026-08-14T07:39+00:00",
-        "source": "快科技-硬件",
-        "url": "https://news.mydrivers.com/1/1143/1143631.htm",
-        "category": "军工与国防科技",
-        "region": "国内",
-        "source_weight": 6
-      },
-      {
-        "title": "Pentagon missile buildup changing the factory floor",
-        "published_at": "2026-08-12T23:00+00:00",
-        "source": "SpaceNews",
-        "url": "https://spacenews.com/pentagon-missile-buildup-changing-the-factory-floor/",
-        "category": "军工与国防科技",
+        "title": "Honor Sets Aug. 12 Launch for Its Robot Phone in China",
+        "published_at": "2026-08-12T05:59+00:00",
+        "source": "TechNode",
+        "url": "https://technode.com/2026/08/12/honor-sets-aug-12-launch-for-its-robot-phone-in-china/",
+        "category": "机器人与具身智能",
         "region": "国际",
-        "source_weight": 13
+        "source_weight": 8
+      },
+      {
+        "title": "Chinese Makers Accounted for More Than 97% of Global Humanoid Robot Shipments in H1 2026",
+        "published_at": "2026-08-11T04:48+00:00",
+        "source": "TechNode",
+        "url": "https://technode.com/2026/08/11/chinese-makers-accounted-for-more-than-97-of-global-humanoid-robot-shipments-in-h1-2026/",
+        "category": "机器人与具身智能",
+        "region": "国际",
+        "source_weight": 8
       }
     ],
     "errors": [
       "36氪: not well-formed (invalid token): line 9, column 542",
+      "IT之家: Response ended prematurely",
       "国内科技新闻: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=%28%E5%8D%AB%E6%98%9F+OR+%E8%88%AA%E5%A4%A9+OR+%E5%8C%97%E6%96%97+OR+%E6%9C%BA%E5%99%A8%E4%BA%BA+OR+%E5%85%B7%E8%BA%AB%E6%99%BA%E8%83%BD+OR+%E8%8A%AF%E7%89%87+OR+%E5%8D%8A%E5%AF%BC%E4%BD%93+OR+%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD+OR+%E5%86%9B%E5%B7%A5+OR+%E5%9B%BD%E9%98%B2%E7%A7%91%E6%8A%80%29+sourcelang%3AChinese&mode=artlist&format=json&maxrecords=24&sort=datedesc&timespan=3d",
       "国际科技新闻: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=%28satellite+OR+spaceflight+OR+robotics+OR+humanoid+OR+semiconductor+OR+%22artificial+intelligence%22+OR+%22defense+technology%22%29+sourcelang%3AEnglish&mode=artlist&format=json&maxrecords=24&sort=datedesc&timespan=3d"
     ],
     "policy": "仅展示含标题、发布时间、来源和原文链接的新闻；不据此自动推断股价因果。"
   },
-  "digest": "【A股科技主题决策雷达】\n个股建议：持有（基于近3个月K线，保守模式）\n执行参考：买入区间 66.23元（MA5附近回踩不破）｜仓位 建议仓位：2-3成（保守）\n风控纪律：止损 64.50元（跌破MA10支撑区；波段防守MA20 61.83元）｜失效条件 跌破止损位或量价结构转空时，持有逻辑失效\n大盘摘要：🎯 大盘复盘 2026-08-14 大盘复盘 一句话：今日市场呈显著结构性分化，创业板强势领涨而权重拖累上证，指数层面震荡偏暖；核心矛盾在于“指数平稳掩盖下的个股分歧加剧”，明日优先观察科技主线能否在放量后形成合力，以及高位板块是否出现亏钱效应扩散。 一、盘面总览📊 今日市场整体定性为“震荡偏暖、结构分化”。三大指数涨跌互现，创业板指收涨1.12%明显强于主…\n600118 双源校验：价格：66.84；涨跌幅：1.12；动态PE：-462.86（亏损状态）；PB：12.52\n\n可核验科技新闻：\n- 科技与芯片：CesiumAstro buys semiconductor specialist to boost constellation plans（SpaceNews，2026-08-14T02:24+00:00）\n  https://spacenews.com/cesiumastro-buys-semiconductor-specialist-to-boost-constellation-plans/\n- 卫星与商业航天：Space Force awards five companies $60 million for multi-vendor satellite network tests（SpaceNews，2026-08-13T22:00+00:00）\n  https://spacenews.com/space-force-awards-five-companies-60-million-for-multi-vendor-satellite-network-tests/\n- 军工与国防科技：Lockheed Martin launches modular missile tech with dedicated ‘storefront’（Defense News，2026-08-11T14:38+00:00）\n  https://www.defensenews.com/news/your-military/2026/08/11/lockheed-martin-launches-modular-missile-tech-with-dedicated-storefront/\n- 机器人与具身智能：China built robots that can do backflips – but can they make money?（CNBC Technology，2026-08-14T08:24+00:00）\n  https://www.cnbc.com/2026/08/14/china-humanoid-robots-unitree-ipo-tesla-optimus.html\n\n网页版完整报告：https://LPT111.github.io/daily_stock_analysis/\n仅供研究参考，不构成投资建议。"
+  "digest": "【A股科技主题决策雷达】\n个股建议：待确认（基于近3个月K线，保守模式）\n执行参考：买入区间 仅在MA20附近企稳时考虑低吸，不追涨｜仓位 控制在3成以内\n风控纪律：止损 有效跌破MA20且两个交易日未收回｜失效条件 跌破止损位或量价结构转空时，持有逻辑失效\n大盘摘要：\n600118 双源校验：价格：66.84；涨跌幅：1.12；动态PE：-462.86（亏损状态）；PB：12.52\n\n可核验科技新闻：\n- 卫星与商业航天：NASA Competition Invites Students to Help Imagine a Future Enabled by Lunar Technologies（NASA News，2026-08-14T20:00+00:00）\n  https://www.nasa.gov/directorates/stmd/prizes-challenges-crowdsourcing-program/nasa-competition-invites-students-to-help-imagine-a-future-enabled-by-lunar-technologies/\n- 科技与芯片：NASA’s COFFIES Uses AI to Predict Storm-Causing Active Regions on Sun（NASA News，2026-08-14T17:00+00:00）\n  https://science.nasa.gov/science-research/heliophysics/nasas-coffies-uses-ai-to-predict-storm-causing-active-regions-on-sun/\n- 军工与国防科技：CENTCOM launches multinational attack drone task force（Defense News，2026-08-14T15:09+00:00）\n  https://www.defensenews.com/news/pentagon-congress/2026/08/14/centcom-launches-multinational-attack-drone-task-force/\n- 机器人与具身智能：China built robots that can do backflips – but can they make money?（CNBC Technology，2026-08-14T08:24+00:00）\n  https://www.cnbc.com/2026/08/14/china-humanoid-robots-unitree-ipo-tesla-optimus.html\n\n网页版完整报告：https://LPT111.github.io/daily_stock_analysis/\n仅供研究参考，不构成投资建议。"
 }
