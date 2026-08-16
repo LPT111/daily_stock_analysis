@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-15T07:39:09+00:00",
+  "generated_at": "2026-08-16T00:37:55+00:00",
   "dashboard_url": "https://LPT111.github.io/daily_stock_analysis/",
   "stock_report": null,
   "market_report": null,
@@ -93,6 +93,15 @@
         "source_weight": 14
       },
       {
+        "title": "Lunar orbiter among upcoming NASA CLPS task orders",
+        "published_at": "2026-08-15T23:49+00:00",
+        "source": "SpaceNews",
+        "url": "https://spacenews.com/lunar-orbiter-among-upcoming-nasa-clps-task-orders/",
+        "category": "卫星与商业航天",
+        "region": "国际",
+        "source_weight": 13
+      },
+      {
         "title": "CENTCOM launches multinational attack drone task force",
         "published_at": "2026-08-14T15:09+00:00",
         "source": "Defense News",
@@ -125,15 +134,6 @@
         "source": "SpaceNews",
         "url": "https://spacenews.com/bulgaria-advances-project-to-launch-new-space-defense-innovation-hub/",
         "category": "军工与国防科技",
-        "region": "国际",
-        "source_weight": 13
-      },
-      {
-        "title": "In-Orbit Services Market to Generate $3 Billion in Revenue Over the Next Decade",
-        "published_at": "2026-08-14T09:00+00:00",
-        "source": "SpaceNews",
-        "url": "https://spacenews.com/in-orbit-services-market-to-generate-3-billion-in-revenue-over-the-next-decade/",
-        "category": "卫星与商业航天",
         "region": "国际",
         "source_weight": 13
       },
@@ -210,13 +210,13 @@
         "source_weight": 10
       },
       {
-        "title": "Here Are the First Images of the Crater Left on the Moon by SpaceX’s Rocket",
-        "published_at": "2026-08-08T12:00+00:00",
-        "source": "WIRED Science",
-        "url": "https://www.wired.com/story/first-images-spacex-rocket-moon-crater/",
+        "title": "Ukraine strikes major Russian rocket factory with cruise missiles",
+        "published_at": "2026-08-15T15:46+00:00",
+        "source": "Ars Technica",
+        "url": "https://arstechnica.com/space/2026/08/ukraine-strikes-major-russian-rocket-factory-with-cruise-missiles/",
         "category": "卫星与商业航天",
         "region": "国际",
-        "source_weight": 10
+        "source_weight": 9
       },
       {
         "title": "Drone stocks rally after Trump orders tariffs on foreign-made components",
@@ -255,6 +255,24 @@
         "source_weight": 9
       },
       {
+        "title": "2026 世界机器人大会展位图揭晓：8 月 19 日开幕，宇树科技、优必选等参展",
+        "published_at": "2026-08-16T00:11+00:00",
+        "source": "IT之家",
+        "url": "https://www.ithome.com/0/990/220.htm",
+        "category": "机器人与具身智能",
+        "region": "国内",
+        "source_weight": 8
+      },
+      {
+        "title": "另类 AI：前谷歌员工打造“聊天机器人”ChatTJB，不过背后全是真人回复",
+        "published_at": "2026-08-15T14:53+00:00",
+        "source": "IT之家",
+        "url": "https://www.ithome.com/0/990/184.htm",
+        "category": "机器人与具身智能",
+        "region": "国内",
+        "source_weight": 8
+      },
+      {
         "title": "Uber and Pony.ai plan to bring 2,000 robotaxis to Europe",
         "published_at": "2026-08-14T10:44+00:00",
         "source": "TechCrunch",
@@ -271,29 +289,11 @@
         "category": "机器人与具身智能",
         "region": "国际",
         "source_weight": 8
-      },
-      {
-        "title": "Honor Sets Aug. 12 Launch for Its Robot Phone in China",
-        "published_at": "2026-08-12T05:59+00:00",
-        "source": "TechNode",
-        "url": "https://technode.com/2026/08/12/honor-sets-aug-12-launch-for-its-robot-phone-in-china/",
-        "category": "机器人与具身智能",
-        "region": "国际",
-        "source_weight": 8
-      },
-      {
-        "title": "Chinese Makers Accounted for More Than 97% of Global Humanoid Robot Shipments in H1 2026",
-        "published_at": "2026-08-11T04:48+00:00",
-        "source": "TechNode",
-        "url": "https://technode.com/2026/08/11/chinese-makers-accounted-for-more-than-97-of-global-humanoid-robot-shipments-in-h1-2026/",
-        "category": "机器人与具身智能",
-        "region": "国际",
-        "source_weight": 8
       }
     ],
     "errors": [
       "36氪: not well-formed (invalid token): line 9, column 542",
-      "国际科技新闻: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=%28satellite+OR+spaceflight+OR+robotics+OR+humanoid+OR+semiconductor+OR+%22artificial+intelligence%22+OR+%22defense+technology%22%29+sourcelang%3AEnglish&mode=artlist&format=json&maxrecords=24&sort=datedesc&timespan=3d"
+      "国内科技新闻: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=%28%E5%8D%AB%E6%98%9F+OR+%E8%88%AA%E5%A4%A9+OR+%E5%8C%97%E6%96%97+OR+%E6%9C%BA%E5%99%A8%E4%BA%BA+OR+%E5%85%B7%E8%BA%AB%E6%99%BA%E8%83%BD+OR+%E8%8A%AF%E7%89%87+OR+%E5%8D%8A%E5%AF%BC%E4%BD%93+OR+%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD+OR+%E5%86%9B%E5%B7%A5+OR+%E5%9B%BD%E9%98%B2%E7%A7%91%E6%8A%80%29+sourcelang%3AChinese&mode=artlist&format=json&maxrecords=24&sort=datedesc&timespan=3d"
     ],
     "policy": "仅展示含标题、发布时间、来源和原文链接的新闻；不据此自动推断股价因果。"
   },
