@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-08-16T07:39:40+00:00",
+  "generated_at": "2026-08-17T00:42:34+00:00",
   "dashboard_url": "https://LPT111.github.io/daily_stock_analysis/",
-  "stock_report": null,
-  "market_report": null,
+  "stock_report": "report_20260817.md",
+  "market_report": "market_review_20260817.md",
   "validations": [
     {
       "code": "600118",
@@ -93,6 +93,24 @@
         "source_weight": 14
       },
       {
+        "title": "Satellite operators emphasize launch deals in a constrained market",
+        "published_at": "2026-08-16T23:05+00:00",
+        "source": "SpaceNews",
+        "url": "https://spacenews.com/satellite-operators-emphasize-launch-deals-in-a-constrained-market/",
+        "category": "卫星与商业航天",
+        "region": "国际",
+        "source_weight": 13
+      },
+      {
+        "title": "U.S. defense agencies tap three companies for satellite disposal study",
+        "published_at": "2026-08-16T10:50+00:00",
+        "source": "SpaceNews",
+        "url": "https://spacenews.com/u-s-defense-agencies-tap-three-companies-for-satellite-disposal-study/",
+        "category": "卫星与商业航天",
+        "region": "国际",
+        "source_weight": 13
+      },
+      {
         "title": "Lunar orbiter among upcoming NASA CLPS task orders",
         "published_at": "2026-08-15T23:49+00:00",
         "source": "SpaceNews",
@@ -116,24 +134,6 @@
         "source": "SpaceNews",
         "url": "https://spacenews.com/cheaper-launch-has-moved-the-spacecraft-bottleneck-mass-is-out-surface-area-is-in/",
         "category": "卫星与商业航天",
-        "region": "国际",
-        "source_weight": 13
-      },
-      {
-        "title": "Intuitive Machines wins contract for three GEO satellites",
-        "published_at": "2026-08-14T11:29+00:00",
-        "source": "SpaceNews",
-        "url": "https://spacenews.com/intuitive-machines-wins-contract-for-three-geo-satellites/",
-        "category": "卫星与商业航天",
-        "region": "国际",
-        "source_weight": 13
-      },
-      {
-        "title": "Bulgaria advances project to launch new space, defense innovation hub",
-        "published_at": "2026-08-14T09:00+00:00",
-        "source": "SpaceNews",
-        "url": "https://spacenews.com/bulgaria-advances-project-to-launch-new-space-defense-innovation-hub/",
-        "category": "军工与国防科技",
         "region": "国际",
         "source_weight": 13
       },
@@ -228,15 +228,6 @@
         "source_weight": 9
       },
       {
-        "title": "Rocket Report: Rocket Lab shows off its flexibility; Blue Origin's two-pad plan",
-        "published_at": "2026-08-14T11:00+00:00",
-        "source": "Ars Technica",
-        "url": "https://arstechnica.com/space/2026/08/rocket-report-rocket-lab-shows-off-its-flexibility-blue-origins-two-pad-plan/",
-        "category": "卫星与商业航天",
-        "region": "国际",
-        "source_weight": 9
-      },
-      {
         "title": "China built robots that can do backflips – but can they make money?",
         "published_at": "2026-08-14T08:24+00:00",
         "source": "CNBC Technology",
@@ -255,30 +246,21 @@
         "source_weight": 9
       },
       {
-        "title": "第二届世界人形机器人运动会新增跳远、举重、拔河等项目，2056 台机器人同台竞技",
-        "published_at": "2026-08-16T01:04+00:00",
+        "title": "比亚迪全新海鸥内饰曝光：大尺寸中控屏 + 无线充电面板，95kW 电机 + 可选激光雷达",
+        "published_at": "2026-08-16T14:14+00:00",
         "source": "IT之家",
-        "url": "https://www.ithome.com/0/990/230.htm",
-        "category": "机器人与具身智能",
+        "url": "https://www.ithome.com/0/990/392.htm",
+        "category": "军工与国防科技",
         "region": "国内",
         "source_weight": 8
       },
       {
-        "title": "2026 世界机器人大会展位图揭晓：8 月 19 日开幕，宇树科技、优必选等参展",
-        "published_at": "2026-08-16T00:11+00:00",
+        "title": "人形机器人运动会赛前冲刺备战“家政赛”：30 分钟内完成收纳叠衣等多项任务，AI 大模型助力持续学习",
+        "published_at": "2026-08-16T13:52+00:00",
         "source": "IT之家",
-        "url": "https://www.ithome.com/0/990/220.htm",
+        "url": "https://www.ithome.com/0/990/389.htm",
         "category": "机器人与具身智能",
         "region": "国内",
-        "source_weight": 8
-      },
-      {
-        "title": "Uber and Pony.ai plan to bring 2,000 robotaxis to Europe",
-        "published_at": "2026-08-14T10:44+00:00",
-        "source": "TechCrunch",
-        "url": "https://techcrunch.com/2026/08/14/uber-and-pony-ai-plan-to-bring-2000-robotaxis-to-europe/",
-        "category": "机器人与具身智能",
-        "region": "国际",
         "source_weight": 8
       },
       {
@@ -289,14 +271,33 @@
         "category": "机器人与具身智能",
         "region": "国际",
         "source_weight": 8
+      },
+      {
+        "title": "Honor Sets Aug. 12 Launch for Its Robot Phone in China",
+        "published_at": "2026-08-12T05:59+00:00",
+        "source": "TechNode",
+        "url": "https://technode.com/2026/08/12/honor-sets-aug-12-launch-for-its-robot-phone-in-china/",
+        "category": "机器人与具身智能",
+        "region": "国际",
+        "source_weight": 8
+      },
+      {
+        "title": "Chinese Makers Accounted for More Than 97% of Global Humanoid Robot Shipments in H1 2026",
+        "published_at": "2026-08-11T04:48+00:00",
+        "source": "TechNode",
+        "url": "https://technode.com/2026/08/11/chinese-makers-accounted-for-more-than-97-of-global-humanoid-robot-shipments-in-h1-2026/",
+        "category": "机器人与具身智能",
+        "region": "国际",
+        "source_weight": 8
       }
     ],
     "errors": [
       "36氪: not well-formed (invalid token): line 9, column 542",
-      "国内科技新闻: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=%28%E5%8D%AB%E6%98%9F+OR+%E8%88%AA%E5%A4%A9+OR+%E5%8C%97%E6%96%97+OR+%E6%9C%BA%E5%99%A8%E4%BA%BA+OR+%E5%85%B7%E8%BA%AB%E6%99%BA%E8%83%BD+OR+%E8%8A%AF%E7%89%87+OR+%E5%8D%8A%E5%AF%BC%E4%BD%93+OR+%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD+OR+%E5%86%9B%E5%B7%A5+OR+%E5%9B%BD%E9%98%B2%E7%A7%91%E6%8A%80%29+sourcelang%3AChinese&mode=artlist&format=json&maxrecords=24&sort=datedesc&timespan=3d",
+      "快科技-综合: not well-formed (invalid token): line 210, column 2137",
+      "国内科技新闻: HTTPSConnectionPool(host='api.gdeltproject.org', port=443): Read timed out. (read timeout=15)",
       "国际科技新闻: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=%28satellite+OR+spaceflight+OR+robotics+OR+humanoid+OR+semiconductor+OR+%22artificial+intelligence%22+OR+%22defense+technology%22%29+sourcelang%3AEnglish&mode=artlist&format=json&maxrecords=24&sort=datedesc&timespan=3d"
     ],
     "policy": "仅展示含标题、发布时间、来源和原文链接的新闻；不据此自动推断股价因果。"
   },
-  "digest": "【A股科技主题决策雷达】\n个股建议：待确认（基于近3个月K线，保守模式）\n执行参考：买入区间 仅在MA20附近企稳时考虑低吸，不追涨｜仓位 控制在3成以内\n风控纪律：止损 有效跌破MA20且两个交易日未收回｜失效条件 跌破止损位或量价结构转空时，持有逻辑失效\n大盘摘要：\n600118 双源校验：价格：66.84；涨跌幅：1.12；动态PE：-462.86（亏损状态）；PB：12.52\n\n可核验科技新闻：\n- 卫星与商业航天：NASA Competition Invites Students to Help Imagine a Future Enabled by Lunar Technologies（NASA News，2026-08-14T20:00+00:00）\n  https://www.nasa.gov/directorates/stmd/prizes-challenges-crowdsourcing-program/nasa-competition-invites-students-to-help-imagine-a-future-enabled-by-lunar-technologies/\n- 科技与芯片：NASA’s COFFIES Uses AI to Predict Storm-Causing Active Regions on Sun（NASA News，2026-08-14T17:00+00:00）\n  https://science.nasa.gov/science-research/heliophysics/nasas-coffies-uses-ai-to-predict-storm-causing-active-regions-on-sun/\n- 军工与国防科技：CENTCOM launches multinational attack drone task force（Defense News，2026-08-14T15:09+00:00）\n  https://www.defensenews.com/news/pentagon-congress/2026/08/14/centcom-launches-multinational-attack-drone-task-force/\n- 机器人与具身智能：China built robots that can do backflips – but can they make money?（CNBC Technology，2026-08-14T08:24+00:00）\n  https://www.cnbc.com/2026/08/14/china-humanoid-robots-unitree-ipo-tesla-optimus.html\n\n网页版完整报告：https://LPT111.github.io/daily_stock_analysis/\n仅供研究参考，不构成投资建议。"
+  "digest": "【A股科技主题决策雷达】\n个股建议：买入（基于近3个月K线，保守模式）\n执行参考：买入区间 65.77元（MA5附近）｜仓位 建议仓位：空仓者0-2成；持仓者可视成本自行控制不超过4成\n风控纪律：止损 62.20元（跌破MA20或亏损约7%）｜失效条件 跌破止损位或所属板块同步转弱时，买入逻辑失效\n大盘摘要：🎯 大盘复盘 2026-08-17 大盘复盘 今日市场呈“指数抗跌、个股分化”的震荡格局：权重拖累上证50，创业板领涨，但下跌家数多于上涨家数。核心矛盾在于资金抱团成长题材与权重周期走弱之间的跷跷板效应，明日优先观察创业板能否延续放量上攻，以及跌停家数是否收敛。 一、盘面总览 📊 今日市场整体定性为“震荡偏弱”：上证指数微涨0.01%，深证成指涨0.45%…\n600118 双源校验：价格：66.84；涨跌幅：1.12；动态PE：-462.86（亏损状态）；PB：12.52\n\n可核验科技新闻：\n- 卫星与商业航天：NASA Competition Invites Students to Help Imagine a Future Enabled by Lunar Technologies（NASA News，2026-08-14T20:00+00:00）\n  https://www.nasa.gov/directorates/stmd/prizes-challenges-crowdsourcing-program/nasa-competition-invites-students-to-help-imagine-a-future-enabled-by-lunar-technologies/\n- 科技与芯片：NASA’s COFFIES Uses AI to Predict Storm-Causing Active Regions on Sun（NASA News，2026-08-14T17:00+00:00）\n  https://science.nasa.gov/science-research/heliophysics/nasas-coffies-uses-ai-to-predict-storm-causing-active-regions-on-sun/\n- 军工与国防科技：CENTCOM launches multinational attack drone task force（Defense News，2026-08-14T15:09+00:00）\n  https://www.defensenews.com/news/pentagon-congress/2026/08/14/centcom-launches-multinational-attack-drone-task-force/\n- 机器人与具身智能：China built robots that can do backflips – but can they make money?（CNBC Technology，2026-08-14T08:24+00:00）\n  https://www.cnbc.com/2026/08/14/china-humanoid-robots-unitree-ipo-tesla-optimus.html\n\n网页版完整报告：https://LPT111.github.io/daily_stock_analysis/\n仅供研究参考，不构成投资建议。"
 }
